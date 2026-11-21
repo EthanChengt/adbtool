@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Portami a casa</string>
+    <string name="b">Torna indietro</string>
+    <string name="c">Altre opzioni</string>
+    <string name="d">Fine</string>
+    <string name="e">Mostra tutto</string>
+    <string name="f">Scelta di un\'app</string>
+    <string name="g">OFF</string>
+    <string name="h">ON</string>
+    <string name="i">ALT +</string>
+    <string name="j">CTRL +</string>
+    <string name="k">CANC</string>
+    <string name="l">INVIO</string>
+    <string name="m">FUNZIONE +</string>
+    <string name="n">META +</string>
+    <string name="o">MAIUSC +</string>
+    <string name="p">SPAZIO</string>
+    <string name="q">SYM +</string>
+    <string name="r">MENU +</string>
+    <string name="s">Cerca…</string>
+    <string name="t">Cancella query</string>
+    <string name="u">Query di ricerca</string>
+    <string name="v">Cerca</string>
+    <string name="w">Invia query</string>
+    <string name="x">Ricerca vocale</string>
+    <string name="y">Condividi con</string>
+    <string name="z">Condividi tramite %s</string>
+    <string name="a0">Comprimi</string>
+    <string name="ba">Copia</string>
+    <string name="c6">Avanzate</string>
+    <string name="ef">Non impostato</string>
+    <string name="fj">\"%1$s\"copiato negli appunti.</string>
+    <string name="gg">Cerca</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">OFF</string>
+    <string name="hw">ON</string>
+</resources>

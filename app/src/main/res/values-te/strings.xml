@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">హోమ్‌కు నావిగేట్ చేస్తుంది</string>
+    <string name="b">పైకి నావిగేట్ చేస్తుంది</string>
+    <string name="c">మరిన్ని ఎంపికలు</string>
+    <string name="d">పూర్తయింది</string>
+    <string name="e">అన్నీ చూడండి</string>
+    <string name="f">యాప్‌ను ఎంచుకోండి</string>
+    <string name="g">ఆఫ్</string>
+    <string name="h">ఆన్</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">స్పేస్</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">వెతకండి…</string>
+    <string name="t">ప్రశ్నను తీసివేస్తుంది</string>
+    <string name="u">శోధన ప్రశ్న</string>
+    <string name="v">శోధన</string>
+    <string name="w">ప్రశ్నని సమర్పిస్తుంది</string>
+    <string name="x">వాయిస్ శోధన</string>
+    <string name="y">వీరితో షేర్ చేస్తుంది</string>
+    <string name="z">%sతో షేర్ చేస్తుంది</string>
+    <string name="a0">కుదిస్తుంది</string>
+    <string name="ba">కాపీ చేయి</string>
+    <string name="c6">అధునాతనం</string>
+    <string name="ef">సెట్ చేయలేదు</string>
+    <string name="fj">\"%1$s\" క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది.</string>
+    <string name="gg">శోధన</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ఆఫ్ చేయండి</string>
+    <string name="hw">ఆన్ చేయండి</string>
+</resources>

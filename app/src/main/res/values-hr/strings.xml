@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Idi na početnu</string>
+    <string name="b">Natrag</string>
+    <string name="c">Više opcija</string>
+    <string name="d">Gotovo</string>
+    <string name="e">Prikaži sve</string>
+    <string name="f">Odabir aplikacije</string>
+    <string name="g">ISKLJUČENO</string>
+    <string name="h">UKLJUČENO</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">svemir</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">Pretražite…</string>
+    <string name="t">Izbriši upit</string>
+    <string name="u">Upit za pretraživanje</string>
+    <string name="v">Pretraži</string>
+    <string name="w">Pošalji upit</string>
+    <string name="x">Glasovno pretraživanje</string>
+    <string name="y">Dijeli s</string>
+    <string name="z">Dijeli putem aplikacije %s</string>
+    <string name="a0">Sažmi</string>
+    <string name="ba">Kopiraj</string>
+    <string name="c6">Napredno</string>
+    <string name="ef">Nije postavljeno</string>
+    <string name="fj">Sažetak \"%1$s\" kopiran je u međuspremnik.</string>
+    <string name="gg">Pretraži</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ISKLJUČENO</string>
+    <string name="hw">UKLJUČENO</string>
+</resources>

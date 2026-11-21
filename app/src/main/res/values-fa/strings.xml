@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">پیمایش به صفحه اصلی</string>
+    <string name="b">رفتن به بالا</string>
+    <string name="c">گزینه‌های بیشتر</string>
+    <string name="d">تمام</string>
+    <string name="e">دیدن همه</string>
+    <string name="f">انتخاب برنامه</string>
+    <string name="g">خاموش</string>
+    <string name="h">روشن</string>
+    <string name="i">‎Alt+‎</string>
+    <string name="j">‎Ctrl+‎</string>
+    <string name="k">حذف</string>
+    <string name="l">enter</string>
+    <string name="m">‎Function+‎</string>
+    <string name="n">‎Meta+‎</string>
+    <string name="o">‎Shift+‎</string>
+    <string name="p">فاصله</string>
+    <string name="q">‎Sym+‎</string>
+    <string name="r">منو+</string>
+    <string name="s">جستجو…‏</string>
+    <string name="t">پاک کردن پُرسمان</string>
+    <string name="u">درخواست جستجو</string>
+    <string name="v">جستجو</string>
+    <string name="w">ارسال پُرسمان</string>
+    <string name="x">جستجوی گفتاری</string>
+    <string name="y">هم‌رسانی با</string>
+    <string name="z">هم‌رسانی با %s</string>
+    <string name="a0">کوچک کردن</string>
+    <string name="ba">کپی</string>
+    <string name="c6">پیشرفته</string>
+    <string name="ef">تنظیم نشده است</string>
+    <string name="fj">«%1$s» در بریده‌دان کپی شد.</string>
+    <string name="gg">جستجو</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s، %2$s</string>
+    <string name="hv">خاموش</string>
+    <string name="hw">روشن</string>
+</resources>

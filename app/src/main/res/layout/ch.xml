@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="@integer/m"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <include layout="@layout/cj"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/js"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/jr"
+            android:paddingLeft="@dimen/er"
+            android:paddingRight="@dimen/er"
+            android:paddingBottom="@dimen/eq"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/er"
+            android:paddingEnd="@dimen/er"/>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/eo"
+            layout="@layout/cg"/>
+    </LinearLayout>
+</LinearLayout>

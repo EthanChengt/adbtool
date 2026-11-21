@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Zulazulela ekhaya</string>
+    <string name="b">Zulazulela phezulu</string>
+    <string name="c">Ezinye izinketho</string>
+    <string name="d">Kwenziwe</string>
+    <string name="e">Buka konke</string>
+    <string name="f">Khetha insiza</string>
+    <string name="g">VALA</string>
+    <string name="h">VULA</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">space</string>
+    <string name="q">Sym+</string>
+    <string name="r">Imenyu+</string>
+    <string name="s">Sesha…</string>
+    <string name="t">Sula inkinga</string>
+    <string name="u">Sesha umbuzo</string>
+    <string name="v">Sesha</string>
+    <string name="w">Thumela umbuzo</string>
+    <string name="x">Ukusesha ngezwi</string>
+    <string name="y">Yabelana no</string>
+    <string name="z">Yabelana ne-%s</string>
+    <string name="a0">Goqa</string>
+    <string name="ba">Kopisha</string>
+    <string name="c6">Okuthuthukisiwe</string>
+    <string name="ef">Ayisethiwe</string>
+    <string name="fj">\"%1$s\" kukopishelwe kuklibhodi.</string>
+    <string name="gg">Sesha</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">VALA</string>
+    <string name="hw">VULA</string>
+</resources>

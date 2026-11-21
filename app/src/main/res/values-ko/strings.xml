@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">홈으로 이동</string>
+    <string name="b">위로 이동</string>
+    <string name="c">추가 옵션</string>
+    <string name="d">완료</string>
+    <string name="e">전체 보기</string>
+    <string name="f">앱 선택</string>
+    <string name="g">사용 중지</string>
+    <string name="h">사용</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">Delete</string>
+    <string name="l">Enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">스페이스바</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">검색...</string>
+    <string name="t">검색어 삭제</string>
+    <string name="u">검색어</string>
+    <string name="v">검색</string>
+    <string name="w">검색어 보내기</string>
+    <string name="x">음성 검색</string>
+    <string name="y">공유 대상:</string>
+    <string name="z">%s과(와) 공유</string>
+    <string name="a0">접기</string>
+    <string name="ba">복사</string>
+    <string name="c6">고급</string>
+    <string name="ef">설정되지 않음</string>
+    <string name="fj">\'%1$s\'이(가) 클립보드에 복사되었습니다.</string>
+    <string name="gg">검색</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">사용 안함</string>
+    <string name="hw">사용</string>
+</resources>

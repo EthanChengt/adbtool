@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Chỉ đường về nhà</string>
+    <string name="b">Di chuyển lên</string>
+    <string name="c">Tùy chọn khác</string>
+    <string name="d">Xong</string>
+    <string name="e">Xem tất cả</string>
+    <string name="f">Chọn một ứng dụng</string>
+    <string name="g">TẮT</string>
+    <string name="h">BẬT</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">space</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">Tìm kiếm…</string>
+    <string name="t">Xóa truy vấn</string>
+    <string name="u">Truy vấn tìm kiếm</string>
+    <string name="v">Tìm kiếm</string>
+    <string name="w">Gửi truy vấn</string>
+    <string name="x">Tìm kiếm bằng giọng nói</string>
+    <string name="y">Chia sẻ với</string>
+    <string name="z">Chia sẻ với %s</string>
+    <string name="a0">Thu gọn</string>
+    <string name="ba">Sao chép</string>
+    <string name="c6">Nâng cao</string>
+    <string name="ef">Chưa đặt</string>
+    <string name="fj">Đã sao chép \"%1$s\" vào khay nhớ tạm.</string>
+    <string name="gg">Tìm kiếm</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">TẮT</string>
+    <string name="hw">BẬT</string>
+</resources>

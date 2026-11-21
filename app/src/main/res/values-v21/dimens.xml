@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ff">0dp</dimen>
+    <dimen name="g1">1dp</dimen>
+    <dimen name="gn">0.48</dimen>
+    <dimen name="go">0.48</dimen>
+    <dimen name="gp">0.16</dimen>
+    <dimen name="gq">0.48</dimen>
+    <dimen name="gs">0.24</dimen>
+    <dimen name="gt">0.24</dimen>
+    <dimen name="gu">0.08</dimen>
+    <dimen name="gv">0.24</dimen>
+    <dimen name="ho">0dp</dimen>
+    <dimen name="hr">0dp</dimen>
+    <dimen name="hs">12dp</dimen>
+    <dimen name="i0">72dp</dimen>
+</resources>

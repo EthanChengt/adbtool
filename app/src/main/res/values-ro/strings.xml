@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Navigați la ecranul de pornire</string>
+    <string name="b">Navigați în sus</string>
+    <string name="c">Mai multe opțiuni</string>
+    <string name="d">Gata</string>
+    <string name="e">Afișați tot</string>
+    <string name="f">Alegeți o aplicație</string>
+    <string name="g">DEZACTIVAT</string>
+    <string name="h">ACTIVAT</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">space</string>
+    <string name="q">Sym+</string>
+    <string name="r">Meniu+</string>
+    <string name="s">Căutați…</string>
+    <string name="t">Ștergeți interogarea</string>
+    <string name="u">Termen de căutare</string>
+    <string name="v">Căutați</string>
+    <string name="w">Trimiteți interogarea</string>
+    <string name="x">Căutare vocală</string>
+    <string name="y">Trimiteți la</string>
+    <string name="z">Trimiteți folosind %s</string>
+    <string name="a0">Restrângeți</string>
+    <string name="ba">Copiați</string>
+    <string name="c6">Avansat</string>
+    <string name="ef">Nesetată</string>
+    <string name="fj">„%1$s” a fost copiat în clipboard.</string>
+    <string name="gg">Căutați</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">DEZACTIVAT</string>
+    <string name="hw">ACTIVAT</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/j1"
+        android:title="免ROOT运行"/>
+    <item
+        android:id="@+id/iz"
+        android:title="@string/b0"/>
+    <item
+        android:id="@+id/j0"
+        android:title="@string/g1"/>
+</menu>

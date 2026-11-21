@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="h" parent="@style/ku">
+        <item name="dy">@color/a8</item>
+        <item name="e0">@color/f4</item>
+        <item name="e2">#ff63a4ff</item>
+        <item name="e5">#ffa0c8ff</item>
+        <item name="e6">#ffff5983</item>
+        <item name="e7">#ffff87a6</item>
+    </style>
+    <style name="jz" parent="@style/jx">
+    </style>
+    <style name="k0" parent="@style/jx">
+    </style>
+    <style name="k1" parent="@style/k6">
+    </style>
+    <style name="k2" parent="@style/k7">
+    </style>
+    <style name="k3" parent="@style/k8">
+    </style>
+    <style name="k4" parent="@style/k9">
+    </style>
+    <style name="k5" parent="@style/kg">
+    </style>
+    <style name="kr" parent="@style/kn">
+    </style>
+    <style name="ks" parent="@style/ko">
+    </style>
+    <style name="kt" parent="@style/kp">
+    </style>
+    <style name="ku" parent="@style/kn">
+    </style>
+    <style name="kv" parent="@style/kp">
+    </style>
+    <style name="kw" parent="@style/l7">
+    </style>
+    <style name="kx" parent="@style/l8">
+    </style>
+    <style name="ky" parent="@style/l9">
+    </style>
+    <style name="kz" parent="@style/l_">
+    </style>
+    <style name="l0" parent="@style/la">
+    </style>
+    <style name="l1" parent="@style/lb">
+    </style>
+    <style name="l2" parent="@style/lc">
+    </style>
+    <style name="l3" parent="@style/ld">
+    </style>
+    <style name="l4" parent="@style/le">
+    </style>
+    <style name="l5" parent="@style/lx">
+    </style>
+    <style name="l6" parent="@style/ly">
+    </style>
+    <style name="m3" parent="@style/m1">
+    </style>
+    <style name="mm" parent="@style/mj">
+    </style>
+    <style name="pg" parent="@style/pi">
+    </style>
+    <style name="pk" parent="@style/pl">
+    </style>
+    <style name="pt" parent="@style/pr">
+    </style>
+    <style name="pw" parent="@style/pu">
+    </style>
+    <style name="rf" parent="@style/rd">
+    </style>
+    <style name="rv" parent="@style/rw">
+    </style>
+</resources>

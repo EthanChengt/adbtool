@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Πλοήγηση στην αρχική σελίδα</string>
+    <string name="b">Πλοήγηση προς τα επάνω</string>
+    <string name="c">Περισσότερες επιλογές</string>
+    <string name="d">Τέλος</string>
+    <string name="e">Εμφάνιση όλων</string>
+    <string name="f">Επιλέξτε μια εφαρμογή</string>
+    <string name="g">ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ</string>
+    <string name="h">ΕΝΕΡΓΟΠΟΙΗΣΗ</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">διάστημα</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">Αναζήτηση…</string>
+    <string name="t">Διαγραφή ερωτήματος</string>
+    <string name="u">Ερώτημα αναζήτησης</string>
+    <string name="v">Αναζήτηση</string>
+    <string name="w">Υποβολή ερωτήματος</string>
+    <string name="x">Φωνητική αναζήτηση</string>
+    <string name="y">Κοινοποίηση σε</string>
+    <string name="z">Κοινοποίηση στην εφαρμογή %s</string>
+    <string name="a0">Σύμπτυξη</string>
+    <string name="ba">Αντιγραφή</string>
+    <string name="c6">Σύνθετες</string>
+    <string name="ef">Δεν έχει οριστεί</string>
+    <string name="fj">Το \"%1$s\" αντιγράφηκε στο πρόχειρο.</string>
+    <string name="gg">Αναζήτηση</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ΑΝΕΝΕΡΓΗ</string>
+    <string name="hw">ΕΝΕΡΓΗ</string>
+</resources>

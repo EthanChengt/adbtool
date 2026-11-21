@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Zur Startseite</string>
+    <string name="b">Nach oben</string>
+    <string name="c">Weitere Optionen</string>
+    <string name="d">Fertig</string>
+    <string name="e">Alle anzeigen</string>
+    <string name="f">App auswählen</string>
+    <string name="g">AUS</string>
+    <string name="h">AN</string>
+    <string name="i">Alt +</string>
+    <string name="j">Strg +</string>
+    <string name="k">Löschen</string>
+    <string name="l">Eingabetaste</string>
+    <string name="m">Funktionstaste +</string>
+    <string name="n">Meta-Taste +</string>
+    <string name="o">Umschalttaste +</string>
+    <string name="p">Leertaste</string>
+    <string name="q">Sym-Taste +</string>
+    <string name="r">Menütaste +</string>
+    <string name="s">Suchen…</string>
+    <string name="t">Suchanfrage löschen</string>
+    <string name="u">Suchanfrage</string>
+    <string name="v">Suche</string>
+    <string name="w">Anfrage senden</string>
+    <string name="x">Sprachsuche</string>
+    <string name="y">Teilen mit</string>
+    <string name="z">Mit %s teilen</string>
+    <string name="a0">Minimieren</string>
+    <string name="ba">Kopieren</string>
+    <string name="c6">Erweitert</string>
+    <string name="ef">Nicht festgelegt</string>
+    <string name="fj">\"%1$s\" in Zwischenablage kopiert.</string>
+    <string name="gg">Suche</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">AUS</string>
+    <string name="hw">AN</string>
+</resources>

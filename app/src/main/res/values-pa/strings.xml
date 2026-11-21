@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">ਹੋਮ \'ਤੇ ਜਾਓ</string>
+    <string name="b">ਉੱਪਰ ਜਾਓ</string>
+    <string name="c">ਹੋਰ ਵਿਕਲਪ</string>
+    <string name="d">ਹੋ ਗਿਆ</string>
+    <string name="e">ਸਭ ਦੇਖੋ</string>
+    <string name="f">ਇੱਕ ਐਪ ਚੁਣੋ</string>
+    <string name="g">ਬੰਦ</string>
+    <string name="h">ਚਾਲੂ</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">ਮਿਟਾਓ</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">space</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">ਖੋਜ…</string>
+    <string name="t">ਪੁੱਛਗਿੱਛ ਕਲੀਅਰ ਕਰੋ</string>
+    <string name="u">ਖੋਜ ਪੁੱਛਗਿੱਛ</string>
+    <string name="v">ਖੋਜ</string>
+    <string name="w">ਪੁੱਛਗਿੱਛ ਸਪੁਰਦ ਕਰੋ</string>
+    <string name="x">ਅਵਾਜ਼ੀ ਖੋਜ</string>
+    <string name="y">ਇਸ ਨਾਲ ਸਾਂਝਾ ਕਰੋ</string>
+    <string name="z">%s ਨਾਲ ਸਾਂਝਾ ਕਰੋ</string>
+    <string name="a0">ਸਮੇਟੋ</string>
+    <string name="ba">ਕਾਪੀ ਕਰੋ</string>
+    <string name="c6">ਉੱਨਤ</string>
+    <string name="ef">ਸੈੱਟ ਨਹੀਂ</string>
+    <string name="fj">\"%1$s\" ਨੂੰ ਕਲਿੱਪਬੋਰਡ \'ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।</string>
+    <string name="gg">ਖੋਜ</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ਬੰਦ</string>
+    <string name="hw">ਚਾਲੂ</string>
+</resources>

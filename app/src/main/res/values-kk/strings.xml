@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Негізгі бетке өту</string>
+    <string name="b">Жоғары қарай өту</string>
+    <string name="c">Басқа опциялар</string>
+    <string name="d">Дайын</string>
+    <string name="e">Барлығын көру</string>
+    <string name="f">Қолданбаны таңдау</string>
+    <string name="g">ӨШІРУ</string>
+    <string name="h">ҚОСУ</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">бос орын</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">Іздеу…</string>
+    <string name="t">Сұрауды өшіру</string>
+    <string name="u">Іздеу сұрауы</string>
+    <string name="v">Іздеу</string>
+    <string name="w">Сұрауды жіберу</string>
+    <string name="x">Дауыспен іздеу</string>
+    <string name="y">Бөлісу</string>
+    <string name="z">%s қолданбасымен бөлісу</string>
+    <string name="a0">Жию</string>
+    <string name="ba">Көшіру</string>
+    <string name="c6">Қосымша</string>
+    <string name="ef">Орнатылмаған</string>
+    <string name="fj">\"%1$s\" қорытындысы буферге көшірілді</string>
+    <string name="gg">Іздеу</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ӨШІРУЛІ</string>
+    <string name="hw">ҚОСУЛЫ</string>
+</resources>

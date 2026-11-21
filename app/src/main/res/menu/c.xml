@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/in"
+        android:checked="false"
+        android:title="只加载包名"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/ip"
+        android:title="@string/fq"/>
+    <item
+        android:id="@+id/iq"
+        android:title="恢复系统应用"/>
+</menu>

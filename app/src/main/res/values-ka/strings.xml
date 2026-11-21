@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">მთავარზე გადასვლა</string>
+    <string name="b">ზემოთ გადასვლა</string>
+    <string name="c">სხვა ვარიანტები</string>
+    <string name="d">მზადაა</string>
+    <string name="e">ყველას ნახვა</string>
+    <string name="f">აირჩიეთ აპი</string>
+    <string name="g">გამორთვა</string>
+    <string name="h">ჩართვა</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">შორისი</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">ძიება…</string>
+    <string name="t">მოთხოვნის გასუფთავება</string>
+    <string name="u">მოთხოვნის ძიება</string>
+    <string name="v">ძიება</string>
+    <string name="w">მოთხოვნის გადაგზავნა</string>
+    <string name="x">ხმოვანი ძიება</string>
+    <string name="y">გაზიარება:</string>
+    <string name="z">%s-ით გაზიარება</string>
+    <string name="a0">ჩაკეცვა</string>
+    <string name="ba">კოპირება</string>
+    <string name="c6">დამატებით</string>
+    <string name="ef">არ არის დაყენებული</string>
+    <string name="fj">„%1$s“ კოპირებულია გაცვლის ბუფერში.</string>
+    <string name="gg">ძიება</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">გამორთული</string>
+    <string name="hw">ჩართული</string>
+</resources>
