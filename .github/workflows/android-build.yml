@@ -1,0 +1,96 @@
+name: Android CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-debug-apk:
+    name: Build debug APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+
+      - name: Install Android SDK platform and build tools
+        run: |
+          sdkmanager --install "platforms;android-28" "build-tools;35.0.0"
+          sdkmanager --list_installed
+
+      - name: Set up Gradle 8.11.1
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '8.11.1'
+
+      - name: Validate nine-patch source images
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import struct
+          import sys
+
+          resources = Path("app/src/main/res")
+          nine_patches = sorted(resources.rglob("*.9.png"))
+          invalid = []
+          for path in nine_patches:
+              data = path.read_bytes()
+              if len(data) < 24 or data[:8] != b"\x89PNG\r\n\x1a\n":
+                  invalid.append((str(path), "not a valid PNG"))
+                  continue
+              width, height = struct.unpack(">II", data[16:24])
+              if width < 3 or height < 3:
+                  invalid.append((str(path), f"{width}x{height} is too small for a nine-patch"))
+
+          if invalid:
+              for path, reason in invalid:
+                  print(f"::error file={path}::{reason}")
+              sys.exit(1)
+
+          print(f"Validated {len(nine_patches)} nine-patch PNG files")
+          PY
+
+      - name: Build debug APK
+        id: gradle_build
+        shell: bash
+        run: |
+          set -o pipefail
+          LOG_FILE="${RUNNER_TEMP}/gradle-build.log"
+          gradle --no-daemon --stacktrace --info :app:assembleDebug 2>&1 | tee "$LOG_FILE"
+
+      - name: Upload build failure diagnostics
+        if: ${{ always() && steps.gradle_build.outcome != 'success' }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: adb-helper-build-error-logs
+          path: |
+            ${{ runner.temp }}/gradle-build.log
+            ${{ runner.temp }}/.gradle-actions/build-results/
+            app/build/outputs/logs/
+          if-no-files-found: warn
+          retention-days: 14
+          include-hidden-files: true
+
+      - name: Upload debug APK
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: adb-helper-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 14
