@@ -32,15 +32,31 @@ jobs:
           sdkmanager --install "platforms;android-28" "build-tools;35.0.0"
           sdkmanager --list_installed
 
-      # This project currently has gradle-wrapper.properties but no gradlew
-      # scripts or gradle-wrapper.jar. Install Gradle directly and invoke it.
       - name: Set up Gradle 8.11.1
         uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.11.1'
 
       - name: Build debug APK
-        run: gradle --no-daemon --stacktrace :app:assembleDebug
+        shell: bash
+        run: |
+          LOG_FILE="${RUNNER_TEMP}/gradle-build.log"
+          if ! gradle --no-daemon --stacktrace :app:assembleDebug > "$LOG_FILE" 2>&1; then
+            echo "::error::Gradle 构建失败，日志如下："
+            echo "::group::Gradle 构建失败日志"
+            cat "$LOG_FILE"
+            echo "::endgroup::"
+            exit 1
+          fi
+
+      - name: Upload build error log
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: adb-helper-错误日志
+          path: ${{ runner.temp }}/gradle-build.log
+          if-no-files-found: ignore
+          compression-level: 0
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v7
