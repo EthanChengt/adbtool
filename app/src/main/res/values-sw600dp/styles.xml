@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="pd" parent="@style/ej">
-        <item name="q5">cr</item>
-        <item name="qg">fd</item>
-    </style>
-</resources>
