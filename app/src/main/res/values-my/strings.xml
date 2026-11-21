@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">မူလနေရာကို ပြန်သွားရန်</string>
+    <string name="b">အပေါ်သို့ ရွှေ့ရန်</string>
+    <string name="c">နောက်ထပ် ရွေးစရာများ</string>
+    <string name="d">ပြီးပြီ</string>
+    <string name="e">အားလုံး ကြည့်ရန်</string>
+    <string name="f">အက်ပ်တစ်ခုကို ရွေးရန်</string>
+    <string name="g">ပိတ်ရန်</string>
+    <string name="h">ဖွင့်ရန်</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">space</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">ရှာဖွေရန်…</string>
+    <string name="t">ရှာဖွေမှုကို ဖယ်ရှားရန်</string>
+    <string name="u">ရှာဖွေရန် မေးခွန်း</string>
+    <string name="v">ရှာရန်</string>
+    <string name="w">ရှာဖွေစရာ အချက်အလက်ကို ပေးပို့ရန်</string>
+    <string name="x">အသံဖြင့် ရှာရန်</string>
+    <string name="y">နှင့် မျှဝေရန်</string>
+    <string name="z">%s ဖြင့် မျှဝေရန်</string>
+    <string name="a0">လျှော့ပြရန်</string>
+    <string name="ba">မိတ္တူကူးရန်</string>
+    <string name="c6">အဆင့်မြင့်</string>
+    <string name="ef">သတ်မှတ်မထားပါ</string>
+    <string name="fj">\"%1$s\" ကို ကလစ်ဘုတ်သို့ မိတ္တူကူးယူပြီးပါပြီ။</string>
+    <string name="gg">ရှာဖွေမှု</string>
+    <string name="h0">၉၉၉+</string>
+    <string name="h2">%1$s၊ %2$s</string>
+    <string name="hv">ပိတ်ရန်</string>
+    <string name="hw">ဖွင့်ရန်</string>
+</resources>

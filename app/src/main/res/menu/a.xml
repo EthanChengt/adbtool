@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/fm">
+        <item
+            android:icon="@drawable/en"
+            android:id="@+id/kb"
+            android:title="@string/bn"/>
+        <item
+            android:icon="@drawable/er"
+            android:id="@+id/kl"
+            android:title="@string/hk"/>
+        <item
+            android:icon="@drawable/eq"
+            android:id="@+id/kf"
+            android:title="@string/fu"/>
+        <item
+            android:icon="@drawable/em"
+            android:id="@+id/kd"
+            android:title="@string/cd"/>
+        <item
+            android:icon="@drawable/ek"
+            android:id="@+id/k_"
+            android:title="@string/aa"/>
+        <item
+            android:icon="@drawable/ep"
+            android:id="@+id/ke"
+            android:title="@string/fk"/>
+        <item
+            android:icon="@drawable/el"
+            android:id="@+id/ka"
+            android:title="@string/b4"/>
+    </group>
+    <group android:id="@+id/fn">
+        <item
+            android:icon="@drawable/ea"
+            android:id="@+id/kk"
+            android:title="@string/gk"/>
+        <item
+            android:icon="@drawable/e3"
+            android:id="@+id/kc"
+            android:title="@string/c5"/>
+    </group>
+</menu>

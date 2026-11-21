@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="f9" parent="@style/sc">
+    </style>
+    <style name="f_" parent="@style/sd">
+    </style>
+    <style name="sc" parent="@android:style/Theme.Material.NoActionBar">
+    </style>
+    <style name="sd" parent="@android:style/Theme.Material.Light.NoActionBar">
+    </style>
+</resources>

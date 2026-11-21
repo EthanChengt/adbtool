@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Navegar para a página inicial</string>
+    <string name="b">Navegar para cima</string>
+    <string name="c">Mais opções</string>
+    <string name="d">Concluído</string>
+    <string name="e">Ver tudo</string>
+    <string name="f">Selecionar um app</string>
+    <string name="g">DESATIVADO</string>
+    <string name="h">ATIVADO</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">espaço</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">Pesquisar…</string>
+    <string name="t">Limpar consulta</string>
+    <string name="u">Consulta de pesquisa</string>
+    <string name="v">Pesquisar</string>
+    <string name="w">Enviar consulta</string>
+    <string name="x">Pesquisa por voz</string>
+    <string name="y">Compartilhar com</string>
+    <string name="z">Compartilhar com %s</string>
+    <string name="a0">Recolher</string>
+    <string name="ba">Copiar</string>
+    <string name="c6">Avançado</string>
+    <string name="ef">Não definido</string>
+    <string name="fj">\"%1$s\" copiado para a área de transferência.</string>
+    <string name="gg">Pesquisar</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">DESATIVADO</string>
+    <string name="hw">ATIVADO</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="17"
+    android:versionName="1.3.1"
+>
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28"/>
+    <uses-feature android:name="android.hardware.usb.host"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <application
+        android:theme="@style/h"
+        android:label="@string/ab"
+        android:icon="@drawable/bu"
+        android:name="com.didjdk.adbhelper.MyApplication"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:roundIcon="@drawable/bv"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:label="选择已安装应用"
+            android:name="com.didjdk.adbhelper.AppPickerActivity"/>
+        <activity
+            android:label="解锁高级版"
+            android:name="com.didjdk.adbhelper.UnlockActivity"/>
+        <activity
+            android:theme="@style/i"
+            android:label="Fastboot"
+            android:name="com.didjdk.adbhelper.FastbootActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:label="@string/cb"
+            android:name="com.didjdk.adbhelper.FeedbackActivity"/>
+        <activity
+            android:label="@string/a2"
+            android:name="com.didjdk.adbhelper.AboutActivity"/>
+        <activity
+            android:label="@string/gk"
+            android:name="com.didjdk.adbhelper.SettingsActivity"/>
+        <activity
+            android:theme="@style/j"
+            android:name="com.didjdk.adbhelper.RemoteActivity"/>
+        <activity
+            android:theme="@style/k"
+            android:name="com.didjdk.adbhelper.FilePickerActivity"/>
+        <activity
+            android:theme="@style/k"
+            android:name="com.didjdk.adbhelper.ConnectActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/k"
+            android:name="com.didjdk.adbhelper.MainActivity"
+            android:configChanges="screenSize|orientation"
+            android:windowSoftInputMode="stateHidden"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.didjdk.adbhelper.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/a"/>
+        </provider>
+    </application>
+</manifest>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Перейти на главный экран</string>
+    <string name="b">Перейти вверх</string>
+    <string name="c">Ещё</string>
+    <string name="d">Готово</string>
+    <string name="e">Показать все</string>
+    <string name="f">Выберите приложение</string>
+    <string name="g">ВЫКЛ</string>
+    <string name="h">ВКЛ</string>
+    <string name="i">Alt +</string>
+    <string name="j">Ctrl +</string>
+    <string name="k">Delete</string>
+    <string name="l">Ввод</string>
+    <string name="m">Fn +</string>
+    <string name="n">Meta +</string>
+    <string name="o">Shift +</string>
+    <string name="p">Пробел</string>
+    <string name="q">Sym +</string>
+    <string name="r">Меню +</string>
+    <string name="s">Введите запрос</string>
+    <string name="t">Удалить запрос</string>
+    <string name="u">Поисковый запрос</string>
+    <string name="v">Поиск</string>
+    <string name="w">Отправить запрос</string>
+    <string name="x">Голосовой поиск</string>
+    <string name="y">Поделиться с помощью</string>
+    <string name="z">Поделиться с помощью %s</string>
+    <string name="a0">Свернуть</string>
+    <string name="ba">Копировать</string>
+    <string name="c6">Дополнительно</string>
+    <string name="ef">Не указано</string>
+    <string name="fj">Текст \"%1$s\" скопирован в буфер обмена</string>
+    <string name="gg">Поиск</string>
+    <string name="h0">&gt;999</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ВЫКЛ.</string>
+    <string name="hw">ВКЛ.</string>
+</resources>

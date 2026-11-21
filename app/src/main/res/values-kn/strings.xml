@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">ಹೋಮ್‌ಗೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
+    <string name="b">ಮೇಲಕ್ಕೆ ನ್ಯಾವಿಗೇಟ್ ಮಾಡಿ</string>
+    <string name="c">ಇನ್ನಷ್ಟು ಆಯ್ಕೆಗಳು</string>
+    <string name="d">ಮುಗಿದಿದೆ</string>
+    <string name="e">ಎಲ್ಲವನ್ನೂ ನೋಡಿ</string>
+    <string name="f">ಆ್ಯಪ್‌ವೊಂದನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="g">ಆಫ್</string>
+    <string name="h">ಆನ್</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">space</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">ಹುಡುಕಿ…</string>
+    <string name="t">ಪ್ರಶ್ನೆಯನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="u">ಪ್ರಶ್ನೆಯನ್ನು ಹುಡುಕಿ</string>
+    <string name="v">ಹುಡುಕಿ</string>
+    <string name="w">ಪ್ರಶ್ನೆಯನ್ನು ಸಲ್ಲಿಸಿ</string>
+    <string name="x">ಧ್ವನಿ ಹುಡುಕಾಟ</string>
+    <string name="y">ಇವರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="z">%s ನೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="a0">ಕುಗ್ಗಿಸಿ</string>
+    <string name="ba">ನಕಲಿಸಿ</string>
+    <string name="c6">ಸುಧಾರಿತ</string>
+    <string name="ef">ಹೊಂದಿಸಿಲ್ಲ</string>
+    <string name="fj">\"%1$s\" ಅನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ.</string>
+    <string name="gg">ಹುಡುಕಿ</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ಆಫ್</string>
+    <string name="hw">ಆನ್</string>
+</resources>

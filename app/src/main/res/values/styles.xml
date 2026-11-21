@@ -1,0 +1,3490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="a" parent="@style/m">
+    </style>
+    <style name="b" parent="@style/n">
+    </style>
+    <style name="c" parent="@style/o">
+    </style>
+    <style name="d" parent="@style/p">
+    </style>
+    <style name="e" parent="@style/q">
+    </style>
+    <style name="f" parent="@style/c">
+        <item name="android:windowEnterAnimation">@anim/y</item>
+        <item name="android:windowExitAnimation">@anim/z</item>
+    </style>
+    <style name="g" parent="@style/c">
+        <item name="android:windowEnterAnimation">@anim/a9</item>
+        <item name="android:windowExitAnimation">@anim/a_</item>
+    </style>
+    <style name="h" parent="@style/kr">
+        <item name="f">@style/nu</item>
+        <item name="dy">#ffffffff</item>
+        <item name="e0">#ff000000</item>
+        <item name="e2">#ff1976d2</item>
+        <item name="e5">#ff63a4ff</item>
+        <item name="e6">#ffff5983</item>
+        <item name="e7">#ffad1457</item>
+    </style>
+    <style name="i" parent="@style/h">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="j" parent="@style/i">
+    </style>
+    <style name="k" parent="@style/i">
+    </style>
+    <style name="l" parent="@style/je">
+        <item name="android:textSize">0sp</item>
+    </style>
+    <style name="m" parent="@android:style/Widget">
+        <item name="android:layout">@layout/j</item>
+        <item name="c6">@dimen/r</item>
+        <item name="lk">@layout/dk</item>
+        <item name="ll">@layout/a0</item>
+        <item name="mq">@layout/dl</item>
+        <item name="ot">@layout/dm</item>
+    </style>
+    <style name="n" parent="@style/m">
+    </style>
+    <style name="o" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/d</item>
+        <item name="android:windowExitAnimation">@anim/e</item>
+    </style>
+    <style name="p" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/c</item>
+        <item name="android:windowExitAnimation">@anim/f</item>
+    </style>
+    <style name="q" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/k</item>
+        <item name="android:windowExitAnimation">@anim/l</item>
+    </style>
+    <style name="r" parent="@android:style/Widget">
+        <item name="cc">@dimen/bk</item>
+        <item name="cd">@dimen/bj</item>
+        <item name="cf">@dimen/bj</item>
+        <item name="cg">true</item>
+        <item name="ch">false</item>
+    </style>
+    <style name="s" parent="@android:style/Widget">
+        <item name="android:textAppearance">@style/ic</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <style name="t" parent="@android:style/Widget">
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">?attr/fl</item>
+        <item name="android:paddingTop">@dimen/aa</item>
+        <item name="android:paddingRight">?attr/fl</item>
+    </style>
+    <style name="u" parent="@android:style/Widget">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:src">@null</item>
+        <item name="android:scaleType">3</item>
+        <item name="android:contentDescription">@string/cn</item>
+    </style>
+    <style name="v" parent="@android:style/Widget">
+        <item name="android:paddingLeft">?attr/fl</item>
+        <item name="android:paddingTop">@dimen/aa</item>
+        <item name="android:paddingRight">?attr/fl</item>
+        <item name="android:layout_width">-1</item>
+        <item name="android:layout_height">-2</item>
+    </style>
+    <style name="w" parent="@style/gc">
+        <item name="android:textAppearance">?attr/rc</item>
+        <item name="android:textColor">@color/ch</item>
+        <item name="android:ellipsize">3</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="x" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/ax</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlight</item>
+        <item name="android:textColorHint">?android:attr/textColorHint</item>
+        <item name="android:textColorLink">?android:attr/textColorLink</item>
+    </style>
+    <style name="y" parent="@style/x">
+        <item name="android:textSize">@dimen/ax</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="z" parent="@style/x">
+        <item name="android:textSize">@dimen/ay</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="a0" parent="@style/x">
+        <item name="android:textSize">@dimen/az</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="a1" parent="@style/x">
+        <item name="android:textSize">@dimen/b0</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="a2" parent="@style/x">
+        <item name="android:textSize">@dimen/b1</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="a3" parent="@style/x">
+        <item name="android:textSize">@dimen/b2</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="a4" parent="@style/x">
+        <item name="android:textSize">@dimen/b3</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="a5" parent="@style/x">
+        <item name="android:textSize">@dimen/b4</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="a6" parent="@style/x">
+        <item name="android:textSize">@dimen/b5</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="a7" parent="@style/x">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="a8" parent="@style/x">
+        <item name="android:textSize">@dimen/b6</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="a9" parent="@style/a8">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="a_" parent="@style/x">
+        <item name="android:textSize">@dimen/b7</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="aa" parent="@style/a_">
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="ab" parent="@style/x">
+        <item name="android:textSize">@dimen/b9</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="ac" parent="">
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColorHint">?android:attr/textColorHint</item>
+    </style>
+    <style name="ad" parent="@style/ac">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="ae" parent="@style/ac">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="af" parent="@style/x">
+        <item name="android:textSize">@dimen/b_</item>
+        <item name="android:textColor">?android:attr/textColorTertiary</item>
+    </style>
+    <style name="ag" parent="@style/af">
+        <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="ah" parent="@style/x">
+        <item name="android:textSize">@dimen/ba</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="ai" parent="@style/ah">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="aj" parent="@style/x">
+        <item name="android:textSize">@dimen/bc</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="ak" parent="@style/aj">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="al" parent="@style/x">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="am" parent="@style/hq">
+        <item name="android:textColor">?attr/p</item>
+        <item name="qs">@bool/c</item>
+    </style>
+    <style name="an" parent="@style/ia">
+        <item name="android:textSize">@dimen/bb</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="ao" parent="@style/ib">
+        <item name="android:textSize">@dimen/bb</item>
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+    </style>
+    <style name="ap" parent="@style/ic">
+        <item name="android:textSize">@dimen/bd</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="aq" parent="@style/id">
+        <item name="android:textSize">@dimen/bd</item>
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+    <style name="ar" parent="@style/ig">
+    </style>
+    <style name="as" parent="@style/ii">
+    </style>
+    <style name="at" parent="@style/hq">
+    </style>
+    <style name="au" parent="@style/at">
+        <item name="android:textColor">@color/c</item>
+    </style>
+    <style name="av" parent="@style/at">
+        <item name="android:textColor">@color/d</item>
+    </style>
+    <style name="aw" parent="@style/hq">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+    <style name="ax" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item>
+    </style>
+    <style name="ay" parent="@style/hn">
+        <item name="android:textSize">@dimen/b8</item>
+        <item name="android:textColor">?attr/dp</item>
+    </style>
+    <style name="az" parent="@style/i6">
+    </style>
+    <style name="b0" parent="@style/i6">
+    </style>
+    <style name="b1" parent="@style/hq">
+    </style>
+    <style name="b2" parent="@style/i6">
+    </style>
+    <style name="b3" parent="@style/hn">
+        <item name="android:textSize">@dimen/dv</item>
+        <item name="android:textStyle">0x1</item>
+        <item name="android:textColor">?attr/dx</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="hm">sans-serif-medium</item>
+    </style>
+    <style name="b4" parent="@style/hq">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">0x1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="hm">sans-serif-medium</item>
+    </style>
+    <style name="b5" parent="@style/ic">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">0x1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="hm">sans-serif-medium</item>
+    </style>
+    <style name="b6" parent="@style/ia">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">0x1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="hm">sans-serif-medium</item>
+    </style>
+    <style name="b7" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item>
+    </style>
+    <style name="b8" parent="@style/ig">
+    </style>
+    <style name="b9" parent="@style/ii">
+    </style>
+    <style name="b_" parent="@style/cr">
+    </style>
+    <style name="ba" parent="">
+        <item name="android:listViewStyle">@style/oj</item>
+        <item name="android:windowAnimationStyle">@style/d</item>
+        <item name="android:itemTextAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+    <style name="bb" parent="@style/cs">
+    </style>
+    <style name="bc" parent="@style/bb">
+        <item name="android:windowMinWidthMajor">@dimen/a8</item>
+        <item name="android:windowMinWidthMinor">@dimen/a9</item>
+    </style>
+    <style name="bd" parent="@style/bb">
+        <item name="sp">@dimen/a2</item>
+        <item name="sq">@dimen/a3</item>
+        <item name="sr">@dimen/a4</item>
+        <item name="ss">@dimen/a5</item>
+    </style>
+    <style name="be" parent="@style/bb">
+        <item name="android:windowMinWidthMajor">@dimen/a8</item>
+        <item name="android:windowMinWidthMinor">@dimen/a9</item>
+    </style>
+    <style name="bf" parent="@style/jx">
+    </style>
+    <style name="bg" parent="@style/ct">
+    </style>
+    <style name="bh" parent="@style/bg">
+        <item name="c">@style/m7</item>
+        <item name="j">@style/m2</item>
+        <item name="k">@null</item>
+        <item name="e2">@color/e9</item>
+        <item name="e3">@color/e6</item>
+        <item name="lg">@drawable/x</item>
+    </style>
+    <style name="bi" parent="@style/cu">
+    </style>
+    <style name="bj" parent="@style/bi">
+        <item name="android:windowMinWidthMajor">@dimen/a8</item>
+        <item name="android:windowMinWidthMinor">@dimen/a9</item>
+    </style>
+    <style name="bk" parent="@style/bi">
+        <item name="sp">@dimen/a2</item>
+        <item name="sq">@dimen/a3</item>
+        <item name="sr">@dimen/a4</item>
+        <item name="ss">@dimen/a5</item>
+    </style>
+    <style name="bl" parent="@style/bi">
+        <item name="android:windowMinWidthMajor">@dimen/a8</item>
+        <item name="android:windowMinWidthMinor">@dimen/a9</item>
+    </style>
+    <style name="bm" parent="@style/k_">
+    </style>
+    <style name="bn" parent="@style/cf">
+    </style>
+    <style name="bo" parent="@style/cg">
+    </style>
+    <style name="bp" parent="">
+        <item name="android:listViewStyle">@style/oj</item>
+        <item name="android:windowAnimationStyle">@style/d</item>
+        <item name="android:itemTextAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+    <style name="bq" parent="@style/ch">
+    </style>
+    <style name="br" parent="@style/bq">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="bs" parent="@style/ci">
+    </style>
+    <style name="bt" parent="@style/bq">
+        <item name="sp">@dimen/a2</item>
+        <item name="sq">@dimen/a3</item>
+        <item name="sr">@dimen/a4</item>
+        <item name="ss">@dimen/a5</item>
+    </style>
+    <style name="bu" parent="@style/bq">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="bv" parent="@style/kn">
+    </style>
+    <style name="bw" parent="@style/cj">
+    </style>
+    <style name="bx" parent="@style/ck">
+    </style>
+    <style name="by" parent="@style/bw">
+        <item name="j">@style/ml</item>
+        <item name="k">@null</item>
+        <item name="e2">@color/e9</item>
+        <item name="e3">@color/e6</item>
+        <item name="lg">@drawable/x</item>
+    </style>
+    <style name="bz" parent="@style/cl">
+    </style>
+    <style name="c0" parent="@style/cm">
+    </style>
+    <style name="c1" parent="@style/c0">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="c2" parent="@style/cn">
+    </style>
+    <style name="c3" parent="@style/c0">
+        <item name="sp">@dimen/a2</item>
+        <item name="sq">@dimen/a3</item>
+        <item name="sr">@dimen/a4</item>
+        <item name="ss">@dimen/a5</item>
+    </style>
+    <style name="c4" parent="@style/c0">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="c5" parent="@style/lf">
+    </style>
+    <style name="c6" parent="@style/fe">
+    </style>
+    <style name="c7" parent="@style/c6">
+        <item name="du">?android:attr/textColorPrimary</item>
+        <item name="o_">@style/ot</item>
+    </style>
+    <style name="c8" parent="@style/ff">
+        <item name="android:colorForeground">@color/bu</item>
+        <item name="android:colorBackground">@color/a6</item>
+        <item name="android:textColorPrimary">@color/j</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/h</item>
+        <item name="android:textColorSecondary">@color/p</item>
+        <item name="android:textColorPrimaryInverse">@color/k</item>
+        <item name="android:textColorSecondaryInverse">@color/q</item>
+        <item name="android:textColorHintInverse">@color/f</item>
+        <item name="android:windowBackground">@color/a6</item>
+        <item name="android:textColorHighlight">@color/bx</item>
+        <item name="android:textColorHint">@color/e</item>
+        <item name="android:colorForegroundInverse">@color/bv</item>
+        <item name="android:textColorTertiary">@color/p</item>
+        <item name="android:textColorTertiaryInverse">@color/q</item>
+        <item name="android:colorBackgroundCacheHint">@color/a</item>
+        <item name="dq">@color/a2</item>
+        <item name="dr">@color/af</item>
+        <item name="dt">@color/ei</item>
+        <item name="du">?android:attr/textColorSecondary</item>
+        <item name="e9">@color/es</item>
+        <item name="iu">false</item>
+    </style>
+    <style name="c9" parent="@style/c8">
+        <item name="du">?android:attr/textColorPrimary</item>
+        <item name="o_">@style/ot</item>
+    </style>
+    <style name="c_" parent="@style/cv">
+    </style>
+    <style name="ca" parent="@style/c_">
+        <item name="android:windowMinWidthMajor">@dimen/a8</item>
+        <item name="android:windowMinWidthMinor">@dimen/a9</item>
+    </style>
+    <style name="cb" parent="@style/fg">
+        <item name="android:colorForeground">@color/bv</item>
+        <item name="android:colorBackground">@color/a7</item>
+        <item name="android:textColorPrimary">@color/k</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/i</item>
+        <item name="android:textColorSecondary">@color/q</item>
+        <item name="android:textColorPrimaryInverse">@color/j</item>
+        <item name="android:textColorSecondaryInverse">@color/p</item>
+        <item name="android:textColorHintInverse">@color/e</item>
+        <item name="android:windowBackground">@color/a7</item>
+        <item name="android:textColorHighlight">@color/by</item>
+        <item name="android:textColorHint">@color/f</item>
+        <item name="android:colorForegroundInverse">@color/bu</item>
+        <item name="android:textColorTertiary">@color/q</item>
+        <item name="android:textColorTertiaryInverse">@color/p</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/h</item>
+        <item name="android:colorBackgroundCacheHint">@color/b</item>
+        <item name="dq">@color/a3</item>
+        <item name="dr">@color/ag</item>
+        <item name="dt">@color/ej</item>
+        <item name="du">?android:attr/textColorSecondary</item>
+        <item name="e9">@color/et</item>
+        <item name="iu">true</item>
+    </style>
+    <style name="cc" parent="@style/co">
+    </style>
+    <style name="cd" parent="@style/cp">
+    </style>
+    <style name="ce" parent="@style/cq">
+    </style>
+    <style name="cf" parent="@style/cg">
+        <item name="android:colorBackground">@color/ao</item>
+        <item name="c">@style/mk</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/pi</item>
+        <item name="j">@style/mb</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pl</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bn">@style/mj</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/ap</item>
+        <item name="e2">@color/av</item>
+        <item name="e3">@color/aw</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="m6">@style/mx</item>
+        <item name="mc">@style/qp</item>
+        <item name="md">@style/mw</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="cg" parent="@style/fa">
+        <item name="dw">@color/aq</item>
+        <item name="dx">@color/ar</item>
+        <item name="dy">@color/as</item>
+        <item name="dz">?attr/e1</item>
+        <item name="e0">@color/at</item>
+        <item name="e1">@color/au</item>
+        <item name="e4">?attr/e8</item>
+        <item name="e5">@color/ax</item>
+        <item name="e6">@color/ay</item>
+        <item name="e7">@color/az</item>
+        <item name="e8">@color/b0</item>
+        <item name="gb">?attr/e1</item>
+        <item name="gc">true</item>
+        <item name="iv">true</item>
+        <item name="nd">@drawable/cd</item>
+        <item name="o6">@color/dm</item>
+        <item name="oh">@style/gu</item>
+        <item name="oi">@style/gv</item>
+        <item name="ok">@style/gw</item>
+        <item name="qt">@style/jg</item>
+        <item name="qu">@style/jh</item>
+        <item name="qv">@style/ji</item>
+        <item name="qw">@style/jj</item>
+        <item name="qx">@style/jl</item>
+        <item name="qy">@style/jm</item>
+        <item name="qz">@style/jn</item>
+        <item name="r0">@style/jo</item>
+        <item name="r1">@style/jp</item>
+        <item name="r2">@style/jq</item>
+        <item name="r8">@style/jr</item>
+        <item name="rc">@style/js</item>
+        <item name="rd">@style/jt</item>
+    </style>
+    <style name="ch" parent="@style/ci">
+        <item name="android:colorBackground">@color/ao</item>
+        <item name="c">@style/mk</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/pi</item>
+        <item name="j">@style/mb</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pl</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bz">@style/q5</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/ap</item>
+        <item name="e2">@color/av</item>
+        <item name="e3">@color/aw</item>
+        <item name="e6">@color/ay</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="ci" parent="@style/fb">
+        <item name="dw">@color/aq</item>
+        <item name="dx">@color/ar</item>
+        <item name="dy">@color/as</item>
+        <item name="dz">?attr/e1</item>
+        <item name="e0">@color/at</item>
+        <item name="e1">@color/au</item>
+        <item name="e4">?attr/e8</item>
+        <item name="e5">@color/ax</item>
+        <item name="e6">@color/ay</item>
+        <item name="e7">@color/az</item>
+        <item name="e8">@color/b0</item>
+        <item name="gb">?attr/e1</item>
+        <item name="gc">true</item>
+        <item name="iv">true</item>
+        <item name="nd">@drawable/cd</item>
+        <item name="o6">@color/dm</item>
+        <item name="oh">@style/gu</item>
+        <item name="oi">@style/gv</item>
+        <item name="ok">@style/gw</item>
+        <item name="qt">@style/jg</item>
+        <item name="qu">@style/jh</item>
+        <item name="qv">@style/ji</item>
+        <item name="qw">@style/jj</item>
+        <item name="qx">@style/jl</item>
+        <item name="qy">@style/jm</item>
+        <item name="qz">@style/jn</item>
+        <item name="r0">@style/jo</item>
+        <item name="r1">@style/jp</item>
+        <item name="r2">@style/jq</item>
+        <item name="r8">@style/jr</item>
+        <item name="rc">@style/js</item>
+        <item name="rd">@style/jt</item>
+    </style>
+    <style name="cj" parent="@style/ck">
+        <item name="android:colorBackground">@color/b1</item>
+        <item name="c">@style/mp</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/qn</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pj</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bn">@style/mq</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/b2</item>
+        <item name="e2">@color/b8</item>
+        <item name="e3">@color/b9</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="m6">@style/mx</item>
+        <item name="mc">@style/qp</item>
+        <item name="md">@style/mw</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="ck" parent="@style/fc">
+        <item name="dw">@color/b3</item>
+        <item name="dx">@color/b4</item>
+        <item name="dy">@color/b5</item>
+        <item name="dz">?attr/dy</item>
+        <item name="e0">@color/b6</item>
+        <item name="e1">@color/b7</item>
+        <item name="e4">?attr/e2</item>
+        <item name="e5">@color/b_</item>
+        <item name="e6">@color/ba</item>
+        <item name="e7">@color/bb</item>
+        <item name="e8">@color/bc</item>
+        <item name="gb">?attr/e1</item>
+        <item name="gc">false</item>
+        <item name="iv">true</item>
+        <item name="nd">@drawable/cc</item>
+        <item name="o6">@color/dm</item>
+        <item name="oh">@style/gu</item>
+        <item name="oi">@style/gv</item>
+        <item name="ok">@style/gw</item>
+        <item name="qt">@style/jg</item>
+        <item name="qu">@style/jh</item>
+        <item name="qv">@style/ji</item>
+        <item name="qw">@style/jj</item>
+        <item name="qx">@style/jl</item>
+        <item name="qy">@style/jm</item>
+        <item name="qz">@style/jn</item>
+        <item name="r0">@style/jo</item>
+        <item name="r1">@style/jp</item>
+        <item name="r2">@style/jq</item>
+        <item name="r8">@style/jr</item>
+        <item name="rc">@style/js</item>
+        <item name="rd">@style/jt</item>
+    </style>
+    <style name="cl" parent="@style/ka">
+        <item name="dw">@color/b3</item>
+        <item name="dx">@color/b4</item>
+        <item name="dy">@color/b5</item>
+        <item name="dz">?attr/dy</item>
+        <item name="e0">@color/b6</item>
+        <item name="e1">@color/b7</item>
+        <item name="e4">?attr/e2</item>
+        <item name="e5">@color/b_</item>
+        <item name="e6">@color/ba</item>
+        <item name="e7">@color/bb</item>
+        <item name="e8">@color/bc</item>
+        <item name="gb">?attr/e1</item>
+        <item name="gc">false</item>
+        <item name="iv">true</item>
+        <item name="nd">@drawable/cc</item>
+        <item name="o6">@color/dm</item>
+        <item name="oh">@style/gu</item>
+        <item name="oi">@style/gv</item>
+        <item name="ok">@style/gw</item>
+        <item name="qt">@style/jg</item>
+        <item name="qu">@style/jh</item>
+        <item name="qv">@style/ji</item>
+        <item name="qw">@style/jj</item>
+        <item name="qx">@style/jl</item>
+        <item name="qy">@style/jm</item>
+        <item name="qz">@style/jn</item>
+        <item name="r0">@style/jo</item>
+        <item name="r1">@style/jp</item>
+        <item name="r2">@style/jq</item>
+        <item name="r8">@style/jr</item>
+        <item name="rc">@style/js</item>
+        <item name="rd">@style/jt</item>
+    </style>
+    <style name="cm" parent="@style/cn">
+        <item name="android:colorBackground">@color/b1</item>
+        <item name="c">@style/mp</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/qn</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pj</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bz">@style/q5</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/b2</item>
+        <item name="e2">@color/b8</item>
+        <item name="e3">@color/b9</item>
+        <item name="e6">@color/ba</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="cn" parent="@style/fd">
+        <item name="dw">@color/b3</item>
+        <item name="dx">@color/b4</item>
+        <item name="dy">@color/b5</item>
+        <item name="dz">?attr/dy</item>
+        <item name="e0">@color/b6</item>
+        <item name="e1">@color/b7</item>
+        <item name="e4">?attr/e2</item>
+        <item name="e5">@color/b_</item>
+        <item name="e6">@color/ba</item>
+        <item name="e7">@color/bb</item>
+        <item name="e8">@color/bc</item>
+        <item name="gb">?attr/e1</item>
+        <item name="gc">false</item>
+        <item name="iv">true</item>
+        <item name="nd">@drawable/cc</item>
+        <item name="o6">@color/dm</item>
+        <item name="oh">@style/gu</item>
+        <item name="oi">@style/gv</item>
+        <item name="ok">@style/gw</item>
+        <item name="qt">@style/jg</item>
+        <item name="qu">@style/jh</item>
+        <item name="qv">@style/ji</item>
+        <item name="qw">@style/jj</item>
+        <item name="qx">@style/jl</item>
+        <item name="qy">@style/jm</item>
+        <item name="qz">@style/jn</item>
+        <item name="r0">@style/jo</item>
+        <item name="r1">@style/jp</item>
+        <item name="r2">@style/jq</item>
+        <item name="r8">@style/jr</item>
+        <item name="rc">@style/js</item>
+        <item name="rd">@style/jt</item>
+    </style>
+    <style name="co" parent="@style/m5">
+        <item name="m3">@style/q5</item>
+    </style>
+    <style name="cp" parent="@style/m6">
+        <item name="bz">@style/q5</item>
+    </style>
+    <style name="cq" parent="@style/m6">
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="android:checkedTextViewStyle">@style/qb</item>
+        <item name="ab">@style/ez</item>
+        <item name="bz">@style/q4</item>
+        <item name="c0">@style/q4</item>
+        <item name="c1">@style/q5</item>
+        <item name="c2">@style/q4</item>
+        <item name="lx">@style/f0</item>
+    </style>
+    <style name="cr" parent="@style/f9">
+        <item name="android:panelBackground">@android:color/transparent</item>
+        <item name="android:dropDownListViewStyle">@style/oi</item>
+        <item name="android:textViewStyle">@style/p0</item>
+        <item name="android:dropDownItemStyle">@style/nr</item>
+        <item name="android:spinnerItemStyle">@style/p1</item>
+        <item name="android:textAppearanceButton">@style/io</item>
+        <item name="a">?attr/ft</item>
+        <item name="b">?attr/of</item>
+        <item name="c">@null</item>
+        <item name="d">@dimen/c</item>
+        <item name="e">?attr/f</item>
+        <item name="f">@style/n6</item>
+        <item name="g">@style/n7</item>
+        <item name="h">@style/n9</item>
+        <item name="i">@style/n8</item>
+        <item name="j">@style/m0</item>
+        <item name="k">@null</item>
+        <item name="l">@style/n_</item>
+        <item name="m">@style/oy</item>
+        <item name="o">@style/if_res_0x7f120166</item>
+        <item name="p">?android:attr/textColorPrimaryDisableOnly</item>
+        <item name="q">@drawable/i</item>
+        <item name="r">@style/na</item>
+        <item name="s">@drawable/l</item>
+        <item name="t">@drawable/fh</item>
+        <item name="u">@drawable/fi</item>
+        <item name="w">@drawable/fj</item>
+        <item name="y">@drawable/fk</item>
+        <item name="z">@drawable/fl</item>
+        <item name="a0">?attr/e3</item>
+        <item name="a1">@style/nc</item>
+        <item name="a3">@style/nb</item>
+        <item name="a4">@style/ol</item>
+        <item name="a8">@style/nd</item>
+        <item name="aa">false</item>
+        <item name="ab">@style/a</item>
+        <item name="ac">@style/m6</item>
+        <item name="an">@style/ne</item>
+        <item name="bk">@style/ng</item>
+        <item name="bz">@style/ni</item>
+        <item name="c0">?attr/bz</item>
+        <item name="c1">?attr/bz</item>
+        <item name="c2">?attr/bz</item>
+        <item name="c3">@style/nl</item>
+        <item name="c8">@style/nf</item>
+        <item name="c9">@style/nk</item>
+        <item name="cl">@style/nn</item>
+        <item name="dp">@color/z</item>
+        <item name="dq">@color/a2</item>
+        <item name="dr">@color/af</item>
+        <item name="ds">?attr/dp</item>
+        <item name="dt">@color/ei</item>
+        <item name="du">?android:attr/textColorSecondary</item>
+        <item name="dv">@color/bs</item>
+        <item name="e2">@color/e9</item>
+        <item name="e3">@color/e6</item>
+        <item name="e9">@color/es</item>
+        <item name="eq">?attr/of</item>
+        <item name="fg">@dimen/a1</item>
+        <item name="fl">@dimen/a_</item>
+        <item name="fm">@style/m5</item>
+        <item name="fr">@drawable/fs</item>
+        <item name="ft">@drawable/fs</item>
+        <item name="g3">@style/nq</item>
+        <item name="g4">?android:attr/dropDownListViewStyle</item>
+        <item name="g5">?attr/lq</item>
+        <item name="g7">@drawable/k</item>
+        <item name="g8">?android:attr/textColorPrimary</item>
+        <item name="g_">@style/ns</item>
+        <item name="ic">@drawable/l</item>
+        <item name="ip">@style/nt</item>
+        <item name="iu">false</item>
+        <item name="lg">@drawable/x</item>
+        <item name="lj">@null</item>
+        <item name="lm">@style/of</item>
+        <item name="ln">@style/og</item>
+        <item name="lo">@dimen/am</item>
+        <item name="lp">@dimen/al</item>
+        <item name="lq">@dimen/an</item>
+        <item name="lr">@dimen/ao</item>
+        <item name="ls">@dimen/ao</item>
+        <item name="lt">@dimen/ao</item>
+        <item name="lu">@dimen/ao</item>
+        <item name="n5">@drawable/fz</item>
+        <item name="n6">@style/jy</item>
+        <item name="n7">@dimen/ap</item>
+        <item name="ne">@style/ok</item>
+        <item name="nx">@style/no</item>
+        <item name="nz">@style/op</item>
+        <item name="o0">@style/oq</item>
+        <item name="o1">@style/or</item>
+        <item name="o_">@style/os</item>
+        <item name="oc">@style/ou</item>
+        <item name="oe">@drawable/s</item>
+        <item name="of">?attr/oe</item>
+        <item name="p1">@style/nr</item>
+        <item name="p2">@style/ow</item>
+        <item name="pz">@style/np</item>
+        <item name="r3">@style/iu</item>
+        <item name="r5">@style/ia</item>
+        <item name="r6">@style/ho</item>
+        <item name="r7">@style/ia</item>
+        <item name="r9">@style/it</item>
+        <item name="r_">@style/i7</item>
+        <item name="ra">@style/i8</item>
+        <item name="rb">@style/iv</item>
+        <item name="re">@color/j</item>
+        <item name="rf">@color/l</item>
+        <item name="s7">@style/p3</item>
+        <item name="s8">@style/p2</item>
+        <item name="s9">@color/bv</item>
+        <item name="s_">@drawable/ev</item>
+        <item name="sj">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="sm">true</item>
+        <item name="sn">false</item>
+        <item name="so">false</item>
+        <item name="sp">@null</item>
+        <item name="sq">@null</item>
+        <item name="sr">@null</item>
+        <item name="ss">@null</item>
+        <item name="sv">false</item>
+    </style>
+    <style name="cs" parent="@style/b_">
+        <item name="android:colorBackground">?attr/dq</item>
+        <item name="android:windowBackground">@drawable/j</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/gc</item>
+        <item name="android:windowTitleBackgroundStyle">@style/t</item>
+        <item name="android:windowAnimationStyle">@style/c</item>
+        <item name="android:listDivider">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">0x20</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:borderlessButtonStyle">@style/ng</item>
+        <item name="android:buttonBarStyle">@style/nm</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="ls">24dp</item>
+        <item name="lt">24dp</item>
+        <item name="sm">false</item>
+        <item name="so">true</item>
+    </style>
+    <style name="ct" parent="@style/f_">
+        <item name="android:panelBackground">@android:color/transparent</item>
+        <item name="android:dropDownListViewStyle">@style/oi</item>
+        <item name="android:textViewStyle">@style/p0</item>
+        <item name="android:dropDownItemStyle">@style/nr</item>
+        <item name="android:spinnerItemStyle">@style/p1</item>
+        <item name="android:textAppearanceButton">@style/io</item>
+        <item name="a">?attr/ft</item>
+        <item name="b">?attr/of</item>
+        <item name="c">@null</item>
+        <item name="d">@dimen/c</item>
+        <item name="e">?attr/f</item>
+        <item name="f">@style/nv</item>
+        <item name="g">@style/nx</item>
+        <item name="h">@style/o1</item>
+        <item name="i">@style/nz</item>
+        <item name="j">@style/m0</item>
+        <item name="k">@null</item>
+        <item name="l">@style/o3</item>
+        <item name="m">@style/oe</item>
+        <item name="o">@style/if_res_0x7f120166</item>
+        <item name="p">?android:attr/textColorPrimaryDisableOnly</item>
+        <item name="q">@drawable/i</item>
+        <item name="r">@style/na</item>
+        <item name="s">@drawable/l</item>
+        <item name="t">@drawable/fh</item>
+        <item name="u">@drawable/fi</item>
+        <item name="w">@drawable/fj</item>
+        <item name="y">@drawable/fk</item>
+        <item name="z">@drawable/fl</item>
+        <item name="a0">?attr/e3</item>
+        <item name="a1">@style/nc</item>
+        <item name="a3">@style/o5</item>
+        <item name="a4">@style/oc</item>
+        <item name="a8">@style/nd</item>
+        <item name="aa">false</item>
+        <item name="ab">@style/b</item>
+        <item name="ac">@style/m6</item>
+        <item name="an">@style/ne</item>
+        <item name="bk">@style/ng</item>
+        <item name="bz">@style/ni</item>
+        <item name="c0">?attr/bz</item>
+        <item name="c1">?attr/bz</item>
+        <item name="c2">?attr/bz</item>
+        <item name="c3">@style/nl</item>
+        <item name="c8">@style/nf</item>
+        <item name="c9">@style/nk</item>
+        <item name="cl">@style/nn</item>
+        <item name="dp">@color/a0</item>
+        <item name="dq">@color/a3</item>
+        <item name="dr">@color/ag</item>
+        <item name="ds">?attr/dp</item>
+        <item name="dt">@color/ej</item>
+        <item name="du">?android:attr/textColorSecondary</item>
+        <item name="dv">@color/bt</item>
+        <item name="e2">@color/e_</item>
+        <item name="e3">@color/e7</item>
+        <item name="e9">@color/et</item>
+        <item name="eq">?attr/of</item>
+        <item name="fg">@dimen/a1</item>
+        <item name="fl">@dimen/a_</item>
+        <item name="fm">@style/m5</item>
+        <item name="fr">@drawable/fs</item>
+        <item name="ft">@drawable/fs</item>
+        <item name="g3">@style/nq</item>
+        <item name="g4">?android:attr/dropDownListViewStyle</item>
+        <item name="g5">?attr/lq</item>
+        <item name="g7">@drawable/k</item>
+        <item name="g8">?android:attr/textColorPrimary</item>
+        <item name="g_">@style/ns</item>
+        <item name="ic">@drawable/l</item>
+        <item name="ip">@style/nt</item>
+        <item name="iu">true</item>
+        <item name="lg">@drawable/y</item>
+        <item name="lj">@null</item>
+        <item name="lm">@style/of</item>
+        <item name="ln">@style/og</item>
+        <item name="lo">@dimen/am</item>
+        <item name="lp">@dimen/al</item>
+        <item name="lq">@dimen/an</item>
+        <item name="lr">@dimen/ao</item>
+        <item name="ls">@dimen/ao</item>
+        <item name="lt">@dimen/ao</item>
+        <item name="lu">@dimen/ao</item>
+        <item name="n5">@drawable/fz</item>
+        <item name="n6">@style/jy</item>
+        <item name="n7">@dimen/ap</item>
+        <item name="ne">@style/ob</item>
+        <item name="nx">@style/no</item>
+        <item name="nz">@style/op</item>
+        <item name="o0">@style/oq</item>
+        <item name="o1">@style/or</item>
+        <item name="o_">@style/od</item>
+        <item name="oc">@style/ou</item>
+        <item name="oe">@drawable/t</item>
+        <item name="of">?attr/oe</item>
+        <item name="p1">@style/nr</item>
+        <item name="p2">@style/ow</item>
+        <item name="pz">@style/np</item>
+        <item name="r3">@style/i2</item>
+        <item name="r5">@style/ia</item>
+        <item name="r6">@style/ho</item>
+        <item name="r7">@style/ia</item>
+        <item name="r9">@style/it</item>
+        <item name="r_">@style/i7</item>
+        <item name="ra">@style/i8</item>
+        <item name="rb">@style/i3</item>
+        <item name="re">@color/k</item>
+        <item name="rf">@color/l</item>
+        <item name="s7">@style/p3</item>
+        <item name="s8">@style/p2</item>
+        <item name="s9">@color/bu</item>
+        <item name="s_">@drawable/eu</item>
+        <item name="sj">androidx.appcompat.app.AppCompatViewInflater</item>
+        <item name="sm">true</item>
+        <item name="sn">false</item>
+        <item name="so">false</item>
+        <item name="sp">@null</item>
+        <item name="sq">@null</item>
+        <item name="sr">@null</item>
+        <item name="ss">@null</item>
+        <item name="sv">false</item>
+    </style>
+    <style name="cu" parent="@style/bg">
+        <item name="android:colorBackground">?attr/dq</item>
+        <item name="android:windowBackground">@drawable/j</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/gc</item>
+        <item name="android:windowTitleBackgroundStyle">@style/t</item>
+        <item name="android:windowAnimationStyle">@style/c</item>
+        <item name="android:listDivider">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">0x20</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:borderlessButtonStyle">@style/ng</item>
+        <item name="android:buttonBarStyle">@style/nm</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="ls">24dp</item>
+        <item name="lt">24dp</item>
+        <item name="sm">false</item>
+        <item name="so">true</item>
+    </style>
+    <style name="cv" parent="@style/c6">
+        <item name="android:colorBackground">?attr/dq</item>
+        <item name="android:windowBackground">@drawable/j</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/gc</item>
+        <item name="android:windowTitleBackgroundStyle">@style/t</item>
+        <item name="android:windowAnimationStyle">@style/c</item>
+        <item name="android:listDivider">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">0x20</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:borderlessButtonStyle">@style/ng</item>
+        <item name="android:buttonBarStyle">@style/nm</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="ls">24dp</item>
+        <item name="lt">24dp</item>
+        <item name="sm">false</item>
+        <item name="so">true</item>
+        <item name="sp">@null</item>
+        <item name="sq">@null</item>
+        <item name="sr">@null</item>
+        <item name="ss">@null</item>
+    </style>
+    <style name="cw" parent="@android:style/Widget.AutoCompleteTextView">
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+        <item name="android:textColor">?attr/g8</item>
+        <item name="android:background">?attr/g7</item>
+        <item name="android:dropDownSelector">?attr/lg</item>
+        <item name="android:popupBackground">@drawable/g0</item>
+        <item name="android:textCursorDrawable">@drawable/a8</item>
+    </style>
+    <style name="cx" parent="@android:style/Widget.EditText">
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+        <item name="android:textColor">?attr/g8</item>
+        <item name="android:background">?attr/g7</item>
+        <item name="android:textCursorDrawable">@drawable/a8</item>
+    </style>
+    <style name="cy" parent="@android:style/Widget">
+        <item name="android:paddingLeft">@dimen/e</item>
+        <item name="android:paddingRight">@dimen/d</item>
+        <item name="android:minHeight">?attr/d</item>
+        <item name="c5">pf</item>
+        <item name="dk">@string/a0</item>
+        <item name="dl">?attr/ic</item>
+        <item name="ei">16dp</item>
+        <item name="ej">@dimen/b</item>
+        <item name="mh">@dimen/c</item>
+        <item name="po">@style/jv</item>
+        <item name="rx">4dp</item>
+        <item name="s3">@style/jw</item>
+    </style>
+    <style name="cz" parent="">
+        <item name="android:gravity">0x10</item>
+        <item name="l">@style/n_</item>
+        <item name="a3">@style/nb</item>
+        <item name="at">@null</item>
+        <item name="b0">@null</item>
+        <item name="b1">@null</item>
+        <item name="ee">@dimen/a</item>
+        <item name="ei">@dimen/a</item>
+        <item name="ej">@dimen/b</item>
+        <item name="fp">n1</item>
+        <item name="fq">?attr/ft</item>
+        <item name="ga">@dimen/f</item>
+        <item name="i1">?attr/d</item>
+        <item name="nf">?attr/c</item>
+        <item name="pq">@style/ig</item>
+        <item name="s5">@style/ii</item>
+    </style>
+    <style name="d0" parent="@style/cz">
+        <item name="at">?attr/e2</item>
+        <item name="b0">?attr/e2</item>
+        <item name="b1">?attr/e2</item>
+    </style>
+    <style name="d1" parent="">
+        <item name="fq">?attr/a</item>
+        <item name="fs">8dp</item>
+        <item name="on">jb</item>
+    </style>
+    <style name="d2" parent="">
+        <item name="android:textAppearance">@style/i4</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">0x1</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:ellipsize">4</item>
+        <item name="android:maxWidth">180dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="qs">true</item>
+    </style>
+    <style name="d3" parent="">
+        <item name="android:gravity">0x1</item>
+        <item name="android:background">@drawable/a7</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="d4" parent="@style/gr">
+        <item name="android:gravity">0x11</item>
+        <item name="android:background">?attr/b</item>
+        <item name="android:scaleType">5</item>
+        <item name="android:minWidth">@dimen/o</item>
+        <item name="android:minHeight">@dimen/n</item>
+        <item name="android:maxLines">2</item>
+        <item name="qs">@bool/c</item>
+    </style>
+    <style name="d5" parent="@style/d4">
+        <item name="android:background">?attr/eq</item>
+        <item name="android:minWidth">56dp</item>
+    </style>
+    <style name="d6" parent="@style/gs">
+        <item name="android:background">?attr/b</item>
+        <item name="android:minWidth">@dimen/p</item>
+        <item name="android:minHeight">@dimen/n</item>
+        <item name="android:contentDescription">@string/c</item>
+        <item name="p4">@drawable/p</item>
+    </style>
+    <style name="d7" parent="">
+        <item name="at">?attr/q</item>
+        <item name="b0">?attr/a0</item>
+        <item name="dj">@layout/f</item>
+        <item name="i1">?attr/d</item>
+        <item name="pq">@style/ik</item>
+        <item name="s5">@style/im</item>
+    </style>
+    <style name="d8" parent="">
+        <item name="android:gravity">0x11</item>
+        <item name="android:background">@drawable/f9</item>
+        <item name="fq">?attr/ft</item>
+        <item name="fs">6dp</item>
+        <item name="on">jb</item>
+    </style>
+    <style name="d9" parent="@style/cw">
+    </style>
+    <style name="d_" parent="@android:style/Widget">
+        <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:background">@drawable/e</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:minWidth">88dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+    <style name="da" parent="@style/d_">
+        <item name="android:background">@drawable/a</item>
+    </style>
+    <style name="db" parent="@style/da">
+        <item name="android:textAppearance">@style/ip</item>
+    </style>
+    <style name="dc" parent="@style/nh">
+        <item name="android:minWidth">64dp</item>
+        <item name="android:minHeight">@dimen/q</item>
+    </style>
+    <style name="dd" parent="@style/d_">
+        <item name="android:textAppearance">@style/iq</item>
+        <item name="android:background">@drawable/d</item>
+    </style>
+    <style name="de" parent="@style/d_">
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+    <style name="df" parent="@android:style/Widget">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="dg" parent="@style/df">
+    </style>
+    <style name="dh" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:background">?attr/eq</item>
+        <item name="android:button">?android:attr/listChoiceIndicatorMultiple</item>
+        <item name="c4">?attr/lh</item>
+    </style>
+    <style name="di" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">?attr/eq</item>
+        <item name="android:button">?android:attr/listChoiceIndicatorSingle</item>
+        <item name="c4">?attr/li</item>
+    </style>
+    <style name="dj" parent="@android:style/Widget.CompoundButton">
+        <item name="android:background">?attr/eq</item>
+        <item name="android:textOn">@string/h</item>
+        <item name="android:textOff">@string/g</item>
+        <item name="android:thumb">@drawable/a6</item>
+        <item name="oq">false</item>
+        <item name="pw">@dimen/aw</item>
+        <item name="q0">@style/iw</item>
+        <item name="sb">@drawable/g7</item>
+    </style>
+    <style name="dk" parent="@style/dl">
+        <item name="b7">18dp</item>
+        <item name="fy">24dp</item>
+        <item name="hy">3dp</item>
+    </style>
+    <style name="dl" parent="">
+        <item name="al">8dp</item>
+        <item name="am">16dp</item>
+        <item name="do_res_0x7f0400a2">?android:attr/textColorSecondary</item>
+        <item name="p0">true</item>
+        <item name="rm">2dp</item>
+    </style>
+    <style name="dm" parent="">
+        <item name="android:textAppearance">@style/is</item>
+        <item name="android:gravity">0x10</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+    <style name="dn" parent="@style/cx">
+    </style>
+    <style name="do_res_0x7f1200b2" parent="@android:style/Widget.ImageButton">
+        <item name="android:background">@drawable/e</item>
+    </style>
+    <style name="dp" parent="@style/cz">
+        <item name="l">@style/o3</item>
+        <item name="a3">@style/o5</item>
+    </style>
+    <style name="dq" parent="@style/dp">
+        <item name="at">?attr/e2</item>
+        <item name="b0">?attr/e2</item>
+        <item name="b1">?attr/e2</item>
+    </style>
+    <style name="dr" parent="@style/d1">
+    </style>
+    <style name="ds" parent="@style/d2">
+    </style>
+    <style name="dt" parent="@style/ds">
+        <item name="android:textAppearance">@style/i5</item>
+    </style>
+    <style name="du" parent="@style/d3">
+        <item name="android:background">@drawable/a7</item>
+    </style>
+    <style name="dv" parent="@style/og">
+    </style>
+    <style name="dw" parent="@style/dv">
+        <item name="android:dropDownHorizontalOffset">-4dp</item>
+        <item name="n0">true</item>
+    </style>
+    <style name="dx" parent="@android:style/Widget">
+        <item name="pl">@drawable/m</item>
+    </style>
+    <style name="dy" parent="">
+        <item name="android:dropDownSelector">?attr/lg</item>
+        <item name="android:popupBackground">@drawable/g0</item>
+        <item name="android:dropDownWidth">-2</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+    </style>
+    <style name="dz" parent="@android:style/Widget.ListView">
+        <item name="android:listSelector">?attr/lg</item>
+    </style>
+    <style name="e0" parent="@style/dz">
+        <item name="android:divider">@null</item>
+    </style>
+    <style name="e1" parent="@android:style/Widget.ListView.Menu">
+        <item name="android:listSelector">?attr/lg</item>
+        <item name="android:divider">?attr/fr</item>
+    </style>
+    <style name="e2" parent="@style/og">
+    </style>
+    <style name="e3" parent="@style/e2">
+        <item name="android:dropDownHorizontalOffset">-4dp</item>
+        <item name="n0">true</item>
+    </style>
+    <style name="e4" parent="@android:style/Widget.PopupWindow">
+    </style>
+    <style name="e5" parent="@android:style/Widget.Holo.ProgressBar">
+    </style>
+    <style name="e6" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+    </style>
+    <style name="e7" parent="@android:style/Widget.RatingBar">
+        <item name="android:indeterminateDrawable">@drawable/a0</item>
+        <item name="android:progressDrawable">@drawable/a0</item>
+    </style>
+    <style name="e8" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">36dp</item>
+        <item name="android:indeterminateDrawable">@drawable/z</item>
+        <item name="android:progressDrawable">@drawable/z</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="e9" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:indeterminateDrawable">@drawable/a1</item>
+        <item name="android:progressDrawable">@drawable/a1</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="e_" parent="@android:style/Widget">
+        <item name="dc">@drawable/n</item>
+        <item name="e_">@drawable/fg</item>
+        <item name="hz">@drawable/o</item>
+        <item name="jo">@layout/z</item>
+        <item name="nv">@drawable/a9</item>
+        <item name="o8">@drawable/q</item>
+        <item name="o9">@drawable/q</item>
+        <item name="pm">@drawable/a9</item>
+        <item name="pr">@layout/y</item>
+        <item name="sk">@drawable/r</item>
+    </style>
+    <style name="ea" parent="@style/e_">
+        <item name="fd">@string/s</item>
+        <item name="nv">@null</item>
+        <item name="o8">@null</item>
+        <item name="pm">@null</item>
+    </style>
+    <style name="eb" parent="@android:style/Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/a4</item>
+        <item name="android:progressDrawable">@drawable/a4</item>
+        <item name="android:thumb">@drawable/a2</item>
+    </style>
+    <style name="ec" parent="@style/eb">
+        <item name="rq">@drawable/a3</item>
+    </style>
+    <style name="ed" parent="@style/fh">
+        <item name="android:gravity">0x800013</item>
+        <item name="android:background">@drawable/g6</item>
+        <item name="android:clickable">true</item>
+        <item name="android:dropDownSelector">?attr/lg</item>
+        <item name="android:popupBackground">@drawable/g0</item>
+        <item name="android:dropDownWidth">-2</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <item name="android:dropDownVerticalOffset">0dp</item>
+        <item name="n0">true</item>
+    </style>
+    <style name="ee" parent="@style/ed">
+        <item name="android:background">@drawable/a5</item>
+    </style>
+    <style name="ef" parent="@android:style/Widget.TextView">
+    </style>
+    <style name="eg" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/ix</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+    <style name="eh" parent="@style/cy">
+    </style>
+    <style name="ei" parent="@android:style/Widget">
+        <item name="android:background">?attr/eq</item>
+        <item name="android:scaleType">5</item>
+        <item name="android:minWidth">56dp</item>
+    </style>
+    <style name="ej" parent="@android:style/Widget">
+        <item name="android:background">@null</item>
+        <item name="q6">@null</item>
+        <item name="q8">@drawable/ce</item>
+        <item name="q9">@integer/h</item>
+        <item name="q_">?attr/dp</item>
+        <item name="qb">bo</item>
+        <item name="qe">@dimen/cx</item>
+        <item name="qj">12dp</item>
+        <item name="qk">12dp</item>
+        <item name="qm">?attr/dt</item>
+        <item name="qp">@style/je</item>
+        <item name="qq">@null</item>
+        <item name="qr">false</item>
+    </style>
+    <style name="ek" parent="@style/ne">
+        <item name="android:textAppearance">?attr/rc</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:dropDownVerticalOffset">@dimen/g1</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+    <style name="el" parent="@android:style/Widget">
+    </style>
+    <style name="em" parent="@android:style/Widget">
+        <item name="android:textAppearance">?attr/qu</item>
+        <item name="android:textColor">@color/d3</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:text">@null</item>
+        <item name="android:checkable">false</item>
+        <item name="co">@drawable/c0</item>
+        <item name="cr">true</item>
+        <item name="ct">@color/cz</item>
+        <item name="cv">6dp</item>
+        <item name="cx">@null</item>
+        <item name="cz">24dp</item>
+        <item name="d1">true</item>
+        <item name="d2">32dp</item>
+        <item name="d3">48dp</item>
+        <item name="d8">4dp</item>
+        <item name="d9">?attr/e1</item>
+        <item name="d_">0dp</item>
+        <item name="db">@color/d2</item>
+        <item name="dc">@drawable/c1</item>
+        <item name="de">2dp</item>
+        <item name="df">18dp</item>
+        <item name="dg">2dp</item>
+        <item name="dh">@color/d0</item>
+        <item name="di">true</item>
+        <item name="gm">true</item>
+        <item name="gn">true</item>
+        <item name="go">true</item>
+        <item name="ig">0dp</item>
+        <item name="il">0dp</item>
+        <item name="o4">@color/d1</item>
+        <item name="og">?attr/ok</item>
+        <item name="oj">@style/h4</item>
+        <item name="rg">6dp</item>
+        <item name="rj">8dp</item>
+    </style>
+    <style name="en" parent="@style/ok">
+        <item name="android:dropDownVerticalOffset">1px</item>
+        <item name="n0">false</item>
+    </style>
+    <style name="eo" parent="@style/ok">
+    </style>
+    <style name="ep" parent="@style/og">
+    </style>
+    <style name="eq" parent="@style/ol">
+        <item name="android:dropDownVerticalOffset">1px</item>
+    </style>
+    <style name="er" parent="@style/ns">
+        <item name="android:textAppearance">?attr/rc</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+    <style name="es" parent="@style/pe">
+        <item name="android:textColorHint">@color/de</item>
+        <item name="bp">@null</item>
+        <item name="bq">kx</item>
+        <item name="br">0dp</item>
+        <item name="bw">@color/dk</item>
+        <item name="bx">@dimen/hd</item>
+        <item name="by">@dimen/he</item>
+        <item name="f5">?attr/qw</item>
+        <item name="f6">@color/d7</item>
+        <item name="f7">?attr/qw</item>
+        <item name="f8">@color/de</item>
+        <item name="gk">@color/dj</item>
+        <item name="gm">true</item>
+        <item name="gn">true</item>
+        <item name="gs">@drawable/cb</item>
+        <item name="gt">@color/d7</item>
+        <item name="gv">?attr/qw</item>
+        <item name="gw">@color/d7</item>
+        <item name="i4">?attr/qw</item>
+        <item name="i5">@color/de</item>
+        <item name="ia">?attr/qw</item>
+        <item name="ib">?attr/e2</item>
+        <item name="og">?attr/ok</item>
+        <item name="oj">@null</item>
+        <item name="p9">@color/dj</item>
+    </style>
+    <style name="et" parent="@style/p0">
+    </style>
+    <style name="eu" parent="@style/r">
+    </style>
+    <style name="ev" parent="@style/eu">
+        <item name="cb">@color/ah</item>
+    </style>
+    <style name="ew" parent="@style/eu">
+        <item name="cb">@color/ai</item>
+    </style>
+    <style name="ex" parent="@style/hp">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="ey" parent="">
+    </style>
+    <style name="ez" parent="@style/a">
+        <item name="android:layout">@layout/bz</item>
+        <item name="av">@dimen/dm</item>
+        <item name="aw">@dimen/dn</item>
+        <item name="ax">@dimen/do_res_0x7f0700a2</item>
+        <item name="ay">@dimen/dp</item>
+        <item name="lk">@layout/c2</item>
+        <item name="mq">@layout/c3</item>
+        <item name="og">?attr/oi</item>
+        <item name="ot">@layout/c4</item>
+    </style>
+    <style name="f0" parent="@style/jh">
+        <item name="android:textAppearance">?attr/qu</item>
+        <item name="android:textColor">@color/ci</item>
+    </style>
+    <style name="f1" parent="@android:style/Widget.DeviceDefault.DatePicker">
+        <item name="av">@dimen/dq</item>
+        <item name="ay">@dimen/dq</item>
+        <item name="og">?attr/oi</item>
+    </style>
+    <style name="f2" parent="@android:style/Widget.DeviceDefault.DatePicker">
+        <item name="av">@dimen/dq</item>
+        <item name="ay">@dimen/dq</item>
+        <item name="og">?attr/oi</item>
+    </style>
+    <style name="f3" parent="@style/u">
+        <item name="android:layout_gravity">0x800013</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="f4" parent="@style/u">
+        <item name="android:layout_gravity">0x11</item>
+    </style>
+    <style name="f5" parent="@style/v">
+        <item name="android:orientation">0</item>
+    </style>
+    <style name="f6" parent="@style/v">
+        <item name="android:orientation">1</item>
+    </style>
+    <style name="f7" parent="@style/w">
+        <item name="android:layout_gravity">0x800013</item>
+        <item name="android:textAlignment">5</item>
+    </style>
+    <style name="f8" parent="@style/w">
+        <item name="android:layout_gravity">0x11</item>
+        <item name="android:textAlignment">4</item>
+    </style>
+    <style name="f9" parent="@android:style/Theme.Holo">
+        <item name="android:colorForeground">@color/bu</item>
+        <item name="android:colorBackground">@color/a6</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:disabledAlpha">@dimen/ac</item>
+        <item name="android:textAppearance">@style/hn</item>
+        <item name="android:textAppearanceInverse">@style/hx</item>
+        <item name="android:textColorPrimary">@color/j</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/h</item>
+        <item name="android:textColorSecondary">@color/p</item>
+        <item name="android:textColorPrimaryInverse">@color/k</item>
+        <item name="android:textColorSecondaryInverse">@color/q</item>
+        <item name="android:textColorHintInverse">@color/f</item>
+        <item name="android:textAppearanceLarge">@style/hy</item>
+        <item name="android:textAppearanceMedium">@style/i4</item>
+        <item name="android:textAppearanceSmall">@style/i9</item>
+        <item name="android:textAppearanceLargeInverse">@style/hz</item>
+        <item name="android:textAppearanceMediumInverse">@style/i5</item>
+        <item name="android:textAppearanceSmallInverse">@style/i_</item>
+        <item name="android:listPreferredItemHeight">@dimen/am</item>
+        <item name="android:windowBackground">@color/a6</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColorHighlight">@color/bx</item>
+        <item name="android:textColorHint">@color/e</item>
+        <item name="android:textColorLink">?attr/dp</item>
+        <item name="android:colorForegroundInverse">@color/bv</item>
+        <item name="android:textColorTertiary">@color/p</item>
+        <item name="android:textColorTertiaryInverse">@color/q</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/f</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/b</item>
+        <item name="android:colorBackgroundCacheHint">@color/a</item>
+        <item name="android:textSelectHandleLeft">@drawable/g9</item>
+        <item name="android:textSelectHandleRight">@drawable/gc</item>
+        <item name="android:textSelectHandle">@drawable/ga</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:textColorAlertDialogListItem">@color/j</item>
+        <item name="android:actionModeCutDrawable">?attr/u</item>
+        <item name="android:actionModeCopyDrawable">?attr/t</item>
+        <item name="android:actionModePasteDrawable">?attr/w</item>
+        <item name="android:borderlessButtonStyle">?attr/bk</item>
+        <item name="android:buttonBarStyle">?attr/c3</item>
+        <item name="android:buttonBarButtonStyle">?attr/bz</item>
+        <item name="android:textColorHighlightInverse">@color/by</item>
+        <item name="android:textColorLinkInverse">?attr/dp</item>
+        <item name="android:actionModeSelectAllDrawable">?attr/y</item>
+        <item name="android:listPreferredItemHeightLarge">@dimen/al</item>
+        <item name="android:listPreferredItemHeightSmall">@dimen/an</item>
+        <item name="android:textAppearanceListItem">@style/ia</item>
+        <item name="android:textAppearanceListItemSmall">@style/ia</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/ao</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/ao</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/ao</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/ao</item>
+        <item name="lh">@drawable/c</item>
+        <item name="li">@drawable/g</item>
+    </style>
+    <style name="f_" parent="@android:style/Theme.Holo.Light">
+        <item name="android:colorForeground">@color/bv</item>
+        <item name="android:colorBackground">@color/a7</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:disabledAlpha">@dimen/ad</item>
+        <item name="android:textAppearance">@style/hn</item>
+        <item name="android:textAppearanceInverse">@style/hx</item>
+        <item name="android:textColorPrimary">@color/k</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/i</item>
+        <item name="android:textColorSecondary">@color/q</item>
+        <item name="android:textColorPrimaryInverse">@color/j</item>
+        <item name="android:textColorSecondaryInverse">@color/p</item>
+        <item name="android:textColorHintInverse">@color/e</item>
+        <item name="android:textAppearanceLarge">@style/hy</item>
+        <item name="android:textAppearanceMedium">@style/i4</item>
+        <item name="android:textAppearanceSmall">@style/i9</item>
+        <item name="android:textAppearanceLargeInverse">@style/hz</item>
+        <item name="android:textAppearanceMediumInverse">@style/i5</item>
+        <item name="android:textAppearanceSmallInverse">@style/i_</item>
+        <item name="android:listPreferredItemHeight">@dimen/am</item>
+        <item name="android:windowBackground">@color/a7</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:textColorHighlight">@color/by</item>
+        <item name="android:textColorHint">@color/f</item>
+        <item name="android:textColorLink">?attr/dp</item>
+        <item name="android:colorForegroundInverse">@color/bu</item>
+        <item name="android:textColorTertiary">@color/q</item>
+        <item name="android:textColorTertiaryInverse">@color/p</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/f</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/b</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/h</item>
+        <item name="android:colorBackgroundCacheHint">@color/b</item>
+        <item name="android:textSelectHandleLeft">@drawable/g_</item>
+        <item name="android:textSelectHandleRight">@drawable/gd</item>
+        <item name="android:textSelectHandle">@drawable/gb</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:textColorAlertDialogListItem">@color/k</item>
+        <item name="android:actionModeCutDrawable">?attr/u</item>
+        <item name="android:actionModeCopyDrawable">?attr/t</item>
+        <item name="android:actionModePasteDrawable">?attr/w</item>
+        <item name="android:borderlessButtonStyle">?attr/bk</item>
+        <item name="android:buttonBarStyle">?attr/c3</item>
+        <item name="android:buttonBarButtonStyle">?attr/bz</item>
+        <item name="android:textColorHighlightInverse">@color/bx</item>
+        <item name="android:textColorLinkInverse">?attr/dp</item>
+        <item name="android:actionModeSelectAllDrawable">?attr/y</item>
+        <item name="android:listPreferredItemHeightLarge">@dimen/al</item>
+        <item name="android:listPreferredItemHeightSmall">@dimen/an</item>
+        <item name="android:textAppearanceListItem">@style/ia</item>
+        <item name="android:textAppearanceListItemSmall">@style/ia</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/ao</item>
+        <item name="android:listPreferredItemPaddingRight">@dimen/ao</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/ao</item>
+        <item name="android:listPreferredItemPaddingEnd">@dimen/ao</item>
+        <item name="lh">@drawable/c</item>
+        <item name="li">@drawable/g</item>
+    </style>
+    <style name="fa" parent="@style/jx">
+    </style>
+    <style name="fb" parent="@style/k6">
+    </style>
+    <style name="fc" parent="@style/k_">
+    </style>
+    <style name="fd" parent="@style/kb">
+    </style>
+    <style name="fe" parent="">
+    </style>
+    <style name="ff" parent="@style/fe">
+        <item name="android:autoCompleteTextViewStyle">@style/ne</item>
+        <item name="android:dropDownItemStyle">@style/nr</item>
+        <item name="b">@drawable/s</item>
+        <item name="m">@style/oy</item>
+        <item name="oe">@drawable/s</item>
+    </style>
+    <style name="fg" parent="@style/fe">
+        <item name="android:autoCompleteTextViewStyle">@style/o8</item>
+        <item name="android:dropDownItemStyle">@style/nr</item>
+        <item name="b">@drawable/t</item>
+        <item name="m">@style/oe</item>
+        <item name="oe">@drawable/t</item>
+    </style>
+    <style name="fh" parent="@android:style/Widget.Holo.Spinner">
+    </style>
+    <style name="fi" parent="">
+        <item name="android:layout">@layout/d5</item>
+    </style>
+    <style name="fj" parent="@style/fi">
+        <item name="android:layout">@layout/d6</item>
+        <item name="android:selectable">false</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+    <style name="fk" parent="@style/fj">
+        <item name="android:layout">@layout/d7</item>
+        <item name="ad">true</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+    </style>
+    <style name="fl" parent="@style/fi">
+        <item name="android:widgetLayout">@layout/df</item>
+    </style>
+    <style name="fm" parent="@style/fl">
+        <item name="android:layout">@layout/dd</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+    </style>
+    <style name="fn" parent="@style/fi">
+        <item name="android:positiveButtonText">@android:string/ok</item>
+        <item name="android:negativeButtonText">@android:string/cancel</item>
+    </style>
+    <style name="fo" parent="@style/fn">
+        <item name="android:dialogLayout">@layout/d8</item>
+    </style>
+    <style name="fp" parent="@style/fo">
+        <item name="android:layout">@layout/dd</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+        <item name="ov">false</item>
+    </style>
+    <style name="fq" parent="@style/fn">
+        <item name="android:layout">@layout/dd</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+    </style>
+    <style name="fr" parent="@style/fi">
+        <item name="android:layout">@layout/d9</item>
+    </style>
+    <style name="fs" parent="@style/fr">
+        <item name="android:layout">@layout/d_</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+    </style>
+    <style name="ft" parent="@style/fi">
+        <item name="android:enabled">false</item>
+        <item name="android:layout">@layout/da</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+    <style name="fu" parent="@style/ft">
+        <item name="android:enabled">false</item>
+        <item name="android:layout">@layout/db</item>
+        <item name="android:shouldDisableView">false</item>
+    </style>
+    <style name="fv" parent="@style/fi">
+        <item name="android:layout">@layout/dd</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+        <item name="ov">false</item>
+    </style>
+    <style name="fw" parent="@style/fi">
+    </style>
+    <style name="fx" parent="@style/fw">
+        <item name="android:layout">@layout/dd</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+    </style>
+    <style name="fy" parent="@style/fi">
+        <item name="android:layout">@layout/dg</item>
+        <item name="a9">true</item>
+        <item name="op">true</item>
+        <item name="sf">false</item>
+    </style>
+    <style name="fz" parent="@style/fy">
+        <item name="android:layout">@layout/dh</item>
+        <item name="a9">true</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+        <item name="op">false</item>
+    </style>
+    <style name="g0" parent="@style/fi">
+        <item name="android:widgetLayout">@layout/di</item>
+        <item name="android:switchTextOn">@string/hw</item>
+        <item name="android:switchTextOff">@string/hv</item>
+    </style>
+    <style name="g1" parent="@style/g0">
+        <item name="android:layout">@layout/dd</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+        <item name="ov">false</item>
+    </style>
+    <style name="g2" parent="@style/fi">
+        <item name="android:widgetLayout">@layout/dj</item>
+        <item name="android:switchTextOn">@string/hw</item>
+        <item name="android:switchTextOff">@string/hv</item>
+    </style>
+    <style name="g3" parent="@style/g2">
+        <item name="android:layout">@layout/dd</item>
+        <item name="ad">false</item>
+        <item name="af">true</item>
+        <item name="ik">@bool/d</item>
+    </style>
+    <style name="g4" parent="">
+        <item name="android:textAppearance">?attr/nj</item>
+        <item name="android:textColor">@color/e3</item>
+    </style>
+    <style name="g5" parent="">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:divider">?android:attr/listDivider</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="g6" parent="@style/g5">
+        <item name="android:divider">@drawable/dc</item>
+        <item name="ae">false</item>
+    </style>
+    <style name="g7" parent="">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+    <style name="g8" parent="@style/g7">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="g9" parent="">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+    <style name="g_" parent="">
+        <item name="android:scrollbars">0x200</item>
+        <item name="ck">@style/fm</item>
+        <item name="fk">@style/fq</item>
+        <item name="g6">@style/fs</item>
+        <item name="g9">@style/fp</item>
+        <item name="ni">@style/fk</item>
+        <item name="nj">@style/hp</item>
+        <item name="nk">@style/g6</item>
+        <item name="nl">@style/g8</item>
+        <item name="nm">@style/g6</item>
+        <item name="no">@style/fx</item>
+        <item name="np">@style/fv</item>
+        <item name="ob">@style/fz</item>
+        <item name="px">@style/g3</item>
+        <item name="py">@style/g1</item>
+    </style>
+    <style name="ga" parent="@style/g_">
+    </style>
+    <style name="gb" parent="@style/ga">
+    </style>
+    <style name="gc" parent="@style/s">
+        <item name="android:textAlignment">5</item>
+    </style>
+    <style name="gd" parent="@android:style/Widget">
+        <item name="android:layout_gravity">0x800013</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+    <style name="ge" parent="@android:style/Widget">
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+    <style name="gf" parent="@android:style/Widget">
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+    <style name="gg" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="gh" parent="@android:style/Widget">
+        <item name="android:textAlignment">6</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="gi" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+    <style name="gj" parent="@android:style/Widget">
+        <item name="android:textAlignment">5</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="gk" parent="@android:style/Widget">
+        <item name="android:textAlignment">5</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+    <style name="gl" parent="@android:style/Widget">
+        <item name="android:paddingStart">@dimen/af</item>
+        <item name="android:paddingEnd">4dp</item>
+    </style>
+    <style name="gm" parent="@android:style/Widget">
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+    <style name="gn" parent="@android:style/Widget">
+        <item name="android:layout_toStartOf">@id/ea</item>
+    </style>
+    <style name="go" parent="@android:style/Widget">
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="gp" parent="@style/dm">
+        <item name="android:layout_toStartOf">@android:id/icon2</item>
+        <item name="android:layout_toEndOf">@android:id/icon1</item>
+    </style>
+    <style name="gq" parent="@android:style/Widget">
+        <item name="android:layout_marginStart">@dimen/af</item>
+    </style>
+    <style name="gr" parent="@android:style/Widget">
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+    <style name="gs" parent="@style/d4">
+        <item name="android:paddingStart">@dimen/i</item>
+        <item name="android:paddingEnd">@dimen/h</item>
+    </style>
+    <style name="gt" parent="">
+        <item name="es">m3</item>
+    </style>
+    <style name="gu" parent="@style/gt">
+        <item name="ey">@dimen/h3</item>
+    </style>
+    <style name="gv" parent="@style/gt">
+        <item name="ey">@dimen/h4</item>
+    </style>
+    <style name="gw" parent="@style/gt">
+        <item name="ey">@dimen/h5</item>
+    </style>
+    <style name="gx" parent="">
+        <item name="es">m3</item>
+        <item name="ey">10px</item>
+    </style>
+    <style name="gy" parent="">
+    </style>
+    <style name="gz" parent="@style/gy">
+        <item name="ez">20px</item>
+    </style>
+    <style name="h0" parent="@style/gy">
+        <item name="eu">dc</item>
+    </style>
+    <style name="h1" parent="@style/gy">
+        <item name="es">dc</item>
+    </style>
+    <style name="h2" parent="@style/gy">
+        <item name="ey">20px</item>
+    </style>
+    <style name="h3" parent="">
+        <item name="ez">0dp</item>
+        <item name="f0">0dp</item>
+    </style>
+    <style name="h4" parent="">
+        <item name="ey">50%</item>
+    </style>
+    <style name="h5" parent="">
+        <item name="ey">@null</item>
+    </style>
+    <style name="h6" parent="">
+        <item name="ey">50%</item>
+    </style>
+    <style name="h7" parent="">
+        <item name="ey">@dimen/es</item>
+    </style>
+    <style name="h8" parent="">
+        <item name="ey">0dp</item>
+    </style>
+    <style name="h9" parent="">
+        <item name="ey">@dimen/fn</item>
+    </style>
+    <style name="h_" parent="">
+        <item name="ez">@dimen/hb</item>
+        <item name="f0">@dimen/hb</item>
+    </style>
+    <style name="ha" parent="@style/gy">
+        <item name="ev">dc</item>
+    </style>
+    <style name="hb" parent="@style/gy">
+        <item name="f2">20px</item>
+    </style>
+    <style name="hc" parent="">
+        <item name="es">m3</item>
+        <item name="ey">@dimen/i9</item>
+    </style>
+    <style name="hd" parent="@style/lf">
+        <item name="mc">@style/he</item>
+    </style>
+    <style name="he" parent="">
+        <item name="f_">@style/hf</item>
+        <item name="fa">@style/hg</item>
+        <item name="fb">@style/hf</item>
+        <item name="fc">@style/hf</item>
+        <item name="ny">@color/ez</item>
+        <item name="sw">@style/hg</item>
+        <item name="sx">@style/hf</item>
+        <item name="sy">@style/hf</item>
+    </style>
+    <style name="hf" parent="">
+        <item name="iy">@color/ez</item>
+        <item name="j7">@style/hc</item>
+        <item name="j8">@style/hc</item>
+        <item name="je">@color/ez</item>
+        <item name="jf">0dp</item>
+        <item name="jj">@color/ez</item>
+    </style>
+    <style name="hg" parent="">
+        <item name="iy">@color/f0</item>
+        <item name="j7">@style/hc</item>
+        <item name="j8">@style/hc</item>
+        <item name="je">@color/ez</item>
+        <item name="jf">0dp</item>
+        <item name="jj">@color/f0</item>
+    </style>
+    <style name="hh" parent="@style/hk">
+        <item name="le">@dimen/dk</item>
+    </style>
+    <style name="hi" parent="">
+        <item name="android:textAppearance">@style/hh</item>
+    </style>
+    <style name="hj" parent="@style/hk">
+        <item name="le">?attr/rl</item>
+    </style>
+    <style name="hk" parent="@style/ic">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="hl" parent="@style/k_">
+        <item name="rl">@dimen/dk</item>
+    </style>
+    <style name="hm" parent="@style/hl">
+        <item name="r4">false</item>
+    </style>
+    <style name="hn" parent="@style/x">
+    </style>
+    <style name="ho" parent="@style/y">
+    </style>
+    <style name="hp" parent="@style/z">
+    </style>
+    <style name="hq" parent="@style/a0">
+    </style>
+    <style name="hr" parent="@style/a1">
+    </style>
+    <style name="hs" parent="@style/a2">
+    </style>
+    <style name="ht" parent="@style/a3">
+    </style>
+    <style name="hu" parent="@style/a4">
+    </style>
+    <style name="hv" parent="@style/a5">
+    </style>
+    <style name="hw" parent="@style/a6">
+    </style>
+    <style name="hx" parent="@style/a7">
+    </style>
+    <style name="hy" parent="@style/a8">
+    </style>
+    <style name="hz" parent="@style/a9">
+    </style>
+    <style name="i0" parent="@style/i7">
+    </style>
+    <style name="i1" parent="@style/i8">
+    </style>
+    <style name="i2" parent="@style/iu">
+    </style>
+    <style name="i3" parent="@style/iv">
+    </style>
+    <style name="i4" parent="@style/a_">
+    </style>
+    <style name="i5" parent="@style/aa">
+    </style>
+    <style name="i6" parent="@style/ab">
+    </style>
+    <style name="i7" parent="@style/ad">
+    </style>
+    <style name="i8" parent="@style/ae">
+    </style>
+    <style name="i9" parent="@style/af">
+    </style>
+    <style name="i_" parent="@style/ag">
+    </style>
+    <style name="ia" parent="@style/ah">
+    </style>
+    <style name="ib" parent="@style/ai">
+    </style>
+    <style name="ic" parent="@style/aj">
+    </style>
+    <style name="id" parent="@style/ak">
+    </style>
+    <style name="ie" parent="@style/hn">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="if_res_0x7f120166" parent="@style/am">
+    </style>
+    <style name="ig" parent="@style/an">
+    </style>
+    <style name="ih" parent="@style/ao">
+    </style>
+    <style name="ii" parent="@style/ap">
+    </style>
+    <style name="ij" parent="@style/aq">
+    </style>
+    <style name="ik" parent="@style/ar">
+    </style>
+    <style name="il" parent="@style/ik">
+    </style>
+    <style name="im" parent="@style/as">
+    </style>
+    <style name="in" parent="@style/im">
+    </style>
+    <style name="io" parent="@style/at">
+    </style>
+    <style name="ip" parent="@style/au">
+    </style>
+    <style name="iq" parent="@style/av">
+    </style>
+    <style name="ir" parent="@style/aw">
+    </style>
+    <style name="is" parent="@style/ax">
+    </style>
+    <style name="it" parent="@style/ay">
+    </style>
+    <style name="iu" parent="@style/az">
+    </style>
+    <style name="iv" parent="@style/b0">
+    </style>
+    <style name="iw" parent="@style/b1">
+    </style>
+    <style name="ix" parent="@style/b2">
+    </style>
+    <style name="iy" parent="@android:style/TextAppearance.StatusBar.EventContent">
+    </style>
+    <style name="iz" parent="@style/iy">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="j0" parent="@style/iz">
+    </style>
+    <style name="j1" parent="@style/iz">
+    </style>
+    <style name="j2" parent="@style/j0">
+    </style>
+    <style name="j3" parent="@style/iy">
+    </style>
+    <style name="j4" parent="@style/iy">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="j5" parent="@style/j4">
+    </style>
+    <style name="j6" parent="@android:style/TextAppearance.StatusBar.EventContent.Title">
+    </style>
+    <style name="j7" parent="@style/j6">
+    </style>
+    <style name="j8" parent="@style/hs">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="j9" parent="@style/hr">
+    </style>
+    <style name="j_" parent="@style/hr">
+        <item name="android:textColor">@color/bd</item>
+    </style>
+    <style name="ja" parent="@style/hr">
+        <item name="android:textColor">@color/bd</item>
+    </style>
+    <style name="jb" parent="@style/hr">
+    </style>
+    <style name="jc" parent="@style/hr">
+        <item name="android:textColor">?attr/ds</item>
+    </style>
+    <style name="jd" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/cw</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="je" parent="@style/hq">
+        <item name="android:textSize">@dimen/cz</item>
+        <item name="android:textColor">@color/dq</item>
+        <item name="qs">true</item>
+    </style>
+    <style name="jf" parent="@style/b3">
+    </style>
+    <style name="jg" parent="@style/hp">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="jh" parent="@style/ho">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="ji" parent="@style/b4">
+    </style>
+    <style name="jj" parent="@style/hr">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="jk" parent="@style/hn">
+        <item name="android:textSize">@dimen/fz</item>
+        <item name="android:textColor">@color/d3</item>
+    </style>
+    <style name="jl" parent="@style/hv">
+        <item name="android:textSize">96sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="hm">sans-serif-light</item>
+    </style>
+    <style name="jm" parent="@style/hu">
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="hm">sans-serif-light</item>
+    </style>
+    <style name="jn" parent="@style/ht">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="jo" parent="@style/hs">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="jp" parent="@style/hw">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="jq" parent="@style/b5">
+    </style>
+    <style name="jr" parent="@style/hn">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="js" parent="@style/ia">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="hm">sans-serif</item>
+    </style>
+    <style name="jt" parent="@style/b6">
+    </style>
+    <style name="ju" parent="@style/b7">
+    </style>
+    <style name="jv" parent="@style/b8">
+    </style>
+    <style name="jw" parent="@style/b9">
+    </style>
+    <style name="jx" parent="@style/b_">
+    </style>
+    <style name="jy" parent="@style/ba">
+    </style>
+    <style name="jz" parent="@style/k_">
+    </style>
+    <style name="k0" parent="@style/ka">
+    </style>
+    <style name="k1" parent="@style/kb">
+    </style>
+    <style name="k2" parent="@style/kc">
+    </style>
+    <style name="k3" parent="@style/kd">
+    </style>
+    <style name="k4" parent="@style/ke">
+    </style>
+    <style name="k5" parent="@style/kf">
+    </style>
+    <style name="k6" parent="@style/bb">
+    </style>
+    <style name="k7" parent="@style/bc">
+    </style>
+    <style name="k8" parent="@style/be">
+    </style>
+    <style name="k9" parent="@style/bf">
+    </style>
+    <style name="k_" parent="@style/bg">
+    </style>
+    <style name="ka" parent="@style/bh">
+    </style>
+    <style name="kb" parent="@style/bi">
+    </style>
+    <style name="kc" parent="@style/bj">
+    </style>
+    <style name="kd" parent="@style/bl">
+    </style>
+    <style name="ke" parent="@style/bm">
+    </style>
+    <style name="kf" parent="@style/k_">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="kg" parent="@style/jx">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="kh" parent="@style/jx">
+    </style>
+    <style name="ki" parent="@style/k6">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/f</item>
+        <item name="bo">@style/p8</item>
+    </style>
+    <style name="kj" parent="@style/k_">
+    </style>
+    <style name="kk" parent="@style/kb">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/f</item>
+        <item name="bo">@style/p8</item>
+    </style>
+    <style name="kl" parent="@style/kj">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="km" parent="@style/kh">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="kn" parent="@style/bn">
+    </style>
+    <style name="ko" parent="@style/l7">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/g</item>
+        <item name="bo">@style/p8</item>
+    </style>
+    <style name="kp" parent="@style/bo">
+    </style>
+    <style name="kq" parent="@style/bp">
+    </style>
+    <style name="kr" parent="@style/lf">
+    </style>
+    <style name="ks" parent="@style/lh">
+    </style>
+    <style name="kt" parent="@style/li">
+    </style>
+    <style name="ku" parent="@style/lj">
+    </style>
+    <style name="kv" parent="@style/lk">
+    </style>
+    <style name="kw" parent="@style/ll">
+    </style>
+    <style name="kx" parent="@style/lm">
+    </style>
+    <style name="ky" parent="@style/ln">
+    </style>
+    <style name="kz" parent="@style/lo">
+    </style>
+    <style name="l0" parent="@style/lp">
+    </style>
+    <style name="l1" parent="@style/lq">
+    </style>
+    <style name="l2" parent="@style/lr">
+    </style>
+    <style name="l3" parent="@style/ls">
+    </style>
+    <style name="l4" parent="@style/lt">
+    </style>
+    <style name="l5" parent="@style/lv">
+    </style>
+    <style name="l6" parent="@style/lw">
+    </style>
+    <style name="l7" parent="@style/bq">
+    </style>
+    <style name="l8" parent="@style/br">
+    </style>
+    <style name="l9" parent="@style/bs">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="l_" parent="@style/bs">
+    </style>
+    <style name="la" parent="@style/bt">
+    </style>
+    <style name="lb" parent="@style/bs">
+        <item name="sp">@dimen/a2</item>
+        <item name="sq">@dimen/a3</item>
+        <item name="sr">@dimen/a4</item>
+        <item name="ss">@dimen/a5</item>
+    </style>
+    <style name="lc" parent="@style/bu">
+    </style>
+    <style name="ld" parent="@style/bs">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="le" parent="@style/bv">
+    </style>
+    <style name="lf" parent="@style/bw">
+    </style>
+    <style name="lg" parent="@style/lf">
+        <item name="d">@dimen/be</item>
+    </style>
+    <style name="lh" parent="@style/ll">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/g</item>
+        <item name="bo">@style/p8</item>
+    </style>
+    <style name="li" parent="@style/bx">
+    </style>
+    <style name="lj" parent="@style/by">
+    </style>
+    <style name="lk" parent="@style/bz">
+    </style>
+    <style name="ll" parent="@style/c0">
+    </style>
+    <style name="lm" parent="@style/c1">
+    </style>
+    <style name="ln" parent="@style/c2">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="lo" parent="@style/c2">
+    </style>
+    <style name="lp" parent="@style/c3">
+    </style>
+    <style name="lq" parent="@style/c2">
+        <item name="sp">@dimen/a2</item>
+        <item name="sq">@dimen/a3</item>
+        <item name="sr">@dimen/a4</item>
+        <item name="ss">@dimen/a5</item>
+    </style>
+    <style name="lr" parent="@style/c4">
+    </style>
+    <style name="ls" parent="@style/c2">
+        <item name="st">@dimen/a8</item>
+        <item name="su">@dimen/a9</item>
+    </style>
+    <style name="lt" parent="@style/c5">
+    </style>
+    <style name="lu" parent="@style/lf">
+        <item name="mp">@dimen/gr</item>
+    </style>
+    <style name="lv" parent="@style/lf">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="lw" parent="@style/li">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="lx" parent="@style/kn">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="ly" parent="@style/kp">
+        <item name="sm">false</item>
+        <item name="sv">true</item>
+    </style>
+    <style name="lz" parent="@style/c6">
+    </style>
+    <style name="m0" parent="@style/c7">
+    </style>
+    <style name="m1" parent="@style/c8">
+    </style>
+    <style name="m2" parent="@style/c9">
+    </style>
+    <style name="m3" parent="@style/m7">
+    </style>
+    <style name="m4" parent="@style/m3">
+        <item name="du">?android:attr/textColorPrimary</item>
+        <item name="o_">@style/ot</item>
+    </style>
+    <style name="m5" parent="@style/c_">
+    </style>
+    <style name="m6" parent="@style/ca">
+    </style>
+    <style name="m7" parent="@style/cb">
+    </style>
+    <style name="m8" parent="">
+    </style>
+    <style name="m9" parent="@style/lz">
+    </style>
+    <style name="m_" parent="@style/m0">
+    </style>
+    <style name="ma" parent="">
+        <item name="android:colorBackground">?attr/e2</item>
+        <item name="android:textColorPrimary">?attr/dy</item>
+        <item name="android:textColorSecondary">@color/cf</item>
+        <item name="p">?attr/dy</item>
+        <item name="du">?attr/dy</item>
+    </style>
+    <style name="mb" parent="">
+        <item name="android:colorBackground">?attr/e8</item>
+        <item name="android:textColorPrimary">@color/ch</item>
+        <item name="android:textColorSecondary">@color/ci</item>
+        <item name="p">@color/ci</item>
+        <item name="du">@color/ci</item>
+    </style>
+    <style name="mc" parent="">
+        <item name="ds">?attr/e2</item>
+    </style>
+    <style name="md" parent="@style/mc">
+        <item name="an">@style/pm</item>
+    </style>
+    <style name="me" parent="@style/md">
+        <item name="an">@style/pn</item>
+    </style>
+    <style name="mf" parent="@style/mc">
+        <item name="an">@style/po</item>
+    </style>
+    <style name="mg" parent="@style/mf">
+        <item name="an">@style/pp</item>
+    </style>
+    <style name="mh" parent="">
+        <item name="p">?attr/dy</item>
+        <item name="du">?attr/dy</item>
+    </style>
+    <style name="mi" parent="">
+        <item name="p">@color/ci</item>
+        <item name="du">@color/ci</item>
+    </style>
+    <style name="mj" parent="@style/mn">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/g</item>
+        <item name="bo">@style/py</item>
+        <item name="m3">@style/pz</item>
+    </style>
+    <style name="mk" parent="@style/m1">
+        <item name="android:colorBackground">@color/ao</item>
+        <item name="dv">@color/ap</item>
+        <item name="dw">@color/aq</item>
+        <item name="dx">@color/ar</item>
+        <item name="e1">@color/au</item>
+        <item name="e8">@color/b0</item>
+    </style>
+    <style name="ml" parent="@style/m2">
+    </style>
+    <style name="mm" parent="@style/mq">
+    </style>
+    <style name="mn" parent="@style/cc">
+    </style>
+    <style name="mo" parent="@style/cd">
+    </style>
+    <style name="mp" parent="@style/m7">
+        <item name="android:colorBackground">@color/b1</item>
+        <item name="dv">@color/b2</item>
+        <item name="dw">@color/b3</item>
+        <item name="dx">@color/b4</item>
+        <item name="e1">@color/b7</item>
+        <item name="e8">@color/bc</item>
+    </style>
+    <style name="mq" parent="@style/mn">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/g</item>
+        <item name="bo">@style/py</item>
+        <item name="m3">@style/pz</item>
+    </style>
+    <style name="mr" parent="@style/ce">
+        <item name="lz">@style/f3</item>
+        <item name="m0">@style/f5</item>
+        <item name="m1">@style/f7</item>
+    </style>
+    <style name="ms" parent="@style/ce">
+        <item name="lz">@style/f4</item>
+        <item name="m0">@style/f6</item>
+        <item name="m1">@style/f8</item>
+    </style>
+    <style name="mt" parent="@style/mr">
+    </style>
+    <style name="mu" parent="@style/mt">
+    </style>
+    <style name="mv" parent="@style/mt">
+    </style>
+    <style name="mw" parent="@style/mn">
+        <item name="c0">@style/q4</item>
+        <item name="c2">@style/q4</item>
+        <item name="m5">@style/qu</item>
+        <item name="m7">@style/qw</item>
+        <item name="m8">@style/qx</item>
+        <item name="m9">@style/qy</item>
+        <item name="m_">@style/qz</item>
+        <item name="ma">@style/r1</item>
+        <item name="mb">@style/r2</item>
+        <item name="mc">@style/qp</item>
+    </style>
+    <style name="mx" parent="@style/mw">
+        <item name="m_">@style/r0</item>
+        <item name="mc">@style/qv</item>
+    </style>
+    <style name="my" parent="@style/m8">
+        <item name="android:editTextBackground">@null</item>
+        <item name="ds">?attr/e2</item>
+        <item name="g7">@null</item>
+    </style>
+    <style name="mz" parent="@style/my">
+        <item name="g_">@style/rg</item>
+    </style>
+    <style name="n0" parent="@style/mz">
+        <item name="g_">@style/rh</item>
+    </style>
+    <style name="n1" parent="@style/my">
+        <item name="g_">@style/ri</item>
+    </style>
+    <style name="n2" parent="@style/n1">
+        <item name="g_">@style/rj</item>
+    </style>
+    <style name="n3" parent="">
+        <item name="p">?attr/dy</item>
+        <item name="du">?attr/dy</item>
+    </style>
+    <style name="n4" parent="">
+        <item name="p">@color/ci</item>
+        <item name="du">@color/ci</item>
+    </style>
+    <style name="n5" parent="@style/cz">
+    </style>
+    <style name="n6" parent="@style/d0">
+    </style>
+    <style name="n7" parent="@style/d1">
+    </style>
+    <style name="n8" parent="@style/d2">
+    </style>
+    <style name="n9" parent="@style/d3">
+    </style>
+    <style name="n_" parent="@style/d4">
+    </style>
+    <style name="na" parent="@style/d5">
+    </style>
+    <style name="nb" parent="@style/d6">
+    </style>
+    <style name="nc" parent="@style/d7">
+    </style>
+    <style name="nd" parent="@style/d8">
+    </style>
+    <style name="ne" parent="@style/d9">
+    </style>
+    <style name="nf" parent="@style/d_">
+    </style>
+    <style name="ng" parent="@style/da">
+    </style>
+    <style name="nh" parent="@style/db">
+    </style>
+    <style name="ni" parent="@style/dc">
+    </style>
+    <style name="nj" parent="@style/dd">
+    </style>
+    <style name="nk" parent="@style/de">
+    </style>
+    <style name="nl" parent="@style/df">
+    </style>
+    <style name="nm" parent="@style/dg">
+    </style>
+    <style name="nn" parent="@style/dh">
+    </style>
+    <style name="no" parent="@style/di">
+    </style>
+    <style name="np" parent="@style/dj">
+    </style>
+    <style name="nq" parent="@style/dk">
+        <item name="do_res_0x7f0400a2">?attr/du</item>
+    </style>
+    <style name="nr" parent="@style/gp">
+    </style>
+    <style name="ns" parent="@style/dn">
+    </style>
+    <style name="nt" parent="@style/do_res_0x7f1200b2">
+    </style>
+    <style name="nu" parent="@style/dp">
+    </style>
+    <style name="nv" parent="@style/dq">
+    </style>
+    <style name="nw" parent="@style/nv">
+    </style>
+    <style name="nx" parent="@style/dr">
+    </style>
+    <style name="ny" parent="@style/nx">
+    </style>
+    <style name="nz" parent="@style/ds">
+    </style>
+    <style name="o0" parent="@style/dt">
+    </style>
+    <style name="o1" parent="@style/du">
+    </style>
+    <style name="o2" parent="@style/o1">
+    </style>
+    <style name="o3" parent="@style/n_">
+    </style>
+    <style name="o4" parent="@style/na">
+    </style>
+    <style name="o5" parent="@style/nb">
+    </style>
+    <style name="o6" parent="@style/nc">
+    </style>
+    <style name="o7" parent="@style/nd">
+    </style>
+    <style name="o8" parent="@style/ne">
+    </style>
+    <style name="o9" parent="@style/nr">
+    </style>
+    <style name="o_" parent="@style/og">
+    </style>
+    <style name="oa" parent="@style/oi">
+    </style>
+    <style name="ob" parent="@style/dv">
+    </style>
+    <style name="oc" parent="@style/dw">
+    </style>
+    <style name="od" parent="@style/os">
+    </style>
+    <style name="oe" parent="@style/oy">
+    </style>
+    <style name="of" parent="@style/dx">
+    </style>
+    <style name="og" parent="@style/dy">
+    </style>
+    <style name="oh" parent="@style/dz">
+    </style>
+    <style name="oi" parent="@style/e0">
+    </style>
+    <style name="oj" parent="@style/e1">
+    </style>
+    <style name="ok" parent="@style/e2">
+    </style>
+    <style name="ol" parent="@style/e3">
+    </style>
+    <style name="om" parent="@style/e4">
+    </style>
+    <style name="on" parent="@style/e5">
+    </style>
+    <style name="oo" parent="@style/e6">
+    </style>
+    <style name="op" parent="@style/e7">
+    </style>
+    <style name="oq" parent="@style/e8">
+    </style>
+    <style name="or" parent="@style/e9">
+    </style>
+    <style name="os" parent="@style/e_">
+    </style>
+    <style name="ot" parent="@style/ea">
+    </style>
+    <style name="ou" parent="@style/eb">
+    </style>
+    <style name="ov" parent="@style/ec">
+    </style>
+    <style name="ow" parent="@style/ed">
+    </style>
+    <style name="ox" parent="@style/ow">
+    </style>
+    <style name="oy" parent="@style/ox">
+    </style>
+    <style name="oz" parent="@style/ee">
+    </style>
+    <style name="p0" parent="@style/ef">
+    </style>
+    <style name="p1" parent="@style/eg">
+    </style>
+    <style name="p2" parent="@style/eh">
+    </style>
+    <style name="p3" parent="@style/ei">
+    </style>
+    <style name="p4" parent="">
+    </style>
+    <style name="p5" parent="">
+    </style>
+    <style name="p6" parent="@android:style/Widget">
+        <item name="android:background">?attr/e2</item>
+    </style>
+    <style name="p7" parent="">
+        <item name="ga">@dimen/bx</item>
+        <item name="gm">false</item>
+        <item name="gn">false</item>
+        <item name="ix">?attr/of</item>
+        <item name="j0">true</item>
+        <item name="j2">@dimen/bz</item>
+        <item name="jm">bk</item>
+    </style>
+    <style name="p8" parent="@android:style/Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="b2">?android:attr/colorBackground</item>
+        <item name="be">true</item>
+        <item name="bg">bk</item>
+        <item name="bi">false</item>
+        <item name="gm">false</item>
+        <item name="og">@null</item>
+        <item name="oj">@null</item>
+    </style>
+    <style name="p9" parent="@android:style/Widget">
+        <item name="h0">32dp</item>
+        <item name="pi">?attr/e3</item>
+    </style>
+    <style name="p_" parent="@android:style/Widget">
+        <item name="android:background">@drawable/b8</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="b2">?attr/dp</item>
+        <item name="bj">@dimen/c8</item>
+        <item name="ga">@dimen/c9</item>
+        <item name="hd">bk</item>
+        <item name="i6">@animator/a</item>
+        <item name="ie">@dimen/cc</item>
+        <item name="mk">@dimen/c_</item>
+        <item name="ns">@dimen/cd</item>
+        <item name="o4">?attr/dt</item>
+        <item name="oo">@animator/b</item>
+    </style>
+    <style name="pa" parent="@style/pb">
+        <item name="android:background">?android:attr/windowBackground</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:maxWidth">@dimen/cj</item>
+        <item name="ga">@dimen/ce</item>
+        <item name="iz">@dimen/ch</item>
+        <item name="j1">@dimen/ci</item>
+    </style>
+    <style name="pb" parent="">
+        <item name="it">#44000000</item>
+    </style>
+    <style name="pc" parent="@android:style/Widget">
+        <item name="android:background">@drawable/b_</item>
+        <item name="android:paddingLeft">@dimen/ct</item>
+        <item name="android:paddingRight">@dimen/ct</item>
+        <item name="android:maxWidth">@dimen/cr</item>
+        <item name="android:minWidth">@dimen/cs</item>
+        <item name="a6">@dimen/cn</item>
+        <item name="aj">n3</item>
+        <item name="ga">@dimen/cp</item>
+        <item name="mg">@dimen/cm</item>
+    </style>
+    <style name="pd" parent="@style/ej">
+        <item name="q5">f8</item>
+        <item name="qa">true</item>
+        <item name="qg">fd</item>
+    </style>
+    <style name="pe" parent="@android:style/Widget">
+        <item name="bq">kq</item>
+        <item name="bw">@color/an</item>
+        <item name="f5">@style/j_</item>
+        <item name="f6">@null</item>
+        <item name="f7">@style/j9</item>
+        <item name="f8">@null</item>
+        <item name="gk">@color/bl</item>
+        <item name="gm">false</item>
+        <item name="gn">false</item>
+        <item name="gs">@null</item>
+        <item name="gv">@style/ja</item>
+        <item name="gw">@null</item>
+        <item name="i4">@style/jb</item>
+        <item name="i5">@null</item>
+        <item name="ia">@style/jc</item>
+        <item name="ib">@null</item>
+        <item name="mf">@style/m8</item>
+        <item name="n8">@string/f0</item>
+        <item name="n9">@drawable/b9</item>
+        <item name="na">@color/bl</item>
+        <item name="og">@null</item>
+        <item name="oj">@null</item>
+        <item name="p9">@color/bl</item>
+    </style>
+    <style name="pf" parent="@style/n6">
+        <item name="at">?attr/e2</item>
+        <item name="ga">@dimen/bt</item>
+    </style>
+    <style name="pg" parent="@style/pf">
+    </style>
+    <style name="ph" parent="@style/n6">
+        <item name="android:minHeight">@dimen/hi</item>
+        <item name="mh">@dimen/hi</item>
+        <item name="pq">?attr/rc</item>
+        <item name="s5">?attr/r2</item>
+    </style>
+    <style name="pi" parent="@style/nv">
+        <item name="at">?attr/e8</item>
+        <item name="ga">0dp</item>
+    </style>
+    <style name="pj" parent="@style/p6">
+    </style>
+    <style name="pk" parent="@style/pj">
+    </style>
+    <style name="pl" parent="@style/p6">
+        <item name="android:background">?attr/e8</item>
+    </style>
+    <style name="pm" parent="@style/ek">
+        <item name="android:paddingTop">28dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+    <style name="pn" parent="@style/pm">
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="po" parent="@style/ek">
+    </style>
+    <style name="pp" parent="@style/po">
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+    </style>
+    <style name="pq" parent="@android:style/Widget">
+        <item name="au">?attr/dv</item>
+        <item name="b4">l</item>
+        <item name="mi">@integer/j</item>
+    </style>
+    <style name="pr" parent="@style/p2">
+        <item name="android:minHeight">@dimen/e2</item>
+        <item name="b2">?attr/e8</item>
+        <item name="ga">8dp</item>
+        <item name="gm">true</item>
+        <item name="h_">@dimen/dz</item>
+        <item name="ha">@dimen/e0</item>
+        <item name="hb">@dimen/e1</item>
+        <item name="mh">@dimen/e2</item>
+    </style>
+    <style name="ps" parent="@style/pr">
+        <item name="b2">?attr/e2</item>
+        <item name="mf">@style/mh</item>
+    </style>
+    <style name="pt" parent="@style/ps">
+    </style>
+    <style name="pu" parent="@style/p7">
+        <item name="android:background">?attr/e8</item>
+        <item name="gm">true</item>
+        <item name="gn">true</item>
+        <item name="ix">@null</item>
+        <item name="j0">false</item>
+        <item name="j3">@color/cl</item>
+        <item name="j6">@color/cm</item>
+        <item name="jh">?attr/qw</item>
+        <item name="ji">?attr/qw</item>
+        <item name="jj">@color/cl</item>
+    </style>
+    <style name="pv" parent="@style/pu">
+        <item name="android:background">?attr/e2</item>
+        <item name="gm">true</item>
+        <item name="gn">true</item>
+        <item name="j3">@color/cj</item>
+        <item name="j6">@color/ck</item>
+        <item name="jh">?attr/qw</item>
+        <item name="ji">?attr/qw</item>
+        <item name="jj">@color/cj</item>
+    </style>
+    <style name="pw" parent="@style/pv">
+    </style>
+    <style name="px" parent="@style/p8">
+        <item name="android:background">@null</item>
+        <item name="b2">?attr/e8</item>
+        <item name="gm">true</item>
+        <item name="og">?attr/oh</item>
+        <item name="oj">@style/h3</item>
+    </style>
+    <style name="py" parent="@style/px">
+    </style>
+    <style name="pz" parent="@style/nf">
+        <item name="android:textAppearance">?attr/qv</item>
+        <item name="android:textColor">@color/ct</item>
+        <item name="android:paddingLeft">@dimen/ee</item>
+        <item name="android:paddingTop">@dimen/eg</item>
+        <item name="android:paddingRight">@dimen/ef</item>
+        <item name="android:paddingBottom">@dimen/ed</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">@dimen/eb</item>
+        <item name="android:insetBottom">@dimen/eb</item>
+        <item name="b2">@color/cn</item>
+        <item name="ex">@null</item>
+        <item name="ga">@dimen/e7</item>
+        <item name="gm">true</item>
+        <item name="gn">true</item>
+        <item name="ii">@dimen/ea</item>
+        <item name="im">@color/ct</item>
+        <item name="o4">@color/co</item>
+        <item name="og">?attr/ok</item>
+    </style>
+    <style name="q0" parent="@style/pz">
+        <item name="android:paddingLeft">@dimen/e_</item>
+    </style>
+    <style name="q1" parent="@style/q3">
+        <item name="android:paddingLeft">@dimen/ee</item>
+        <item name="android:paddingRight">@dimen/ef</item>
+        <item name="pj">@color/cp</item>
+        <item name="pk">@dimen/ei</item>
+    </style>
+    <style name="q2" parent="@style/q1">
+        <item name="android:paddingLeft">@dimen/e_</item>
+    </style>
+    <style name="q3" parent="@style/q9">
+        <item name="android:textColor">@color/ds</item>
+        <item name="android:paddingLeft">@dimen/ek</item>
+        <item name="android:paddingRight">@dimen/el</item>
+        <item name="b2">@color/cq</item>
+        <item name="ii">@dimen/ej</item>
+        <item name="im">@color/ds</item>
+        <item name="o4">@color/cr</item>
+    </style>
+    <style name="q4" parent="@style/q3">
+        <item name="android:ellipsize">3</item>
+        <item name="android:layout_marginLeft">@dimen/ek</item>
+        <item name="android:minWidth">@dimen/e4</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginStart">@dimen/ek</item>
+    </style>
+    <style name="q5" parent="@style/q4">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+    </style>
+    <style name="q6" parent="@style/q4">
+    </style>
+    <style name="q7" parent="@style/q3">
+    </style>
+    <style name="q8" parent="@style/q3">
+        <item name="android:textColor">?attr/e2</item>
+    </style>
+    <style name="q9" parent="@style/pz">
+        <item name="ga">0dp</item>
+    </style>
+    <style name="q_" parent="@style/q9">
+        <item name="android:paddingLeft">@dimen/e_</item>
+    </style>
+    <style name="qa" parent="@style/eu">
+        <item name="cb">?attr/e8</item>
+        <item name="cc">@null</item>
+        <item name="cd">@dimen/fw</item>
+        <item name="ce">@color/cx</item>
+        <item name="co">@drawable/by</item>
+        <item name="cq">?attr/e2</item>
+        <item name="gm">true</item>
+        <item name="o4">@color/cy</item>
+        <item name="og">?attr/oi</item>
+    </style>
+    <style name="qb" parent="@style/el">
+        <item name="android:textAppearance">?attr/qt</item>
+        <item name="android:textColor">@color/ci</item>
+    </style>
+    <style name="qc" parent="@style/em">
+        <item name="di">false</item>
+    </style>
+    <style name="qd" parent="@style/em">
+        <item name="android:textColor">@color/d6</item>
+        <item name="android:checkable">true</item>
+        <item name="co">@drawable/bz</item>
+        <item name="cr">false</item>
+        <item name="ct">@color/d4</item>
+        <item name="d1">false</item>
+        <item name="di">false</item>
+        <item name="o4">@color/d5</item>
+    </style>
+    <style name="qe" parent="@style/em">
+        <item name="android:checkable">true</item>
+    </style>
+    <style name="qf" parent="@style/em">
+        <item name="android:checkable">true</item>
+        <item name="co">@drawable/bz</item>
+        <item name="d1">false</item>
+        <item name="di">false</item>
+    </style>
+    <style name="qg" parent="@android:style/Widget">
+        <item name="d5">8dp</item>
+        <item name="ou">false</item>
+        <item name="ow">false</item>
+    </style>
+    <style name="qh" parent="@style/nn">
+        <item name="android:minWidth">?attr/mp</item>
+        <item name="android:minHeight">?attr/mp</item>
+        <item name="gm">true</item>
+        <item name="sh">true</item>
+    </style>
+    <style name="qi" parent="@style/no">
+        <item name="android:minWidth">?attr/mp</item>
+        <item name="android:minHeight">?attr/mp</item>
+        <item name="gm">true</item>
+        <item name="sh">true</item>
+    </style>
+    <style name="qj" parent="@style/np">
+        <item name="android:minWidth">?attr/mp</item>
+        <item name="android:minHeight">?attr/mp</item>
+        <item name="gm">true</item>
+        <item name="sh">true</item>
+    </style>
+    <style name="qk" parent="@style/pz">
+        <item name="android:textColor">@color/d_</item>
+        <item name="android:paddingLeft">@dimen/gd</item>
+        <item name="android:paddingTop">@dimen/gf</item>
+        <item name="android:paddingRight">@dimen/g8</item>
+        <item name="android:paddingBottom">@dimen/g3</item>
+        <item name="android:minWidth">@dimen/gc</item>
+        <item name="android:minHeight">@dimen/gb</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">@dimen/gd</item>
+        <item name="android:paddingEnd">@dimen/g8</item>
+        <item name="b2">@color/d8</item>
+        <item name="ga">@dimen/g7</item>
+        <item name="ii">@dimen/ga</item>
+        <item name="ij">@dimen/g_</item>
+        <item name="im">@color/d_</item>
+        <item name="o4">@color/d9</item>
+        <item name="oj">@style/h5</item>
+    </style>
+    <style name="ql" parent="@style/qk">
+        <item name="android:gravity">0x800013</item>
+        <item name="android:paddingLeft">@dimen/ge</item>
+        <item name="android:paddingRight">@dimen/g9</item>
+        <item name="android:paddingStart">@dimen/ge</item>
+        <item name="android:paddingEnd">@dimen/g9</item>
+    </style>
+    <style name="qm" parent="@style/p_">
+        <item name="android:background">@null</item>
+        <item name="b2">?attr/e6</item>
+        <item name="ga">@dimen/gj</item>
+        <item name="gm">true</item>
+        <item name="go">true</item>
+        <item name="i6">@animator/k</item>
+        <item name="ie">@dimen/gl</item>
+        <item name="ns">@dimen/gm</item>
+        <item name="o4">@color/da</item>
+        <item name="og">?attr/ok</item>
+        <item name="oj">@style/h6</item>
+        <item name="oo">@animator/l</item>
+        <item name="rt">?attr/e0</item>
+    </style>
+    <style name="qn" parent="@style/nv">
+        <item name="android:minHeight">@dimen/hi</item>
+        <item name="mh">@dimen/hi</item>
+        <item name="pq">?attr/rc</item>
+        <item name="s5">?attr/r2</item>
+    </style>
+    <style name="qo" parent="@android:style/Widget">
+        <item name="ow">false</item>
+    </style>
+    <style name="qp" parent="@android:style/Widget">
+        <item name="android:windowFullscreen">false</item>
+        <item name="f_">@style/qr</item>
+        <item name="fa">@style/qs</item>
+        <item name="fb">@style/qq</item>
+        <item name="fc">@style/qt</item>
+        <item name="ny">@color/cw</item>
+        <item name="og">?attr/oi</item>
+        <item name="sw">@style/r5</item>
+        <item name="sx">@style/r4</item>
+        <item name="sy">@style/r6</item>
+    </style>
+    <style name="qq" parent="@style/r3">
+        <item name="android:height">@dimen/et</item>
+        <item name="android:width">@dimen/ex</item>
+        <item name="android:insetLeft">@dimen/eu</item>
+        <item name="android:insetRight">@dimen/eu</item>
+        <item name="android:insetTop">@dimen/ew</item>
+        <item name="android:insetBottom">@dimen/ew</item>
+        <item name="j8">@style/h7</item>
+    </style>
+    <style name="qr" parent="@style/qq">
+        <item name="jf">0dp</item>
+        <item name="jj">@color/cg</item>
+    </style>
+    <style name="qs" parent="@style/qq">
+        <item name="iy">?attr/e2</item>
+        <item name="jf">0dp</item>
+        <item name="jj">?attr/dy</item>
+    </style>
+    <style name="qt" parent="@style/qq">
+        <item name="je">@color/ch</item>
+        <item name="jf">@dimen/ev</item>
+    </style>
+    <style name="qu" parent="@style/p0">
+        <item name="android:textAppearance">?attr/qw</item>
+        <item name="android:gravity">0x11</item>
+    </style>
+    <style name="qv" parent="@style/qp">
+        <item name="android:windowFullscreen">true</item>
+        <item name="oj">@style/h8</item>
+    </style>
+    <style name="qw" parent="@style/q3">
+        <item name="android:textColor">@color/di</item>
+        <item name="o4">@color/co</item>
+    </style>
+    <style name="qx" parent="@android:style/Widget">
+        <item name="android:background">?attr/dy</item>
+        <item name="android:visibility">2</item>
+    </style>
+    <style name="qy" parent="@android:style/Widget">
+        <item name="android:background">?attr/e2</item>
+    </style>
+    <style name="qz" parent="@style/p0">
+        <item name="android:textAppearance">?attr/r0</item>
+        <item name="android:textColor">?attr/dy</item>
+        <item name="android:ellipsize">3</item>
+        <item name="android:maxLines">@integer/n</item>
+        <item name="ao">34sp</item>
+        <item name="ap">2sp</item>
+        <item name="as">r0</item>
+    </style>
+    <style name="r0" parent="@style/qz">
+        <item name="android:textAppearance">?attr/r2</item>
+        <item name="android:maxLines">1</item>
+        <item name="ao">20sp</item>
+    </style>
+    <style name="r1" parent="@style/p0">
+        <item name="android:textAppearance">?attr/r8</item>
+        <item name="android:textColor">?attr/dy</item>
+        <item name="android:ellipsize">3</item>
+        <item name="android:maxLines">1</item>
+        <item name="ao">10sp</item>
+        <item name="ap">2sp</item>
+        <item name="as">r0</item>
+    </style>
+    <style name="r2" parent="@style/nt">
+        <item name="android:background">?attr/b</item>
+        <item name="android:tint">?attr/dy</item>
+    </style>
+    <style name="r3" parent="">
+        <item name="iy">@android:color/transparent</item>
+        <item name="j7">?attr/ok</item>
+        <item name="je">@color/cv</item>
+        <item name="jf">1dp</item>
+        <item name="jj">@color/ch</item>
+    </style>
+    <style name="r4" parent="@style/r3">
+        <item name="android:height">@dimen/fo</item>
+        <item name="android:width">@dimen/fr</item>
+        <item name="android:insetLeft">@dimen/fp</item>
+        <item name="android:insetRight">@dimen/fp</item>
+        <item name="android:insetTop">@dimen/fq</item>
+        <item name="android:insetBottom">@dimen/fq</item>
+        <item name="j8">@style/h9</item>
+    </style>
+    <style name="r5" parent="@style/r4">
+        <item name="iy">?attr/e2</item>
+        <item name="je">?attr/dy</item>
+        <item name="jf">0dp</item>
+        <item name="jj">?attr/dy</item>
+    </style>
+    <style name="r6" parent="@style/r4">
+        <item name="je">@color/ch</item>
+        <item name="jf">@dimen/ev</item>
+    </style>
+    <style name="r7" parent="@style/pa">
+        <item name="android:background">?attr/e8</item>
+        <item name="gm">true</item>
+        <item name="ix">@null</item>
+        <item name="iz">@dimen/gy</item>
+        <item name="j1">@dimen/gz</item>
+        <item name="j2">@dimen/h0</item>
+        <item name="j3">@color/dg</item>
+        <item name="j7">?attr/ok</item>
+        <item name="j9">@color/df</item>
+        <item name="j_">@dimen/h2</item>
+        <item name="ja">@dimen/h1</item>
+        <item name="jb">@dimen/h1</item>
+        <item name="jc">@dimen/h2</item>
+        <item name="jg">?attr/rd</item>
+        <item name="jj">@color/dh</item>
+    </style>
+    <style name="r8" parent="@style/en">
+    </style>
+    <style name="r9" parent="@style/eo">
+    </style>
+    <style name="r_" parent="@style/ep">
+    </style>
+    <style name="ra" parent="@style/eq">
+    </style>
+    <style name="rb" parent="@style/pc">
+        <item name="android:background">@null</item>
+        <item name="android:layout_margin">@dimen/h9</item>
+        <item name="a6">@dimen/h6</item>
+        <item name="aj">em</item>
+        <item name="az">@dimen/h8</item>
+    </style>
+    <style name="rc" parent="@style/pc">
+        <item name="a6">@dimen/h6</item>
+        <item name="az">@dimen/h8</item>
+    </style>
+    <style name="rd" parent="@style/pd">
+        <item name="android:background">?attr/e8</item>
+        <item name="gm">true</item>
+        <item name="gn">true</item>
+        <item name="q6">@color/do_res_0x7f0600a3</item>
+        <item name="q9">@integer/s</item>
+        <item name="q_">?attr/e2</item>
+        <item name="qm">@color/dr</item>
+        <item name="qp">?attr/qv</item>
+        <item name="qq">@color/do_res_0x7f0600a3</item>
+        <item name="qr">true</item>
+    </style>
+    <style name="re" parent="@style/rd">
+        <item name="android:background">?attr/e2</item>
+        <item name="q6">@color/dp</item>
+        <item name="q_">?attr/dy</item>
+        <item name="qm">@color/dn</item>
+        <item name="qq">@color/dp</item>
+    </style>
+    <style name="rf" parent="@style/re">
+    </style>
+    <style name="rg" parent="@style/er">
+        <item name="android:paddingTop">28dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+    <style name="rh" parent="@style/rg">
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="ri" parent="@style/er">
+    </style>
+    <style name="rj" parent="@style/ri">
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+    </style>
+    <style name="rk" parent="@style/es">
+        <item name="bp">@color/db</item>
+        <item name="bq">fa</item>
+        <item name="br">12dp</item>
+        <item name="bw">@color/dd</item>
+        <item name="gk">@color/dc</item>
+        <item name="mf">@style/mz</item>
+        <item name="oj">@style/h_</item>
+        <item name="p9">@color/dc</item>
+    </style>
+    <style name="rl" parent="@style/rk">
+        <item name="br">8dp</item>
+        <item name="mf">@style/n0</item>
+    </style>
+    <style name="rm" parent="@style/rl">
+        <item name="gj">e2</item>
+        <item name="mf">@style/me</item>
+    </style>
+    <style name="rn" parent="@style/rk">
+        <item name="gj">e2</item>
+        <item name="mf">@style/md</item>
+    </style>
+    <style name="ro" parent="@style/es">
+        <item name="br">0dp</item>
+        <item name="mf">@style/n1</item>
+    </style>
+    <style name="rp" parent="@style/ro">
+        <item name="mf">@style/n2</item>
+    </style>
+    <style name="rq" parent="@style/rp">
+        <item name="gj">e2</item>
+        <item name="mf">@style/mg</item>
+    </style>
+    <style name="rr" parent="@style/ro">
+        <item name="gj">e2</item>
+        <item name="mf">@style/mf</item>
+    </style>
+    <style name="rs" parent="@style/et">
+    </style>
+    <style name="rt" parent="@style/p2">
+        <item name="android:minHeight">@dimen/hi</item>
+        <item name="mh">@dimen/hi</item>
+        <item name="po">?attr/rc</item>
+        <item name="pp">?android:attr/textColorSecondary</item>
+        <item name="s3">?attr/r2</item>
+        <item name="s4">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="ru" parent="@style/rt">
+        <item name="android:theme">@style/n3</item>
+        <item name="android:background">?attr/e2</item>
+        <item name="pp">@color/cf</item>
+        <item name="s4">?attr/dy</item>
+    </style>
+    <style name="rv" parent="@style/ru">
+    </style>
+    <style name="rw" parent="@style/rt">
+        <item name="android:theme">@style/n4</item>
+        <item name="android:background">?attr/e8</item>
+        <item name="pp">@color/ci</item>
+        <item name="s4">@color/ch</item>
+    </style>
+    <style name="rx" parent="@android:style/Widget">
+        <item name="pg">#ff000000</item>
+    </style>
+</resources>

@@ -1,0 +1,3 @@
+rootProject.name = '甲壳虫ADB助手'
+
+include 'app'

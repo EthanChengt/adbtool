@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/m1"
+    android:layout_gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    class="com.google.android.material.snackbar.SnackbarContentLayout">
+    <TextView
+        android:textAppearance="@style/jd"
+        android:ellipsize="end"
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/n6"
+        android:paddingLeft="@dimen/ct"
+        android:paddingTop="@dimen/cu"
+        android:paddingRight="@dimen/ct"
+        android:paddingBottom="@dimen/cu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="@integer/g"
+        android:layout_weight="1"
+        android:textAlignment="viewStart"/>
+    <Button
+        android:textColor="?attr/dp"
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/n5"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cq"
+        android:minWidth="48dp"
+        android:layout_marginStart="@dimen/cq"
+        style="?attr/bk"/>
+</view>

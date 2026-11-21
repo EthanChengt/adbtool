@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">घराकडे नेव्हिगेट करा</string>
+    <string name="b">वर नेव्‍हिगेट करा</string>
+    <string name="c">आणखी पर्याय</string>
+    <string name="d">पूर्ण झाले</string>
+    <string name="e">सर्व पाहा</string>
+    <string name="f">अ‍ॅप निवडा</string>
+    <string name="g">बंद</string>
+    <string name="h">सुरू</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">हटवा</string>
+    <string name="l">एंटर करा</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">space</string>
+    <string name="q">Sym+</string>
+    <string name="r">मेनू+</string>
+    <string name="s">शोधा…</string>
+    <string name="t">क्‍वेरी साफ करा</string>
+    <string name="u">शोध क्वेरी</string>
+    <string name="v">शोध</string>
+    <string name="w">क्वेरी सबमिट करा</string>
+    <string name="x">व्हॉइस शोध</string>
+    <string name="y">यांच्यासोबत शेअर करा</string>
+    <string name="z">%s सह शेअर करा</string>
+    <string name="a0">कोलॅप्स करा</string>
+    <string name="ba">कॉपी करा</string>
+    <string name="c6">प्रगत</string>
+    <string name="ef">सेट केलेले नाही</string>
+    <string name="fj">\"%1$s\" क्लिपबोर्डवर कॉपी केली.</string>
+    <string name="gg">शोध</string>
+    <string name="h0">९९९+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">बंद</string>
+    <string name="hw">चालू</string>
+</resources>

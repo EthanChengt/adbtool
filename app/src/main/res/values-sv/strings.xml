@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Navigera hem</string>
+    <string name="b">Navigera uppåt</string>
+    <string name="c">Fler alternativ</string>
+    <string name="d">Klar</string>
+    <string name="e">Visa alla</string>
+    <string name="f">Välj en app</string>
+    <string name="g">AV</string>
+    <string name="h">PÅ</string>
+    <string name="i">Alt + </string>
+    <string name="j">Ctrl + </string>
+    <string name="k">delete</string>
+    <string name="l">retur</string>
+    <string name="m">Funktion + </string>
+    <string name="n">Meta + </string>
+    <string name="o">Skift + </string>
+    <string name="p">blanksteg</string>
+    <string name="q">Symbol + </string>
+    <string name="r">Meny + </string>
+    <string name="s">Sök …</string>
+    <string name="t">Ta bort frågan</string>
+    <string name="u">Sökfråga</string>
+    <string name="v">Sök</string>
+    <string name="w">Skicka fråga</string>
+    <string name="x">Röstsökning</string>
+    <string name="y">Dela med</string>
+    <string name="z">Dela med %s</string>
+    <string name="a0">Komprimera</string>
+    <string name="ba">Kopiera</string>
+    <string name="c6">Avancerat</string>
+    <string name="ef">Inte angett</string>
+    <string name="fj">%1$s har kopierats till Urklipp.</string>
+    <string name="gg">Sök</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">AV</string>
+    <string name="hw">PÅ</string>
+</resources>

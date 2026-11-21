@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Перайсці на галоўную старонку</string>
+    <string name="b">Перайсці ўверх</string>
+    <string name="c">Дадатковыя параметры</string>
+    <string name="d">Гатова</string>
+    <string name="e">Паказаць усе</string>
+    <string name="f">Выберыце праграму</string>
+    <string name="g">ВЫКЛ.</string>
+    <string name="h">УКЛ.</string>
+    <string name="i">Alt +</string>
+    <string name="j">Ctrl +</string>
+    <string name="k">Delete</string>
+    <string name="l">Enter</string>
+    <string name="m">Fn +</string>
+    <string name="n">Meta +</string>
+    <string name="o">Shift +</string>
+    <string name="p">Прабел</string>
+    <string name="q">Sym +</string>
+    <string name="r">Меню +</string>
+    <string name="s">Пошук…</string>
+    <string name="t">Выдаліць запыт</string>
+    <string name="u">Пошукавы запыт</string>
+    <string name="v">Пошук</string>
+    <string name="w">Адправіць запыт</string>
+    <string name="x">Галасавы пошук</string>
+    <string name="y">Абагуліць праз</string>
+    <string name="z">Абагуліць праз праграму \"%s\"</string>
+    <string name="a0">Згарнуць</string>
+    <string name="ba">Капіраваць</string>
+    <string name="c6">Пашыраныя налады</string>
+    <string name="ef">Не зададзена</string>
+    <string name="fj">\"%1$s\": скапіравана ў буфер абмену.</string>
+    <string name="gg">Пошук</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ВЫКЛ.</string>
+    <string name="hw">УКЛ.</string>
+</resources>

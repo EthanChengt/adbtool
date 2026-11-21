@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Fara heim</string>
+    <string name="b">Fara upp</string>
+    <string name="c">Fleiri valkostir</string>
+    <string name="d">Lokið</string>
+    <string name="e">Sjá allt</string>
+    <string name="f">Veldu forrit</string>
+    <string name="g">SLÖKKT</string>
+    <string name="h">KVEIKT</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">eyða</string>
+    <string name="l">enter</string>
+    <string name="m">Aðgerðarlykill+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">bilslá</string>
+    <string name="q">Sym+</string>
+    <string name="r">Valmynd+</string>
+    <string name="s">Leita…</string>
+    <string name="t">Hreinsa fyrirspurn</string>
+    <string name="u">Leitarfyrirspurn</string>
+    <string name="v">Leit</string>
+    <string name="w">Senda fyrirspurn</string>
+    <string name="x">Raddleit</string>
+    <string name="y">Deila með</string>
+    <string name="z">Deila með %s</string>
+    <string name="a0">Minnka</string>
+    <string name="ba">Afrita</string>
+    <string name="c6">Ítarlegt</string>
+    <string name="ef">Ekki stillt</string>
+    <string name="fj">„%1$s“ afritað á klippiborðið.</string>
+    <string name="gg">Leit</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">SLÖKKT</string>
+    <string name="hw">KVEIKT</string>
+</resources>

@@ -1,0 +1,14 @@
+package androidx.lifecycle;
+
+import p006b.p061o.AbstractC0499d;
+import p006b.p061o.InterfaceC0500e;
+import p006b.p061o.InterfaceC0502g;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class Lifecycling$1 implements InterfaceC0500e {
+    @Override // p006b.p061o.InterfaceC0500e
+    /* JADX INFO: renamed from: d */
+    public void mo8d(InterfaceC0502g interfaceC0502g, AbstractC0499d.a aVar) {
+        throw null;
+    }
+}

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="au" parent="@android:style/TextAppearance.Material.Widget.Button.Borderless.Colored">
+    </style>
+    <style name="av" parent="@android:style/TextAppearance.Material.Widget.Button.Colored">
+    </style>
+    <style name="cf" parent="@style/cg">
+        <item name="android:colorBackground">@color/ao</item>
+        <item name="android:timePickerDialogTheme">@style/mn</item>
+        <item name="android:datePickerDialogTheme">@style/mn</item>
+        <item name="android:contextPopupMenuStyle">@style/r9</item>
+        <item name="c">@style/mk</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/pi</item>
+        <item name="j">@style/mb</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pl</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bn">@style/mj</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/ap</item>
+        <item name="e2">@color/av</item>
+        <item name="e3">@color/aw</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="m6">@style/mx</item>
+        <item name="mc">@style/qp</item>
+        <item name="md">@style/mw</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="ch" parent="@style/ci">
+        <item name="android:colorBackground">@color/ao</item>
+        <item name="android:contextPopupMenuStyle">@style/r9</item>
+        <item name="c">@style/mk</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/pi</item>
+        <item name="j">@style/mb</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pl</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bz">@style/q5</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/ap</item>
+        <item name="e2">@color/av</item>
+        <item name="e3">@color/aw</item>
+        <item name="e6">@color/ay</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="cj" parent="@style/ck">
+        <item name="android:colorBackground">@color/b1</item>
+        <item name="android:timePickerDialogTheme">@style/mn</item>
+        <item name="android:datePickerDialogTheme">@style/mn</item>
+        <item name="android:contextPopupMenuStyle">@style/r9</item>
+        <item name="c">@style/mp</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/qn</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pj</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bn">@style/mq</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/b2</item>
+        <item name="e2">@color/b8</item>
+        <item name="e3">@color/b9</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="m6">@style/mx</item>
+        <item name="mc">@style/qp</item>
+        <item name="md">@style/mw</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="cm" parent="@style/cn">
+        <item name="android:colorBackground">@color/b1</item>
+        <item name="android:contextPopupMenuStyle">@style/r9</item>
+        <item name="c">@style/mp</item>
+        <item name="d">@dimen/hi</item>
+        <item name="f">@style/qn</item>
+        <item name="a4">@style/ra</item>
+        <item name="ac">@style/mo</item>
+        <item name="ak">@style/pj</item>
+        <item name="b5">@style/pq</item>
+        <item name="bk">@style/q3</item>
+        <item name="bl">@style/pr</item>
+        <item name="bm">@style/pu</item>
+        <item name="bz">@style/q5</item>
+        <item name="cl">@style/qh</item>
+        <item name="cw">@style/qg</item>
+        <item name="d7">@style/qe</item>
+        <item name="da">@style/qc</item>
+        <item name="dp">?attr/e6</item>
+        <item name="dv">@color/b2</item>
+        <item name="e2">@color/b8</item>
+        <item name="e3">@color/b9</item>
+        <item name="e6">@color/ba</item>
+        <item name="h7">@style/ql</item>
+        <item name="hk">@style/qm</item>
+        <item name="ln">@style/r_</item>
+        <item name="ly">@style/mr</item>
+        <item name="m2">@style/q1</item>
+        <item name="m3">@style/pz</item>
+        <item name="m4">@style/qo</item>
+        <item name="me">@style/qa</item>
+        <item name="mp">@dimen/gw</item>
+        <item name="mu">@style/r7</item>
+        <item name="ne">@style/r8</item>
+        <item name="nx">@style/qi</item>
+        <item name="ox">@style/q8</item>
+        <item name="oy">@style/rb</item>
+        <item name="pz">@style/qj</item>
+        <item name="qo">@style/rd</item>
+        <item name="r3">?attr/rc</item>
+        <item name="rb">?attr/rc</item>
+        <item name="rh">@style/rk</item>
+        <item name="s8">@style/rt</item>
+        <item name="sj">com.google.android.material.theme.MaterialComponentsViewInflater</item>
+    </style>
+    <style name="j0" parent="@style/iz">
+    </style>
+    <style name="j3" parent="@style/iy">
+    </style>
+    <style name="j5" parent="@style/j4">
+    </style>
+    <style name="j7" parent="@style/j6">
+    </style>
+</resources>

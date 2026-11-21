@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">முகப்பிற்குச் செல்லும்</string>
+    <string name="b">மேலே செல்லும்</string>
+    <string name="c">மேலும் விருப்பங்கள்</string>
+    <string name="d">முடிந்தது</string>
+    <string name="e">அனைத்தையும் காட்டு</string>
+    <string name="f">ஆப்ஸைத் தேர்வுசெய்க</string>
+    <string name="g">ஆஃப்</string>
+    <string name="h">ஆன்</string>
+    <string name="i">Alt மற்றும்</string>
+    <string name="j">Ctrl மற்றும்</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function மற்றும்</string>
+    <string name="n">Meta மற்றும்</string>
+    <string name="o">Shift மற்றும்</string>
+    <string name="p">space</string>
+    <string name="q">Sym மற்றும்</string>
+    <string name="r">Menu மற்றும்</string>
+    <string name="s">தேடுக…</string>
+    <string name="t">வினவலை அழிக்கும்</string>
+    <string name="u">தேடல் வினவல்</string>
+    <string name="v">தேடும்</string>
+    <string name="w">வினவலைச் சமர்ப்பிக்கும்</string>
+    <string name="x">குரல் தேடல்</string>
+    <string name="y">இதில் பகிர்</string>
+    <string name="z">%s மூலம் பகிர்</string>
+    <string name="a0">சுருக்கும்</string>
+    <string name="ba">நகலெடு</string>
+    <string name="c6">மேம்பட்டவை</string>
+    <string name="ef">அமைக்கப்படவில்லை</string>
+    <string name="fj">\"%1$s\" கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது.</string>
+    <string name="gg">தேடல்</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">ஆஃப்</string>
+    <string name="hw">ஆன்</string>
+</resources>

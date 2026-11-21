@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/au"
+        android:id="@+id/b6"
+        android:orderInCategory="100"
+        android:title="@string/ev"
+        app:iconTint="@color/eh"
+        app:showAsAction="0x2"/>
+    <item
+        android:icon="@drawable/aq"
+        android:id="@+id/az"
+        android:orderInCategory="100"
+        android:title="fastboot命令"
+        app:iconTint="@color/ey"
+        app:showAsAction="0x2"/>
+    <item
+        android:id="@+id/b7"
+        android:orderInCategory="100"
+        android:title="@string/fr"
+        app:showAsAction="0x0"/>
+    <item
+        android:id="@+id/b8"
+        android:orderInCategory="100"
+        android:title="@string/g0"
+        app:showAsAction="0x0"/>
+    <item
+        android:icon="@drawable/d_"
+        android:id="@+id/b9"
+        android:orderInCategory="100"
+        android:title="@string/gk"
+        app:iconTint="@color/e4"
+        app:showAsAction="0x1"/>
+</menu>

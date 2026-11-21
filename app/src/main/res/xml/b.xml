@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:icon="@drawable/av"
+        app:key="unlock_advanced"
+        app:summary="未解锁"
+        app:title="解锁高级版"/>
+    <PreferenceCategory app:title="@string/hk">
+        <Preference
+            app:icon="@drawable/d9"
+            app:key="screencap_path"
+            app:summary="/sdcard/Pictures"
+            app:title="@string/gf"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/cd">
+        <SwitchPreferenceCompat
+            app:icon="@drawable/db"
+            app:key="show_hide_files"
+            app:summaryOff="@string/cl"
+            app:summaryOn="@string/gn"
+            app:title="@string/bh"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/ci">
+        <ListPreference
+            app:defaultValue="true"
+            app:entries="@array/d"
+            app:entryValues="@array/e"
+            app:icon="@drawable/d1"
+            app:key="default_fragment"
+            app:title="@string/bg"
+            app:useSimpleSummaryProvider="true"/>
+        <Preference
+            app:icon="@drawable/cq"
+            app:key="clear_cache"
+            app:title="@string/az"/>
+        <Preference
+            app:icon="@drawable/cn"
+            app:key="show_log"
+            app:summary="最近一次异常退出的日志，请向开发者反馈以便修复"
+            app:title="崩溃日志"/>
+        <Preference
+            app:icon="@drawable/d4"
+            app:key="contact_author"
+            app:summary="邮箱: didjdk@163.com"
+            app:title="联系作者"/>
+        <Preference
+            app:icon="@drawable/d2"
+            app:key="about_app"
+            app:title="关于软件"/>
+    </PreferenceCategory>
+</PreferenceScreen>

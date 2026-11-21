@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/je"
+    android:paddingTop="@dimen/fe"
+    android:paddingBottom="@dimen/fc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <com.google.android.material.button.MaterialButton
+            android:gravity="start|center_vertical"
+            android:layout_gravity="start"
+            android:id="@+id/jf"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fd"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/bw"
+            app:iconGravity="0x4"
+            app:iconPadding="4dp"/>
+    </FrameLayout>
+    <com.google.android.material.button.MaterialButton
+        android:gravity="center"
+        android:id="@+id/jh"
+        android:layout_width="@dimen/gw"
+        android:layout_height="@dimen/fd"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:contentDescription="@string/db"
+        app:icon="@drawable/bs"/>
+    <com.google.android.material.button.MaterialButton
+        android:gravity="center"
+        android:id="@+id/jg"
+        android:layout_width="@dimen/gw"
+        android:layout_height="@dimen/fd"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:contentDescription="@string/da"
+        app:icon="@drawable/bt"/>
+</LinearLayout>

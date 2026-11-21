@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a">Tunjukkan jalan ke rumah</string>
+    <string name="b">Kembali ke atas</string>
+    <string name="c">Opsi lain</string>
+    <string name="d">Selesai</string>
+    <string name="e">Lihat semua</string>
+    <string name="f">Pilih aplikasi</string>
+    <string name="g">NONAKTIF</string>
+    <string name="h">AKTIF</string>
+    <string name="i">Alt+</string>
+    <string name="j">Ctrl+</string>
+    <string name="k">delete</string>
+    <string name="l">enter</string>
+    <string name="m">Function+</string>
+    <string name="n">Meta+</string>
+    <string name="o">Shift+</string>
+    <string name="p">spasi</string>
+    <string name="q">Sym+</string>
+    <string name="r">Menu+</string>
+    <string name="s">Telusuri...</string>
+    <string name="t">Hapus kueri</string>
+    <string name="u">Telusuri kueri</string>
+    <string name="v">Telusuri</string>
+    <string name="w">Kirim kueri</string>
+    <string name="x">Penelusuran suara</string>
+    <string name="y">Bagikan dengan</string>
+    <string name="z">Bagikan dengan %s</string>
+    <string name="a0">Ciutkan</string>
+    <string name="ba">Salin</string>
+    <string name="c6">Lanjutan</string>
+    <string name="ef">Belum disetel</string>
+    <string name="fj">\"%1$s\" disalin ke papan klip.</string>
+    <string name="gg">Telusuri</string>
+    <string name="h0">999+</string>
+    <string name="h2">%1$s, %2$s</string>
+    <string name="hv">NONAKTIF</string>
+    <string name="hw">AKTIF</string>
+</resources>
