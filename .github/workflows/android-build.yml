@@ -61,28 +61,60 @@ jobs:
         with:
           gradle-version: '8.11.1'
 
-      - name: Build debug APK
+      - name: Capture build environment
         shell: bash
         run: |
-          LOG_FILE="${RUNNER_TEMP}/gradle-build.log"
-          if ! gradle --no-daemon --stacktrace :app:assembleDebug > "$LOG_FILE" 2>&1; then
-            echo "::error::Gradle 构建失败，日志如下："
-            echo "::group::Gradle 构建失败日志"
-            cat "$LOG_FILE"
-            echo "::endgroup::"
-            exit 1
-          fi
+          {
+            echo "=== Java ==="
+            java -version
+            echo "=== Gradle ==="
+            gradle --version
+            echo "=== Android SDK Manager ==="
+            sdkmanager --version
+            echo "=== Installed SDK packages ==="
+            sdkmanager --list_installed
+          } 2>&1 | tee "${RUNNER_TEMP}/build-environment.log"
 
-      - name: Upload build error log
-        if: failure()
+      - name: Validate all nine-patch resources
+        id: resource_preflight
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/check_ninepatches.py 2>&1 | tee "${RUNNER_TEMP}/ninepatch-preflight.log"
+
+      - name: Validate Android framework enum and flag values
+        id: resource_types_preflight
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/check_resource_style_values.py 2>&1 | tee "${RUNNER_TEMP}/resource-style-preflight.log"
+
+      - name: Build debug APK
+        id: gradle_build
+        shell: bash
+        run: |
+          set -o pipefail
+          LOG_FILE="${RUNNER_TEMP}/gradle-build.log"
+          gradle --no-daemon --stacktrace --info :app:assembleDebug 2>&1 | tee "$LOG_FILE"
+
+      - name: Upload failure diagnostics
+        if: ${{ always() && failure() }}
         uses: actions/upload-artifact@v7
         with:
-          name: adb-helper-错误日志
-          path: ${{ runner.temp }}/gradle-build.log
-          archive: false
-          if-no-files-found: ignore
+          name: adb-helper-build-error-logs
+          path: |
+            ${{ runner.temp }}/build-environment.log
+            ${{ runner.temp }}/ninepatch-preflight.log
+            ${{ runner.temp }}/resource-style-preflight.log
+            ${{ runner.temp }}/gradle-build.log
+            ${{ runner.temp }}/.gradle-actions/build-results/
+            app/build/outputs/logs/
+          if-no-files-found: warn
+          retention-days: 14
+          include-hidden-files: true
 
       - name: Upload debug APK
+        if: ${{ success() }}
         uses: actions/upload-artifact@v7
         with:
           name: adb-helper-debug-apk
