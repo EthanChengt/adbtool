@@ -2,31 +2,7 @@ name: Android CI
 
 on:
   push:
-    branches: [main, master]
-    tags: ["v*"]
-    paths-ignore:
-      - "**/*.md"
-      - "**/*.zip"
-      - "**/*.rar"
-      - "**/*.7z"
-      - "**/*.tar"
-      - "**/*.tar.gz"
-      - "**/*.tgz"
-      - "**/*.gz"
-      - "**/*.bz2"
-      - "**/*.xz"
   pull_request:
-    paths-ignore:
-      - "**/*.md"
-      - "**/*.zip"
-      - "**/*.rar"
-      - "**/*.7z"
-      - "**/*.tar"
-      - "**/*.tar.gz"
-      - "**/*.tgz"
-      - "**/*.gz"
-      - "**/*.bz2"
-      - "**/*.xz"
   workflow_dispatch:
 
 permissions:
