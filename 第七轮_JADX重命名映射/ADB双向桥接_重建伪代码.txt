@@ -1,0 +1,58 @@
+甲壳虫 ADB 1.3.1 — C0979t3 双向桥接伪代码（非原始源码，不可直接替换）
+
+类映射：JADX C0979t3 ← 原始 DEX c.c.a.t3
+字段映射：
+  f4905a ← a : UsbDeviceConnection
+  f4906b ← b : USB Bulk OUT endpoint
+  f4907c ← c : USB Bulk IN endpoint
+  f4908d ← d : UsbInterface
+  f4909e ← e : ServerSocket
+  f4910f ← f : InputStream
+  f4911g ← g : OutputStream
+  f4912h ← h : ConnectActivity
+  f4915k ← k : Handler
+  f4917m ← m : boolean
+  f4918n ← n : boolean
+
+// Java RunnableC0974s3 在 5008 端口 accept() 后持有 socket 的 InputStream/OutputStream。
+// 随后循环调用 native m2631a(t3)，并启动 native r2.run() 线程。
+
+static void adbSocketToUsb(C0979t3 t3) { // 原始 JNI：c.c.a.t3.a(t3)
+    byte[] header = new byte[24];
+    t3.m2638h(header);                   // 原始 h(byte[])：从 t3.InputStream 取数据
+
+    ByteBuffer frame = ByteBuffer.allocate(24)
+                                 .order(ByteOrder.LITTLE_ENDIAN)
+                                 .put(header);
+
+    int command = frame.getInt(0);
+    if (t3.f4917m && command == 0x4e584e43) { // 小端字节对应 ASCII: CNXN
+        frame.putInt(8, 0x4000);
+    }
+
+    int payloadLength = frame.getInt(12);
+    t3.m2639i(frame.array());            // 原始 i(byte[])：头部送入 USB OUT 路径
+
+    // 负载读取/分块与传输：机器码中可见长度读取、数组处理及 USB OUT 调用。
+    // 具体循环边界、异常/重试时序仍应以 m2631a 完整 CFG 复核。
+    // 负载最终通过 t3.m2632b(USB_OUT, bytes, count) 发送。
+}
+
+static void adbUsbToSocket(C0979t3 t3) { // 原始 JNI：c.c.a.t3.e()
+    // 从 USB Bulk IN 端点读取数据，按 ADB 帧头解析长度。
+    // 将头部和负载通过 t3.OutputStream.write(byte[]) 写回本地 socket，随后 flush()。
+    // USB bulkTransfer 的具体超时、短包和失败重试分支应以完整反汇编为准。
+}
+
+static void reverseWorker(r2 worker) { // 原始 JNI：c.c.a.r2.run()
+    C0979t3 t3 = worker.b;
+    // Native 访问 t3.n 关闭标志，并调用 t3.e() 处理 USB IN → socket。
+    // 结束或异常路径调用 t3.d() 清理，并记录异常日志。
+}
+
+static void cleanup(C0979t3 t3) { // 原始 c.c.a.t3.c() / d()
+    // m2633c()：releaseInterface(UsbInterface)、close(UsbDeviceConnection)、close(ServerSocket)。
+    // m2634d()：先调用 c()，并继续清理 ConnectActivity/广播注册相关对象。
+}
+
+证据边界：上面只将已确认的 JNI resolver、字段/方法访问和 Java 调用关系转换成可读流程。它不是从 Native 机器码自动生成的等价 Java 实现；不应直接编译或用于替换原类。
