@@ -52,8 +52,8 @@
     <style name="dd" parent="@android:style/Widget.Material.Button.Colored">
     </style>
     <style name="dn" parent="@android:style/Widget.Material.EditText">
-        <item name="android:breakStrategy">0</item>
-        <item name="android:hyphenationFrequency">0</item>
+        <item name="android:breakStrategy">simple</item>
+        <item name="android:hyphenationFrequency">none</item>
     </style>
     <style name="e8" parent="@android:style/Widget.Material.RatingBar.Indicator">
     </style>
@@ -62,8 +62,8 @@
     <style name="ee" parent="@android:style/Widget.Material.Spinner.Underlined">
     </style>
     <style name="ef" parent="@android:style/Widget.Material.TextView">
-        <item name="android:breakStrategy">1</item>
-        <item name="android:hyphenationFrequency">0</item>
+        <item name="android:breakStrategy">high_quality</item>
+        <item name="android:hyphenationFrequency">none</item>
     </style>
     <style name="eu" parent="@style/r">
         <item name="cb">?android:attr/colorBackgroundFloating</item>

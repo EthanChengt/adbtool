@@ -82,7 +82,7 @@
         <item name="android:layout_width">32dp</item>
         <item name="android:layout_height">32dp</item>
         <item name="android:src">@null</item>
-        <item name="android:scaleType">3</item>
+        <item name="android:scaleType">fitCenter</item>
         <item name="android:contentDescription">@string/cn</item>
     </style>
     <style name="v" parent="@android:style/Widget">
@@ -95,7 +95,7 @@
     <style name="w" parent="@style/gc">
         <item name="android:textAppearance">?attr/rc</item>
         <item name="android:textColor">@color/ch</item>
-        <item name="android:ellipsize">3</item>
+        <item name="android:ellipsize">end</item>
         <item name="android:layout_width">-2</item>
         <item name="android:layout_height">-2</item>
         <item name="android:singleLine">true</item>
@@ -175,7 +175,7 @@
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
     <style name="ac" parent="">
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:textColorHint">?android:attr/textColorHint</item>
     </style>
@@ -271,7 +271,7 @@
     </style>
     <style name="b3" parent="@style/hn">
         <item name="android:textSize">@dimen/dv</item>
-        <item name="android:textStyle">0x1</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">?attr/dx</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -279,21 +279,21 @@
     </style>
     <style name="b4" parent="@style/hq">
         <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">0x1</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="hm">sans-serif-medium</item>
     </style>
     <style name="b5" parent="@style/ic">
         <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">0x1</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="hm">sans-serif-medium</item>
     </style>
     <style name="b6" parent="@style/ia">
         <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">0x1</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="hm">sans-serif-medium</item>
@@ -991,7 +991,7 @@
         <item name="android:windowAnimationStyle">@style/c</item>
         <item name="android:listDivider">@null</item>
         <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowSoftInputMode">0x20</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:borderlessButtonStyle">@style/ng</item>
         <item name="android:buttonBarStyle">@style/nm</item>
@@ -1135,7 +1135,7 @@
         <item name="android:windowAnimationStyle">@style/c</item>
         <item name="android:listDivider">@null</item>
         <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowSoftInputMode">0x20</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:borderlessButtonStyle">@style/ng</item>
         <item name="android:buttonBarStyle">@style/nm</item>
@@ -1156,7 +1156,7 @@
         <item name="android:windowAnimationStyle">@style/c</item>
         <item name="android:listDivider">@null</item>
         <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:windowSoftInputMode">0x20</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:borderlessButtonStyle">@style/ng</item>
         <item name="android:buttonBarStyle">@style/nm</item>
@@ -1199,7 +1199,7 @@
         <item name="s3">@style/jw</item>
     </style>
     <style name="cz" parent="">
-        <item name="android:gravity">0x10</item>
+        <item name="android:gravity">center_vertical</item>
         <item name="l">@style/n_</item>
         <item name="a3">@style/nb</item>
         <item name="at">@null</item>
@@ -1229,15 +1229,15 @@
     <style name="d2" parent="">
         <item name="android:textAppearance">@style/i4</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:textStyle">0x1</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="android:ellipsize">4</item>
+        <item name="android:ellipsize">marquee</item>
         <item name="android:maxWidth">180dp</item>
         <item name="android:maxLines">2</item>
         <item name="qs">true</item>
     </style>
     <style name="d3" parent="">
-        <item name="android:gravity">0x1</item>
+        <item name="android:gravity">center_horizontal</item>
         <item name="android:background">@drawable/a7</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
@@ -1246,9 +1246,9 @@
         <item name="android:layout_weight">1</item>
     </style>
     <style name="d4" parent="@style/gr">
-        <item name="android:gravity">0x11</item>
+        <item name="android:gravity">center</item>
         <item name="android:background">?attr/b</item>
-        <item name="android:scaleType">5</item>
+        <item name="android:scaleType">center</item>
         <item name="android:minWidth">@dimen/o</item>
         <item name="android:minHeight">@dimen/n</item>
         <item name="android:maxLines">2</item>
@@ -1274,7 +1274,7 @@
         <item name="s5">@style/im</item>
     </style>
     <style name="d8" parent="">
-        <item name="android:gravity">0x11</item>
+        <item name="android:gravity">center</item>
         <item name="android:background">@drawable/f9</item>
         <item name="fq">?attr/ft</item>
         <item name="fs">6dp</item>
@@ -1284,7 +1284,7 @@
     </style>
     <style name="d_" parent="@android:style/Widget">
         <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
-        <item name="android:gravity">0x11</item>
+        <item name="android:gravity">center</item>
         <item name="android:background">@drawable/e</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
@@ -1348,7 +1348,7 @@
     </style>
     <style name="dm" parent="">
         <item name="android:textAppearance">@style/is</item>
-        <item name="android:gravity">0x10</item>
+        <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">8dp</item>
         <item name="android:paddingRight">8dp</item>
     </style>
@@ -1465,7 +1465,7 @@
         <item name="rq">@drawable/a3</item>
     </style>
     <style name="ed" parent="@style/fh">
-        <item name="android:gravity">0x800013</item>
+        <item name="android:gravity">start|center_vertical</item>
         <item name="android:background">@drawable/g6</item>
         <item name="android:clickable">true</item>
         <item name="android:dropDownSelector">?attr/lg</item>
@@ -1489,7 +1489,7 @@
     </style>
     <style name="ei" parent="@android:style/Widget">
         <item name="android:background">?attr/eq</item>
-        <item name="android:scaleType">5</item>
+        <item name="android:scaleType">center</item>
         <item name="android:minWidth">56dp</item>
     </style>
     <style name="ej" parent="@android:style/Widget">
@@ -1646,26 +1646,26 @@
         <item name="og">?attr/oi</item>
     </style>
     <style name="f3" parent="@style/u">
-        <item name="android:layout_gravity">0x800013</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
         <item name="android:layout_marginRight">8dp</item>
         <item name="android:layout_marginEnd">8dp</item>
     </style>
     <style name="f4" parent="@style/u">
-        <item name="android:layout_gravity">0x11</item>
+        <item name="android:layout_gravity">center</item>
     </style>
     <style name="f5" parent="@style/v">
-        <item name="android:orientation">0</item>
+        <item name="android:orientation">horizontal</item>
     </style>
     <style name="f6" parent="@style/v">
-        <item name="android:orientation">1</item>
+        <item name="android:orientation">vertical</item>
     </style>
     <style name="f7" parent="@style/w">
-        <item name="android:layout_gravity">0x800013</item>
-        <item name="android:textAlignment">5</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
     </style>
     <style name="f8" parent="@style/w">
-        <item name="android:layout_gravity">0x11</item>
-        <item name="android:textAlignment">4</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
     </style>
     <style name="f9" parent="@android:style/Theme.Holo">
         <item name="android:colorForeground">@color/bu</item>
@@ -1951,7 +1951,7 @@
         <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
     </style>
     <style name="g_" parent="">
-        <item name="android:scrollbars">0x200</item>
+        <item name="android:scrollbars">vertical</item>
         <item name="ck">@style/fm</item>
         <item name="fk">@style/fq</item>
         <item name="g6">@style/fs</item>
@@ -1972,10 +1972,10 @@
     <style name="gb" parent="@style/ga">
     </style>
     <style name="gc" parent="@style/s">
-        <item name="android:textAlignment">5</item>
+        <item name="android:textAlignment">viewStart</item>
     </style>
     <style name="gd" parent="@android:style/Widget">
-        <item name="android:layout_gravity">0x800013</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
         <item name="android:paddingEnd">8dp</item>
     </style>
     <style name="ge" parent="@android:style/Widget">
@@ -1988,18 +1988,18 @@
         <item name="android:layout_marginStart">16dp</item>
     </style>
     <style name="gh" parent="@android:style/Widget">
-        <item name="android:textAlignment">6</item>
+        <item name="android:textAlignment">viewEnd</item>
         <item name="android:layout_marginStart">16dp</item>
     </style>
     <style name="gi" parent="@android:style/Widget">
         <item name="android:layout_marginStart">8dp</item>
     </style>
     <style name="gj" parent="@android:style/Widget">
-        <item name="android:textAlignment">5</item>
+        <item name="android:textAlignment">viewStart</item>
         <item name="android:layout_alignParentStart">true</item>
     </style>
     <style name="gk" parent="@android:style/Widget">
-        <item name="android:textAlignment">5</item>
+        <item name="android:textAlignment">viewStart</item>
         <item name="android:layout_marginStart">16dp</item>
     </style>
     <style name="gl" parent="@android:style/Widget">
@@ -2294,14 +2294,14 @@
     </style>
     <style name="jg" parent="@style/hp">
         <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
     </style>
     <style name="jh" parent="@style/ho">
         <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
@@ -2310,7 +2310,7 @@
     </style>
     <style name="jj" parent="@style/hr">
         <item name="android:textSize">12sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
@@ -2321,35 +2321,35 @@
     </style>
     <style name="jl" parent="@style/hv">
         <item name="android:textSize">96sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="hm">sans-serif-light</item>
     </style>
     <style name="jm" parent="@style/hu">
         <item name="android:textSize">60sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="hm">sans-serif-light</item>
     </style>
     <style name="jn" parent="@style/ht">
         <item name="android:textSize">48sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
     </style>
     <style name="jo" parent="@style/hs">
         <item name="android:textSize">34sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
     </style>
     <style name="jp" parent="@style/hw">
         <item name="android:textSize">24sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
@@ -2358,14 +2358,14 @@
     </style>
     <style name="jr" parent="@style/hn">
         <item name="android:textSize">10sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
     </style>
     <style name="js" parent="@style/ia">
         <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">0x0</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="hm">sans-serif</item>
@@ -3110,7 +3110,7 @@
         <item name="o4">@color/cr</item>
     </style>
     <style name="q4" parent="@style/q3">
-        <item name="android:ellipsize">3</item>
+        <item name="android:ellipsize">end</item>
         <item name="android:layout_marginLeft">@dimen/ek</item>
         <item name="android:minWidth">@dimen/e4</item>
         <item name="android:lines">1</item>
@@ -3216,7 +3216,7 @@
         <item name="oj">@style/h5</item>
     </style>
     <style name="ql" parent="@style/qk">
-        <item name="android:gravity">0x800013</item>
+        <item name="android:gravity">start|center_vertical</item>
         <item name="android:paddingLeft">@dimen/ge</item>
         <item name="android:paddingRight">@dimen/g9</item>
         <item name="android:paddingStart">@dimen/ge</item>
@@ -3282,7 +3282,7 @@
     </style>
     <style name="qu" parent="@style/p0">
         <item name="android:textAppearance">?attr/qw</item>
-        <item name="android:gravity">0x11</item>
+        <item name="android:gravity">center</item>
     </style>
     <style name="qv" parent="@style/qp">
         <item name="android:windowFullscreen">true</item>
@@ -3294,7 +3294,7 @@
     </style>
     <style name="qx" parent="@android:style/Widget">
         <item name="android:background">?attr/dy</item>
-        <item name="android:visibility">2</item>
+        <item name="android:visibility">gone</item>
     </style>
     <style name="qy" parent="@android:style/Widget">
         <item name="android:background">?attr/e2</item>
@@ -3302,7 +3302,7 @@
     <style name="qz" parent="@style/p0">
         <item name="android:textAppearance">?attr/r0</item>
         <item name="android:textColor">?attr/dy</item>
-        <item name="android:ellipsize">3</item>
+        <item name="android:ellipsize">end</item>
         <item name="android:maxLines">@integer/n</item>
         <item name="ao">34sp</item>
         <item name="ap">2sp</item>
@@ -3316,7 +3316,7 @@
     <style name="r1" parent="@style/p0">
         <item name="android:textAppearance">?attr/r8</item>
         <item name="android:textColor">?attr/dy</item>
-        <item name="android:ellipsize">3</item>
+        <item name="android:ellipsize">end</item>
         <item name="android:maxLines">1</item>
         <item name="ao">10sp</item>
         <item name="ap">2sp</item>

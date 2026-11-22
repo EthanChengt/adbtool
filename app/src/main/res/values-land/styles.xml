@@ -7,7 +7,7 @@
     <style name="qz" parent="@style/p0">
         <item name="android:textAppearance">?attr/r2</item>
         <item name="android:textColor">?attr/dy</item>
-        <item name="android:ellipsize">3</item>
+        <item name="android:ellipsize">end</item>
         <item name="android:maxLines">@integer/n</item>
     </style>
 </resources>
