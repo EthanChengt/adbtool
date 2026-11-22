@@ -24,6 +24,12 @@ TYPED_ATTRS = {
     "android:breakStrategy",
     "android:hyphenationFrequency",
 }
+# Layout dimensions are special enums; raw -1/-2 must be symbolic values.
+LAYOUT_DIMENSION_ATTRS = {
+    "android:layout_width",
+    "android:layout_height",
+    "android:dropDownWidth",
+}
 NUMERIC = re.compile(r"\s*(?:0[xX][0-9a-fA-F]+|-?\d+)\s*\Z")
 errors = []
 files = sorted(ROOT.glob("values*/*.xml"))
@@ -38,9 +44,11 @@ for path in files:
         value = item.text or ""
         if name in TYPED_ATTRS and NUMERIC.fullmatch(value):
             errors.append(f"numeric typed value: {path}:{item.sourceline if hasattr(item, 'sourceline') else '?'} {name}={value.strip()}")
+        if name in LAYOUT_DIMENSION_ATTRS and value.strip() in {"-1", "-2"}:
+            errors.append(f"raw layout dimension: {path} {name}={value.strip()} (use match_parent/wrap_content)")
 
 if errors:
     print("Resource enum/flag preflight FAILED:")
     print("\n".join(errors))
     sys.exit(1)
-print(f"Resource enum/flag preflight passed: {len(files)} values XML files checked; no numeric literals remain for {len(TYPED_ATTRS)} typed framework attributes.")
+print(f"Resource enum/flag preflight passed: {len(files)} values XML files checked; no numeric literals remain for {len(TYPED_ATTRS)} typed framework attributes and raw -1/-2 layout dimensions.")
