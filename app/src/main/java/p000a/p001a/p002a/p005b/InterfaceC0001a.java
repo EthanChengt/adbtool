@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.os.Parcel;
+import android.os.RemoteException;
 import java.util.Objects;
 
 /* JADX INFO: renamed from: a.a.a.b.a */
@@ -43,7 +44,7 @@ public interface InterfaceC0001a extends IInterface {
         }
 
         @Override // android.os.Binder
-        public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) {
+        public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) throws RemoteException {
             if (i == 1598968902) {
                 parcel2.writeString("android.support.v4.os.IResultReceiver");
                 return true;

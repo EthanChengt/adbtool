@@ -1,0 +1,37 @@
+--- a/app/src/main/java/p080c/p126d/p127a/p128a/p131c/C1187f.java
++++ b/app/src/main/java/p080c/p126d/p127a/p128a/p131c/C1187f.java
+@@ -15,4 +15,15 @@
+ 
+     /* JADX INFO: renamed from: c */
+     public final Matrix f5674c = new Matrix();
++
++    @Override
++    public Matrix evaluate(float fraction, Matrix startValue, Matrix endValue) {
++        startValue.getValues(this.f5672a);
++        endValue.getValues(this.f5673b);
++        for (int i = 0; i < 9; i++) {
++            this.f5672a[i] += fraction * (this.f5673b[i] - this.f5672a[i]);
++        }
++        this.f5674c.setValues(this.f5672a);
++        return this.f5674c;
++    }
+ }
+--- a/app/src/main/java/p000a/p001a/p002a/p005b/InterfaceC0001a.java
++++ b/app/src/main/java/p000a/p001a/p002a/p005b/InterfaceC0001a.java
+@@ -5,6 +5,7 @@
+ import android.os.IBinder;
+ import android.os.IInterface;
+ import android.os.Parcel;
++import android.os.RemoteException;
+ import java.util.Objects;
+ 
+ /* JADX INFO: renamed from: a.a.a.b.a */
+@@ -43,7 +44,7 @@
+         }
+ 
+         @Override // android.os.Binder
+-        public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) {
++        public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) throws RemoteException {
+             if (i == 1598968902) {
+                 parcel2.writeString("android.support.v4.os.IResultReceiver");
+                 return true;
