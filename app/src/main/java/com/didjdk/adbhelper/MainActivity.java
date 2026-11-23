@@ -98,6 +98,10 @@ public class MainActivity extends ActivityC1119w2 {
         public a() {
         }
 
+        public MainActivity getOwnerActivity() {
+            return MainActivity.this;
+        }
+
         @Override // android.content.BroadcastReceiver
         public native void onReceive(Context context, Intent intent);
     }

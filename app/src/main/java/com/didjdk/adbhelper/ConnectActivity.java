@@ -26,7 +26,7 @@ import c.c.a.q3;
 import c.c.a.p115u3.C0984a;
 
 /* JADX INFO: loaded from: classes.dex */
-public class ConnectActivity extends ActivityC1119w2 {
+public class ConnectActivity extends ConnectActivityBase {
 
     /* JADX INFO: renamed from: U */
     public static final String f6338U = c.a.a.a.c.a.a.a.a.q();
@@ -92,7 +92,6 @@ public class ConnectActivity extends ActivityC1119w2 {
     public String f6365s;
 
     /* JADX INFO: renamed from: t */
-    public c.c.a.x3.a f6366t;
 
     /* JADX INFO: renamed from: w */
     public String f6369w;
@@ -171,6 +170,10 @@ public class ConnectActivity extends ActivityC1119w2 {
         public c(Context context, int i, List<String> list) {
             super(context, i, list);
             this.f6377b = i;
+        }
+
+        public ConnectActivity getOwnerActivity() {
+            return ConnectActivity.this;
         }
 
         @Override // android.widget.ArrayAdapter, android.widget.Adapter

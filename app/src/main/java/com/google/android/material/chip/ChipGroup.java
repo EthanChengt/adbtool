@@ -41,7 +41,7 @@ public class ChipGroup extends C1268e {
 
     /* JADX INFO: renamed from: com.google.android.material.chip.ChipGroup$b */
     public class C1353b implements CompoundButton.OnCheckedChangeListener {
-        public C1353b(C1352a c1352a) {
+        public C1353b() {
         }
 
         @Override // android.widget.CompoundButton.OnCheckedChangeListener
@@ -94,7 +94,7 @@ public class ChipGroup extends C1268e {
         /* JADX INFO: renamed from: a */
         public ViewGroup.OnHierarchyChangeListener f10271a;
 
-        public ViewGroupOnHierarchyChangeListenerC1356e(C1352a c1352a) {
+        public ViewGroupOnHierarchyChangeListenerC1356e() {
         }
 
         @Override // android.view.ViewGroup.OnHierarchyChangeListener
@@ -125,8 +125,8 @@ public class ChipGroup extends C1268e {
 
     public ChipGroup(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, R.attr.cw);
-        this.f10266i = new C1353b(null);
-        this.f10267j = new ViewGroupOnHierarchyChangeListenerC1356e(null);
+        this.f10266i = new C1353b();
+        this.f10267j = new ViewGroupOnHierarchyChangeListenerC1356e();
         this.f10268k = -1;
         this.f10269l = false;
         int[] iArr = C1164b.f5568f;

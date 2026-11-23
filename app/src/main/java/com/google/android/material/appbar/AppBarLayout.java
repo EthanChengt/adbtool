@@ -47,7 +47,7 @@ import p080c.p126d.p127a.p128a.p148r.C1277n;
 import p080c.p126d.p127a.p128a.p154x.C1296g;
 
 /* JADX INFO: loaded from: classes.dex */
-@CoordinatorLayout.InterfaceC0069d(Behavior.class)
+@CoordinatorLayout.InterfaceC0069d(AppBarLayout.Behavior.class)
 public class AppBarLayout extends LinearLayout {
 
     /* JADX INFO: renamed from: b */
@@ -880,16 +880,6 @@ public class AppBarLayout extends LinearLayout {
     /* JADX INFO: renamed from: f */
     public final void m3047f() {
         setWillNotDraw(!(this.f10129p != null && getTopInset() > 0));
-    }
-
-    @Override // android.widget.LinearLayout, android.view.ViewGroup
-    public ViewGroup.LayoutParams generateDefaultLayoutParams() {
-        return new C1336a(-1, -2);
-    }
-
-    @Override // android.widget.LinearLayout, android.view.ViewGroup
-    public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
-        return new C1336a(getContext(), attributeSet);
     }
 
     public int getDownNestedPreScrollRange() {

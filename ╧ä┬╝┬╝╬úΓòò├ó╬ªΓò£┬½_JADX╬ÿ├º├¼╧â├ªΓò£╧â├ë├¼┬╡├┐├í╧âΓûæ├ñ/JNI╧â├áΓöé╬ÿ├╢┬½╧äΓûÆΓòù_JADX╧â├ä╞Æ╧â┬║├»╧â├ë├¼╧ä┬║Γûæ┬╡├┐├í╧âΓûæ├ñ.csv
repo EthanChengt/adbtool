@@ -1,0 +1,84 @@
+﻿kind,package,current_owner,original_owner,current_name,original_name,current_qualified_name,original_qualified_name,source_file,source_line,declaration
+field,com.didjdk.adbhelper,FastbootActivity,,f6380e0,e0,com.didjdk.adbhelper.FastbootActivity.f6380e0,e0,com/didjdk/adbhelper/FastbootActivity.java,36,public static final /* synthetic */ int f6380e0 = 0;
+field,com.didjdk.adbhelper,FastbootActivity,,f6381A,A,com.didjdk.adbhelper.FastbootActivity.f6381A,A,com/didjdk/adbhelper/FastbootActivity.java,39,public TextView f6381A;
+field,com.didjdk.adbhelper,FastbootActivity,,f6382B,B,com.didjdk.adbhelper.FastbootActivity.f6382B,B,com/didjdk/adbhelper/FastbootActivity.java,42,public TextView f6382B;
+field,com.didjdk.adbhelper,FastbootActivity,,f6383C,C,com.didjdk.adbhelper.FastbootActivity.f6383C,C,com/didjdk/adbhelper/FastbootActivity.java,45,public ImageView f6383C;
+field,com.didjdk.adbhelper,FastbootActivity,,f6384D,D,com.didjdk.adbhelper.FastbootActivity.f6384D,D,com/didjdk/adbhelper/FastbootActivity.java,48,public ImageView f6384D;
+field,com.didjdk.adbhelper,FastbootActivity,,f6385E,E,com.didjdk.adbhelper.FastbootActivity.f6385E,E,com/didjdk/adbhelper/FastbootActivity.java,51,public TextView f6385E;
+field,com.didjdk.adbhelper,FastbootActivity,,f6386F,F,com.didjdk.adbhelper.FastbootActivity.f6386F,F,com/didjdk/adbhelper/FastbootActivity.java,54,public TextView f6386F;
+field,com.didjdk.adbhelper,FastbootActivity,,f6387G,G,com.didjdk.adbhelper.FastbootActivity.f6387G,G,com/didjdk/adbhelper/FastbootActivity.java,57,public Spinner f6387G;
+field,com.didjdk.adbhelper,FastbootActivity,,f6388H,H,com.didjdk.adbhelper.FastbootActivity.f6388H,H,com/didjdk/adbhelper/FastbootActivity.java,60,public Button f6388H;
+field,com.didjdk.adbhelper,FastbootActivity,,f6389I,I,com.didjdk.adbhelper.FastbootActivity.f6389I,I,com/didjdk/adbhelper/FastbootActivity.java,63,public Button f6389I;
+field,com.didjdk.adbhelper,FastbootActivity,,f6390J,J,com.didjdk.adbhelper.FastbootActivity.f6390J,J,com/didjdk/adbhelper/FastbootActivity.java,66,public TextView f6390J;
+field,com.didjdk.adbhelper,FastbootActivity,,f6391K,K,com.didjdk.adbhelper.FastbootActivity.f6391K,K,com/didjdk/adbhelper/FastbootActivity.java,69,public ProgressBar f6391K;
+field,com.didjdk.adbhelper,FastbootActivity,,f6392L,L,com.didjdk.adbhelper.FastbootActivity.f6392L,L,com/didjdk/adbhelper/FastbootActivity.java,72,public TextView f6392L;
+field,com.didjdk.adbhelper,FastbootActivity,,f6393M,M,com.didjdk.adbhelper.FastbootActivity.f6393M,M,com/didjdk/adbhelper/FastbootActivity.java,75,public boolean f6393M;
+field,com.didjdk.adbhelper,FastbootActivity,,f6394N,N,com.didjdk.adbhelper.FastbootActivity.f6394N,N,com/didjdk/adbhelper/FastbootActivity.java,78,public TextView f6394N;
+field,com.didjdk.adbhelper,FastbootActivity,,f6395O,O,com.didjdk.adbhelper.FastbootActivity.f6395O,O,com/didjdk/adbhelper/FastbootActivity.java,81,public Button f6395O;
+field,com.didjdk.adbhelper,FastbootActivity,,f6396P,P,com.didjdk.adbhelper.FastbootActivity.f6396P,P,com/didjdk/adbhelper/FastbootActivity.java,84,public EditText f6396P;
+field,com.didjdk.adbhelper,FastbootActivity,,f6397Q,Q,com.didjdk.adbhelper.FastbootActivity.f6397Q,Q,com/didjdk/adbhelper/FastbootActivity.java,87,public ArrayList<String> f6397Q;
+field,com.didjdk.adbhelper,FastbootActivity,,f6398R,R,com.didjdk.adbhelper.FastbootActivity.f6398R,R,com/didjdk/adbhelper/FastbootActivity.java,90,public RunnableC0964q3 f6398R;
+field,com.didjdk.adbhelper,FastbootActivity,,f6399S,S,com.didjdk.adbhelper.FastbootActivity.f6399S,S,com/didjdk/adbhelper/FastbootActivity.java,93,public StringBuilder f6399S;
+field,com.didjdk.adbhelper,FastbootActivity,,f6400T,T,com.didjdk.adbhelper.FastbootActivity.f6400T,T,com/didjdk/adbhelper/FastbootActivity.java,96,public String f6400T;
+field,com.didjdk.adbhelper,FastbootActivity,,f6401U,U,com.didjdk.adbhelper.FastbootActivity.f6401U,U,com/didjdk/adbhelper/FastbootActivity.java,99,public String f6401U;
+field,com.didjdk.adbhelper,FastbootActivity,,f6402V,V,com.didjdk.adbhelper.FastbootActivity.f6402V,V,com/didjdk/adbhelper/FastbootActivity.java,102,public UsbDevice f6402V;
+field,com.didjdk.adbhelper,FastbootActivity,,f6403W,W,com.didjdk.adbhelper.FastbootActivity.f6403W,W,com/didjdk/adbhelper/FastbootActivity.java,105,public UsbManager f6403W;
+field,com.didjdk.adbhelper,FastbootActivity,,f6404X,X,com.didjdk.adbhelper.FastbootActivity.f6404X,X,com/didjdk/adbhelper/FastbootActivity.java,108,public UsbDeviceConnection f6404X;
+field,com.didjdk.adbhelper,FastbootActivity,,f6405Y,Y,com.didjdk.adbhelper.FastbootActivity.f6405Y,Y,com/didjdk/adbhelper/FastbootActivity.java,111,public C0979t3 f6405Y;
+field,com.didjdk.adbhelper,FastbootActivity,,f6406Z,Z,com.didjdk.adbhelper.FastbootActivity.f6406Z,Z,com/didjdk/adbhelper/FastbootActivity.java,114,public InputStream f6406Z;
+field,com.didjdk.adbhelper,FastbootActivity,,f6407a0,a0,com.didjdk.adbhelper.FastbootActivity.f6407a0,a0,com/didjdk/adbhelper/FastbootActivity.java,117,public OutputStream f6407a0;
+field,com.didjdk.adbhelper,FastbootActivity,,f6408b0,b0,com.didjdk.adbhelper.FastbootActivity.f6408b0,b0,com/didjdk/adbhelper/FastbootActivity.java,120,public final BroadcastReceiver f6408b0;
+field,com.didjdk.adbhelper,FastbootActivity,,f6409c0,c0,com.didjdk.adbhelper.FastbootActivity.f6409c0,c0,com/didjdk/adbhelper/FastbootActivity.java,123,public final Handler f6409c0;
+field,com.didjdk.adbhelper,FastbootActivity,,f6410d0,d0,com.didjdk.adbhelper.FastbootActivity.f6410d0,d0,com/didjdk/adbhelper/FastbootActivity.java,126,public boolean f6410d0;
+method,com.didjdk.adbhelper,FastbootActivity,,m2196j,q,com.didjdk.adbhelper.FastbootActivity.m2196j,q,com/didjdk/adbhelper/FastbootActivity.java,129,public final String f6411q = C0614a.m2196j();
+method,com.didjdk.adbhelper,FastbootActivity,,m2196j,r,com.didjdk.adbhelper.FastbootActivity.m2196j,r,com/didjdk/adbhelper/FastbootActivity.java,132,public final String f6412r = C0614a.m2196j();
+field,com.didjdk.adbhelper,FastbootActivity,,f6413s,s,com.didjdk.adbhelper.FastbootActivity.f6413s,s,com/didjdk/adbhelper/FastbootActivity.java,135,public boolean f6413s;
+field,com.didjdk.adbhelper,FastbootActivity,,f6414t,t,com.didjdk.adbhelper.FastbootActivity.f6414t,t,com/didjdk/adbhelper/FastbootActivity.java,138,public boolean f6414t;
+field,com.didjdk.adbhelper,FastbootActivity,,f6415u,u,com.didjdk.adbhelper.FastbootActivity.f6415u,u,com/didjdk/adbhelper/FastbootActivity.java,141,public boolean f6415u;
+field,com.didjdk.adbhelper,FastbootActivity,,f6416v,v,com.didjdk.adbhelper.FastbootActivity.f6416v,v,com/didjdk/adbhelper/FastbootActivity.java,144,public boolean f6416v;
+field,com.didjdk.adbhelper,FastbootActivity,,f6417w,w,com.didjdk.adbhelper.FastbootActivity.f6417w,w,com/didjdk/adbhelper/FastbootActivity.java,147,public boolean f6417w;
+field,com.didjdk.adbhelper,FastbootActivity,,f6418x,x,com.didjdk.adbhelper.FastbootActivity.f6418x,x,com/didjdk/adbhelper/FastbootActivity.java,150,public View f6418x;
+field,com.didjdk.adbhelper,FastbootActivity,,f6419y,y,com.didjdk.adbhelper.FastbootActivity.f6419y,y,com/didjdk/adbhelper/FastbootActivity.java,153,public View f6419y;
+field,com.didjdk.adbhelper,FastbootActivity,,f6420z,z,com.didjdk.adbhelper.FastbootActivity.f6420z,z,com/didjdk/adbhelper/FastbootActivity.java,156,public TextView f6420z;
+type,com.didjdk.adbhelper,FastbootActivity,,RunnableC1318a,com.didjdk.adbhelper.FastbootActivity$a,com.didjdk.adbhelper.FastbootActivity$RunnableC1318a,com.didjdk.adbhelper.FastbootActivity$a,com/didjdk/adbhelper/FastbootActivity.java,159,public class RunnableC1318a implements Runnable {
+type,com.didjdk.adbhelper,FastbootActivity,,C1319b,com.didjdk.adbhelper.FastbootActivity$b,com.didjdk.adbhelper.FastbootActivity$C1319b,com.didjdk.adbhelper.FastbootActivity$b,com/didjdk/adbhelper/FastbootActivity.java,168,public class C1319b extends Thread {
+field,com.didjdk.adbhelper,C1319b,com.didjdk.adbhelper.FastbootActivity$b,f6422b,b,com.didjdk.adbhelper.C1319b.f6422b,com.didjdk.adbhelper.FastbootActivity$b.b,com/didjdk/adbhelper/FastbootActivity.java,171,public final /* synthetic */ UsbDevice f6422b;
+type,com.didjdk.adbhelper,FastbootActivity,,RunnableC1320c,com.didjdk.adbhelper.FastbootActivity$c,com.didjdk.adbhelper.FastbootActivity$RunnableC1320c,com.didjdk.adbhelper.FastbootActivity$c,com/didjdk/adbhelper/FastbootActivity.java,182,public class RunnableC1320c implements Runnable {
+type,com.didjdk.adbhelper,FastbootActivity,,C1321d,com.didjdk.adbhelper.FastbootActivity$d,com.didjdk.adbhelper.FastbootActivity$C1321d,com.didjdk.adbhelper.FastbootActivity$d,com/didjdk/adbhelper/FastbootActivity.java,191,public class C1321d extends BroadcastReceiver {
+type,com.didjdk.adbhelper,FastbootActivity,,HandlerC1322e,com.didjdk.adbhelper.FastbootActivity$e,com.didjdk.adbhelper.FastbootActivity$HandlerC1322e,com.didjdk.adbhelper.FastbootActivity$e,com/didjdk/adbhelper/FastbootActivity.java,200,public class HandlerC1322e extends Handler {
+method,com.didjdk.adbhelper,FastbootActivity,,m3016x,x,com.didjdk.adbhelper.FastbootActivity.m3016x,x,com/didjdk/adbhelper/FastbootActivity.java,222,"public static native boolean m3016x(FastbootActivity fastbootActivity, UsbDevice usbDevice, UsbInterface usbInterface);"
+method,com.didjdk.adbhelper,FastbootActivity,,m3017A,A,com.didjdk.adbhelper.FastbootActivity.m3017A,A,com/didjdk/adbhelper/FastbootActivity.java,225,public native void m3017A();
+method,com.didjdk.adbhelper,FastbootActivity,,m3018B,B,com.didjdk.adbhelper.FastbootActivity.m3018B,B,com/didjdk/adbhelper/FastbootActivity.java,228,public final native boolean m3018B(UsbDevice usbDevice);
+method,com.didjdk.adbhelper,FastbootActivity,,m3019C,C,com.didjdk.adbhelper.FastbootActivity.m3019C,C,com/didjdk/adbhelper/FastbootActivity.java,231,public final native void m3019C();
+method,com.didjdk.adbhelper,FastbootActivity,,m3020D,D,com.didjdk.adbhelper.FastbootActivity.m3020D,D,com/didjdk/adbhelper/FastbootActivity.java,234,public native void m3020D();
+method,com.didjdk.adbhelper,FastbootActivity,,m3021E,E,com.didjdk.adbhelper.FastbootActivity.m3021E,E,com/didjdk/adbhelper/FastbootActivity.java,237,"public final native void m3021E(byte[] bArr, int i);"
+method,com.didjdk.adbhelper,FastbootActivity,,m3022y,y,com.didjdk.adbhelper.FastbootActivity.m3022y,y,com/didjdk/adbhelper/FastbootActivity.java,258,public native void m3022y(UsbDevice usbDevice);
+method,com.didjdk.adbhelper,FastbootActivity,,m3023z,z,com.didjdk.adbhelper.FastbootActivity.m3023z,z,com/didjdk/adbhelper/FastbootActivity.java,261,"public final native SpannableString m3023z(String str, int i);"
+type,p080c.p113c.p114a,,,C0978t2,c.c.a.t2,p080c.p113c.p114a.C0978t2,c.c.a.t2,p080c/p113c/p114a/C0978t2.java,7,public class C0978t2 {
+field,p080c.p113c.p114a,C0978t2,c.c.a.t2,f4904a,a,p080c.p113c.p114a.C0978t2.f4904a,c.c.a.t2.a,p080c/p113c/p114a/C0978t2.java,10,public ByteBuffer f4904a;
+type,p080c.p113c.p114a,,,C0979t3,c.c.a.t3,p080c.p113c.p114a.C0979t3,c.c.a.t3,p080c/p113c/p114a/C0979t3.java,15,public class C0979t3 {
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4905a,a,p080c.p113c.p114a.C0979t3.f4905a,c.c.a.t3.a,p080c/p113c/p114a/C0979t3.java,18,public final UsbDeviceConnection f4905a;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4906b,b,p080c.p113c.p114a.C0979t3.f4906b,c.c.a.t3.b,p080c/p113c/p114a/C0979t3.java,21,public final UsbEndpoint f4906b;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4907c,c,p080c.p113c.p114a.C0979t3.f4907c,c.c.a.t3.c,p080c/p113c/p114a/C0979t3.java,24,public final UsbEndpoint f4907c;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4908d,d,p080c.p113c.p114a.C0979t3.f4908d,c.c.a.t3.d,p080c/p113c/p114a/C0979t3.java,27,public final UsbInterface f4908d;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4909e,e,p080c.p113c.p114a.C0979t3.f4909e,c.c.a.t3.e,p080c/p113c/p114a/C0979t3.java,30,public ServerSocket f4909e;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4910f,f,p080c.p113c.p114a.C0979t3.f4910f,c.c.a.t3.f,p080c/p113c/p114a/C0979t3.java,33,public InputStream f4910f;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4911g,g,p080c.p113c.p114a.C0979t3.f4911g,c.c.a.t3.g,p080c/p113c/p114a/C0979t3.java,36,public OutputStream f4911g;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4912h,h,p080c.p113c.p114a.C0979t3.f4912h,c.c.a.t3.h,p080c/p113c/p114a/C0979t3.java,39,public ConnectActivity f4912h;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4913i,i,p080c.p113c.p114a.C0979t3.f4913i,c.c.a.t3.i,p080c/p113c/p114a/C0979t3.java,42,public int f4913i;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4914j,j,p080c.p113c.p114a.C0979t3.f4914j,c.c.a.t3.j,p080c/p113c/p114a/C0979t3.java,45,public int f4914j;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4915k,k,p080c.p113c.p114a.C0979t3.f4915k,c.c.a.t3.k,p080c/p113c/p114a/C0979t3.java,48,public Handler f4915k;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4916l,l,p080c.p113c.p114a.C0979t3.f4916l,c.c.a.t3.l,p080c/p113c/p114a/C0979t3.java,51,public boolean f4916l = false;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4917m,m,p080c.p113c.p114a.C0979t3.f4917m,c.c.a.t3.m,p080c/p113c/p114a/C0979t3.java,54,public boolean f4917m = false;
+field,p080c.p113c.p114a,C0979t3,c.c.a.t3,f4918n,n,p080c.p113c.p114a.C0979t3.f4918n,c.c.a.t3.n,p080c/p113c/p114a/C0979t3.java,57,public boolean f4918n = false;
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2631a,a,p080c.p113c.p114a.C0979t3.m2631a,c.c.a.t3.a,p080c/p113c/p114a/C0979t3.java,86,public static native void m2631a(C0979t3 c0979t3);
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2632b,b,p080c.p113c.p114a.C0979t3.m2632b,c.c.a.t3.b,p080c/p113c/p114a/C0979t3.java,89,"public final native void m2632b(UsbEndpoint usbEndpoint, byte[] bArr, int i);"
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2633c,c,p080c.p113c.p114a.C0979t3.m2633c,c.c.a.t3.c,p080c/p113c/p114a/C0979t3.java,92,public native void m2633c();
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2634d,d,p080c.p113c.p114a.C0979t3.m2634d,c.c.a.t3.d,p080c/p113c/p114a/C0979t3.java,95,public native void m2634d();
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2635e,e,p080c.p113c.p114a.C0979t3.m2635e,c.c.a.t3.e,p080c/p113c/p114a/C0979t3.java,98,public final native void m2635e();
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2636f,f,p080c.p113c.p114a.C0979t3.m2636f,c.c.a.t3.f,p080c/p113c/p114a/C0979t3.java,101,public final native void m2636f(String str);
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2637g,g,p080c.p113c.p114a.C0979t3.m2637g,c.c.a.t3.g,p080c/p113c/p114a/C0979t3.java,104,"public final native void m2637g(String str, ByteBuffer byteBuffer);"
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2638h,h,p080c.p113c.p114a.C0979t3.m2638h,c.c.a.t3.h,p080c/p113c/p114a/C0979t3.java,107,public final native void m2638h(byte[] bArr);
+method,p080c.p113c.p114a,C0979t3,c.c.a.t3,m2639i,i,p080c.p113c.p114a.C0979t3.m2639i,c.c.a.t3.i,p080c/p113c/p114a/C0979t3.java,110,public final native void m2639i(byte[] bArr);
+type,p080c.p113c.p114a,,,RunnableC0974s3,c.c.a.s3,p080c.p113c.p114a.RunnableC0974s3,c.c.a.s3,p080c/p113c/p114a/RunnableC0974s3.java,10,public class RunnableC0974s3 implements Runnable {
+field,p080c.p113c.p114a,RunnableC0974s3,c.c.a.s3,f4899b,b,p080c.p113c.p114a.RunnableC0974s3.f4899b,c.c.a.s3.b,p080c/p113c/p114a/RunnableC0974s3.java,13,public final /* synthetic */ C0979t3 f4899b;

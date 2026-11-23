@@ -1,0 +1,21 @@
+﻿Native导出符号,原始类名,原始方法名,JADX反编译对应项,已确认行为（非完整源码）
+Java_c_c_a_t3_a__Lc_c_a_t3_2,c.c.a.t3,a,C0979t3.m2631a,24-byte ADB header / socket->USB OUT; CNXN special branch
+Java_c_c_a_t3_b__Landroid_hardware_usb_UsbEndpoint_2_3BI,c.c.a.t3,b,C0979t3.m2632b,UsbDeviceConnection.bulkTransfer endpoint transport
+Java_c_c_a_t3_c__,c.c.a.t3,c,C0979t3.m2633c,releaseInterface / UsbDeviceConnection.close / ServerSocket.close
+Java_c_c_a_t3_d__,c.c.a.t3,d,C0979t3.m2634d,m2633c plus ConnectActivity receiver cleanup path
+Java_c_c_a_t3_e__,c.c.a.t3,e,C0979t3.m2635e,USB IN -> Socket OutputStream; ADB frame forwarding
+Java_c_c_a_t3_f__Ljava_lang_String_2,c.c.a.t3,f,C0979t3.m2636f,ConnectActivity / MyApplication logging context
+Java_c_c_a_t3_g__Ljava_lang_String_2Ljava_nio_ByteBuffer_2,c.c.a.t3,g,C0979t3.m2637g,C0978t2(ByteBuffer) header formatting/logging
+Java_c_c_a_t3_h___3B,c.c.a.t3,h,C0979t3.m2638h,"InputStream.read(byte[], offset, length)"
+Java_c_c_a_t3_i___3B,c.c.a.t3,i,C0979t3.m2639i,USB OUT endpoint wrapper calling b(...)
+Java_com_didjdk_adbhelper_FastbootActivity_x__Lcom_didjdk_adbhelper_FastbootActivity_2Landroid_hardware_usb_UsbDevice_2Landroid_hardware_usb_UsbInterface_2,com.didjdk.adbhelper.FastbootActivity,x,FastbootActivity.m3016x,USB device/interface handling entry
+Java_com_didjdk_adbhelper_FastbootActivity_A__,com.didjdk.adbhelper.FastbootActivity,A,FastbootActivity.m3017A,Fastboot command submission / validation
+Java_com_didjdk_adbhelper_FastbootActivity_B__Landroid_hardware_usb_UsbDevice_2,com.didjdk.adbhelper.FastbootActivity,B,FastbootActivity.m3018B,USB device filter/check entry
+Java_com_didjdk_adbhelper_FastbootActivity_C__,com.didjdk.adbhelper.FastbootActivity,C,FastbootActivity.m3019C,console/log clear entry
+Java_com_didjdk_adbhelper_FastbootActivity_D__,com.didjdk.adbhelper.FastbootActivity,D,FastbootActivity.m3020D,settings/control entry
+Java_com_didjdk_adbhelper_FastbootActivity_E___3BI,com.didjdk.adbhelper.FastbootActivity,E,FastbootActivity.m3021E,8-byte Big Endian length + payload -> OutputStream
+Java_com_didjdk_adbhelper_FastbootActivity_y__Landroid_hardware_usb_UsbDevice_2,com.didjdk.adbhelper.FastbootActivity,y,FastbootActivity.m3022y,USB device handling
+Java_com_didjdk_adbhelper_FastbootActivity_z__Ljava_lang_String_2I,com.didjdk.adbhelper.FastbootActivity,z,FastbootActivity.m3023z,SpannableString generation / command text highlighting
+Java_com_didjdk_adbhelper_FastbootActivity_onCreate__Landroid_os_Bundle_2,com.didjdk.adbhelper.FastbootActivity,onCreate,FastbootActivity.onCreate,"UI setup, USB broadcasts/permission, device enumeration, 5007 bridge startup"
+Java_com_didjdk_adbhelper_FastbootActivity_00024d_onReceive__Landroid_content_Context_2Landroid_content_Intent_2,com.didjdk.adbhelper.FastbootActivity$d,onReceive,FastbootActivity.C1321d.onReceive,USB attached/detached/permission handling
+Java_com_didjdk_adbhelper_FastbootActivity_00024b_run__,com.didjdk.adbhelper.FastbootActivity$b,run,FastbootActivity.C1319b.run,USB interface class/subclass/protocol enumeration

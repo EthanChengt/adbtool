@@ -222,11 +222,6 @@ public class ActionMenuView extends C0264i0 implements C0229g.b, InterfaceC0236n
         return false;
     }
 
-    @Override // p006b.p008b.p018i.C0264i0, android.view.ViewGroup
-    public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
-        return new C0034c(getContext(), attributeSet);
-    }
-
     public Menu getMenu() {
         if (this.f223q == null) {
             Context context = getContext();

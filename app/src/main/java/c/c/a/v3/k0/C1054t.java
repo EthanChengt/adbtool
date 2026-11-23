@@ -50,7 +50,7 @@ public class C1054t extends g0 {
     public static final /* synthetic */ int f5195J0 = 0;
 
     /* JADX INFO: renamed from: F0 */
-    public j f5201F0;
+    public c.c.a.y3.j f5201F0;
 
     /* JADX INFO: renamed from: G0 */
     public String f5202G0;

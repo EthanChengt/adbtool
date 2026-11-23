@@ -465,9 +465,6 @@ public class C0608g extends AbstractC0607f {
         public e() {
         }
 
-        public e(a aVar) {
-        }
-
         /* JADX INFO: renamed from: a */
         public boolean mo2157a() {
             return false;

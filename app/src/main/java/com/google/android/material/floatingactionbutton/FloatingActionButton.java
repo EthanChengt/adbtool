@@ -59,7 +59,7 @@ import p080c.p126d.p127a.p128a.p154x.InterfaceC1303n;
 import p080c.p126d.p127a.p128a.p156z.C1309a;
 
 /* JADX INFO: loaded from: classes.dex */
-@CoordinatorLayout.InterfaceC0069d(Behavior.class)
+@CoordinatorLayout.InterfaceC0069d(FloatingActionButton.Behavior.class)
 public class FloatingActionButton extends C1278o implements InterfaceC0417l, InterfaceC0438g, InterfaceC1253a, InterfaceC1303n {
 
     /* JADX INFO: renamed from: c */

@@ -63,14 +63,14 @@ public class C1255a extends Drawable {
     public final RectF f5980f = new RectF();
 
     /* JADX INFO: renamed from: g */
-    public final b f5981g = new b(null);
+    public final b f5981g = new b();
 
     /* JADX INFO: renamed from: n */
     public boolean f5988n = true;
 
     /* JADX INFO: renamed from: c.d.a.a.q.a$b */
     public class b extends Drawable.ConstantState {
-        public b(a aVar) {
+        public b() {
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState

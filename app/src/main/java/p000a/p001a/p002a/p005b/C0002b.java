@@ -33,6 +33,18 @@ public class C0002b implements Parcelable {
     public class b extends InterfaceC0001a.a {
         public b() {
         }
+
+        @Override
+        public boolean onTransact(int code, Parcel data, Parcel reply, int flags) {
+            if (code != 1) {
+                return super.onTransact(code, data, reply, flags);
+            }
+            data.enforceInterface("android.support.v4.os.IResultReceiver");
+            int resultCode = data.readInt();
+            Bundle resultData = data.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(data) : null;
+            C0002b.this.mo0j(resultCode, resultData);
+            return true;
+        }
     }
 
     public C0002b(Parcel parcel) {

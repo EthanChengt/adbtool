@@ -276,12 +276,6 @@ public class C0223a implements InterfaceMenuItemC0386b {
         return this;
     }
 
-    @Override // android.view.MenuItem
-    public MenuItem setContentDescription(CharSequence charSequence) {
-        this.f1560j = charSequence;
-        return this;
-    }
-
     @Override // p006b.p032h.p038e.p039a.InterfaceMenuItemC0386b, android.view.MenuItem
     public InterfaceMenuItemC0386b setContentDescription(CharSequence charSequence) {
         this.f1560j = charSequence;
@@ -393,12 +387,6 @@ public class C0223a implements InterfaceMenuItemC0386b {
     @Override // android.view.MenuItem
     public MenuItem setTitleCondensed(CharSequence charSequence) {
         this.f1552b = charSequence;
-        return this;
-    }
-
-    @Override // android.view.MenuItem
-    public MenuItem setTooltipText(CharSequence charSequence) {
-        this.f1561k = charSequence;
         return this;
     }
 

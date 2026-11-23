@@ -16,7 +16,7 @@ public interface InterfaceC1222d {
         public static final TypeEvaluator<e> f5846b = new b();
 
         /* JADX INFO: renamed from: a */
-        public final e f5847a = new e(null);
+        public final e f5847a = new e();
 
         @Override // android.animation.TypeEvaluator
         public e evaluate(float f, e eVar, e eVar2) {

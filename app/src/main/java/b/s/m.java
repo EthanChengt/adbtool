@@ -129,7 +129,7 @@ public final class m {
 
     /* JADX INFO: renamed from: D */
     public static <T> ObjectAnimator m1948D(T t, Property<T, PointF> property, Path path) {
-        return Build.VERSION.SDK_INT >= 21 ? ObjectAnimator.ofObject(t, property, (TypeConverter) null, path) : ObjectAnimator.ofFloat(t, new C0581f(property, path), 0.0f, 1.0f);
+        return Build.VERSION.SDK_INT >= 21 ? ObjectAnimator.ofObject(t, property, (TypeConverter<PointF, PointF>) null, path) : ObjectAnimator.ofFloat(t, (Property<T, Float>) new C0581f<T>(property, path), 0.0f, 1.0f);
     }
 
     /* JADX INFO: renamed from: E */

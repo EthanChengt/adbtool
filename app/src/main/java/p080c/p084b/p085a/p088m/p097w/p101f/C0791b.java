@@ -7,10 +7,10 @@ import p080c.p084b.p085a.p088m.p091u.InterfaceC0719w;
 /* JADX WARN: Incorrect class signature: super class is equals to this class */
 /* JADX INFO: renamed from: c.b.a.m.w.f.b */
 /* JADX INFO: loaded from: classes.dex */
-public class C0791b implements InterfaceC0719w {
+public class C0791b implements InterfaceC0719w<File> {
 
     /* JADX INFO: renamed from: b */
-    public final T f4502b;
+    public final File f4502b;
 
     /* JADX WARN: Multi-variable type inference failed */
     public C0791b(File file) {
@@ -20,7 +20,7 @@ public class C0791b implements InterfaceC0719w {
 
     @Override // p080c.p084b.p085a.p088m.p091u.InterfaceC0719w
     /* JADX INFO: renamed from: b */
-    public final Object mo2409b() {
+    public final File mo2409b() {
         return this.f4502b;
     }
 
@@ -32,8 +32,8 @@ public class C0791b implements InterfaceC0719w {
 
     @Override // p080c.p084b.p085a.p088m.p091u.InterfaceC0719w
     /* JADX INFO: renamed from: d */
-    public Class mo2411d() {
-        return this.f4502b.getClass();
+    public Class<File> mo2411d() {
+        return File.class;
     }
 
     @Override // p080c.p084b.p085a.p088m.p091u.InterfaceC0719w

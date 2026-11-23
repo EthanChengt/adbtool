@@ -1,0 +1,24 @@
+{
+  "java_files": 1145,
+  "package_path_mismatches": [],
+  "public_filename_mismatches": [],
+  "duplicate_public_top_level_types": {},
+  "xml_files_including_manifest": 746,
+  "xml_errors": [],
+  "abi_export_counts": [
+    108,
+    108
+  ],
+  "abi_export_sets_identical": true,
+  "native_audit": {
+    "exports": 108,
+    "declarations": 108,
+    "matched": 108
+  },
+  "java_parser_exit": 0,
+  "java_parser_stdout": "FILES=1145 PARSED=1145 SYNTAX_ERRORS=0 WARNINGS=0",
+  "gradle_command": null,
+  "wrapper_jar_exists": false,
+  "android_home": null,
+  "android_sdk_root": null
+}

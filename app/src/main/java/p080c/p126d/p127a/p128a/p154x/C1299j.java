@@ -220,7 +220,7 @@ public class C1299j {
 
         /* JADX INFO: renamed from: a */
         public C1299j m2991a() {
-            return new C1299j(this, null);
+            return new C1299j(this);
         }
 
         /* JADX INFO: renamed from: c */
@@ -275,7 +275,7 @@ public class C1299j {
         }
     }
 
-    public C1299j(b bVar, a aVar) {
+    public C1299j(b bVar) {
         this.f6257a = bVar.f6269a;
         this.f6258b = bVar.f6270b;
         this.f6259c = bVar.f6271c;

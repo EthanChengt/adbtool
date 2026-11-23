@@ -20,6 +20,7 @@ public final class C0727e<Model, Data> implements InterfaceC0736n<Model, Data> {
 
     /* JADX INFO: renamed from: c.b.a.m.v.e$a */
     public interface a<Data> {
+        Data m2432a(String str);
     }
 
     /* JADX INFO: renamed from: c.b.a.m.v.e$b */
@@ -42,8 +43,8 @@ public final class C0727e<Model, Data> implements InterfaceC0736n<Model, Data> {
         @Override // p080c.p084b.p085a.p088m.p089t.InterfaceC0655d
         /* JADX INFO: renamed from: a */
         public Class<Data> mo2291a() {
-            Objects.requireNonNull((c.a) this.f4295c);
-            return InputStream.class;
+            Objects.requireNonNull(this.f4295c);
+            return (Class<Data>) (Class<?>) InputStream.class;
         }
 
         @Override // p080c.p084b.p085a.p088m.p089t.InterfaceC0655d
@@ -52,7 +53,7 @@ public final class C0727e<Model, Data> implements InterfaceC0736n<Model, Data> {
             try {
                 a<Data> aVar = this.f4295c;
                 Data data = this.f4296d;
-                Objects.requireNonNull((c.a) aVar);
+                Objects.requireNonNull(aVar);
                 ((InputStream) data).close();
             } catch (IOException unused) {
             }
@@ -73,7 +74,7 @@ public final class C0727e<Model, Data> implements InterfaceC0736n<Model, Data> {
         /* JADX INFO: renamed from: e */
         public void mo2297e(EnumC0620f enumC0620f, InterfaceC0655d.a<? super Data> aVar) {
             try {
-                Data r2 = (Data) ((c.a) this.f4295c).m2432a(this.f4294b);
+                Data r2 = this.f4295c.m2432a(this.f4294b);
                 this.f4296d = r2;
                 aVar.mo2300f(r2);
             } catch (IllegalArgumentException e) {
@@ -86,15 +87,16 @@ public final class C0727e<Model, Data> implements InterfaceC0736n<Model, Data> {
     public static final class c<Model> implements InterfaceC0737o<Model, InputStream> {
 
         /* JADX INFO: renamed from: a */
-        public final a<InputStream> f4297a = new a(this);
+        public final C0727e.a<InputStream> f4297a = new a(this);
 
         /* JADX INFO: renamed from: c.b.a.m.v.e$c$a */
-        public class a implements a<InputStream> {
+        public class a implements C0727e.a<InputStream> {
             public a(c cVar) {
             }
 
             /* JADX INFO: renamed from: a */
-            public Object m2432a(String str) {
+            @Override
+            public InputStream m2432a(String str) {
                 if (!str.startsWith("data:image")) {
                     throw new IllegalArgumentException("Not a valid image data URL.");
                 }

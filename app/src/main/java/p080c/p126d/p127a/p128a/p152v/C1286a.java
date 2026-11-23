@@ -44,11 +44,11 @@ public class C1286a extends Drawable implements InterfaceC1303n, InterfaceC0380a
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public Drawable newDrawable() {
-            return new C1286a(new b(this), null);
+            return new C1286a(new b(this));
         }
     }
 
-    public C1286a(b bVar, a aVar) {
+    public C1286a(b bVar) {
         this.f6181b = bVar;
     }
 

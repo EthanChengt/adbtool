@@ -11,7 +11,7 @@ public abstract class AbstractC0879d {
         public volatile boolean f4750a;
 
         public b() {
-            super(null);
+            super();
         }
 
         @Override // p080c.p084b.p085a.p111s.p112k.AbstractC0879d
@@ -23,7 +23,7 @@ public abstract class AbstractC0879d {
         }
     }
 
-    public AbstractC0879d(a aVar) {
+    public AbstractC0879d() {
     }
 
     /* JADX INFO: renamed from: a */

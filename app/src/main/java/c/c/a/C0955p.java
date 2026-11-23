@@ -3,7 +3,6 @@ package c.c.a;
 import android.os.Handler;
 import android.os.Message;
 import com.didjdk.adbhelper.ConnectActivity;
-import com.didjdk.adbhelper.ConnectActivity.C1316c;
 import com.didjdk.adbhelper.R;
 import java.util.Iterator;
 import b.s.m;
@@ -107,7 +106,7 @@ public final /* synthetic */ class C0955p implements Handler.Callback {
                                 }
                                 connectActivity.f6357O.add(0, str3);
                                 connectActivity.f6357O.size();
-                                ConnectActivity.C1316c c1316c = connectActivity.new C1316c(connectActivity, R.layout.bq, connectActivity.f6357O);
+                                ConnectActivity.c c1316c = connectActivity.new c(connectActivity, R.layout.bq, connectActivity.f6357O);
                                 connectActivity.f6356N = c1316c;
                                 connectActivity.f6372z.setAdapter(c1316c);
                             }

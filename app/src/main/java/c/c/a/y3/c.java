@@ -9,14 +9,13 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.didjdk.adbhelper.R;
 import java.util.List;
-import java.util.Objects;
 import p006b.p067s.C0532j;
 import c.c.a.v3.C1000f0;
 import c.c.a.v3.C1034k;
 
 /* JADX INFO: renamed from: c.c.a.y3.c */
 /* JADX INFO: loaded from: classes.dex */
-public class c extends RecyclerView.AbstractC0132g<c> {
+public class c extends RecyclerView.AbstractC0132g<c.ViewHolder> {
 
     /* JADX INFO: renamed from: c */
     public List<d> f5503c;
@@ -44,7 +43,7 @@ public class c extends RecyclerView.AbstractC0132g<c> {
     }
 
     /* JADX INFO: renamed from: c.c.a.y3.c$c */
-    public class c extends RecyclerView.AbstractC0129d0 {
+    public class ViewHolder extends RecyclerView.AbstractC0129d0 {
 
         /* JADX INFO: renamed from: t */
         public View f5508t;
@@ -58,9 +57,9 @@ public class c extends RecyclerView.AbstractC0132g<c> {
         /* JADX INFO: renamed from: w */
         public TextView f5511w;
 
-        public c(c c1148c, View view) {
+        public ViewHolder(View view) {
             super(view);
-            if (c1148c.f5506f) {
+            if (c.this.f5506f) {
                 this.f5510v = (TextView) view.findViewById(R.id.hb);
                 this.f5511w = (TextView) view.findViewById(R.id.he);
             } else {
@@ -94,7 +93,7 @@ public class c extends RecyclerView.AbstractC0132g<c> {
     @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0132g
     /* JADX INFO: renamed from: e */
     public void mo537e(RecyclerView.AbstractC0129d0 abstractC0129d0, int i) {
-        final c cVar = (c) abstractC0129d0;
+        final ViewHolder cVar = (ViewHolder) abstractC0129d0;
         d c1149d = this.f5503c.get(i);
         if (this.f5506f) {
             cVar.f5510v.setText(c1149d.f5513b);
@@ -111,37 +110,30 @@ public class c extends RecyclerView.AbstractC0132g<c> {
         }
         cVar.f5510v.setText(c1149d.f5513b);
         cVar.f5510v.setEnabled(c1149d.f5515d);
-        cVar.f5508t.setOnClickListener(new View.OnClickListener() { // from class: c.c.a.y3.a
-            @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                c c1148c = this.f5499b;
-                c.c cVar2 = cVar;
-                Objects.requireNonNull(c1148c);
-                c1148c.f5504d.mo2640a(cVar2.m509e());
+        cVar.f5508t.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                c.this.f5504d.mo2640a(cVar.m509e());
             }
         });
         if (this.f5507g) {
-            cVar.f5508t.setOnLongClickListener(new View.OnLongClickListener() { // from class: c.c.a.y3.b
-                @Override // android.view.View.OnLongClickListener
-                public final boolean onLongClick(View view) {
-                    c c1148c = this.f5501b;
-                    c.c cVar2 = cVar;
-                    Objects.requireNonNull(c1148c);
-                    int iM509e = cVar2.m509e();
-                    C1034k c1034k = (C1034k) c1148c.f5505e;
+            cVar.f5508t.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    int position = cVar.m509e();
+                    C1034k c1034k = (C1034k) c.this.f5505e;
                     C1000f0 c1000f0 = c1034k.f5153a;
                     List list = c1034k.f5154b;
-                    c c1148c2 = c1034k.f5155c;
-                    Objects.requireNonNull(c1000f0);
-                    if (iM509e < list.size() - 1) {
-                        list.remove(iM509e);
+                    c cAdapter = c1034k.f5155c;
+                    if (position < list.size() - 1) {
+                        list.remove(position);
                         StringBuilder sb = new StringBuilder();
                         for (int i2 = 0; i2 < list.size() - 1; i2++) {
                             sb.append(((d) list.get(i2)).f5513b);
                             sb.append(";qcmd;");
                         }
                         C0532j.m1940a(c1000f0.m303h()).edit().putString("quick_commands", sb.toString()).apply();
-                        c1148c2.f947a.m542b();
+                        cAdapter.f947a.m542b();
                     }
                     return false;
                 }
@@ -152,6 +144,6 @@ public class c extends RecyclerView.AbstractC0132g<c> {
     @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0132g
     /* JADX INFO: renamed from: f */
     public RecyclerView.AbstractC0129d0 mo538f(ViewGroup viewGroup, int i) {
-        return new c(this, LayoutInflater.from(viewGroup.getContext()).inflate(this.f5506f ? R.layout.bo : R.layout.bn, viewGroup, false));
+        return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(this.f5506f ? R.layout.bo : R.layout.bn, viewGroup, false));
     }
 }

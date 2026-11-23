@@ -39,7 +39,7 @@ public class C0757b0<T> implements InterfaceC0649q<T, Bitmap> {
     public final e f4414c;
 
     /* JADX INFO: renamed from: c.b.a.m.w.c.b0$a */
-    public class a implements C0646n.b<Long> {
+    public static class a implements C0646n.b<Long> {
 
         /* JADX INFO: renamed from: a */
         public final ByteBuffer f4415a = ByteBuffer.allocate(8);
@@ -57,7 +57,7 @@ public class C0757b0<T> implements InterfaceC0649q<T, Bitmap> {
     }
 
     /* JADX INFO: renamed from: c.b.a.m.w.c.b0$b */
-    public class b implements C0646n.b<Integer> {
+    public static class b implements C0646n.b<Integer> {
 
         /* JADX INFO: renamed from: a */
         public final ByteBuffer f4416a = ByteBuffer.allocate(4);
