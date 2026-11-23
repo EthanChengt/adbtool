@@ -65,6 +65,13 @@ jobs:
           set -o pipefail
           python3 tools/check_resource_style_values.py 2>&1 | tee "${RUNNER_TEMP}/resource-style-preflight.log"
 
+      - name: Validate restored AndroidX and Material attributes
+        id: app_attrs_preflight
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/check_app_attrs.py 2>&1 | tee "${RUNNER_TEMP}/app-attrs-preflight.log"
+
       - name: Build debug APK
         id: gradle_build
         shell: bash
@@ -82,6 +89,7 @@ jobs:
             ${{ runner.temp }}/build-environment.log
             ${{ runner.temp }}/ninepatch-preflight.log
             ${{ runner.temp }}/resource-style-preflight.log
+            ${{ runner.temp }}/app-attrs-preflight.log
             ${{ runner.temp }}/gradle-build.log
             ${{ runner.temp }}/.gradle-actions/build-results/
             app/build/outputs/logs/
