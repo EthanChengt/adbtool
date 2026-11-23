@@ -72,6 +72,13 @@ jobs:
           set -o pipefail
           python3 tools/check_app_attrs.py 2>&1 | tee "${RUNNER_TEMP}/app-attrs-preflight.log"
 
+      - name: Validate custom attribute enum values
+        id: custom_attr_enum_preflight
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/check_custom_attr_enum_values.py 2>&1 | tee "${RUNNER_TEMP}/custom-attr-enum-preflight.log"
+
       - name: Build debug APK
         id: gradle_build
         shell: bash
@@ -90,6 +97,7 @@ jobs:
             ${{ runner.temp }}/ninepatch-preflight.log
             ${{ runner.temp }}/resource-style-preflight.log
             ${{ runner.temp }}/app-attrs-preflight.log
+            ${{ runner.temp }}/custom-attr-enum-preflight.log
             ${{ runner.temp }}/gradle-build.log
             ${{ runner.temp }}/.gradle-actions/build-results/
             app/build/outputs/logs/
