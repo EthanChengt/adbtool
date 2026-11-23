@@ -1,4 +1,4 @@
-name: Round 22 Script Fix 5
+name: Round 22 Script Fix 6
 
 on:
   workflow_dispatch:
@@ -12,46 +12,95 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Fix Round22 patch script guards robustly
+
+      - name: Repair Round22 transform logic
         run: |
           python3 - <<'PY'
           from pathlib import Path
+
           p = Path('apply_round22.py')
           if not p.is_file():
               raise SystemExit('apply_round22.py not found; stopping')
           s = p.read_text(encoding='utf-8')
-          old = 'if "a.m2191e(" in text_holder[0]:'
-          new = 'if re.search(r"(?<![\\w.])a\\.m2191e\\(", text_holder[0]):'
-          n = s.count(old)
-          if n != 1:
-              raise SystemExit(f'Expected exactly one C0397b guard source line, found {n}; stopping')
-          s = s.replace(old, new, 1)
-          # Repair the earlier typo only if present; don't fail if absent.
-          s = s.replace('re.MULTIL)', 're.MULTILINE)')
-          p.write_text(s, encoding='utf-8')
-          print('Guard repair applied to patch script.')
+
+          # Fix C0397b: the old substring guard also matched the suffix of
+          # the fully-qualified helper call c.a.a.a.a.m2191e(...).
+          old_guard = 'if "a.m2191e(" in text_holder[0]:'
+          new_guard = 'if re.search(r"(?<![\\w.])a\\.m2191e\\(", text_holder[0]):'
+          guard_count = s.count(old_guard)
+          if guard_count != 1:
+              raise SystemExit(
+                  f'Expected exactly one C0397b guard source line, found {guard_count}; stopping'
+              )
+          if 'import re' not in s:
+              raise SystemExit('apply_round22.py does not import re; stopping')
+          s = s.replace(old_guard, new_guard, 1)
+
+          # Fix C1259e's final shadow-padding edit. The source Java block uses
+          # 8 spaces on these lines, while the original exact anchor expected
+          # 12. Replace the exact Python rep() call with a whitespace-tolerant
+          # regex transformation, scoped to the unique i6/i7/i8/i9 block.
+          lines = s.splitlines()
+          matches = [
+              i for i, line in enumerate(lines)
+              if 'rep("FloatingActionButton.this.f10289n.set(i6, i7, i8, i9);' in line
+          ]
+          if len(matches) != 1:
+              raise SystemExit(
+                  f'Expected one C1259e i6 patch call in apply_round22.py, found {len(matches)}; stopping'
+              )
+          i = matches[0]
+          expected_second = '"c1360b4.setShadowPadding(i6, i7, i8, i9);")'
+          if i + 1 >= len(lines) or lines[i + 1].strip() != expected_second:
+              raise SystemExit('C1259e i6 patch call did not match the expected two-line structure; stopping')
+
+          replacement = [
+              '        pattern = re.compile(',
+              '            r"FloatingActionButton\\.this\\.f10289n\\.set\\(i6,\\s*i7,\\s*i8,\\s*i9\\);\\s*"',
+              '            r"FloatingActionButton\\s+floatingActionButton2\\s*=\\s*FloatingActionButton\\.this;\\s*"',
+              '            r"int\\s+i10\\s*=\\s*floatingActionButton2\\.f10286k;\\s*"',
+              '            r"floatingActionButton2\\.setPadding\\(\\s*i6\\s*\\+\\s*i10,\\s*i7\\s*\\+\\s*i10,\\s*i8\\s*\\+\\s*i10,\\s*i9\\s*\\+\\s*i10\\s*\\);"',
+              '        )',
+              '        text_holder[0], count = pattern.subn(',
+              '            "c1360b4.setShadowPadding(i6, i7, i8, i9);", text_holder[0]',
+              '        )',
+              '        if count != 1:',
+              '            raise ValueError(f"{path}: expected one i6 shadow-padding block, found {count}")',
+          ]
+          lines[i:i + 2] = replacement
+          p.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          print('C0397b guard and C1259e indentation-tolerant transform repaired.')
           PY
+
       - name: Python syntax check
         run: python3 -m py_compile apply_round22.py
+
       - name: Validate Round 22 patches without modifying Java
         run: python3 apply_round22.py --check-only .
+
       - name: Apply Round 22 patches
         run: python3 apply_round22.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
+
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+
       - name: Install Android SDK components
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.11.1'
+
       - name: Build debug APK
         run: gradle --no-daemon --stacktrace :app:assembleDebug
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
