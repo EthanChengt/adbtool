@@ -14,9 +14,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      # 如果仓库有 requirements.txt 就保留；没有则删除
-      - run: pip install -r requirements.txt
-
       - name: Check only
         run: python3 apply_round22.py --check-only .
 
