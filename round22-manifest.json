@@ -1,0 +1,142 @@
+{
+  "base_commit": "24170f8a33cb622caf23f12a208d8672552f87f7",
+  "target_file_count": 34,
+  "targets": [
+    {
+      "path": "app/src/main/java/androidx/recyclerview/widget/RecyclerView.java",
+      "git_blob_sha": "b4d0f3490d9a13c4058e3b5a2473a24f3fd49561"
+    },
+    {
+      "path": "app/src/main/java/p006b/p068t/p069b/C0539b.java",
+      "git_blob_sha": "a46c679a926eb6b8885866ef356ddcbc1d4ed2bb"
+    },
+    {
+      "path": "app/src/main/java/c/c/a/v3/k0/C1051q.java",
+      "git_blob_sha": "f62ab477e2a4a93bdff14437fc88742a1b796813"
+    },
+    {
+      "path": "app/src/main/java/androidx/coordinatorlayout/widget/CoordinatorLayout.java",
+      "git_blob_sha": "675158ebe8b9cd0d3409616c3e6a1d01498db558"
+    },
+    {
+      "path": "app/src/main/java/p006b/p032h/p042h/C0397b.java",
+      "git_blob_sha": "2acdaf9770ba02e537e0896e038e5f639df63329"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p018i/C0264i0.java",
+      "git_blob_sha": "0434e206ad249a76f0661e7337c55ee75c399295"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p018i/C0243a0.java",
+      "git_blob_sha": "82bbdfa34274d708ffa54a5a9ad8686a19b07558"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p018i/C0295y.java",
+      "git_blob_sha": "404b67c1e0cb5c9a3c0505485127a1a894441976"
+    },
+    {
+      "path": "app/src/main/java/p006b/p032h/p034c/p035b/C0369g.java",
+      "git_blob_sha": "3293f0862d74752a12e92da4f3259a4e2acbbbdf"
+    },
+    {
+      "path": "app/src/main/java/p006b/p071v/p072a/C0570d.java",
+      "git_blob_sha": "7948ba7c89c41dfd7d195d290677ee54ccfe4016"
+    },
+    {
+      "path": "app/src/main/java/androidx/appcompat/widget/Toolbar.java",
+      "git_blob_sha": "ba574746ad64a0028c2368e9ccad26053e7a6645"
+    },
+    {
+      "path": "app/src/main/java/androidx/core/widget/NestedScrollView.java",
+      "git_blob_sha": "276031d1012f2eb2a7c21cadad3ff236f0ada7e7"
+    },
+    {
+      "path": "app/src/main/java/androidx/appcompat/widget/ActionMenuView.java",
+      "git_blob_sha": "f577da7f31b44d5108a65059cb78aaa3e61e5357"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p018i/C0248c.java",
+      "git_blob_sha": "46f73e193738bdc7176c68cb83e20e61d4fc655a"
+    },
+    {
+      "path": "app/src/main/java/p006b/p032h/p044j/C0425t.java",
+      "git_blob_sha": "66a3ae5cf31b15b25526ebae8d00154b824941d5"
+    },
+    {
+      "path": "app/src/main/java/p006b/p032h/p044j/AbstractC0407b.java",
+      "git_blob_sha": "7b186668f3d68f4ea7853919a031e1d17851b14f"
+    },
+    {
+      "path": "app/src/main/java/p006b/p025e/AbstractC0319g.java",
+      "git_blob_sha": "8efc9588132d2b894f469328b9274a5154c9ade0"
+    },
+    {
+      "path": "app/src/main/java/p006b/p025e/C0315c.java",
+      "git_blob_sha": "43167396788a1a8833854cca425e28198fd4c73f"
+    },
+    {
+      "path": "app/src/main/java/p006b/p071v/p072a/C0567a.java",
+      "git_blob_sha": "74a1a0820e336d265470dfab2667d846281d7be6"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p009c/DialogC0203s.java",
+      "git_blob_sha": "eafb3108e163b8b33dc9552a111b63e32fe49cd9"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p016h/p017i/C0229g.java",
+      "git_blob_sha": "e777995c6446a7a14efb33bd7d75721f3d99adff"
+    },
+    {
+      "path": "app/src/main/res/values/ids.xml",
+      "git_blob_sha": "d54688ee8c9d5000120806f90397f56f1dcc197e"
+    },
+    {
+      "path": "app/src/main/java/p006b/p032h/p044j/C0423r.java",
+      "git_blob_sha": "ab1ff6fc777e5038c596e41909e8b702fa358325"
+    },
+    {
+      "path": "app/src/main/java/p006b/p032h/p033b/ActivityC0361g.java",
+      "git_blob_sha": "a8df1eb0b360e5fae5c2bfbd7972c181b24a80d7"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p009c/C0204t.java",
+      "git_blob_sha": "2f07383ffa4605ad318b1f92abd239ae912998da"
+    },
+    {
+      "path": "app/src/main/java/androidx/appcompat/view/menu/ActionMenuItemView.java",
+      "git_blob_sha": "d0d1a095db628d413e709430ea9a0fcaa35012d0"
+    },
+    {
+      "path": "app/src/main/java/p080c/p126d/p127a/p128a/p153w/InterfaceC1289b.java",
+      "git_blob_sha": "e587a956667b8a217dd7d5fc23b2dff3e843651f"
+    },
+    {
+      "path": "app/src/main/java/com/google/android/material/floatingactionbutton/FloatingActionButton.java",
+      "git_blob_sha": "17638b1acd2468bfd220f487c4a760678e95c8d3"
+    },
+    {
+      "path": "app/src/main/java/p080c/p126d/p127a/p128a/p147q/C1259e.java",
+      "git_blob_sha": "691476f24e981c07d6c11526d50d6882f4f6268c"
+    },
+    {
+      "path": "app/src/main/java/p080c/p126d/p127a/p128a/p154x/C1300k.java",
+      "git_blob_sha": "7c75d50786709bb7d387658e6207297862ac01ca"
+    },
+    {
+      "path": "app/src/main/java/p080c/p126d/p127a/p128a/p154x/C1296g.java",
+      "git_blob_sha": "87857d6ea8e83df44417eeca4ba043d1855bbfcc"
+    },
+    {
+      "path": "app/src/main/java/p006b/p008b/p018i/C0280q0.java",
+      "git_blob_sha": "dd092391839455d445726ce04c82e35f141a6348"
+    },
+    {
+      "path": "app/src/main/java/com/didjdk/adbhelper/MainActivity.java",
+      "git_blob_sha": "4af8a806c1b5a6bab09df6bb9d5265ed131658c2"
+    },
+    {
+      "path": "app/src/main/java/com/didjdk/adbhelper/ConnectActivity.java",
+      "git_blob_sha": "be2c9a390bdbf91a489fdd55c4683cd4e19eaab7"
+    }
+  ]
+}
