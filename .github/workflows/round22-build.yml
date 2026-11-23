@@ -1,4 +1,4 @@
-name: Round 22 Build Anchor Fix 4
+name: Round 22 Script Fix 4
 on:
   workflow_dispatch:
 permissions:
@@ -11,24 +11,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Replace C1259e patch branch with whitespace-tolerant rules
+      - name: Fix Round22 patch script logic
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import base64
+          import re
           p = Path('apply_round22.py')
           s = p.read_text(encoding='utf-8')
-          start_marker = '    elif path.endswith("C1259e.java"):\n'
-          end_marker = '    elif path.endswith("C1300k.java"):\n'
-          start = s.find(start_marker)
-          end = s.find(end_marker, start + len(start_marker)) if start >= 0 else -1
-          if start < 0 or end < 0 or s.count(start_marker) != 1:
-              raise SystemExit('Could not uniquely locate C1259e branch; stopping safely')
-          branch = base64.b64decode('ICAgIGVsaWYgcGF0aC5lbmRzd2l0aCgiQzEyNTllLmphdmEiKToKICAgICAgICByZXAoIihQcm9wZXJ0eTxGbG9hdGluZ0FjdGlvbkJ1dHRvbiwgRmxvYXQ+KSBWaWV3LkFMUEhBIiwgJyJhbHBoYSInKQogICAgICAgIHJlcCgiKFByb3BlcnR5PEZsb2F0aW5nQWN0aW9uQnV0dG9uLCBGbG9hdD4pIFZpZXcuU0NBTEVfWCIsICcic2NhbGVYIicpCiAgICAgICAgcmVwKCIoUHJvcGVydHk8RmxvYXRpbmdBY3Rpb25CdXR0b24sIEZsb2F0PikgVmlldy5TQ0FMRV9ZIiwgJyJzY2FsZVkiJykKICAgICAgICBwYXR0ZXJuMSA9IHJlLmNvbXBpbGUociJGbG9hdGluZ0FjdGlvbkJ1dHRvblwudGhpc1wuZjEwMjg5blwuc2V0XChpLCBpMiwgaTMsIGk0XCk7XHMrRmxvYXRpbmdBY3Rpb25CdXR0b24gZmxvYXRpbmdBY3Rpb25CdXR0b24gPSBGbG9hdGluZ0FjdGlvbkJ1dHRvblwudGhpcztccytpbnQgaTUgPSBmbG9hdGluZ0FjdGlvbkJ1dHRvblwuZjEwMjg2aztccytmbG9hdGluZ0FjdGlvbkJ1dHRvblwuc2V0UGFkZGluZ1woaSBcKyBpNSwgaTIgXCsgaTUsIGkzIFwrIGk1LCBpNCBcKyBpNVwpOyIsIHJlLk1VTFRJTCkKICAgICAgICBwYXR0ZXJuMiA9IHJlLmNvbXBpbGUociJGbG9hdGluZ0FjdGlvbkJ1dHRvblwudGhpc1wuZjEwMjg5blwuc2V0XChpNiwgaTcsIGk4LCBpOVwpO1xzK0Zsb2F0aW5nQWN0aW9uQnV0dG9uIGZsb2F0aW5nQWN0aW9uQnV0dG9uMiA9IEZsb2F0aW5nQWN0aW9uQnV0dG9uXC50aGlzO1xzK2ludCBpMTAgPSBmbG9hdGluZ0FjdGlvbkJ1dHRvbjJcLmYxMDI4Nms7XHMrZmxvYXRpbmdBY3Rpb25CdXR0b24yXC5zZXRQYWRkaW5nXChpNiBcKyBpMTAsIGk3IFwrIGkxMCwgaTggXCsgaTEwLCBpOSBcKyBpMTBcKTsiLCByZS5NVUxUSUwpCiAgICAgICAgZm9yIHBhdCwgcmVwbGFjZW1lbnQsIGxhYmVsIGluICgocGF0dGVybjEsICJjMTM2MGIzLnNldFNoYWRvd1BhZGRpbmcoaSwgaTIsIGkzLCBpNCk7IiwgImZpcnN0IEMxMjU5ZSBwYWRkaW5nIGJsb2NrIiksIChwYXR0ZXJuMiwgImMxMzYwYjQuc2V0U2hhZG93UGFkZGluZyhpNiwgaTcsIGk4LCBpOSk7IiwgInNlY29uZCBDMTI1OWUgcGFkZGluZyBibG9jayIpKToKICAgICAgICAgICAgbWF0Y2hlcyA9IGxpc3QocGF0LmZpbmRpdGVyKHRleHRfaG9sZGVyWzBdKSkKICAgICAgICAgICAgaWYgbGVuKG1hdGNoZXMpICE9IDE6CiAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYie3BhdGh9OiB7bGFiZWx9OiBleHBlY3RlZCBvbmUgbWF0Y2gsIGZvdW5kIHtsZW4obWF0Y2hlcyl9IikKICAgICAgICAgICAgdGV4dF9ob2xkZXJbMF0gPSBwYXQuc3ViKGxhbWJkYSBtOiByZXBsYWNlbWVudCwgdGV4dF9ob2xkZXJbMF0sIGNvdW50PTEpCiAgICAgICAgcmVwKCJzdXBlci8qYW5kcm9pZC53aWRnZXQuSW1hZ2VCdXR0b24qLy5zZXRCYWNrZ3JvdW5kRHJhd2FibGUoaW5zZXREcmF3YWJsZSk7IiwgImMxMzYwYi5zZXRCYWNrZ3JvdW5kRHJhd2FibGUoaW5zZXREcmF3YWJsZSk7IikK').decode('utf-8')
-          p.write_text(s[:start] + branch + s[end:], encoding='utf-8')
-          print('C1259e branch rewritten.')
+
+          old_guard = '''        if "a.m2191e(" in text_holder[0]:
+            raise ValueError(f"{path}: helper shadowing replacement incomplete")'''
+          new_guard = '''        if re.search(r"(?<![\\w.])a\\.m2191e\\(", text_holder[0]):
+            raise ValueError(f"{path}: helper shadowing replacement incomplete")'''
+          if s.count(old_guard) != 1:
+              raise SystemExit(f'Expected exactly one C0397b guard, found {s.count(old_guard)}; stop')
+          s = s.replace(old_guard, new_guard, 1)
+
+          # Repair a typo in the regex flag if it exists; leave correct flags intact.
+          s = re.sub(r're\\.MULTIL(?!INE)', 're.MULTILINE', s)
+          p.write_text(s, encoding='utf-8')
+          print('Round22 patch-script fixes applied.')
           PY
-      - name: Validate Round 22
+      - name: Validate Round 22 patch
         run: python3 apply_round22.py --check-only .
       - name: Apply Round 22 source repairs
         run: python3 apply_round22.py .
@@ -36,17 +40,15 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-      - name: Install SDK components
+      - uses: android-actions/setup-android@v3
+      - name: Install Android SDK components
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.11.1'
       - name: Build debug APK
         run: gradle --no-daemon --stacktrace :app:assembleDebug
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: round22-debug-apk
           path: app/build/outputs/apk/debug/*.apk
