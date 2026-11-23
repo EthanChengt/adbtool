@@ -11,9 +11,9 @@
         android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:k6="0"
-        app:ko="0"
-        app:kr="0">
+        app:k6="l0"
+        app:ko="l0"
+        app:kr="l0">
         <TextView
             android:textSize="18sp"
             android:textColor="?attr/e0"
@@ -27,9 +27,9 @@
             android:text="TextView"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:k6="0"
-            app:ko="0"
-            app:kr="0"/>
+            app:k6="l0"
+            app:ko="l0"
+            app:kr="l0"/>
         <TextView
             android:textSize="16sp"
             android:textColor="?attr/e0"
@@ -43,9 +43,9 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:k1="@+id/jn"
-            app:k6="0"
+            app:k6="l0"
             app:ke="0"
-            app:ko="0"
+            app:ko="l0"
             app:kq="@+id/jo"/>
         <View
             android:id="@+id/r_"
@@ -54,8 +54,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             app:k1="@+id/jn"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/jo"/>
         <CheckBox
             android:id="@+id/jj"
@@ -68,7 +68,7 @@
             android:text="CheckBox"
             android:layout_marginStart="24dp"
             app:k1="@+id/jn"
-            app:ko="0"
+            app:ko="l0"
             app:kq="@+id/jo"/>
         <Button
             android:id="@+id/jn"
@@ -79,8 +79,8 @@
             android:layout_marginBottom="8dp"
             android:text="Button"
             android:layout_marginEnd="16dp"
-            app:k0="0"
-            app:k6="0"
+            app:k0="l0"
+            app:k6="l0"
             style="@style/q4"/>
         <Button
             android:id="@+id/jm"
@@ -102,7 +102,7 @@
             android:text="Button"
             android:layout_marginStart="16dp"
             app:k0="@+id/jm"
-            app:ko="0"
+            app:ko="l0"
             app:kr="@+id/jm"
             style="@style/q4"/>
     </androidx.constraintlayout.widget.ConstraintLayout>

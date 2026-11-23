@@ -7,17 +7,17 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/d"
         android:layout_marginEnd="8dp"
-        app:k6="0"
-        app:ko="0"
-        app:kr="0"/>
+        app:k6="l0"
+        app:ko="l0"
+        app:kr="l0"/>
     <ScrollView
         android:background="@color/a5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:k0="0"
-        app:k6="0"
-        app:ko="0"
+        app:k0="l0"
+        app:k6="l0"
+        app:ko="l0"
         app:kq="@+id/pd">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -35,9 +35,9 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
-                app:k6="0"
-                app:ko="0"
-                app:kr="0">
+                app:k6="l0"
+                app:ko="l0"
+                app:kr="l0">
                 <ImageView
                     android:id="@+id/g6"
                     android:padding="4dp"
@@ -64,9 +64,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:k6="0"
-                app:ko="0"
-                app:kr="0">
+                app:k6="l0"
+                app:ko="l0"
+                app:kr="l0">
                 <ImageView
                     android:id="@+id/eo"
                     android:layout_width="42dp"
@@ -76,11 +76,11 @@
                     android:tint="@color/e8"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="16dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:k7="@+id/er"
                     app:ke="0"
-                    app:ko="0"
-                    app:kr="0"
+                    app:ko="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/e8"/>
                 <TextView
                     android:textSize="16sp"
@@ -92,7 +92,7 @@
                     android:text="正在获取设备信息..."
                     android:layout_marginStart="16dp"
                     app:kn="@+id/eo"
-                    app:kr="0"/>
+                    app:kr="l0"/>
                 <TextView
                     android:textSize="8sp"
                     android:textColor="#ffffffff"
@@ -104,7 +104,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="16dp"
                     android:text="连接中"
-                    app:k0="0"
+                    app:k0="l0"
                     app:ko="@+id/er"
                     app:kq="@+id/er"/>
                 <ImageView
@@ -114,11 +114,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="16dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:k7="@+id/eu"
                     app:ke="1"
                     app:kn="@+id/er"
-                    app:kr="0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/d2"/>
                 <ImageView
                     android:id="@+id/eu"
@@ -126,9 +126,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:kr="0"
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/c2"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.cardview.widget.CardView
@@ -141,8 +141,8 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="1dp"
                 app:cardUseCompatPadding="true"
-                app:k6="0"
-                app:ko="0"
+                app:k6="l0"
+                app:ko="l0"
                 app:kq="@+id/i1">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -158,8 +158,8 @@
                         android:text="刷入镜像"
                         android:layout_marginStart="16dp"
                         app:k1="@+id/h2"
-                        app:ko="0"
-                        app:kr="0"/>
+                        app:ko="l0"
+                        app:kr="l0"/>
                     <TextView
                         android:textSize="14sp"
                         android:id="@+id/h2"
@@ -178,7 +178,7 @@
                         android:layout_marginEnd="8dp"
                         app:k7="@+id/mv"
                         app:kg="1"
-                        app:ko="0"
+                        app:ko="l0"
                         app:kq="@+id/op"/>
                     <com.google.android.material.chip.Chip
                         android:id="@+id/mv"
@@ -188,7 +188,7 @@
                         app:chipIcon="@drawable/bd"
                         app:iconStartPadding="16dp"
                         app:k0="@+id/h2"
-                        app:k6="0"
+                        app:k6="l0"
                         app:kn="@+id/h2"
                         app:kr="@+id/h2"/>
                     <TextView
@@ -200,7 +200,7 @@
                         android:layout_marginEnd="8dp"
                         app:k0="@+id/fe"
                         app:k7="@+id/fe"
-                        app:ko="0"
+                        app:ko="l0"
                         app:kr="@+id/fe"/>
                     <Spinner
                         android:entries="@array/c"
@@ -236,8 +236,8 @@
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         app:chipSurfaceColor="@color/e4"
-                        app:k0="0"
-                        app:k6="0"
+                        app:k0="l0"
+                        app:k6="l0"
                         app:kg="1"
                         app:kn="@+id/fe"
                         app:kq="@+id/mv"/>
@@ -252,9 +252,9 @@
                 android:layout_marginTop="24dp"
                 android:text="自定义命令"
                 android:layout_marginStart="32dp"
-                app:k6="0"
+                app:k6="l0"
                 app:ke="0"
-                app:ko="0"
+                app:ko="l0"
                 app:kq="@+id/cb"/>
             <EditText
                 android:id="@+id/en"
@@ -272,7 +272,7 @@
                 android:layout_marginStart="18dp"
                 app:k7="@+id/ep"
                 app:kg="1"
-                app:ko="0"
+                app:ko="l0"
                 app:kq="@+id/ot"/>
             <com.google.android.material.chip.Chip
                 android:textColor="@color/f4"
@@ -285,7 +285,7 @@
                 android:layout_marginEnd="18dp"
                 app:chipSurfaceColor="@color/e4"
                 app:k0="@+id/en"
-                app:k6="0"
+                app:k6="l0"
                 app:kn="@+id/en"
                 app:kr="@+id/en"/>
             <TextView
@@ -297,9 +297,9 @@
                 android:layout_marginTop="24dp"
                 android:text="命令行输出"
                 android:layout_marginStart="32dp"
-                app:k6="0"
+                app:k6="l0"
                 app:ke="0"
-                app:ko="0"
+                app:ko="l0"
                 app:kq="@+id/en"/>
             <androidx.core.widget.NestedScrollView
                 android:id="@+id/mc"
@@ -314,9 +314,9 @@
                 android:paddingEnd="4dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="18dp"
-                app:k0="0"
-                app:k6="0"
-                app:ko="0"
+                app:k0="l0"
+                app:k6="l0"
+                app:ko="l0"
                 app:kq="@+id/ou">
                 <TextView
                     android:id="@+id/eq"

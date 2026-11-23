@@ -13,8 +13,8 @@
         android:layout_weight="1"
         android:layout_marginStart="8dp"
         app:k7="@+id/bv"
-        app:ko="0"
-        app:kr="0"/>
+        app:ko="l0"
+        app:kr="l0"/>
     <Button
         android:id="@+id/bv"
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:k0="@+id/h1"
-        app:k6="0"
+        app:k6="l0"
         app:kn="@+id/bv"
         style="@style/nk"/>
     <Button
@@ -46,8 +46,8 @@
         android:layout_weight="3"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:k6="0"
-        app:ko="0"
+        app:k6="l0"
+        app:ko="l0"
         app:kq="@+id/h1"/>
     <androidx.core.widget.NestedScrollView
         android:scrollbarAlwaysDrawVerticalTrack="true"
@@ -58,9 +58,9 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:k0="0"
-        app:k6="0"
-        app:ko="0"
+        app:k0="l0"
+        app:k6="l0"
+        app:ko="l0"
         app:kq="@+id/ed">
         <EditText
             android:textSize="14dp"

@@ -14,7 +14,7 @@
         app:cardUseCompatPadding="true"
         app:k7="@+id/ci"
         app:kg="1"
-        app:ko="0"
+        app:ko="l0"
         app:kq="@+id/cc">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:background="?android:attr/selectableItemBackground"
@@ -27,9 +27,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="24dp"
-                app:k0="0"
-                app:ko="0"
-                app:kr="0"
+                app:k0="l0"
+                app:ko="l0"
+                app:kr="l0"
                 app:srcCompat="@drawable/cz"/>
             <TextView
                 android:textSize="18sp"
@@ -41,10 +41,10 @@
                 android:text="修改DPI"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="8dp"
-                app:k6="0"
+                app:k6="l0"
                 app:ke="0"
                 app:kn="@+id/r6"
-                app:kr="0"/>
+                app:kr="l0"/>
             <TextView
                 android:id="@+id/r8"
                 android:layout_width="wrap_content"
@@ -54,8 +54,8 @@
                 android:text="TextView"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                app:k0="0"
-                app:k6="0"
+                app:k0="l0"
+                app:k6="l0"
                 app:ke="0"
                 app:ko="@+id/r9"
                 app:kq="@+id/r9"/>
@@ -66,11 +66,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                app:k0="0"
-                app:k6="0"
+                app:k0="l0"
+                app:k6="l0"
                 app:ke="1"
                 app:kn="@+id/r9"
-                app:kr="0"/>
+                app:kr="l0"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

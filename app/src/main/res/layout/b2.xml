@@ -10,8 +10,8 @@
         android:layout_marginTop="24dp"
         android:text="设备识别码："
         android:layout_marginStart="24dp"
-        app:ko="0"
-        app:kr="0"/>
+        app:ko="l0"
+        app:kr="l0"/>
     <TextView
         android:textStyle="bold"
         android:id="@+id/dn"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginStart="24dp"
-        app:ko="0"
+        app:ko="l0"
         app:kq="@+id/ov"/>
     <EditText
         android:id="@+id/h4"
@@ -41,7 +41,7 @@
         android:hint="请输入转账单号"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:k6="0"
-        app:ko="0"
+        app:k6="l0"
+        app:ko="l0"
         app:kq="@+id/do_res_0x7f0900a2"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

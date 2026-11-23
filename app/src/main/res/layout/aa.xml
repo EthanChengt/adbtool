@@ -20,9 +20,9 @@
             android:paddingEnd="8dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
-            app:k6="0"
-            app:ko="0"
-            app:kr="0">
+            app:k6="l0"
+            app:ko="l0"
+            app:kr="l0">
             <ImageView
                 android:padding="10dp"
                 android:layout_width="wrap_content"
@@ -57,8 +57,8 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/i8">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/i3"
@@ -74,9 +74,9 @@
                     android:text="重要提示：在为本机进行刷机/恢复出厂设置/双清/ROOT/解锁BL等操作之前，一定要先取消解锁状态，否则支付单号将无法使用！"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:ko="0"
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:ko="l0"
                     app:kq="@+id/c6"/>
                 <Button
                     android:id="@+id/c6"
@@ -86,9 +86,9 @@
                     android:text="取消解锁"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:k6="0"
-                    app:ko="0"
-                    app:kr="0"/>
+                    app:k6="l0"
+                    app:ko="l0"
+                    app:kr="l0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -101,8 +101,8 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/cd">
             <LinearLayout
                 android:orientation="vertical"
@@ -366,8 +366,8 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/ca">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/i5"
@@ -384,9 +384,9 @@
                     android:lineSpacingExtra="6sp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:k6="0"
-                    app:ko="0"
-                    app:kr="0"/>
+                    app:k6="l0"
+                    app:ko="l0"
+                    app:kr="l0"/>
                 <ImageView
                     android:id="@+id/g8"
                     android:layout_width="20dp"
@@ -406,7 +406,7 @@
                     android:text="解锁说明"
                     android:layout_marginEnd="24dp"
                     app:k0="@+id/qt"
-                    app:k6="0"
+                    app:k6="l0"
                     app:kr="@+id/qt"/>
                 <TextView
                     android:textSize="24sp"
@@ -422,7 +422,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="16dp"
                     app:k7="@+id/g8"
-                    app:ko="0"
+                    app:ko="l0"
                     app:kq="@+id/os"/>
                 <Button
                     android:id="@+id/c7"
@@ -432,8 +432,8 @@
                     android:text="支付"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-                    app:k6="0"
-                    app:ko="0"
+                    app:k6="l0"
+                    app:ko="l0"
                     app:kq="@+id/qt"/>
                 <Button
                     android:id="@+id/c8"
@@ -444,9 +444,9 @@
                     android:text=" 使用支付单号解锁"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:ko="0"
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:ko="l0"
                     app:kq="@+id/c7"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

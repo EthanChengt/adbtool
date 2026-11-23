@@ -13,9 +13,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
-        app:k0="0"
-        app:ko="0"
-        app:kr="0"/>
+        app:k0="l0"
+        app:ko="l0"
+        app:kr="l0"/>
     <TextView
         android:textSize="18sp"
         android:textColor="?attr/e0"
@@ -33,8 +33,8 @@
         android:layout_marginEnd="16dp"
         app:k7="@+id/h7"
         app:kn="@+id/h8"
-        app:kr="0"
-        app:ka="2"/>
+        app:kr="l0"
+        app:ka="l5"/>
     <TextView
         android:textSize="12sp"
         android:gravity="center_vertical"
@@ -48,7 +48,7 @@
         android:singleLine="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
-        app:k0="0"
+        app:k0="l0"
         app:k7="@+id/h7"
         app:kn="@+id/h8"
         app:kq="@+id/h9"/>
@@ -61,9 +61,9 @@
         android:layout_marginRight="16dp"
         android:text="已停用"
         android:layout_marginEnd="16dp"
-        app:k0="0"
-        app:k6="0"
-        app:kr="0"/>
+        app:k0="l0"
+        app:k6="l0"
+        app:kr="l0"/>
     <View
         android:background="?android:attr/listDivider"
         android:layout_width="match_parent"
@@ -72,7 +72,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
-        app:k0="0"
-        app:k6="0"
-        app:ko="0"/>
+        app:k0="l0"
+        app:k6="l0"
+        app:ko="l0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,9 +14,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
-        app:k0="0"
-        app:ko="0"
-        app:kr="0"/>
+        app:k0="l0"
+        app:ko="l0"
+        app:kr="l0"/>
     <TextView
         android:textSize="18sp"
         android:textColor="@color/a8"
@@ -28,10 +28,10 @@
         android:text="TextView"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:k0="0"
+        app:k0="l0"
         app:k7="@+id/bt"
         app:kn="@+id/gg"
-        app:kr="0"/>
+        app:kr="l0"/>
     <Button
         android:textColor="@color/e5"
         android:id="@+id/bt"
@@ -39,8 +39,8 @@
         android:layout_height="wrap_content"
         android:text="@string/a3"
         android:layout_marginEnd="32dp"
-        app:k0="0"
-        app:k6="0"
-        app:kr="0"
+        app:k0="l0"
+        app:k6="l0"
+        app:kr="l0"
         style="@style/q4"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

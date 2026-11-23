@@ -13,19 +13,19 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="16dp"
-        app:k0="0"
-        app:ko="0"
-        app:kr="0"
+        app:k0="l0"
+        app:ko="l0"
+        app:kr="l0"
         app:srcCompat="@drawable/dw"/>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        app:k0="0"
+        app:k0="l0"
         app:k7="@+id/cl"
         app:kn="@+id/gn"
-        app:kr="0">
+        app:kr="l0">
         <TextView
             android:textSize="18sp"
             android:textColor="?attr/e0"
@@ -35,9 +35,9 @@
             android:layout_marginLeft="16dp"
             android:text="TextView"
             android:layout_marginStart="16dp"
-            app:k6="0"
-            app:ko="0"
-            app:kr="0"/>
+            app:k6="l0"
+            app:ko="l0"
+            app:kr="l0"/>
         <TextView
             android:id="@+id/pt"
             android:visibility="visible"
@@ -46,8 +46,8 @@
             android:layout_marginLeft="16dp"
             android:text="TextView"
             android:layout_marginStart="16dp"
-            app:k0="0"
-            app:ko="0"
+            app:k0="l0"
+            app:ko="l0"
             app:kq="@+id/ps"/>
         <TextView
             android:gravity="right"
@@ -58,8 +58,8 @@
             android:layout_marginRight="16dp"
             android:text="TextView"
             android:layout_marginEnd="16dp"
-            app:k0="0"
-            app:k6="0"
+            app:k0="l0"
+            app:k6="l0"
             app:kn="@+id/pt"
             app:kq="@+id/ps"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -69,9 +69,9 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
-        app:k0="0"
-        app:k6="0"
-        app:kr="0"/>
+        app:k0="l0"
+        app:k6="l0"
+        app:kr="l0"/>
     <View
         android:id="@+id/f5"
         android:background="?android:attr/listDivider"
@@ -81,7 +81,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:k0="0"
-        app:k6="0"
-        app:ko="0"/>
+        app:k0="l0"
+        app:k6="l0"
+        app:ko="l0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

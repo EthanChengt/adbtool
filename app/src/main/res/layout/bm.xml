@@ -37,9 +37,9 @@
                     android:layout_marginBottom="8dp"
                     android:tint="#ff1e88e5"
                     android:layout_marginStart="8dp"
-                    app:k0="0"
-                    app:ko="0"
-                    app:kr="0"
+                    app:k0="l0"
+                    app:ko="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/e8"/>
                 <TextView
                     android:textSize="18sp"
@@ -54,9 +54,9 @@
                     android:text="Xiaomi Redmi Note 5"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:kn="@+id/gp"
-                    app:kr="0"/>
+                    app:kr="l0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:padding="6dp"
@@ -71,9 +71,9 @@
                     android:layout_marginBottom="8dp"
                     android:tint="#ff009688"
                     android:layout_marginStart="8dp"
-                    app:k0="0"
-                    app:ko="0"
-                    app:kr="0"
+                    app:k0="l0"
+                    app:ko="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/df"/>
                 <TextView
                     android:textSize="14sp"
@@ -83,9 +83,9 @@
                     android:layout_marginRight="8dp"
                     android:text="版本"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:kr="0"/>
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:kr="l0"/>
                 <TextView
                     android:textSize="18sp"
                     android:textColor="?attr/e0"
@@ -99,10 +99,10 @@
                     android:text="Android 11"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:k7="@+id/pv"
                     app:kn="@+id/gh"
-                    app:kr="0"/>
+                    app:kr="l0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:padding="6dp"
@@ -117,9 +117,9 @@
                     android:layout_marginBottom="8dp"
                     android:tint="#ff26c6da"
                     android:layout_marginStart="8dp"
-                    app:k0="0"
-                    app:ko="0"
-                    app:kr="0"
+                    app:k0="l0"
+                    app:ko="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/dv"/>
                 <TextView
                     android:textSize="14sp"
@@ -130,9 +130,9 @@
                     android:layout_marginRight="8dp"
                     android:text="分辨率"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:kr="0"/>
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:kr="l0"/>
                 <TextView
                     android:textSize="18sp"
                     android:textColor="?attr/e0"
@@ -146,10 +146,10 @@
                     android:text="1080 x 1920"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:k7="@+id/q8"
                     app:kn="@+id/gz"
-                    app:kr="0"/>
+                    app:kr="l0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:padding="6dp"
@@ -164,9 +164,9 @@
                     android:layout_marginBottom="8dp"
                     android:tint="#ff827717"
                     android:layout_marginStart="8dp"
-                    app:k0="0"
-                    app:ko="0"
-                    app:kr="0"
+                    app:k0="l0"
+                    app:ko="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/e4"/>
                 <TextView
                     android:textSize="14sp"
@@ -177,9 +177,9 @@
                     android:layout_marginRight="8dp"
                     android:text="CPU"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:kr="0"/>
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:kr="l0"/>
                 <TextView
                     android:textSize="18sp"
                     android:textColor="?attr/e0"
@@ -189,10 +189,10 @@
                     android:text="SDM636"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:k7="@+id/pr"
                     app:kn="@+id/gj"
-                    app:kr="0"/>
+                    app:kr="l0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:padding="6dp"
@@ -207,9 +207,9 @@
                     android:layout_marginBottom="8dp"
                     android:tint="#ff0277bd"
                     android:layout_marginStart="8dp"
-                    app:k0="0"
-                    app:ko="0"
-                    app:kr="0"
+                    app:k0="l0"
+                    app:ko="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/dl"/>
                 <TextView
                     android:textSize="14sp"
@@ -219,9 +219,9 @@
                     android:layout_marginRight="8dp"
                     android:text="运行内存"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:kr="0"/>
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:kr="l0"/>
                 <TextView
                     android:textSize="18sp"
                     android:textColor="?attr/e0"
@@ -231,10 +231,10 @@
                     android:text="4.0 GB"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:k7="@+id/ok"
                     app:kn="@+id/gs"
-                    app:kr="0"/>
+                    app:kr="l0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:padding="6dp"
@@ -249,9 +249,9 @@
                     android:layout_marginBottom="8dp"
                     android:tint="#ff8e24aa"
                     android:layout_marginStart="8dp"
-                    app:k0="0"
-                    app:ko="0"
-                    app:kr="0"
+                    app:k0="l0"
+                    app:ko="l0"
+                    app:kr="l0"
                     app:srcCompat="@drawable/ee"/>
                 <TextView
                     android:textSize="14sp"
@@ -261,9 +261,9 @@
                     android:layout_marginRight="8dp"
                     android:text="存储空间"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
-                    app:k6="0"
-                    app:kr="0"/>
+                    app:k0="l0"
+                    app:k6="l0"
+                    app:kr="l0"/>
                 <TextView
                     android:textSize="16sp"
                     android:textColor="?attr/e0"
@@ -276,7 +276,7 @@
                     android:layout_marginEnd="8dp"
                     app:k7="@+id/q2"
                     app:kn="@+id/gt"
-                    app:kr="0"/>
+                    app:kr="l0"/>
                 <ProgressBar
                     android:id="@+id/lf"
                     android:layout_width="0dp"
@@ -286,7 +286,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
-                    app:k0="0"
+                    app:k0="l0"
                     app:k7="@+id/q2"
                     app:kn="@+id/gt"
                     app:kq="@+id/q1"

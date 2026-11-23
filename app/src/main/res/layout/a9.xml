@@ -63,9 +63,9 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:k6="0"
-                        app:ko="0"
-                        app:kr="0"
+                        app:k6="l0"
+                        app:ko="l0"
+                        app:kr="l0"
                         app:srcCompat="@drawable/dp"/>
                     <ImageView
                         android:id="@+id/gw"
@@ -74,8 +74,8 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:k6="0"
-                        app:ko="0"
+                        app:k6="l0"
+                        app:ko="l0"
                         app:kq="@+id/gx"
                         app:srcCompat="@drawable/e5"/>
                     <ImageView
@@ -85,8 +85,8 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:k6="0"
-                        app:ko="0"
+                        app:k6="l0"
+                        app:ko="l0"
                         app:kq="@+id/gw"
                         app:srcCompat="@drawable/e1"/>
                     <ImageView
@@ -96,8 +96,8 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:k6="0"
-                        app:ko="0"
+                        app:k6="l0"
+                        app:ko="l0"
                         app:kq="@+id/gv"
                         app:srcCompat="@drawable/dg"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,8 +23,8 @@
             android:layout_height="wrap_content"
             android:text="运行内存"
             android:layout_marginStart="8dp"
-            app:ko="0"
-            app:kr="0"/>
+            app:ko="l0"
+            app:kr="l0"/>
         <TextView
             android:textSize="16sp"
             android:gravity="right"
@@ -36,10 +36,10 @@
             android:text="4 GB"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            app:k0="0"
-            app:k6="0"
+            app:k0="l0"
+            app:k6="l0"
             app:kn="@+id/qf"
-            app:kr="0"/>
+            app:kr="l0"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <View
         android:id="@+id/ds"

@@ -7,9 +7,9 @@
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:layout_marginTop="72dp"
-        app:k6="0"
-        app:ko="0"
-        app:kr="0"
+        app:k6="l0"
+        app:ko="l0"
+        app:kr="l0"
         app:srcCompat="@drawable/bu"/>
     <TextView
         android:textSize="18sp"
@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/ab"
-        app:k6="0"
-        app:ko="0"
+        app:k6="l0"
+        app:ko="l0"
         app:kq="@+id/n"/>
     <TextView
         android:textSize="18sp"
@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="TextView"
-        app:k6="0"
-        app:ko="0"
+        app:k6="l0"
+        app:ko="l0"
         app:kq="@+id/o"/>
     <Button
         android:id="@+id/p"
@@ -38,9 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/el"
-        app:k0="0"
-        app:k6="0"
-        app:ko="0"
+        app:k0="l0"
+        app:k6="l0"
+        app:ko="l0"
         style="@style/q3"/>
     <Button
         android:id="@+id/q"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:text="用户协议和隐私政策"
         app:k1="@+id/p"
-        app:k6="0"
-        app:ko="0"
+        app:k6="l0"
+        app:ko="l0"
         style="@style/q3"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

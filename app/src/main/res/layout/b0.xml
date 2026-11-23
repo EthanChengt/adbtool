@@ -11,9 +11,9 @@
         android:layout_marginRight="72dp"
         android:layout_marginStart="72dp"
         android:layout_marginEnd="72dp"
-        app:k6="0"
-        app:ko="0"
-        app:kr="0">
+        app:k6="l0"
+        app:ko="l0"
+        app:kr="l0">
         <TextView
             android:textSize="20sp"
             android:textColor="?attr/e0"
@@ -25,8 +25,8 @@
             android:layout_marginTop="24dp"
             android:text="TextView"
             android:layout_marginStart="24dp"
-            app:ko="0"
-            app:kr="0"/>
+            app:ko="l0"
+            app:kr="l0"/>
         <ProgressBar
             android:id="@+id/lc"
             android:layout_width="wrap_content"
@@ -36,9 +36,9 @@
             android:layout_marginStart="72dp"
             android:layout_marginEnd="72dp"
             app:k1="@+id/ld"
-            app:k6="0"
-            app:ko="0"
-            app:kr="0"
+            app:k6="l0"
+            app:ko="l0"
+            app:kr="l0"
             style="?android:attr/progressBarStyle"/>
         <TextView
             android:textSize="16sp"
@@ -51,9 +51,9 @@
             android:text="Message"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            app:k0="0"
-            app:k6="0"
-            app:ko="0"
+            app:k0="l0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/lc"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

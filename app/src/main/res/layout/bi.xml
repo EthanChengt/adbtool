@@ -17,9 +17,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="16dp"
-            app:k0="0"
-            app:ko="0"
-            app:kr="0"
+            app:k0="l0"
+            app:ko="l0"
+            app:kr="l0"
             app:srcCompat="@drawable/ej"/>
         <TextView
             android:textSize="16sp"
@@ -34,7 +34,7 @@
             android:layout_marginEnd="16dp"
             app:k7="@+id/gl"
             app:kn="@+id/gk"
-            app:kr="0"/>
+            app:kr="l0"/>
         <TextView
             android:gravity="center_vertical"
             android:id="@+id/qb"
@@ -56,9 +56,9 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="8dp"
-            app:k0="0"
-            app:k6="0"
-            app:kr="0"
+            app:k0="l0"
+            app:k6="l0"
+            app:kr="l0"
             app:srcCompat="@drawable/dh"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

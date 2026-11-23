@@ -10,10 +10,10 @@
         android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:k6="0"
+        app:k6="l0"
         app:ke="0"
-        app:ko="0"
-        app:kr="0">
+        app:ko="l0"
+        app:kr="l0">
         <TextView
             android:textSize="20sp"
             android:textColor="?attr/e0"
@@ -24,8 +24,8 @@
             android:layout_marginTop="24dp"
             android:text="修改屏幕分辨率"
             android:layout_marginStart="24dp"
-            app:ko="0"
-            app:kr="0"/>
+            app:ko="l0"
+            app:kr="l0"/>
         <TextView
             android:id="@+id/e5"
             android:visibility="visible"
@@ -35,9 +35,9 @@
             android:text="TextView"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:k6="0"
+            app:k6="l0"
             app:ke="0"
-            app:ko="0"
+            app:ko="l0"
             app:kq="@+id/e_"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/o_"
@@ -48,8 +48,8 @@
             android:layout_marginEnd="24dp"
             app:boxBackgroundColor="@color/a4"
             app:boxBackgroundMode="1"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/e5">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -64,8 +64,8 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:boxBackgroundColor="@color/a4"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/o_">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -80,8 +80,8 @@
             android:layout_marginBottom="8dp"
             android:text="确定"
             android:layout_marginEnd="16dp"
-            app:k0="0"
-            app:k6="0"
+            app:k0="l0"
+            app:k6="l0"
             style="@style/q4"/>
         <Button
             android:id="@+id/e6"
@@ -92,7 +92,7 @@
             android:layout_marginBottom="8dp"
             android:text="取消"
             android:layout_marginEnd="8dp"
-            app:k0="0"
+            app:k0="l0"
             app:k7="@+id/e7"
             app:kq="@+id/o9"
             style="@style/q4"/>

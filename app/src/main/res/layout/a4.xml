@@ -16,9 +16,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            app:k6="0"
-            app:ko="0"
-            app:kr="0"
+            app:k6="l0"
+            app:ko="l0"
+            app:kr="l0"
             app:navigationIcon="@drawable/dz"
             app:popupTheme="@style/m3"/>
         <ImageView
@@ -26,9 +26,9 @@
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_marginTop="96dp"
-            app:k6="0"
-            app:ko="0"
-            app:kr="0"
+            app:k6="l0"
+            app:ko="l0"
+            app:kr="l0"
             app:srcCompat="@drawable/bv"/>
         <LinearLayout
             android:gravity="center_vertical"
@@ -44,8 +44,8 @@
             android:paddingEnd="8dp"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/gi">
             <ImageView
                 android:id="@+id/fz"
@@ -89,9 +89,9 @@
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
             app:chipSurfaceColor="@color/e8"
-            app:k6="0"
+            app:k6="l0"
             app:ke="1"
-            app:ko="0"
+            app:ko="l0"
             app:kq="@+id/h3"/>
         <TextView
             android:textColor="@color/e8"
@@ -103,8 +103,8 @@
             android:text="@string/gz"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/bw"/>
         <ListView
             android:id="@+id/id"
@@ -116,9 +116,9 @@
             android:divider="@null"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            app:k0="0"
-            app:k6="0"
-            app:ko="0"
+            app:k0="l0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/qv"
             app:ks="0"/>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,9 +16,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
-        app:k0="0"
-        app:ko="0"
-        app:kr="0"/>
+        app:k0="l0"
+        app:ko="l0"
+        app:kr="l0"/>
     <TextView
         android:textSize="18sp"
         android:textColor="@color/e2"
@@ -31,7 +31,7 @@
         android:layout_marginEnd="8dp"
         app:k7="@+id/pz"
         app:kn="@+id/gr"
-        app:kr="0"/>
+        app:kr="l0"/>
     <TextView
         android:textColor="@color/e2"
         android:gravity="right"
@@ -40,9 +40,9 @@
         android:layout_height="wrap_content"
         android:text="100MB"
         android:layout_marginEnd="8dp"
-        app:k0="0"
+        app:k0="l0"
         app:k7="@+id/gq"
-        app:kr="0"/>
+        app:kr="l0"/>
     <TextView
         android:id="@+id/py"
         android:layout_width="0dp"
@@ -51,7 +51,7 @@
         android:text="com.tencent.mm"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
-        app:k0="0"
+        app:k0="l0"
         app:k7="@+id/pz"
         app:kn="@+id/gr"
         app:kq="@+id/px"/>
@@ -62,26 +62,26 @@
         android:layout_height="42dp"
         android:tint="@color/e8"
         android:layout_marginEnd="16dp"
-        app:k0="0"
-        app:k6="0"
-        app:kr="0"
+        app:k0="l0"
+        app:k6="l0"
+        app:kr="l0"
         app:srcCompat="@drawable/dm"/>
     <View
         android:id="@+id/dy"
         android:background="?android:attr/listDivider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        app:k0="0"
-        app:k6="0"
-        app:ko="0"/>
+        app:k0="l0"
+        app:k6="l0"
+        app:ko="l0"/>
     <ImageView
         android:id="@+id/gq"
         android:visibility="gone"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        app:k0="0"
+        app:k0="l0"
         app:k7="@+id/go"
-        app:kr="0"
+        app:kr="l0"
         app:ks="0.49"
         app:srcCompat="@drawable/dr"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

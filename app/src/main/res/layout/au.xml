@@ -10,10 +10,10 @@
         android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:k6="0"
+        app:k6="l0"
         app:ke="0"
-        app:ko="0"
-        app:kr="0">
+        app:ko="l0"
+        app:kr="l0">
         <TextView
             android:textSize="20sp"
             android:textColor="?attr/e0"
@@ -24,8 +24,8 @@
             android:layout_marginTop="24dp"
             android:text="text"
             android:layout_marginStart="24dp"
-            app:ko="0"
-            app:kr="0"/>
+            app:ko="l0"
+            app:kr="l0"/>
         <TextView
             android:id="@+id/e5"
             android:visibility="gone"
@@ -35,9 +35,9 @@
             android:text="text"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:k6="0"
+            app:k6="l0"
             app:ke="0"
-            app:ko="0"
+            app:ko="l0"
             app:kq="@+id/e_"/>
         <com.google.android.material.textfield.TextInputLayout
             android:gravity="center"
@@ -51,8 +51,8 @@
             app:boxBackgroundColor="@color/a4"
             app:boxBackgroundMode="1"
             app:boxCollapsedPaddingTop="1dp"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/e5">
             <EditText
                 android:textSize="18sp"
@@ -69,8 +69,8 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:boxBackgroundColor="@color/a4"
-            app:k6="0"
-            app:ko="0"
+            app:k6="l0"
+            app:ko="l0"
             app:kq="@+id/e8">
             <EditText
                 android:textSize="18sp"
@@ -87,8 +87,8 @@
             android:layout_marginBottom="8dp"
             android:text="Button"
             android:layout_marginEnd="16dp"
-            app:k0="0"
-            app:k6="0"
+            app:k0="l0"
+            app:k6="l0"
             app:kq="@+id/e9"
             style="@style/q4"/>
         <Button
@@ -99,7 +99,7 @@
             android:layout_marginBottom="8dp"
             android:text="Button"
             android:layout_marginEnd="8dp"
-            app:k0="0"
+            app:k0="l0"
             app:k7="@+id/e7"
             app:kr="@+id/e7"
             style="@style/q4"/>

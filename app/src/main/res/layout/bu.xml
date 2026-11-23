@@ -21,7 +21,7 @@
                 android:tint="#ffff9800"
                 android:layout_marginStart="16dp"
                 app:k0="@+id/oz"
-                app:ko="0"
+                app:ko="l0"
                 app:kr="@+id/oz"
                 app:srcCompat="@drawable/di"/>
             <TextView
@@ -34,7 +34,7 @@
                 android:layout_marginStart="16dp"
                 app:k1="@+id/oy"
                 app:kn="@+id/g_"
-                app:kr="0"/>
+                app:kr="l0"/>
             <TextView
                 android:id="@+id/oy"
                 android:layout_width="0dp"
@@ -44,8 +44,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 app:k1="@+id/od"
-                app:k6="0"
-                app:ko="0"
+                app:k6="l0"
+                app:ko="l0"
                 app:kq="@+id/oz"/>
             <TextView
                 android:textSize="14sp"
@@ -59,9 +59,9 @@
                 android:lineSpacingExtra="8sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:k0="0"
-                app:k6="0"
-                app:ko="0"
+                app:k0="l0"
+                app:k6="l0"
+                app:ko="l0"
                 app:kq="@+id/oy"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -88,7 +88,7 @@
                 android:tint="#ffe91e63"
                 android:layout_marginStart="16dp"
                 app:k0="@+id/ow"
-                app:ko="0"
+                app:ko="l0"
                 app:kr="@+id/ow"
                 app:srcCompat="@drawable/ds"/>
             <TextView
@@ -101,7 +101,7 @@
                 android:layout_marginStart="16dp"
                 app:k1="@+id/og"
                 app:kn="@+id/gf"
-                app:kr="0"/>
+                app:kr="l0"/>
             <TextView
                 android:id="@+id/og"
                 android:layout_width="match_parent"
@@ -111,8 +111,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 app:k1="@+id/c3"
-                app:k6="0"
-                app:ko="0"
+                app:k6="l0"
+                app:ko="l0"
                 app:kq="@+id/ow"/>
             <Button
                 android:id="@+id/c3"
@@ -125,7 +125,7 @@
                 android:layout_marginEnd="16dp"
                 app:k7="@+id/ex"
                 app:kg="1"
-                app:ko="0"
+                app:ko="l0"
                 app:kq="@+id/og"
                 app:ky="50"/>
             <Button
@@ -138,7 +138,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 app:k1="@+id/oi"
-                app:k6="0"
+                app:k6="l0"
                 app:kg="1"
                 app:kn="@+id/c3"
                 app:kr="@+id/c3"/>
@@ -151,8 +151,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 app:k1="@+id/c4"
-                app:k6="0"
-                app:ko="0"
+                app:k6="l0"
+                app:ko="l0"
                 app:kq="@+id/ex"/>
             <Button
                 android:id="@+id/c4"
@@ -162,10 +162,10 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:k0="0"
-                app:k6="0"
+                app:k0="l0"
+                app:k6="l0"
                 app:ke="0.6"
-                app:ko="0"
+                app:ko="l0"
                 app:kq="@+id/oi"
                 style="@style/q3"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
