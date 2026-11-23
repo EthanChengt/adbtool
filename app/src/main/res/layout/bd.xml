@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_constraintHorizontal_weight="1">
+    app:kg="1">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,9 +17,9 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0">
+            app:k6="0"
+            app:ko="0"
+            app:kr="0">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -29,9 +29,9 @@
                     android:layout_height="32dp"
                     android:tint="?attr/e2"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"
+                    app:k0="0"
+                    app:ko="0"
+                    app:kr="0"
                     app:srcCompat="@drawable/et"/>
                 <TextView
                     android:textSize="18sp"
@@ -42,8 +42,8 @@
                     android:layout_marginTop="16dp"
                     android:text="@string/ek"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintStart_toEndOf="@+id/ge"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:kn="@+id/ge"
+                    app:kr="0"/>
                 <TextView
                     android:id="@+id/r5"
                     android:layout_width="0dp"
@@ -51,9 +51,9 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="16dp"
                     android:text="@string/ed"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintStart_toStartOf="@+id/p0"
-                    app:layout_constraintTop_toBottomOf="@+id/p0"/>
+                    app:k0="0"
+                    app:ko="@+id/p0"
+                    app:kq="@+id/p0"/>
                 <Switch
                     android:textSize="18sp"
                     android:id="@+id/nq"
@@ -64,9 +64,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawablePadding="10dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:kr="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -78,10 +78,10 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toStartOf="@+id/ci"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/cc">
+            app:k7="@+id/ci"
+            app:kg="1"
+            app:ko="0"
+            app:kq="@+id/cc">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:background="?android:attr/selectableItemBackground"
                 android:layout_width="match_parent"
@@ -94,9 +94,9 @@
                     android:layout_marginBottom="16dp"
                     android:tint="#ff00bcd4"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"
+                    app:k0="0"
+                    app:ko="0"
+                    app:kr="0"
                     app:srcCompat="@drawable/cz"/>
                 <TextView
                     android:textSize="18sp"
@@ -109,10 +109,10 @@
                     android:text="修改DPI"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toEndOf="@+id/g3"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:kn="@+id/g3"
+                    app:kr="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -122,11 +122,11 @@
             android:layout_marginEnd="16dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="@+id/ch"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/ch"
-            app:layout_constraintTop_toTopOf="@+id/ch">
+            app:k0="@+id/ch"
+            app:k6="0"
+            app:kg="1"
+            app:kn="@+id/ch"
+            app:kr="@+id/ch">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:background="?android:attr/selectableItemBackground"
                 android:layout_width="match_parent"
@@ -139,9 +139,9 @@
                     android:layout_marginBottom="16dp"
                     android:tint="#ffff5722"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"
+                    app:k0="0"
+                    app:ko="0"
+                    app:kr="0"
                     app:srcCompat="@drawable/aw"/>
                 <TextView
                     android:textSize="18sp"
@@ -154,10 +154,10 @@
                     android:text="高级重启"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toEndOf="@+id/g4"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:kn="@+id/g4"
+                    app:kr="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -169,10 +169,10 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toStartOf="@+id/cf"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/ch">
+            app:k7="@+id/cf"
+            app:kg="1"
+            app:ko="0"
+            app:kq="@+id/ch">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:background="?android:attr/selectableItemBackground"
                 android:layout_width="match_parent"
@@ -185,9 +185,9 @@
                     android:layout_marginBottom="16dp"
                     android:tint="#ff8bc34a"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"
+                    app:k0="0"
+                    app:ko="0"
+                    app:kr="0"
                     app:srcCompat="@drawable/c3"/>
                 <TextView
                     android:textSize="18sp"
@@ -200,10 +200,10 @@
                     android:text="屏幕截图"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toEndOf="@+id/g5"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:kn="@+id/g5"
+                    app:kr="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -213,11 +213,11 @@
             android:layout_marginEnd="16dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="@+id/cj"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/cj"
-            app:layout_constraintTop_toTopOf="@+id/cj">
+            app:k0="@+id/cj"
+            app:k6="0"
+            app:kg="1"
+            app:kn="@+id/cj"
+            app:kr="@+id/cj">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:background="?android:attr/selectableItemBackground"
                 android:layout_width="match_parent"
@@ -230,9 +230,9 @@
                     android:layout_marginBottom="16dp"
                     android:tint="#ff673ab7"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"
+                    app:k0="0"
+                    app:ko="0"
+                    app:kr="0"
                     app:srcCompat="@drawable/al"/>
                 <TextView
                     android:textSize="18sp"
@@ -245,10 +245,10 @@
                     android:text="激活应用"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toEndOf="@+id/g6"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:kn="@+id/g6"
+                    app:kr="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -260,10 +260,10 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toStartOf="@+id/cf"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/cf">
+            app:k7="@+id/cf"
+            app:kg="1"
+            app:ko="0"
+            app:kq="@+id/cf">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:background="?android:attr/selectableItemBackground"
                 android:layout_width="match_parent"
@@ -276,9 +276,9 @@
                     android:layout_marginBottom="16dp"
                     android:tint="#ffe91e63"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"
+                    app:k0="0"
+                    app:ko="0"
+                    app:kr="0"
                     app:srcCompat="@drawable/ak"/>
                 <TextView
                     android:textSize="18sp"
@@ -291,10 +291,10 @@
                     android:text="动画调整"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toEndOf="@+id/g7"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:kn="@+id/g7"
+                    app:kr="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

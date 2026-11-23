@@ -1,0 +1,36 @@
+﻿模块,Java声明,JNI导出符号,ARM64地址,ARM64大小,ARM32地址,ARM32大小,当前理解
+Fastboot,FastbootActivity$RunnableC1318a.run(),Java_com_didjdk_adbhelper_FastbootActivity_00024a_run__,0xd776c,996,0xa0329,740,内部 Runnable，确切业务仍待还原
+Fastboot,FastbootActivity$C1319b.run(),Java_com_didjdk_adbhelper_FastbootActivity_00024b_run__,0xd8a00,3420,0xa0f49,2752,持有 UsbDevice 的线程；很可能参与 USB 设备打开流程
+Fastboot,FastbootActivity$RunnableC1320c.run(),Java_com_didjdk_adbhelper_FastbootActivity_00024c_run__,0xdc774,1380,0xa3559,1080,内部 Runnable，确切业务仍待还原
+Fastboot,"FastbootActivity$C1321d.onReceive(Context,Intent)",Java_com_didjdk_adbhelper_FastbootActivity_00024d_onReceive__Landroid_content_Context_2Landroid_content_Intent_2,0xde344,11348,0xa4649,8828,USB 广播接收器；精确事件分支仍待还原
+Fastboot,FastbootActivity$HandlerC1322e.handleMessage(Message),Java_com_didjdk_adbhelper_FastbootActivity_00024e_handleMessage__Landroid_os_Message_2,0xe506c,6872,0xa95a9,6036,UI Handler；消息语义需结合 native 代码继续确认
+Fastboot,FastbootActivity.m3017A(),Java_com_didjdk_adbhelper_FastbootActivity_A__,0xe9b9c,4168,0xad00d,3500,被点击监听器及回车键监听器调用，属于命令提交入口
+Fastboot,FastbootActivity.m3018B(UsbDevice),Java_com_didjdk_adbhelper_FastbootActivity_B__Landroid_hardware_usb_UsbDevice_2,0xeda00,1176,0xb0241,940,native 布尔设备处理/判断函数；具体条件待确认
+Fastboot,FastbootActivity.m3019C(),Java_com_didjdk_adbhelper_FastbootActivity_C__,0xeec0c,1628,0xb0e15,1308,清空日志按钮调用，关联日志/控制台清理
+Fastboot,FastbootActivity.m3020D(),Java_com_didjdk_adbhelper_FastbootActivity_D__,0xf0728,5944,0xb1f99,4904,设置开关保存后调用；精确行为待确认
+Fastboot,"FastbootActivity.m3021E(byte[],int)",Java_com_didjdk_adbhelper_FastbootActivity_E___3BI,0xf4a50,1692,0xb512d,1344,USB IN 数据回调；由 5007 转发线程收到设备响应后调用
+Fastboot,"FastbootActivity.onActivityResult(int,int,Intent)",Java_com_didjdk_adbhelper_FastbootActivity_onActivityResult__IILandroid_content_Intent_2,0xf6c44,716,0xb6b19,576,Activity 回调
+Fastboot,FastbootActivity.onCreateOptionsMenu(Menu),Java_com_didjdk_adbhelper_FastbootActivity_onCreateOptionsMenu__Landroid_view_Menu_2,0x106be4,916,0xc32d5,708,菜单初始化
+Fastboot,FastbootActivity.onCreate(Bundle),Java_com_didjdk_adbhelper_FastbootActivity_onCreate__Landroid_os_Bundle_2,0xf8230,21432,0xb7a65,18036,Activity 初始化；体积最大之一
+Fastboot,FastbootActivity.onDestroy(),Java_com_didjdk_adbhelper_FastbootActivity_onDestroy__,0x108414,1132,0xc4611,876,Activity 清理
+Fastboot,FastbootActivity.onOptionsItemSelected(MenuItem),Java_com_didjdk_adbhelper_FastbootActivity_onOptionsItemSelected__Landroid_view_MenuItem_2,0x109dbc,6808,0xc5611,5688,菜单事件
+Fastboot,"FastbootActivity.onRequestPermissionsResult(int,String[],int[])",Java_com_didjdk_adbhelper_FastbootActivity_onRequestPermissionsResult__I_3Ljava_lang_String_2_3I,0x10f4c0,580,0xc9849,436,运行时权限结果
+Fastboot,"FastbootActivity.m3016x(FastbootActivity,UsbDevice,UsbInterface)",Java_com_didjdk_adbhelper_FastbootActivity_x__Lcom_didjdk_adbhelper_FastbootActivity_2Landroid_hardware_usb_UsbDevice_2Landroid_hardware_usb_UsbInterface_2,0x10ffa4,3180,0xc9fa5,2560,静态 USB 接口识别/筛选入口（根据参数与用途推断）
+Fastboot,FastbootActivity.m3022y(UsbDevice),Java_com_didjdk_adbhelper_FastbootActivity_y__Landroid_hardware_usb_UsbDevice_2,0x112de4,580,0xcbb8d,476,USB 设备处理入口；具体行为待确认
+Fastboot,"FastbootActivity.m3023z(String,int)",Java_com_didjdk_adbhelper_FastbootActivity_z__Ljava_lang_String_2I,0x113be8,1088,0xcc1f1,812,生成 SpannableString；界面命令/文本着色
+USB transport,C0979t3.m2631a(C0979t3),Java_c_c_a_t3_a__Lc_c_a_t3_2,0x59680,5952,0x45285,4824,5008 服务循环里被重复调用；ADB USB 双向传输处理核心
+USB transport,"C0979t3.m2632b(UsbEndpoint,byte[],int)",Java_c_c_a_t3_b__Landroid_hardware_usb_UsbEndpoint_2_3BI,0x5e2ec,1548,0x48e4d,1216,5007 Fastboot 转发线程调用；向 Bulk OUT 端点写数据
+USB transport,C0979t3.m2633c(),Java_c_c_a_t3_c__,0x5fb90,1332,0x49a71,1040,在 Java 侧未找到直接调用；待确认
+USB transport,C0979t3.m2634d(),Java_c_c_a_t3_d__,0x61228,15560,0x4a96d,12456,5008 socket 线程异常时调用，属于连接清理路径
+USB transport,C0979t3.m2635e(),Java_c_c_a_t3_e__,0x6a4cc,7324,0x51df1,6096,在 Java 侧未找到直接调用；待确认
+USB transport,C0979t3.m2636f(String),Java_c_c_a_t3_f__Ljava_lang_String_2,0x6f06c,688,0x55861,476,USB 连接初始化时写入设备信息和端点信息，属于日志输出
+USB transport,"C0979t3.m2637g(String,ByteBuffer)",Java_c_c_a_t3_g__Ljava_lang_String_2Ljava_nio_ByteBuffer_2,0x70494,1660,0x56405,1212,在 Java 侧未找到直接调用；待确认
+USB transport,C0979t3.m2638h(byte[]),Java_c_c_a_t3_h___3B,0x71d50,1060,0x573f9,784,在 Java 侧未找到直接调用；待确认
+USB transport,C0979t3.m2639i(byte[]),Java_c_c_a_t3_i___3B,0x72e8c,432,0x58061,320,在 Java 侧未找到直接调用；待确认
+C0535m,C0535m.m1954J(Context),Java_b_s_m_J__Landroid_content_Context_2,0x141ac,2888,0x10bb1,2228,多个界面按“已解锁/未解锁”及功能数量限制调用；会员/Pro 解锁状态
+C0535m,"C0535m.m1955K(String,String)",Java_b_s_m_K__Ljava_lang_String_2Ljava_lang_String_2,0x17524,1976,0x129f5,1464,无直接 Java 调用命中；用途待确认
+C0535m,C0535m.m1956L(Context),Java_b_s_m_L__Landroid_content_Context_2,0x1a6f4,2928,0x14585,2328,无直接 Java 调用命中；用途待确认
+C0535m,"C0535m.m1957a(int,byte[])",Java_b_s_m_a__I_3B,0xff30,1104,0xd765,836,被 Base64 包装的字符串编码/解码路径调用；底层变换算法待分析
+C0535m,"C0535m.m1964h(Context,boolean,int,String)",Java_b_s_m_h__Landroid_content_Context_2ZILjava_lang_String_2,0x11a30,2396,0xea7d,1852,Native 文件/应用环境处理入口；具体语义尚未确认
+C0535m,C0535m.m1975s(String),Java_b_s_m_s__Ljava_lang_String_2,0x1dd80,3044,0x16555,2396,无直接 Java 调用命中；用途待确认
+C0535m,C0535m.m1980x(Context),Java_b_s_m_x__Landroid_content_Context_2,0x21050,4120,0x18f15,3436,在一个 UI 标签中显示 Native 返回值；具体内容待确认

@@ -63,9 +63,9 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:layout_constraintEnd_toEndOf="0"
-                        app:layout_constraintStart_toStartOf="0"
-                        app:layout_constraintTop_toTopOf="0"
+                        app:k6="0"
+                        app:ko="0"
+                        app:kr="0"
                         app:srcCompat="@drawable/dp"/>
                     <ImageView
                         android:id="@+id/gw"
@@ -74,9 +74,9 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:layout_constraintEnd_toEndOf="0"
-                        app:layout_constraintStart_toStartOf="0"
-                        app:layout_constraintTop_toBottomOf="@+id/gx"
+                        app:k6="0"
+                        app:ko="0"
+                        app:kq="@+id/gx"
                         app:srcCompat="@drawable/e5"/>
                     <ImageView
                         android:id="@+id/gv"
@@ -85,9 +85,9 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:layout_constraintEnd_toEndOf="0"
-                        app:layout_constraintStart_toStartOf="0"
-                        app:layout_constraintTop_toBottomOf="@+id/gw"
+                        app:k6="0"
+                        app:ko="0"
+                        app:kq="@+id/gw"
                         app:srcCompat="@drawable/e1"/>
                     <ImageView
                         android:id="@+id/gu"
@@ -96,9 +96,9 @@
                         android:layout_height="48dp"
                         android:tint="#ffffffff"
                         android:alpha="0.8"
-                        app:layout_constraintEnd_toEndOf="0"
-                        app:layout_constraintStart_toStartOf="0"
-                        app:layout_constraintTop_toBottomOf="@+id/gv"
+                        app:k6="0"
+                        app:ko="0"
+                        app:kq="@+id/gv"
                         app:srcCompat="@drawable/dg"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.didjdk.adbhelper.view.DragView>

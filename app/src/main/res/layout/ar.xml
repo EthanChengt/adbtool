@@ -11,9 +11,9 @@
         android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k6="0"
+        app:ko="0"
+        app:kr="0">
         <TextView
             android:textSize="18sp"
             android:textColor="?attr/e0"
@@ -25,9 +25,9 @@
             android:text="动画缩放调整"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k6="0"
+            app:ko="0"
+            app:kr="0"/>
         <TextView
             android:textSize="14sp"
             android:id="@+id/re"
@@ -37,8 +37,8 @@
             android:layout_marginTop="24dp"
             android:text="窗口动画缩放倍数"
             android:layout_marginStart="32dp"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/jo"/>
+            app:ko="0"
+            app:kq="@+id/jo"/>
         <EditText
             android:id="@+id/rf"
             android:layout_width="wrap_content"
@@ -47,11 +47,11 @@
             android:inputType="numberDecimal"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="32dp"
-            app:layout_constraintBottom_toBottomOf="@+id/re"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@+id/re"
-            app:layout_constraintTop_toTopOf="@+id/re"/>
+            app:k0="@+id/re"
+            app:k6="0"
+            app:ke="1"
+            app:kn="@+id/re"
+            app:kr="@+id/re"/>
         <SeekBar
             android:id="@+id/mr"
             android:layout_width="0dp"
@@ -61,10 +61,10 @@
             android:max="80"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/pi"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/re"/>
+            app:k1="@+id/pi"
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/re"/>
         <TextView
             android:textSize="14sp"
             android:id="@+id/pi"
@@ -74,8 +74,8 @@
             android:layout_marginTop="24dp"
             android:text="过渡动画缩放倍数"
             android:layout_marginStart="32dp"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/mr"/>
+            app:ko="0"
+            app:kq="@+id/mr"/>
         <EditText
             android:id="@+id/pj"
             android:layout_width="wrap_content"
@@ -84,11 +84,11 @@
             android:inputType="numberDecimal"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="32dp"
-            app:layout_constraintBottom_toBottomOf="@+id/pi"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@+id/pi"
-            app:layout_constraintTop_toTopOf="@+id/pi"/>
+            app:k0="@+id/pi"
+            app:k6="0"
+            app:ke="1"
+            app:kn="@+id/pi"
+            app:kr="@+id/pi"/>
         <SeekBar
             android:id="@+id/mq"
             android:layout_width="0dp"
@@ -98,10 +98,10 @@
             android:max="80"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/bh"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/pi"/>
+            app:k1="@+id/bh"
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/pi"/>
         <TextView
             android:textSize="14sp"
             android:id="@+id/bh"
@@ -111,8 +111,8 @@
             android:layout_marginTop="24dp"
             android:text="动画时长缩放倍数"
             android:layout_marginStart="32dp"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/mq"/>
+            app:ko="0"
+            app:kq="@+id/mq"/>
         <EditText
             android:id="@+id/bi"
             android:layout_width="wrap_content"
@@ -121,11 +121,11 @@
             android:inputType="numberDecimal"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="32dp"
-            app:layout_constraintBottom_toBottomOf="@+id/bh"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@+id/bh"
-            app:layout_constraintTop_toTopOf="@+id/bh"/>
+            app:k0="@+id/bh"
+            app:k6="0"
+            app:ke="1"
+            app:kn="@+id/bh"
+            app:kr="@+id/bh"/>
         <SeekBar
             android:id="@+id/mp"
             android:layout_width="0dp"
@@ -135,10 +135,10 @@
             android:max="80"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/jn"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/bh"/>
+            app:k1="@+id/jn"
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/bh"/>
         <Button
             android:id="@+id/jn"
             android:visibility="visible"
@@ -147,8 +147,8 @@
             android:layout_marginBottom="8dp"
             android:text="@string/eg"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
+            app:k0="0"
+            app:k6="0"
             style="@style/q4"/>
         <Button
             android:id="@+id/jk"
@@ -157,9 +157,9 @@
             android:layout_height="wrap_content"
             android:text="@string/aq"
             android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/jn"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="@+id/jn"
+            app:k0="@+id/jn"
+            app:ko="0"
+            app:kr="@+id/jn"
             style="@style/q4"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

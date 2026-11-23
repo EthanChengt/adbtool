@@ -11,9 +11,9 @@
         android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k6="0"
+        app:ko="0"
+        app:kr="0">
         <TextView
             android:textSize="18sp"
             android:textColor="?attr/e0"
@@ -25,18 +25,18 @@
             android:text="动画缩放调整"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k6="0"
+            app:ko="0"
+            app:kr="0"/>
         <Spinner
             android:id="@+id/na"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dialog"
-            app:layout_constraintBottom_toTopOf="@+id/jn"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/jo"/>
+            app:k1="@+id/jn"
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/jo"/>
         <Button
             android:id="@+id/jn"
             android:visibility="visible"
@@ -45,8 +45,8 @@
             android:layout_marginBottom="8dp"
             android:text="@string/eg"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
+            app:k0="0"
+            app:k6="0"
             style="@style/q4"/>
         <Button
             android:id="@+id/jk"
@@ -55,9 +55,9 @@
             android:layout_height="wrap_content"
             android:text="@string/aq"
             android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/jn"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="@+id/jn"
+            app:k0="@+id/jn"
+            app:ko="0"
+            app:kr="@+id/jn"
             style="@style/q4"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

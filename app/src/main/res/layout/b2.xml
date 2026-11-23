@@ -10,8 +10,8 @@
         android:layout_marginTop="24dp"
         android:text="设备识别码："
         android:layout_marginStart="24dp"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0"/>
+        app:ko="0"
+        app:kr="0"/>
     <TextView
         android:textStyle="bold"
         android:id="@+id/dn"
@@ -19,9 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/ov"
-        app:layout_constraintStart_toEndOf="@+id/ov"
-        app:layout_constraintTop_toTopOf="@+id/ov"/>
+        app:k0="@+id/ov"
+        app:kn="@+id/ov"
+        app:kr="@+id/ov"/>
     <TextView
         android:textSize="14sp"
         android:textColor="#fff44336"
@@ -31,8 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginStart="24dp"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toBottomOf="@+id/ov"/>
+        app:ko="0"
+        app:kq="@+id/ov"/>
     <EditText
         android:id="@+id/h4"
         android:layout_width="0dp"
@@ -41,7 +41,7 @@
         android:hint="请输入转账单号"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toBottomOf="@+id/do_res_0x7f0900a2"/>
+        app:k6="0"
+        app:ko="0"
+        app:kq="@+id/do_res_0x7f0900a2"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

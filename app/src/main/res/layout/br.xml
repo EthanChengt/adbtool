@@ -16,9 +16,9 @@
             android:layout_marginLeft="24dp"
             android:text="设备内存"
             android:layout_marginStart="24dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:ko="0"
+            app:kr="0"/>
         <TextView
             android:textSize="18sp"
             android:gravity="right"
@@ -32,10 +32,10 @@
             android:text="4 GB"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toEndOf="@+id/pw"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:k6="0"
+            app:kn="@+id/pw"
+            app:kr="0"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <ProgressBar
         android:id="@+id/la"
@@ -61,9 +61,9 @@
             android:layout_height="16dp"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:ko="0"
+            app:kr="0"/>
         <TextView
             android:textSize="18sp"
             android:textColor="?attr/e0"
@@ -75,9 +75,9 @@
             android:layout_marginBottom="8dp"
             android:text="已用内存"
             android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintStart_toEndOf="@+id/g1"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:kn="@+id/g1"
+            app:kr="0"/>
         <TextView
             android:textSize="18sp"
             android:gravity="right"
@@ -87,10 +87,10 @@
             android:layout_marginRight="24dp"
             android:text="TextView"
             android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toEndOf="@+id/oh"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:k6="0"
+            app:kn="@+id/oh"
+            app:kr="0"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:orientation="horizontal"
@@ -103,9 +103,9 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginStart="24dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:ko="0"
+            app:kr="0"/>
         <TextView
             android:textSize="18sp"
             android:textColor="?attr/e0"
@@ -117,9 +117,9 @@
             android:layout_marginBottom="8dp"
             android:text="可用内存"
             android:layout_marginStart="8dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintStart_toEndOf="@+id/g2"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:kn="@+id/g2"
+            app:kr="0"/>
         <TextView
             android:textSize="18sp"
             android:gravity="right"
@@ -129,10 +129,10 @@
             android:layout_marginRight="24dp"
             android:text="TextView"
             android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toEndOf="@+id/oj"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:k6="0"
+            app:kn="@+id/oj"
+            app:kr="0"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <View
         android:id="@+id/dx"

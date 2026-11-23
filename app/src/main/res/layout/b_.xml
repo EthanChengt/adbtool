@@ -11,9 +11,9 @@
         android:paddingRight="10dp"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k6="0"
+        app:ko="0"
+        app:kr="0">
         <TextView
             android:textColor="@color/e2"
             android:ellipsize="start"
@@ -53,9 +53,9 @@
         android:visibility="gone"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k6="0"
+        app:ko="0"
+        app:kr="0">
         <TextView
             android:textColor="@color/e2"
             android:id="@+id/qu"
@@ -100,10 +100,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="48dp"
-        app:layout_constraintBottom_toBottomOf="0"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k0="0"
+        app:k6="0"
+        app:ko="0"
+        app:kr="0">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lr"
             android:scrollbars="vertical"

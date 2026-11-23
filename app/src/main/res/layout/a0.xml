@@ -11,7 +11,7 @@
     android:divider="?attr/lj"
     android:overScrollMode="ifContentScrolls"
     android:textAlignment="viewStart"
-    app:paddingBottomNoButtons="@dimen/a6"
-    app:paddingTopNoTitle="@dimen/a7"
+    app:n1="@dimen/a6"
+    app:n4="@dimen/a7"
     class="androidx.appcompat.app.AlertController$RecycleListView"
     style="@style/oh"/>

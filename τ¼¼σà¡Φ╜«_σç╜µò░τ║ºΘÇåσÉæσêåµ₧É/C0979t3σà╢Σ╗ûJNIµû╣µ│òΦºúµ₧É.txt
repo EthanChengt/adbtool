@@ -1,0 +1,57 @@
+
+### Java_c_c_a_t3_b__Landroid_hardware_usb_UsbEndpoint_2_3BI
+0005e3fc field  class='c/c/a/t3' member='n' sig='Z'
+0005e488 field  class='c/c/a/t3' member='m' sig='Z'
+0005e500 method class='android/hardware/usb/UsbEndpoint' member='getMaxPacketSize' sig='()I'
+0005e570 field  class='c/c/a/t3' member='a' sig='Landroid/hardware/usb/UsbDeviceConnection;'
+0005e5f4 method class='java/lang/Math' member='min' sig='(II)I'
+0005e708 method class='android/hardware/usb/UsbDeviceConnection' member='bulkTransfer' sig='(Landroid/hardware/usb/UsbEndpoint;[BIII)I'
+0005e754 field  class='c/c/a/t3' member='a' sig='Landroid/hardware/usb/UsbDeviceConnection;'
+0005e83c method class='android/hardware/usb/UsbDeviceConnection' member='bulkTransfer' sig='(Landroid/hardware/usb/UsbEndpoint;[BIII)I'
+resolver_count= 8
+
+### Java_c_c_a_t3_c__
+0005fc08 field  class='c/c/a/t3' member='n' sig='Z'
+0005fc74 field  class='c/c/a/t3' member='a' sig='Landroid/hardware/usb/UsbDeviceConnection;'
+0005fce0 field  class='c/c/a/t3' member='d' sig='Landroid/hardware/usb/UsbInterface;'
+0005fd50 method class='android/hardware/usb/UsbDeviceConnection' member='releaseInterface' sig='(Landroid/hardware/usb/UsbInterface;)Z'
+0005fdc0 field  class='c/c/a/t3' member='a' sig='Landroid/hardware/usb/UsbDeviceConnection;'
+0005fe44 method class='android/hardware/usb/UsbDeviceConnection' member='close' sig='()V'
+0005feb0 field  class='c/c/a/t3' member='e' sig='Ljava/net/ServerSocket;'
+0005ff78 method class='java/io/IOException' member='printStackTrace' sig='()V'
+00060064 method class='java/net/ServerSocket' member='close' sig='()V'
+resolver_count= 9
+
+### Java_c_c_a_t3_f__Ljava_lang_String_2
+0006f0f8 field  class='c/c/a/t3' member='h' sig='Lcom/didjdk/adbhelper/ConnectActivity;'
+0006f180 method class='android/content/Context' member='getApplicationContext' sig='()Landroid/content/Context;'
+0006f1ec class  class='com/didjdk/adbhelper/MyApplication' member='' sig=''
+0006f258 method class='java/util/Objects' member='requireNonNull' sig='(Ljava/lang/Object;)Ljava/lang/Object;'
+resolver_count= 4
+
+### Java_c_c_a_t3_g__Ljava_lang_String_2Ljava_nio_ByteBuffer_2
+00070528 class  class='c/c/a/t2' member='' sig=''
+000705c0 method class='c/c/a/t2' member='<init>' sig='(Ljava/nio/ByteBuffer;)V'
+00070630 class  class='java/lang/StringBuilder' member='' sig=''
+0007069c method class='java/lang/StringBuilder' member='<init>' sig='()V'
+00070708 method class='java/lang/StringBuilder' member='append' sig='(Ljava/lang/String;)Ljava/lang/StringBuilder;'
+000707c8 method class='java/lang/StringBuilder' member='append' sig='(Ljava/lang/String;)Ljava/lang/StringBuilder;'
+00070854 method class='c/c/a/t2' member='toString' sig='()Ljava/lang/String;'
+000708dc method class='java/lang/StringBuilder' member='append' sig='(Ljava/lang/String;)Ljava/lang/StringBuilder;'
+0007099c method class='java/lang/StringBuilder' member='append' sig='(Ljava/lang/String;)Ljava/lang/StringBuilder;'
+00070a28 method class='java/lang/StringBuilder' member='toString' sig='()Ljava/lang/String;'
+00070ab4 method class='c/c/a/t3' member='f' sig='(Ljava/lang/String;)V'
+resolver_count= 11
+
+### Java_c_c_a_t3_h___3B
+00071e24 field  class='c/c/a/t3' member='n' sig='Z'
+00071ef4 field  class='c/c/a/t3' member='f' sig='Ljava/io/InputStream;'
+00071fac method class='java/io/InputStream' member='read' sig='([BII)I'
+00072034 class  class='java/io/IOException' member='' sig=''
+000720bc method class='java/io/IOException' member='<init>' sig='(Ljava/lang/String;)V'
+resolver_count= 5
+
+### Java_c_c_a_t3_i___3B
+00072f14 field  class='c/c/a/t3' member='b' sig='Landroid/hardware/usb/UsbEndpoint;'
+00072fb4 method class='c/c/a/t3' member='b' sig='(Landroid/hardware/usb/UsbEndpoint;[BI)V'
+resolver_count= 2

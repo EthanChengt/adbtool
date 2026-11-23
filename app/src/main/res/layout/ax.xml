@@ -11,10 +11,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="0"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k0="0"
+        app:k6="0"
+        app:ko="0"
+        app:kr="0">
         <ImageView
             android:id="@+id/hh"
             android:visibility="gone"
@@ -22,9 +22,9 @@
             android:layout_height="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/hm"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="@+id/hm"/>
+            app:k0="@+id/hm"
+            app:ko="0"
+            app:kr="@+id/hm"/>
         <TextView
             android:textSize="20sp"
             android:textColor="?attr/e0"
@@ -39,9 +39,9 @@
             android:singleLine="true"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toEndOf="@+id/hh"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k6="0"
+            app:kn="@+id/hh"
+            app:kr="0"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/hl"
             android:visibility="visible"
@@ -49,10 +49,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:overScrollMode="never"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/hm"/>
+            app:k6="0"
+            app:ke="1"
+            app:ko="0"
+            app:kq="@+id/hm"/>
         <Button
             android:id="@+id/hk"
             android:visibility="gone"
@@ -63,9 +63,9 @@
             android:layout_marginBottom="8dp"
             android:text="Button"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/hl"
+            app:k0="0"
+            app:k6="0"
+            app:kq="@+id/hl"
             style="@style/q4"/>
         <Button
             android:id="@+id/hj"
@@ -77,9 +77,9 @@
             android:layout_marginBottom="8dp"
             android:text="Button"
             android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toStartOf="@+id/hk"
-            app:layout_constraintTop_toBottomOf="@+id/hl"
+            app:k0="0"
+            app:k7="@+id/hk"
+            app:kq="@+id/hl"
             style="@style/q4"/>
         <Button
             android:id="@+id/hi"
@@ -89,9 +89,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Button"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/hl"
+            app:k0="0"
+            app:ko="0"
+            app:kq="@+id/hl"
             style="@style/q4"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

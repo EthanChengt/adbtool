@@ -20,9 +20,9 @@
             android:paddingEnd="8dp"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0">
+            app:k6="0"
+            app:ko="0"
+            app:kr="0">
             <ImageView
                 android:padding="10dp"
                 android:layout_width="wrap_content"
@@ -57,9 +57,9 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/i8">
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/i8">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/i3"
                 android:layout_width="match_parent"
@@ -74,10 +74,10 @@
                     android:text="重要提示：在为本机进行刷机/恢复出厂设置/双清/ROOT/解锁BL等操作之前，一定要先取消解锁状态，否则支付单号将无法使用！"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toBottomOf="@+id/c6"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:ko="0"
+                    app:kq="@+id/c6"/>
                 <Button
                     android:id="@+id/c6"
                     android:layout_width="0dp"
@@ -86,9 +86,9 @@
                     android:text="取消解锁"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k6="0"
+                    app:ko="0"
+                    app:kr="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -101,9 +101,9 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/cd">
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/cd">
             <LinearLayout
                 android:orientation="vertical"
                 android:paddingTop="4dp"
@@ -366,9 +366,9 @@
             android:layout_marginEnd="8dp"
             app:cardCornerRadius="8dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/ca">
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/ca">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/i5"
                 android:layout_width="match_parent"
@@ -384,18 +384,18 @@
                     android:lineSpacingExtra="6sp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"/>
+                    app:k6="0"
+                    app:ko="0"
+                    app:kr="0"/>
                 <ImageView
                     android:id="@+id/g8"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:tint="@color/e8"
                     android:layout_marginEnd="4dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/qx"
-                    app:layout_constraintEnd_toStartOf="@+id/qx"
-                    app:layout_constraintTop_toTopOf="@+id/qx"
+                    app:k0="@+id/qx"
+                    app:k7="@+id/qx"
+                    app:kr="@+id/qx"
                     app:srcCompat="@drawable/dy"/>
                 <TextView
                     android:textColor="@color/e8"
@@ -405,9 +405,9 @@
                     android:layout_height="wrap_content"
                     android:text="解锁说明"
                     android:layout_marginEnd="24dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/qt"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintTop_toTopOf="@+id/qt"/>
+                    app:k0="@+id/qt"
+                    app:k6="0"
+                    app:kr="@+id/qt"/>
                 <TextView
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -421,9 +421,9 @@
                     android:paddingEnd="16dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toStartOf="@+id/g8"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toBottomOf="@+id/os"/>
+                    app:k7="@+id/g8"
+                    app:ko="0"
+                    app:kq="@+id/os"/>
                 <Button
                     android:id="@+id/c7"
                     android:layout_width="0dp"
@@ -432,9 +432,9 @@
                     android:text="支付"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toBottomOf="@+id/qt"/>
+                    app:k6="0"
+                    app:ko="0"
+                    app:kq="@+id/qt"/>
                 <Button
                     android:id="@+id/c8"
                     android:layout_width="0dp"
@@ -444,10 +444,10 @@
                     android:text=" 使用支付单号解锁"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toBottomOf="@+id/c7"/>
+                    app:k0="0"
+                    app:k6="0"
+                    app:ko="0"
+                    app:kq="@+id/c7"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

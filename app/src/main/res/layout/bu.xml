@@ -20,9 +20,9 @@
                 android:layout_height="24dp"
                 android:tint="#ffff9800"
                 android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/oz"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toTopOf="@+id/oz"
+                app:k0="@+id/oz"
+                app:ko="0"
+                app:kr="@+id/oz"
                 app:srcCompat="@drawable/di"/>
             <TextView
                 android:textSize="18sp"
@@ -32,9 +32,9 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/ca"
                 android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/oy"
-                app:layout_constraintStart_toEndOf="@+id/g_"
-                app:layout_constraintTop_toTopOf="0"/>
+                app:k1="@+id/oy"
+                app:kn="@+id/g_"
+                app:kr="0"/>
             <TextView
                 android:id="@+id/oy"
                 android:layout_width="0dp"
@@ -43,10 +43,10 @@
                 android:text="@string/cm"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/od"
-                app:layout_constraintEnd_toEndOf="0"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toBottomOf="@+id/oz"/>
+                app:k1="@+id/od"
+                app:k6="0"
+                app:ko="0"
+                app:kq="@+id/oz"/>
             <TextView
                 android:textSize="14sp"
                 android:textColor="?attr/e2"
@@ -59,10 +59,10 @@
                 android:lineSpacingExtra="8sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="0"
-                app:layout_constraintEnd_toEndOf="0"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toBottomOf="@+id/oy"/>
+                app:k0="0"
+                app:k6="0"
+                app:ko="0"
+                app:kq="@+id/oy"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -87,9 +87,9 @@
                 android:layout_height="24dp"
                 android:tint="#ffe91e63"
                 android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/ow"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toTopOf="@+id/ow"
+                app:k0="@+id/ow"
+                app:ko="0"
+                app:kr="@+id/ow"
                 app:srcCompat="@drawable/ds"/>
             <TextView
                 android:textSize="18sp"
@@ -99,9 +99,9 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/h3"
                 android:layout_marginStart="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/og"
-                app:layout_constraintStart_toEndOf="@+id/gf"
-                app:layout_constraintTop_toTopOf="0"/>
+                app:k1="@+id/og"
+                app:kn="@+id/gf"
+                app:kr="0"/>
             <TextView
                 android:id="@+id/og"
                 android:layout_width="match_parent"
@@ -110,10 +110,10 @@
                 android:text="@string/fa"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/c3"
-                app:layout_constraintEnd_toEndOf="0"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toBottomOf="@+id/ow"/>
+                app:k1="@+id/c3"
+                app:k6="0"
+                app:ko="0"
+                app:kq="@+id/ow"/>
             <Button
                 android:id="@+id/c3"
                 android:visibility="gone"
@@ -123,11 +123,11 @@
                 android:text="@string/i6"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/ex"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toBottomOf="@+id/og"
-                app:layout_constraintWidth_percent="50"/>
+                app:k7="@+id/ex"
+                app:kg="1"
+                app:ko="0"
+                app:kq="@+id/og"
+                app:ky="50"/>
             <Button
                 android:id="@+id/ex"
                 android:layout_width="0dp"
@@ -137,11 +137,11 @@
                 android:text="@string/ao"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/oi"
-                app:layout_constraintEnd_toEndOf="0"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/c3"
-                app:layout_constraintTop_toTopOf="@+id/c3"/>
+                app:k1="@+id/oi"
+                app:k6="0"
+                app:kg="1"
+                app:kn="@+id/c3"
+                app:kr="@+id/c3"/>
             <TextView
                 android:id="@+id/oi"
                 android:visibility="gone"
@@ -150,10 +150,10 @@
                 android:layout_marginTop="48dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/c4"
-                app:layout_constraintEnd_toEndOf="0"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toBottomOf="@+id/ex"/>
+                app:k1="@+id/c4"
+                app:k6="0"
+                app:ko="0"
+                app:kq="@+id/ex"/>
             <Button
                 android:id="@+id/c4"
                 android:visibility="gone"
@@ -162,11 +162,11 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="0"
-                app:layout_constraintEnd_toEndOf="0"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toBottomOf="@+id/oi"
+                app:k0="0"
+                app:k6="0"
+                app:ke="0.6"
+                app:ko="0"
+                app:kq="@+id/oi"
                 style="@style/q3"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

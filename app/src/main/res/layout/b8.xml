@@ -12,18 +12,18 @@
         android:ems="10"
         android:layout_weight="1"
         android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/bv"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0"/>
+        app:k7="@+id/bv"
+        app:ko="0"
+        app:kr="0"/>
     <Button
         android:id="@+id/bv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="↑"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/h1"
-        app:layout_constraintEnd_toStartOf="@+id/bu"
-        app:layout_constraintStart_toEndOf="@+id/h1"
+        app:k0="@+id/h1"
+        app:k7="@+id/bu"
+        app:kn="@+id/h1"
         style="@style/nk"/>
     <Button
         android:id="@+id/bu"
@@ -33,9 +33,9 @@
         android:layout_weight="1"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/h1"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toEndOf="@+id/bv"
+        app:k0="@+id/h1"
+        app:k6="0"
+        app:kn="@+id/bv"
         style="@style/nk"/>
     <Button
         android:id="@+id/ed"
@@ -46,9 +46,9 @@
         android:layout_weight="3"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toBottomOf="@+id/h1"/>
+        app:k6="0"
+        app:ko="0"
+        app:kq="@+id/h1"/>
     <androidx.core.widget.NestedScrollView
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:id="@+id/d3"
@@ -58,10 +58,10 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="0"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toBottomOf="@+id/ed">
+        app:k0="0"
+        app:k6="0"
+        app:ko="0"
+        app:kq="@+id/ed">
         <EditText
             android:textSize="14dp"
             android:textColor="?attr/e0"

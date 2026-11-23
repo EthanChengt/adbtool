@@ -2,8 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:state_enabled="true"
-        app:state_liftable="true"
-        app:state_lifted="false">
+        app:pe="true"
+        app:pf="false">
         <objectAnimator
             android:duration="@integer/c"
             android:valueTo="0dp"

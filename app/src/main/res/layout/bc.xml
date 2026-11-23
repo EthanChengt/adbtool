@@ -18,9 +18,9 @@
             android:layout_marginTop="32dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0">
+            app:k6="0"
+            app:ko="0"
+            app:kr="0">
             <ImageView
                 android:padding="4dp"
                 android:layout_width="wrap_content"
@@ -79,9 +79,9 @@
                             android:layout_marginBottom="24dp"
                             android:text="@string/fz"
                             android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintStart_toStartOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:ko="0"
+                            app:kr="0"/>
                         <TextView
                             android:gravity="right"
                             android:id="@+id/q5"
@@ -92,18 +92,18 @@
                             android:text="@string/er"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="24dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toEndOf="@+id/ql"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:kn="@+id/ql"
+                            app:kr="0"/>
                         <View
                             android:id="@+id/dv"
                             android:background="?android:attr/listDivider"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toStartOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:ko="0"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/hu"
@@ -124,9 +124,9 @@
                             android:layout_marginBottom="24dp"
                             android:text="@string/am"
                             android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintStart_toStartOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:ko="0"
+                            app:kr="0"/>
                         <TextView
                             android:gravity="right"
                             android:id="@+id/q3"
@@ -137,18 +137,18 @@
                             android:text="@string/bi"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="24dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toEndOf="@+id/qn"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:kn="@+id/qn"
+                            app:kr="0"/>
                         <View
                             android:id="@+id/du"
                             android:background="?android:attr/listDivider"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toStartOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:ko="0"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/i0"
@@ -167,9 +167,9 @@
                             android:layout_marginBottom="24dp"
                             android:text="@string/ai"
                             android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintStart_toStartOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:ko="0"
+                            app:kr="0"/>
                         <TextView
                             android:gravity="right"
                             android:id="@+id/q6"
@@ -180,18 +180,18 @@
                             android:text="@string/bi"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="24dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toEndOf="@+id/of"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:kn="@+id/of"
+                            app:kr="0"/>
                         <View
                             android:id="@+id/dw"
                             android:background="?android:attr/listDivider"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toStartOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:ko="0"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/hx"
@@ -209,9 +209,9 @@
                             android:layout_marginBottom="24dp"
                             android:text="导航栏位置"
                             android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintStart_toStartOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:ko="0"
+                            app:kr="0"/>
                         <TextView
                             android:gravity="right"
                             android:id="@+id/q4"
@@ -222,18 +222,18 @@
                             android:text="不显示"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="24dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toEndOf="@+id/op"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:kn="@+id/op"
+                            app:kr="0"/>
                         <View
                             android:id="@+id/dy"
                             android:background="?android:attr/listDivider"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toStartOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:ko="0"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/hv"
@@ -252,26 +252,26 @@
                             android:layout_marginBottom="24dp"
                             android:text="@string/ch"
                             android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintStart_toStartOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:ko="0"
+                            app:kr="0"/>
                         <CheckBox
                             android:id="@+id/cm"
                             android:clickable="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:kr="0"/>
                         <View
                             android:id="@+id/dx"
                             android:background="?android:attr/listDivider"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toStartOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:ko="0"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/hz"
@@ -291,26 +291,26 @@
                             android:layout_marginBottom="24dp"
                             android:text="@string/b_"
                             android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintStart_toStartOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:ko="0"
+                            app:kr="0"/>
                         <CheckBox
                             android:id="@+id/co"
                             android:clickable="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:kr="0"/>
                         <View
                             android:id="@+id/dt"
                             android:background="?android:attr/listDivider"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintStart_toStartOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:ko="0"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/hw"
@@ -329,18 +329,18 @@
                             android:layout_marginBottom="24dp"
                             android:text="兼容模式"
                             android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintStart_toStartOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:ko="0"
+                            app:kr="0"/>
                         <CheckBox
                             android:id="@+id/cn"
                             android:clickable="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
-                            app:layout_constraintBottom_toBottomOf="0"
-                            app:layout_constraintEnd_toEndOf="0"
-                            app:layout_constraintTop_toTopOf="0"/>
+                            app:k0="0"
+                            app:k6="0"
+                            app:kr="0"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>

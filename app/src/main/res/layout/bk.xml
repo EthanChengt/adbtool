@@ -13,8 +13,8 @@
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/qf"
-        app:layout_constraintTop_toTopOf="@+id/qf">
+        app:k1="@+id/qf"
+        app:kr="@+id/qf">
         <TextView
             android:textSize="16sp"
             android:textColor="?attr/e0"
@@ -23,8 +23,8 @@
             android:layout_height="wrap_content"
             android:text="运行内存"
             android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:ko="0"
+            app:kr="0"/>
         <TextView
             android:textSize="16sp"
             android:gravity="right"
@@ -36,10 +36,10 @@
             android:text="4 GB"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toEndOf="@+id/qf"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k0="0"
+            app:k6="0"
+            app:kn="@+id/qf"
+            app:kr="0"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <View
         android:id="@+id/ds"

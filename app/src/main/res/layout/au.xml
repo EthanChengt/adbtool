@@ -10,10 +10,10 @@
         android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k6="0"
+        app:ke="0"
+        app:ko="0"
+        app:kr="0">
         <TextView
             android:textSize="20sp"
             android:textColor="?attr/e0"
@@ -24,8 +24,8 @@
             android:layout_marginTop="24dp"
             android:text="text"
             android:layout_marginStart="24dp"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:ko="0"
+            app:kr="0"/>
         <TextView
             android:id="@+id/e5"
             android:visibility="gone"
@@ -35,10 +35,10 @@
             android:text="text"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/e_"/>
+            app:k6="0"
+            app:ke="0"
+            app:ko="0"
+            app:kq="@+id/e_"/>
         <com.google.android.material.textfield.TextInputLayout
             android:gravity="center"
             android:id="@+id/e8"
@@ -51,9 +51,9 @@
             app:boxBackgroundColor="@color/a4"
             app:boxBackgroundMode="1"
             app:boxCollapsedPaddingTop="1dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/e5">
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/e5">
             <EditText
                 android:textSize="18sp"
                 android:id="@+id/e3"
@@ -69,9 +69,9 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:boxBackgroundColor="@color/a4"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/e8">
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/e8">
             <EditText
                 android:textSize="18sp"
                 android:id="@+id/e4"
@@ -87,9 +87,9 @@
             android:layout_marginBottom="8dp"
             android:text="Button"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/e9"
+            app:k0="0"
+            app:k6="0"
+            app:kq="@+id/e9"
             style="@style/q4"/>
         <Button
             android:id="@+id/e6"
@@ -99,9 +99,9 @@
             android:layout_marginBottom="8dp"
             android:text="Button"
             android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toStartOf="@+id/e7"
-            app:layout_constraintTop_toTopOf="@+id/e7"
+            app:k0="0"
+            app:k7="@+id/e7"
+            app:kr="@+id/e7"
             style="@style/q4"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

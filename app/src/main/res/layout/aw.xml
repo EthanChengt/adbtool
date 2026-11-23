@@ -11,9 +11,9 @@
         android:layout_marginRight="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k6="0"
+        app:ko="0"
+        app:kr="0">
         <ImageView
             android:id="@+id/hg"
             android:visibility="gone"
@@ -21,9 +21,9 @@
             android:layout_height="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/hr"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="@+id/hr"/>
+            app:k0="@+id/hr"
+            app:ko="0"
+            app:kr="@+id/hr"/>
         <TextView
             android:textSize="20sp"
             android:textColor="?attr/e0"
@@ -38,9 +38,9 @@
             android:singleLine="true"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toEndOf="@+id/hg"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:k6="0"
+            app:kn="@+id/hg"
+            app:kr="0"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/hq"
             android:visibility="visible"
@@ -50,11 +50,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:overScrollMode="ifContentScrolls"
-            app:layout_constraintBottom_toBottomOf="@+id/hp"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/hr"
-            app:layout_constraintVertical_bias="1"/>
+            app:k0="@+id/hp"
+            app:k6="0"
+            app:ko="0"
+            app:kq="@+id/hr"
+            app:ks="1"/>
         <Button
             android:id="@+id/hp"
             android:visibility="gone"
@@ -65,9 +65,9 @@
             android:layout_marginBottom="16dp"
             android:text="Button"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintTop_toBottomOf="@+id/hq"
+            app:k0="0"
+            app:k6="0"
+            app:kq="@+id/hq"
             style="@style/q4"/>
         <Button
             android:id="@+id/ho"
@@ -78,9 +78,9 @@
             android:layout_marginBottom="16dp"
             android:text="Button"
             android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toStartOf="@+id/hp"
-            app:layout_constraintTop_toTopOf="@+id/hp"
+            app:k0="0"
+            app:k7="@+id/hp"
+            app:kr="@+id/hp"
             style="@style/q4"/>
         <Button
             android:id="@+id/hn"
@@ -89,9 +89,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Button"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="@+id/ho"
+            app:k0="0"
+            app:ko="0"
+            app:kr="@+id/ho"
             style="@style/q4"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

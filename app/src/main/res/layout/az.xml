@@ -9,10 +9,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:k6="0"
+        app:ke="0"
+        app:ko="0"
+        app:kr="0">
         <TextView
             android:textSize="20sp"
             android:textColor="?attr/e0"
@@ -23,17 +23,17 @@
             android:layout_marginTop="24dp"
             android:text="TextView"
             android:layout_marginStart="24dp"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="0"/>
+            app:ko="0"
+            app:kr="0"/>
         <ProgressBar
             android:id="@+id/l7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/l8"
-            app:layout_constraintStart_toStartOf="0"
-            app:layout_constraintTop_toTopOf="@+id/l8"
+            app:k0="@+id/l8"
+            app:ko="0"
+            app:kr="@+id/l8"
             style="?android:attr/progressBarStyle"/>
         <TextView
             android:textSize="16sp"
@@ -46,10 +46,10 @@
             android:text="Message"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/l9"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toEndOf="@+id/l7"
-            app:layout_constraintTop_toBottomOf="@+id/l_"/>
+            app:k1="@+id/l9"
+            app:k6="0"
+            app:kn="@+id/l7"
+            app:kq="@+id/l_"/>
         <ProgressBar
             android:id="@+id/l9"
             android:visibility="gone"
@@ -58,9 +58,9 @@
             android:layout_marginBottom="24dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="0"
-            app:layout_constraintEnd_toEndOf="0"
-            app:layout_constraintStart_toStartOf="0"
+            app:k0="0"
+            app:k6="0"
+            app:ko="0"
             style="?android:attr/progressBarStyleHorizontal"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

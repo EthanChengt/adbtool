@@ -7,17 +7,17 @@
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="0"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0"/>
+        app:k0="0"
+        app:k6="0"
+        app:ko="0"
+        app:kr="0"/>
     <ProgressBar
         android:id="@+id/lb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/lp"
-        app:layout_constraintEnd_toEndOf="0"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0"
+        app:k0="@+id/lp"
+        app:k6="0"
+        app:ko="0"
+        app:kr="0"
         style="?android:attr/progressBarStyle"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
