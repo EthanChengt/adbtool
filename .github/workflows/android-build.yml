@@ -29,7 +29,7 @@ jobs:
 
       - name: Install Android SDK platform and build tools
         run: |
-          sdkmanager --install "platforms;android-28" "build-tools;35.0.0"
+          sdkmanager --install "platforms;android-35" "build-tools;35.0.0"
           sdkmanager --list_installed
 
       - name: Set up Gradle 8.11.1
@@ -50,6 +50,12 @@ jobs:
             echo "=== Installed SDK packages ==="
             sdkmanager --list_installed
           } 2>&1 | tee "${RUNNER_TEMP}/build-environment.log"
+
+      - name: Validate source tree completeness
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/check_source_inventory.py 2>&1 | tee "${RUNNER_TEMP}/source-inventory-preflight.log"
 
       - name: Validate all nine-patch resources
         id: resource_preflight
@@ -94,6 +100,7 @@ jobs:
           name: adb-helper-build-error-logs
           path: |
             ${{ runner.temp }}/build-environment.log
+            ${{ runner.temp }}/source-inventory-preflight.log
             ${{ runner.temp }}/ninepatch-preflight.log
             ${{ runner.temp }}/resource-style-preflight.log
             ${{ runner.temp }}/app-attrs-preflight.log
