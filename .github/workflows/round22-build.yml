@@ -1,4 +1,4 @@
-name: Round 22 Build Anchor Fix 3
+name: Round 22 Build Anchor Fix 4
 on:
   workflow_dispatch:
 permissions:
@@ -11,22 +11,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Normalize C1259e anchor indentation in patch script
+      - name: Replace C1259e patch branch with whitespace-tolerant rules
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re
+          import base64
           p = Path('apply_round22.py')
           s = p.read_text(encoding='utf-8')
-          pattern = re.compile(r'(rep\("FloatingActionButton\.this\.f10289n\.set\(i6, i7, i8, i9\);\n)( {8,20})(FloatingActionButton floatingActionButton2 = FloatingActionButton\.this;\n\s*int i10 = floatingActionButton2\.f10286k;\n\s*floatingActionButton2\.setPadding\(i6 \+ i10, i7 \+ i10, i8 \+ i10, i9 \+ i10\);",)', re.MULTILINE)
-          matches = list(pattern.finditer(s))
-          if len(matches) != 1:
-              raise SystemExit(f'Expected one C1259e anchor pattern, found {len(matches)}; stopping before source patch')
-          s2 = pattern.sub(lambda m: m.group(1) + '        ' + m.group(3), s, count=1)
-          if s2 == s:
-              raise SystemExit('Anchor normalization made no changes; stop')
-          p.write_text(s2, encoding='utf-8')
-          print('C1259e script anchor normalized successfully.')
+          start_marker = '    elif path.endswith("C1259e.java"):\n'
+          end_marker = '    elif path.endswith("C1300k.java"):\n'
+          start = s.find(start_marker)
+          end = s.find(end_marker, start + len(start_marker)) if start >= 0 else -1
+          if start < 0 or end < 0 or s.count(start_marker) != 1:
+              raise SystemExit('Could not uniquely locate C1259e branch; stopping safely')
+          branch = base64.b64decode('ICAgIGVsaWYgcGF0aC5lbmRzd2l0aCgiQzEyNTllLmphdmEiKToKICAgICAgICByZXAoIihQcm9wZXJ0eTxGbG9hdGluZ0FjdGlvbkJ1dHRvbiwgRmxvYXQ+KSBWaWV3LkFMUEhBIiwgJyJhbHBoYSInKQogICAgICAgIHJlcCgiKFByb3BlcnR5PEZsb2F0aW5nQWN0aW9uQnV0dG9uLCBGbG9hdD4pIFZpZXcuU0NBTEVfWCIsICcic2NhbGVYIicpCiAgICAgICAgcmVwKCIoUHJvcGVydHk8RmxvYXRpbmdBY3Rpb25CdXR0b24sIEZsb2F0PikgVmlldy5TQ0FMRV9ZIiwgJyJzY2FsZVkiJykKICAgICAgICBwYXR0ZXJuMSA9IHJlLmNvbXBpbGUociJGbG9hdGluZ0FjdGlvbkJ1dHRvblwudGhpc1wuZjEwMjg5blwuc2V0XChpLCBpMiwgaTMsIGk0XCk7XHMrRmxvYXRpbmdBY3Rpb25CdXR0b24gZmxvYXRpbmdBY3Rpb25CdXR0b24gPSBGbG9hdGluZ0FjdGlvbkJ1dHRvblwudGhpcztccytpbnQgaTUgPSBmbG9hdGluZ0FjdGlvbkJ1dHRvblwuZjEwMjg2aztccytmbG9hdGluZ0FjdGlvbkJ1dHRvblwuc2V0UGFkZGluZ1woaSBcKyBpNSwgaTIgXCsgaTUsIGkzIFwrIGk1LCBpNCBcKyBpNVwpOyIsIHJlLk1VTFRJTCkKICAgICAgICBwYXR0ZXJuMiA9IHJlLmNvbXBpbGUociJGbG9hdGluZ0FjdGlvbkJ1dHRvblwudGhpc1wuZjEwMjg5blwuc2V0XChpNiwgaTcsIGk4LCBpOVwpO1xzK0Zsb2F0aW5nQWN0aW9uQnV0dG9uIGZsb2F0aW5nQWN0aW9uQnV0dG9uMiA9IEZsb2F0aW5nQWN0aW9uQnV0dG9uXC50aGlzO1xzK2ludCBpMTAgPSBmbG9hdGluZ0FjdGlvbkJ1dHRvbjJcLmYxMDI4Nms7XHMrZmxvYXRpbmdBY3Rpb25CdXR0b24yXC5zZXRQYWRkaW5nXChpNiBcKyBpMTAsIGk3IFwrIGkxMCwgaTggXCsgaTEwLCBpOSBcKyBpMTBcKTsiLCByZS5NVUxUSUwpCiAgICAgICAgZm9yIHBhdCwgcmVwbGFjZW1lbnQsIGxhYmVsIGluICgocGF0dGVybjEsICJjMTM2MGIzLnNldFNoYWRvd1BhZGRpbmcoaSwgaTIsIGkzLCBpNCk7IiwgImZpcnN0IEMxMjU5ZSBwYWRkaW5nIGJsb2NrIiksIChwYXR0ZXJuMiwgImMxMzYwYjQuc2V0U2hhZG93UGFkZGluZyhpNiwgaTcsIGk4LCBpOSk7IiwgInNlY29uZCBDMTI1OWUgcGFkZGluZyBibG9jayIpKToKICAgICAgICAgICAgbWF0Y2hlcyA9IGxpc3QocGF0LmZpbmRpdGVyKHRleHRfaG9sZGVyWzBdKSkKICAgICAgICAgICAgaWYgbGVuKG1hdGNoZXMpICE9IDE6CiAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYie3BhdGh9OiB7bGFiZWx9OiBleHBlY3RlZCBvbmUgbWF0Y2gsIGZvdW5kIHtsZW4obWF0Y2hlcyl9IikKICAgICAgICAgICAgdGV4dF9ob2xkZXJbMF0gPSBwYXQuc3ViKGxhbWJkYSBtOiByZXBsYWNlbWVudCwgdGV4dF9ob2xkZXJbMF0sIGNvdW50PTEpCiAgICAgICAgcmVwKCJzdXBlci8qYW5kcm9pZC53aWRnZXQuSW1hZ2VCdXR0b24qLy5zZXRCYWNrZ3JvdW5kRHJhd2FibGUoaW5zZXREcmF3YWJsZSk7IiwgImMxMzYwYi5zZXRCYWNrZ3JvdW5kRHJhd2FibGUoaW5zZXREcmF3YWJsZSk7IikK').decode('utf-8')
+          p.write_text(s[:start] + branch + s[end:], encoding='utf-8')
+          print('C1259e branch rewritten.')
           PY
       - name: Validate Round 22
         run: python3 apply_round22.py --check-only .
