@@ -24,7 +24,7 @@ import c.c.a.y3.f;
 
 /* JADX INFO: renamed from: c.c.a.v3.i0.p */
 /* JADX INFO: loaded from: classes.dex */
-public class C1021p extends RecyclerView.AbstractC0132g<b> {
+public class C1021p extends RecyclerView.AbstractC0132g<C1021p.b> {
 
     /* JADX INFO: renamed from: c */
     public List<C1027v> f5022c;

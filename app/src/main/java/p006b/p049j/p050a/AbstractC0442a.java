@@ -24,7 +24,7 @@ public abstract class AbstractC0442a implements Parcelable {
     /* JADX INFO: renamed from: b.j.a.a$b */
     public static class b implements Parcelable.ClassLoaderCreator<AbstractC0442a> {
         @Override // android.os.Parcelable.Creator
-        public Object createFromParcel(Parcel parcel) {
+        public AbstractC0442a createFromParcel(Parcel parcel) {
             if (parcel.readParcelable(null) == null) {
                 return AbstractC0442a.f2811c;
             }
@@ -32,7 +32,7 @@ public abstract class AbstractC0442a implements Parcelable {
         }
 
         @Override // android.os.Parcelable.Creator
-        public Object[] newArray(int i) {
+        public AbstractC0442a[] newArray(int i) {
             return new AbstractC0442a[i];
         }
 

@@ -260,6 +260,10 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Abstr
         public C1344c(int i) {
             this.f10216a = i;
         }
+
+        public void performAction() {
+            BottomSheetBehavior.this.m3077I(this.f10216a);
+        }
     }
 
     /* JADX INFO: renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$d */

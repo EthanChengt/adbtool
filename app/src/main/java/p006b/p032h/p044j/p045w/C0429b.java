@@ -159,10 +159,9 @@ public class C0429b {
                 new AccessibilityNodeInfo.AccessibilityAction(R.id.accessibilityActionShowTooltip, null);
             }
             AccessibilityNodeInfo.AccessibilityAction accessibilityAction11 = i >= 28 ? AccessibilityNodeInfo.AccessibilityAction.ACTION_HIDE_TOOLTIP : null;
-            if (i < 21 || accessibilityAction11 != null) {
-                return;
+            if (i >= 21 && accessibilityAction11 == null) {
+                new AccessibilityNodeInfo.AccessibilityAction(R.id.accessibilityActionHideTooltip, null);
             }
-            new AccessibilityNodeInfo.AccessibilityAction(R.id.accessibilityActionHideTooltip, null);
         }
 
         public a(int i, CharSequence charSequence) {

@@ -12,7 +12,7 @@ import c.a.a.a.a;
 
 /* JADX INFO: renamed from: c.c.a.v3.k0.q */
 /* JADX INFO: loaded from: classes.dex */
-public class C1051q extends RecyclerView.AbstractC0132g<b> {
+public class C1051q extends RecyclerView.AbstractC0132g<C1051q.b> {
 
     /* JADX INFO: renamed from: c */
     public List<C1056v> f5181c;

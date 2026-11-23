@@ -165,8 +165,7 @@ public class C0539b {
             m2004i(view);
         }
         RecyclerView.C0130e c0130e = (RecyclerView.C0130e) this.f3316a;
-        RecyclerView.this.addView(view, iM528b);
-        RecyclerView.this.dispatchChildAttached(view);
+        c0130e.addViewAndDispatchAttached(view, iM528b);
     }
 
     /* JADX INFO: renamed from: b */
@@ -184,11 +183,11 @@ public class C0539b {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Called attach on a child which is not detached: ");
                 sb.append(childViewHolderInt);
-                throw new IllegalArgumentException(a.m2197k(RecyclerView.this, sb));
+                throw new IllegalArgumentException(a.m2197k(c0130e.getRecyclerViewForHelper(), sb));
             }
             childViewHolderInt.f936j &= -257;
         }
-        RecyclerView.this.attachViewToParent(view, iM528b, layoutParams);
+        c0130e.attachViewToParentForHelper(view, iM528b, layoutParams);
     }
 
     /* JADX INFO: renamed from: c */
@@ -197,17 +196,17 @@ public class C0539b {
         int iM2001f = m2001f(i);
         this.f3317b.m2013f(iM2001f);
         RecyclerView.C0130e c0130e = (RecyclerView.C0130e) this.f3316a;
-        View childAt = RecyclerView.this.getChildAt(iM2001f);
+        View childAt = c0130e.m527a(iM2001f);
         if (childAt != null && (childViewHolderInt = RecyclerView.getChildViewHolderInt(childAt)) != null) {
             if (childViewHolderInt.m519o() && !childViewHolderInt.m525u()) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("called detach on an already detached child ");
                 sb.append(childViewHolderInt);
-                throw new IllegalArgumentException(a.m2197k(RecyclerView.this, sb));
+                throw new IllegalArgumentException(a.m2197k(c0130e.getRecyclerViewForHelper(), sb));
             }
             childViewHolderInt.m506b(256);
         }
-        RecyclerView.this.detachViewFromParent(iM2001f);
+        c0130e.detachViewFromParentForHelper(iM2001f);
     }
 
     /* JADX INFO: renamed from: d */
@@ -242,7 +241,7 @@ public class C0539b {
 
     /* JADX INFO: renamed from: g */
     public View m2002g(int i) {
-        return RecyclerView.this.getChildAt(i);
+        return ((RecyclerView.C0130e) this.f3316a).m527a(i);
     }
 
     /* JADX INFO: renamed from: h */
@@ -257,7 +256,7 @@ public class C0539b {
         Objects.requireNonNull(c0130e);
         RecyclerView.AbstractC0129d0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
         if (childViewHolderInt != null) {
-            RecyclerView recyclerView = RecyclerView.this;
+            RecyclerView.C0130e owner = (RecyclerView.C0130e) this.f3316a;
             int importantForAccessibility = childViewHolderInt.f943q;
             if (importantForAccessibility == -1) {
                 View view2 = childViewHolderInt.f927a;
@@ -265,13 +264,13 @@ public class C0539b {
                 importantForAccessibility = view2.getImportantForAccessibility();
             }
             childViewHolderInt.f942p = importantForAccessibility;
-            recyclerView.setChildImportantForAccessibilityInternal(childViewHolderInt, 4);
+            owner.setChildImportantForAccessibilityForHelper(childViewHolderInt, 4);
         }
     }
 
     /* JADX INFO: renamed from: j */
     public int m2005j(View view) {
-        int iIndexOfChild = RecyclerView.this.indexOfChild(view);
+        int iIndexOfChild = ((RecyclerView.C0130e) this.f3316a).indexOfChildForHelper(view);
         if (iIndexOfChild == -1 || this.f3317b.m2011d(iIndexOfChild)) {
             return -1;
         }
@@ -294,7 +293,7 @@ public class C0539b {
         if (childViewHolderInt == null) {
             return true;
         }
-        RecyclerView.this.setChildImportantForAccessibilityInternal(childViewHolderInt, childViewHolderInt.f942p);
+        c0130e.setChildImportantForAccessibilityForHelper(childViewHolderInt, childViewHolderInt.f942p);
         childViewHolderInt.f942p = 0;
         return true;
     }

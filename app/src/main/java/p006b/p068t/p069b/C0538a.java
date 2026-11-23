@@ -166,26 +166,21 @@ public class C0538a implements C0554q.a {
             if (i2 == 1) {
                 ((RecyclerView.C0131f) this.f3309d).m530a(bVar);
                 RecyclerView.C0131f c0131f = (RecyclerView.C0131f) this.f3309d;
-                RecyclerView.this.offsetPositionRecordsForInsert(bVar.f3313b, bVar.f3315d);
-                RecyclerView.this.mItemsAddedOrRemoved = true;
+                c0131f.offsetPositionRecordsForInsert(bVar.f3313b, bVar.f3315d);
             } else if (i2 == 2) {
                 ((RecyclerView.C0131f) this.f3309d).m530a(bVar);
                 a aVar = this.f3309d;
                 int i3 = bVar.f3313b;
                 int i4 = bVar.f3315d;
                 RecyclerView.C0131f c0131f2 = (RecyclerView.C0131f) aVar;
-                RecyclerView.this.offsetPositionRecordsForRemove(i3, i4, true);
-                RecyclerView recyclerView = RecyclerView.this;
-                recyclerView.mItemsAddedOrRemoved = true;
-                recyclerView.mState.f905c += i4;
+                c0131f2.offsetPositionRecordsForRemove(i3, i4);
             } else if (i2 == 4) {
                 ((RecyclerView.C0131f) this.f3309d).m530a(bVar);
                 ((RecyclerView.C0131f) this.f3309d).m532c(bVar.f3313b, bVar.f3315d, bVar.f3314c);
             } else if (i2 == 8) {
                 ((RecyclerView.C0131f) this.f3309d).m530a(bVar);
                 RecyclerView.C0131f c0131f3 = (RecyclerView.C0131f) this.f3309d;
-                RecyclerView.this.offsetPositionRecordsForMove(bVar.f3313b, bVar.f3315d);
-                RecyclerView.this.mItemsAddedOrRemoved = true;
+                c0131f3.offsetPositionRecordsForMove(bVar.f3313b, bVar.f3315d);
             }
         }
         m1994l(this.f3307b);
@@ -245,17 +240,13 @@ public class C0538a implements C0554q.a {
                 throw new IllegalArgumentException("only remove and update ops can be dispatched in first pass");
             }
             RecyclerView.C0131f c0131f = (RecyclerView.C0131f) this.f3309d;
-            RecyclerView.this.viewRangeUpdate(i, bVar.f3315d, bVar.f3314c);
-            RecyclerView.this.mItemsChanged = true;
+            c0131f.viewRangeUpdateForHelper(i, bVar.f3315d, bVar.f3314c);
             return;
         }
         a aVar = this.f3309d;
         int i3 = bVar.f3315d;
         RecyclerView.C0131f c0131f2 = (RecyclerView.C0131f) aVar;
-        RecyclerView.this.offsetPositionRecordsForRemove(i, i3, true);
-        RecyclerView recyclerView = RecyclerView.this;
-        recyclerView.mItemsAddedOrRemoved = true;
-        recyclerView.mState.f905c += i3;
+        c0131f2.offsetPositionRecordsForRemove(i, i3);
     }
 
     /* JADX INFO: renamed from: f */
@@ -319,14 +310,12 @@ public class C0538a implements C0554q.a {
         int i = bVar.f3312a;
         if (i == 1) {
             RecyclerView.C0131f c0131f = (RecyclerView.C0131f) this.f3309d;
-            RecyclerView.this.offsetPositionRecordsForInsert(bVar.f3313b, bVar.f3315d);
-            RecyclerView.this.mItemsAddedOrRemoved = true;
+            c0131f.offsetPositionRecordsForInsert(bVar.f3313b, bVar.f3315d);
             return;
         }
         if (i == 2) {
             RecyclerView.C0131f c0131f2 = (RecyclerView.C0131f) this.f3309d;
-            RecyclerView.this.offsetPositionRecordsForRemove(bVar.f3313b, bVar.f3315d, false);
-            RecyclerView.this.mItemsAddedOrRemoved = true;
+            c0131f2.offsetPositionRecordsForRemoveWithoutUpdate(bVar.f3313b, bVar.f3315d);
             return;
         }
         if (i == 4) {
@@ -336,8 +325,7 @@ public class C0538a implements C0554q.a {
                 throw new IllegalArgumentException("Unknown update op type for " + bVar);
             }
             RecyclerView.C0131f c0131f3 = (RecyclerView.C0131f) this.f3309d;
-            RecyclerView.this.offsetPositionRecordsForMove(bVar.f3313b, bVar.f3315d);
-            RecyclerView.this.mItemsAddedOrRemoved = true;
+            c0131f3.offsetPositionRecordsForMove(bVar.f3313b, bVar.f3315d);
         }
     }
 

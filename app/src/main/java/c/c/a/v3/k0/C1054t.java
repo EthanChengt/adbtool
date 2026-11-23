@@ -164,8 +164,8 @@ public class C1054t extends g0 {
     public int f5200E0 = 0;
 
     /* JADX INFO: renamed from: c.c.a.v3.k0.t$a */
-    public class a implements Handler.Callback {
-        public a() {
+    public class HandlerMessageCallback implements Handler.Callback {
+        public HandlerMessageCallback() {
         }
 
         @Override // android.os.Handler.Callback
@@ -194,7 +194,7 @@ public class C1054t extends g0 {
     }
 
     /* JADX INFO: renamed from: c.c.a.v3.k0.t$c */
-    public class c implements Comparator<C1056v> {
+    public class SortComparator implements Comparator<C1056v> {
 
         /* JADX INFO: renamed from: b */
         public final /* synthetic */ int f5236b;
@@ -205,7 +205,7 @@ public class C1054t extends g0 {
         /* JADX INFO: renamed from: d */
         public final /* synthetic */ Collator f5238d;
 
-        public c(C1054t c1054t, int i, int i2, Collator collator) {
+        public SortComparator(C1054t c1054t, int i, int i2, Collator collator) {
             this.f5236b = i;
             this.f5237c = i2;
             this.f5238d = collator;
@@ -255,8 +255,8 @@ public class C1054t extends g0 {
     }
 
     /* JADX INFO: renamed from: c.c.a.v3.k0.t$d */
-    public class d implements Comparator<C1056v> {
-        public d(C1054t c1054t) {
+    public class SizeComparator implements Comparator<C1056v> {
+        public SizeComparator(C1054t c1054t) {
         }
 
         @Override // java.util.Comparator
@@ -298,8 +298,8 @@ public class C1054t extends g0 {
     }
 
     /* JADX INFO: renamed from: c.c.a.v3.k0.t$g */
-    public class g implements View.OnClickListener {
-        public g() {
+    public class SelectAllClickListener implements View.OnClickListener {
+        public SelectAllClickListener() {
         }
 
         @Override // android.view.View.OnClickListener
@@ -397,13 +397,13 @@ public class C1054t extends g0 {
         new Handler().postDelayed(new Runnable() { // from class: c.c.a.v3.k0.h
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5169b.f5218k0.m2627c("");
+                C1054t.this.f5218k0.m2627c("");
             }
         }, m2646G0().f6463s);
         new Handler().postDelayed(new Runnable() { // from class: c.c.a.v3.k0.e
             @Override // java.lang.Runnable
             public final void run() {
-                C1054t c1054t = this.f5166b;
+                C1054t c1054t = C1054t.this;
                 int i2 = C1054t.f5195J0;
                 c1054t.m2672O0();
             }
@@ -413,7 +413,7 @@ public class C1054t extends g0 {
         runnableC0964q4.f4888j = new Handler(new Handler.Callback() { // from class: c.c.a.v3.k0.l
             @Override // android.os.Handler.Callback
             public final boolean handleMessage(Message message) {
-                this.f5173a.m2670M0(message);
+                C1054t.this.m2670M0(message);
                 return false;
             }
         });
@@ -424,10 +424,10 @@ public class C1054t extends g0 {
         new Handler().postDelayed(new Runnable() { // from class: c.c.a.v3.k0.d
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5165b.f5220m0.m2627c("");
+                C1054t.this.f5220m0.m2627c("");
             }
         }, m2646G0().f6463s);
-        this.f5220m0.f4888j = new Handler(new a());
+        this.f5220m0.f4888j = new Handler(new HandlerMessageCallback());
     }
 
     @Override // c.c.a.v3.g0
@@ -604,7 +604,7 @@ public class C1054t extends g0 {
         this.f5233z0.findViewById(R.id.f7).setOnClickListener(new View.OnClickListener() { // from class: c.c.a.v3.k0.m
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                this.f5174b.mo2648J0();
+                C1054t.this.mo2648J0();
             }
         });
         Button button = (Button) this.f5233z0.findViewById(R.id.c2);
@@ -612,7 +612,7 @@ public class C1054t extends g0 {
         button.setOnClickListener(new View.OnClickListener() { // from class: c.c.a.v3.k0.f
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                this.f5167b.m2671N0();
+                C1054t.this.m2671N0();
             }
         });
         Button button2 = (Button) this.f5233z0.findViewById(R.id.bx);
@@ -620,7 +620,7 @@ public class C1054t extends g0 {
         button2.setOnClickListener(new View.OnClickListener() { // from class: c.c.a.v3.k0.i
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                C1054t c1054t = this.f5170b;
+                C1054t c1054t = C1054t.this;
                 c1054t.f5211d0 = "/sdcard";
                 c1054t.m2672O0();
             }
@@ -628,7 +628,7 @@ public class C1054t extends g0 {
         this.f5224q0.setVisibility(8);
         Button button3 = (Button) this.f5233z0.findViewById(R.id.c0);
         this.f5222o0 = button3;
-        button3.setOnClickListener(new g());
+        button3.setOnClickListener(new SelectAllClickListener());
         Button button4 = (Button) this.f5233z0.findViewById(R.id.c1);
         this.f5223p0 = button4;
         button4.setOnClickListener(new h());
@@ -637,7 +637,7 @@ public class C1054t extends g0 {
             public final void onClick(View view) {
                 ActivityC0459e activityC0459eM303h;
                 String strM337y;
-                C1054t c1054t = this.f5171b;
+                C1054t c1054t = C1054t.this;
                 int i2 = c1054t.f5196A0;
                 if (i2 < 1) {
                     activityC0459eM303h = c1054t.m303h();
@@ -660,7 +660,7 @@ public class C1054t extends g0 {
             public final void onClick(View view) {
                 ActivityC0459e activityC0459eM303h;
                 String strM337y;
-                C1054t c1054t = this.f5172b;
+                C1054t c1054t = C1054t.this;
                 int i2 = c1054t.f5196A0;
                 if (i2 < 1) {
                     activityC0459eM303h = c1054t.m303h();
@@ -684,7 +684,7 @@ public class C1054t extends g0 {
             public final void onClick(View view) {
                 ActivityC0459e activityC0459eM303h;
                 String strM337y;
-                C1054t c1054t = this.f5168b;
+                C1054t c1054t = C1054t.this;
                 int i2 = c1054t.f5196A0;
                 if (i2 < 1) {
                     activityC0459eM303h = c1054t.m303h();
@@ -773,8 +773,8 @@ public class C1054t extends g0 {
             this.f5232y0 = iArr2;
             iArr2[i2] = -i3;
         }
-        Collections.sort(this.f5205X, new c(this, i2, this.f5232y0[i2], collator));
-        Collections.sort(this.f5205X, new d(this));
+        Collections.sort(this.f5205X, new SortComparator(this, i2, this.f5232y0[i2], collator));
+        Collections.sort(this.f5205X, new SizeComparator(this));
         this.f5208a0.f947a.m542b();
         this.f5207Z.scrollToPosition(0);
         this.f5206Y.setRefreshing(false);

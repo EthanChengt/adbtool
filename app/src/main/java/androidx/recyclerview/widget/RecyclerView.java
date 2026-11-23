@@ -73,6 +73,8 @@ import p006b.p068t.p069b.RunnableC0541d;
 import p006b.p068t.p069b.RunnableC0542e;
 import p006b.p068t.p069b.RunnableC0550m;
 import c.a.a.a.a;
+import static c.a.a.a.a.m2191e;
+import static c.a.a.a.a.m2197k;
 
 /* JADX INFO: loaded from: classes.dex */
 public class RecyclerView extends ViewGroup implements InterfaceC0409d {
@@ -258,7 +260,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             if ((this.f906d & i) != 0) {
                 return;
             }
-            StringBuilder sbM2191e = a.m2191e("Layout state should be one of ");
+            StringBuilder sbM2191e = m2191e("Layout state should be one of ");
             sbM2191e.append(Integer.toBinaryString(i));
             sbM2191e.append(" but it is ");
             sbM2191e.append(Integer.toBinaryString(this.f906d));
@@ -271,7 +273,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         }
 
         public String toString() {
-            StringBuilder sbM2191e = a.m2191e("State{mTargetPosition=");
+            StringBuilder sbM2191e = m2191e("State{mTargetPosition=");
             sbM2191e.append(this.f903a);
             sbM2191e.append(", mData=");
             sbM2191e.append((Object) null);
@@ -872,7 +874,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                 sb.append(" tmpDetached");
             }
             if (!m516l()) {
-                StringBuilder sbM2191e = a.m2191e(" not recyclable(");
+                StringBuilder sbM2191e = m2191e(" not recyclable(");
                 sbM2191e.append(this.f939m);
                 sbM2191e.append(")");
                 sb.append(sbM2191e.toString());
@@ -922,6 +924,31 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             }
             RecyclerView.this.removeViewAt(i);
         }
+
+        public void addViewAndDispatchAttached(View view, int index) {
+            RecyclerView.this.addView(view, index);
+            RecyclerView.this.dispatchChildAttached(view);
+        }
+
+        public void attachViewToParentForHelper(View view, int index, ViewGroup.LayoutParams params) {
+            RecyclerView.this.attachViewToParent(view, index, params);
+        }
+
+        public void detachViewFromParentForHelper(int index) {
+            RecyclerView.this.detachViewFromParent(index);
+        }
+
+        public int indexOfChildForHelper(View view) {
+            return RecyclerView.this.indexOfChild(view);
+        }
+
+        public void setChildImportantForAccessibilityForHelper(AbstractC0129d0 holder, int importance) {
+            RecyclerView.this.setChildImportantForAccessibilityInternal(holder, importance);
+        }
+
+        public RecyclerView getRecyclerViewForHelper() {
+            return RecyclerView.this;
+        }
     }
 
     /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$f */
@@ -965,6 +992,32 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         public void m532c(int i, int i2, Object obj) {
             RecyclerView.this.viewRangeUpdate(i, i2, obj);
             RecyclerView.this.mItemsChanged = true;
+        }
+
+        public void offsetPositionRecordsForInsert(int positionStart, int itemCount) {
+            RecyclerView.this.offsetPositionRecordsForInsert(positionStart, itemCount);
+            RecyclerView.this.mItemsAddedOrRemoved = true;
+        }
+
+        public void offsetPositionRecordsForRemove(int positionStart, int itemCount) {
+            RecyclerView.this.offsetPositionRecordsForRemove(positionStart, itemCount, true);
+            RecyclerView.this.mItemsAddedOrRemoved = true;
+            RecyclerView.this.mState.f905c += itemCount;
+        }
+
+        public void offsetPositionRecordsForMove(int from, int to) {
+            RecyclerView.this.offsetPositionRecordsForMove(from, to);
+            RecyclerView.this.mItemsAddedOrRemoved = true;
+        }
+
+        public void viewRangeUpdateForHelper(int positionStart, int itemCount, Object payload) {
+            RecyclerView.this.viewRangeUpdate(positionStart, itemCount, payload);
+            RecyclerView.this.mItemsChanged = true;
+        }
+
+        public void offsetPositionRecordsForRemoveWithoutUpdate(int positionStart, int itemCount) {
+            RecyclerView.this.offsetPositionRecordsForRemove(positionStart, itemCount, false);
+            RecyclerView.this.mItemsAddedOrRemoved = true;
         }
     }
 
@@ -1018,20 +1071,20 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
     public static class C0133h extends Observable<AbstractC0134i> {
         /* JADX INFO: renamed from: a */
         public boolean m541a() {
-            return !((Observable) this).mObservers.isEmpty();
+            return !this.mObservers.isEmpty();
         }
 
         /* JADX INFO: renamed from: b */
         public void m542b() {
-            for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
-                ((AbstractC0134i) ((Observable) this).mObservers.get(size)).mo544a();
+            for (int size = this.mObservers.size() - 1; size >= 0; size--) {
+                ((AbstractC0134i) this.mObservers.get(size)).mo544a();
             }
         }
 
         /* JADX INFO: renamed from: c */
         public void m543c(int i, int i2, Object obj) {
-            for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
-                ((AbstractC0134i) ((Observable) this).mObservers.get(size)).mo545b(i, i2, obj);
+            for (int size = this.mObservers.size() - 1; size >= 0; size--) {
+                ((AbstractC0134i) this.mObservers.get(size)).mo545b(i, i2, obj);
             }
         }
     }
@@ -1130,10 +1183,10 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                     abstractC0129d0.f934h = null;
                 }
                 abstractC0129d0.f935i = null;
-                if (((abstractC0129d0.f936j & 16) != 0) || RecyclerView.this.removeAnimatingView(abstractC0129d0.f927a) || !abstractC0129d0.m519o()) {
+                if (((abstractC0129d0.f936j & 16) != 0) || c0138m.removeAnimatingView(abstractC0129d0.f927a) || !abstractC0129d0.m519o()) {
                     return;
                 }
-                RecyclerView.this.removeDetachedView(abstractC0129d0.f927a, false);
+                c0138m.removeDetachedView(abstractC0129d0.f927a, false);
             }
         }
 
@@ -1170,6 +1223,14 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
     /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$m */
     public class C0138m implements AbstractC0137l.b {
         public C0138m() {
+        }
+
+        public boolean removeAnimatingView(View view) {
+            return RecyclerView.this.removeAnimatingView(view);
+        }
+
+        public void removeDetachedView(View view, boolean animate) {
+            RecyclerView.this.removeDetachedView(view, animate);
         }
     }
 
@@ -1543,7 +1604,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         /* JADX INFO: renamed from: E0 */
         public void m572E0(View view, C0147v c0147v) {
             C0539b c0539b = this.f958a;
-            int iIndexOfChild = RecyclerView.this.indexOfChild(view);
+            int iIndexOfChild = this.f959b.indexOfChild(view);
             if (iIndexOfChild >= 0) {
                 if (c0539b.f3317b.m2013f(iIndexOfChild)) {
                     c0539b.m2007l(view);
@@ -1911,7 +1972,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             Objects.requireNonNull(abstractC0151z);
             recyclerView.mViewFlinger.m504c();
             if (abstractC0151z.f1008h) {
-                StringBuilder sbM2191e = a.m2191e("An instance of ");
+                StringBuilder sbM2191e = m2191e("An instance of ");
                 sbM2191e.append(abstractC0151z.getClass().getSimpleName());
                 sbM2191e.append(" was started more than once. Each instance of");
                 sbM2191e.append(abstractC0151z.getClass().getSimpleName());
@@ -1997,9 +2058,9 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                     i = this.f958a.m2000e();
                 }
                 if (iM2005j == -1) {
-                    StringBuilder sbM2191e = a.m2191e("Added View has RecyclerView as parent but view is not a real child. Unfiltered index:");
+                    StringBuilder sbM2191e = m2191e("Added View has RecyclerView as parent but view is not a real child. Unfiltered index:");
                     sbM2191e.append(this.f959b.indexOfChild(view));
-                    throw new IllegalStateException(a.m2197k(this.f959b, sbM2191e));
+                    throw new IllegalStateException(m2197k(this.f959b, sbM2191e));
                 }
                 if (iM2005j != i) {
                     AbstractC0140o abstractC0140o = this.f959b.mLayout;
@@ -2546,7 +2607,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             sb.append(i);
             sb.append(". State item count is ");
             sb.append(RecyclerView.this.mState.m501b());
-            throw new IndexOutOfBoundsException(a.m2197k(RecyclerView.this, sb));
+            throw new IndexOutOfBoundsException(m2197k(RecyclerView.this, sb));
         }
 
         /* JADX INFO: renamed from: d */
@@ -2626,20 +2687,20 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             boolean z2 = false;
             boolean z3 = true;
             if (abstractC0129d0.m518n() || abstractC0129d0.f927a.getParent() != null) {
-                StringBuilder sbM2191e = a.m2191e("Scrapped or attached views may not be recycled. isScrap:");
+                StringBuilder sbM2191e = m2191e("Scrapped or attached views may not be recycled. isScrap:");
                 sbM2191e.append(abstractC0129d0.m518n());
                 sbM2191e.append(" isAttached:");
                 sbM2191e.append(abstractC0129d0.f927a.getParent() != null);
-                throw new IllegalArgumentException(a.m2197k(RecyclerView.this, sbM2191e));
+                throw new IllegalArgumentException(m2197k(RecyclerView.this, sbM2191e));
             }
             if (abstractC0129d0.m519o()) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Tmp detached view should be removed from RecyclerView before it can be recycled: ");
                 sb.append(abstractC0129d0);
-                throw new IllegalArgumentException(a.m2197k(RecyclerView.this, sb));
+                throw new IllegalArgumentException(m2197k(RecyclerView.this, sb));
             }
             if (abstractC0129d0.m525u()) {
-                throw new IllegalArgumentException(a.m2197k(RecyclerView.this, a.m2191e("Trying to recycle an ignored view holder. You should first call stopIgnoringView(view) before calling recycle.")));
+                throw new IllegalArgumentException(m2197k(RecyclerView.this, m2191e("Trying to recycle an ignored view holder. You should first call stopIgnoringView(view) before calling recycle.")));
             }
             if ((abstractC0129d0.f936j & 16) == 0) {
                 View view = abstractC0129d0.f927a;
@@ -2705,7 +2766,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                 arrayList = this.f992b;
             } else {
                 if (childViewHolderInt.m515k() && !childViewHolderInt.m517m() && !RecyclerView.this.mAdapter.f948b) {
-                    throw new IllegalArgumentException(a.m2197k(RecyclerView.this, a.m2191e("Called scrap view with an invalid view. Invalid views cannot be reused from scrap, they should rebound from recycler pool.")));
+                    throw new IllegalArgumentException(m2197k(RecyclerView.this, m2191e("Called scrap view with an invalid view. Invalid views cannot be reused from scrap, they should rebound from recycler pool.")));
                 }
                 childViewHolderInt.f940n = this;
                 childViewHolderInt.f941o = false;
@@ -2821,7 +2882,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                 sb.append(i);
                 sb.append("). Item count:");
                 sb.append(RecyclerView.this.mState.m501b());
-                throw new IndexOutOfBoundsException(a.m2197k(RecyclerView.this, sb));
+                throw new IndexOutOfBoundsException(m2197k(RecyclerView.this, sb));
             }
             boolean z7 = false;
             if (RecyclerView.this.mState.f909g) {
@@ -2862,7 +2923,6 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                     }
                 } else {
                     childViewHolderInt = null;
-                    break;
                 }
                 z2 = childViewHolderInt != null;
                 if (childViewHolderInt == null) {
@@ -2924,7 +2984,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                                     StringBuilder sb2 = new StringBuilder();
                                     sb2.append("layout index should not be -1 after unhiding a view:");
                                     sb2.append(childViewHolderInt);
-                                    throw new IllegalStateException(a.m2197k(RecyclerView.this, sb2));
+                                    throw new IllegalStateException(m2197k(RecyclerView.this, sb2));
                                 }
                             } else {
                                 size2 = this.f993c.size();
@@ -2960,7 +3020,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                                 StringBuilder sb3 = new StringBuilder();
                                 sb3.append("Inconsistency detected. Invalid view holder adapter position");
                                 sb3.append(childViewHolderInt);
-                                throw new IndexOutOfBoundsException(a.m2197k(RecyclerView.this, sb3));
+                                throw new IndexOutOfBoundsException(m2197k(RecyclerView.this, sb3));
                             }
                             RecyclerView recyclerView2 = RecyclerView.this;
                             if (recyclerView2.mState.f909g || recyclerView2.mAdapter.mo535c(childViewHolderInt.f929c) == childViewHolderInt.f932f) {
@@ -3001,7 +3061,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                         sb4.append(iM1988f2);
                         sb4.append(").state:");
                         sb4.append(RecyclerView.this.mState.m501b());
-                        throw new IndexOutOfBoundsException(a.m2197k(RecyclerView.this, sb4));
+                        throw new IndexOutOfBoundsException(m2197k(RecyclerView.this, sb4));
                     }
                     int iMo535c = RecyclerView.this.mAdapter.mo535c(iM1988f2);
                     AbstractC0132g abstractC0132g3 = RecyclerView.this.mAdapter;
@@ -3077,7 +3137,6 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                             }
                         } else {
                             abstractC0129d0Remove = null;
-                            break;
                         }
                         if (abstractC0129d0Remove != null) {
                             abstractC0129d0Remove.m522r();
@@ -3394,7 +3453,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                                 StringBuilder sb5 = new StringBuilder();
                                 sb5.append("layout index should not be -1 after unhiding a view:");
                                 sb5.append(childViewHolderInt);
-                                throw new IllegalStateException(a.m2197k(RecyclerView.this, sb5));
+                                throw new IllegalStateException(m2197k(RecyclerView.this, sb5));
                             }
                         }
                         if (childViewHolderInt != null) {
@@ -3405,7 +3464,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                                 StringBuilder sb6 = new StringBuilder();
                                 sb6.append("Inconsistency detected. Invalid view holder adapter position");
                                 sb6.append(childViewHolderInt);
-                                throw new IndexOutOfBoundsException(a.m2197k(RecyclerView.this, sb6));
+                                throw new IndexOutOfBoundsException(m2197k(RecyclerView.this, sb6));
                             }
                             z6 = RecyclerView.this.mState.f909g;
                             if (z6) {
@@ -3434,7 +3493,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                             StringBuilder sb7 = new StringBuilder();
                             sb7.append("Inconsistency detected. Invalid view holder adapter position");
                             sb7.append(childViewHolderInt);
-                            throw new IndexOutOfBoundsException(a.m2197k(RecyclerView.this, sb7));
+                            throw new IndexOutOfBoundsException(m2197k(RecyclerView.this, sb7));
                         }
                         z6 = RecyclerView.this.mState.f909g;
                         if (z6) {
@@ -3466,7 +3525,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                 sb8.append(iM1988f2);
                 sb8.append(").state:");
                 sb8.append(RecyclerView.this.mState.m501b());
-                throw new IndexOutOfBoundsException(a.m2197k(RecyclerView.this, sb8));
+                throw new IndexOutOfBoundsException(m2197k(RecyclerView.this, sb8));
             }
             if (z2) {
                 childViewHolderInt.m523s(0, 8192);
@@ -3990,12 +4049,12 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         /* JADX INFO: renamed from: androidx.recyclerview.widget.RecyclerView$y$a */
         public static class a implements Parcelable.ClassLoaderCreator<C0150y> {
             @Override // android.os.Parcelable.Creator
-            public Object createFromParcel(Parcel parcel) {
+            public C0150y createFromParcel(Parcel parcel) {
                 return new C0150y(parcel, null);
             }
 
             @Override // android.os.Parcelable.Creator
-            public Object[] newArray(int i) {
+            public C0150y[] newArray(int i) {
                 return new C0150y[i];
             }
 
@@ -4129,7 +4188,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             if (obj instanceof b) {
                 return ((b) obj).mo456a(i);
             }
-            StringBuilder sbM2191e = a.m2191e("You should override computeScrollVectorForPosition when the LayoutManager does not implement ");
+            StringBuilder sbM2191e = m2191e("You should override computeScrollVectorForPosition when the LayoutManager does not implement ");
             sbM2191e.append(b.class.getCanonicalName());
             Log.w(RecyclerView.TAG, sbM2191e.toString());
             return null;
@@ -4362,7 +4421,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             c0539b.m1996a(view, -1, true);
             return;
         }
-        int iIndexOfChild = RecyclerView.this.indexOfChild(view);
+        int iIndexOfChild = this.f959b.indexOfChild(view);
         if (iIndexOfChild >= 0) {
             c0539b.f3317b.m2015h(iIndexOfChild);
             c0539b.m2004i(view);
@@ -4432,7 +4491,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             }
             String fullClassName = getFullClassName(context, strTrim);
             try {
-                Class<? extends U> clsAsSubclass = Class.forName(fullClassName, false, isInEditMode() ? getClass().getClassLoader() : context.getClassLoader()).asSubclass(AbstractC0140o.class);
+                Class<? extends AbstractC0140o> clsAsSubclass = Class.forName(fullClassName, false, isInEditMode() ? getClass().getClassLoader() : context.getClassLoader()).asSubclass(AbstractC0140o.class);
                 Object[] objArr = null;
                 try {
                     constructor = clsAsSubclass.getConstructor(LAYOUT_MANAGER_CONSTRUCTOR_SIGNATURE);
@@ -4862,14 +4921,14 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                     sb.append(childViewHolderInt);
                     sb.append(" \n View Holder 2:");
                     sb.append(abstractC0129d0);
-                    throw new IllegalStateException(a.m2197k(this, sb));
+                    throw new IllegalStateException(m2197k(this, sb));
                 }
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("Two different ViewHolders have the same stable ID. Stable IDs in your adapter MUST BE unique and SHOULD NOT change.\n ViewHolder 1:");
                 sb2.append(childViewHolderInt);
                 sb2.append(" \n View Holder 2:");
                 sb2.append(abstractC0129d0);
-                throw new IllegalStateException(a.m2197k(this, sb2));
+                throw new IllegalStateException(m2197k(this, sb2));
             }
         }
         Log.e(TAG, "Problem while matching changed view holders with the newones. The pre-layout information for the change holder " + abstractC0129d1 + " cannot be found but it is necessary for " + abstractC0129d0 + exceptionLabel());
@@ -4957,7 +5016,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         StringBuilder sb = new StringBuilder();
         sb.append("Invalid direction: ");
         sb.append(i);
-        throw new IllegalArgumentException(a.m2197k(this, sb));
+        throw new IllegalArgumentException(m2197k(this, sb));
     }
 
     private void onPointerUp(MotionEvent motionEvent) {
@@ -5362,9 +5421,9 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             return;
         }
         if (str != null) {
-            throw new IllegalStateException(a.m2197k(this, a.m2191e(str)));
+            throw new IllegalStateException(m2197k(this, m2191e(str)));
         }
-        throw new IllegalStateException(a.m2197k(this, a.m2191e("Cannot call this method unless RecyclerView is computing a layout or scrolling")));
+        throw new IllegalStateException(m2197k(this, m2191e("Cannot call this method unless RecyclerView is computing a layout or scrolling")));
     }
 
     public void assertNotInLayoutOrScroll(String str) {
@@ -5372,10 +5431,10 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             if (str != null) {
                 throw new IllegalStateException(str);
             }
-            throw new IllegalStateException(a.m2197k(this, a.m2191e("Cannot call this method while RecyclerView is computing a layout or scrolling")));
+            throw new IllegalStateException(m2197k(this, m2191e("Cannot call this method while RecyclerView is computing a layout or scrolling")));
         }
         if (this.mDispatchScrollCounter > 0) {
-            Log.w(TAG, "Cannot call this method in a scroll callback. Scroll callbacks mightbe run during a measure & layout pass where you cannot change theRecyclerView data. Any method call that might change the structureof the RecyclerView or the adapter contents should be postponed tothe next frame.", new IllegalStateException(a.m2197k(this, a.m2191e(""))));
+            Log.w(TAG, "Cannot call this method in a scroll callback. Scroll callbacks mightbe run during a measure & layout pass where you cannot change theRecyclerView data. Any method call that might change the structureof the RecyclerView or the adapter contents should be postponed tothe next frame.", new IllegalStateException(m2197k(this, m2191e(""))));
         }
     }
 
@@ -5887,7 +5946,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
     }
 
     public String exceptionLabel() {
-        StringBuilder sbM2191e = a.m2191e(" ");
+        StringBuilder sbM2191e = m2191e(" ");
         sbM2191e.append(super.toString());
         sbM2191e.append(", adapter:");
         sbM2191e.append(this.mAdapter);
@@ -6061,7 +6120,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             if (abstractC0143r != null) {
                 AbstractC0560w abstractC0560w = (AbstractC0560w) abstractC0143r;
                 AbstractC0140o layoutManager = abstractC0560w.f3451a.getLayoutManager();
-                if (layoutManager == 0 || abstractC0560w.f3451a.getAdapter() == null || (Math.abs(i6) <= (minFlingVelocity = abstractC0560w.f3451a.getMinFlingVelocity()) && Math.abs(i5) <= minFlingVelocity)) {
+                if (layoutManager == null || abstractC0560w.f3451a.getAdapter() == null || (Math.abs(i6) <= (minFlingVelocity = abstractC0560w.f3451a.getMinFlingVelocity()) && Math.abs(i5) <= minFlingVelocity)) {
                     z = false;
                 } else {
                     boolean z4 = layoutManager instanceof AbstractC0151z.b;
@@ -6137,7 +6196,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                     return true;
                 }
             }
-            int i8 = zMo462e;
+            int i8 = zMo462e ? 1 : 0;
             if (z3) {
                 if (zMo464f) {
                     i8 = (zMo462e ? 1 : 0) | 2;
@@ -6233,7 +6292,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         if (abstractC0140o != null) {
             return abstractC0140o.mo441u();
         }
-        throw new IllegalStateException(a.m2197k(this, a.m2191e("RecyclerView has no LayoutManager")));
+        throw new IllegalStateException(m2197k(this, m2191e("RecyclerView has no LayoutManager")));
     }
 
     @Override // android.view.ViewGroup
@@ -6242,7 +6301,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         if (abstractC0140o != null) {
             return abstractC0140o.mo443v(getContext(), attributeSet);
         }
-        throw new IllegalStateException(a.m2197k(this, a.m2191e("RecyclerView has no LayoutManager")));
+        throw new IllegalStateException(m2197k(this, m2191e("RecyclerView has no LayoutManager")));
     }
 
     @Override // android.view.ViewGroup
@@ -6251,7 +6310,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         if (abstractC0140o != null) {
             return abstractC0140o.mo444w(layoutParams);
         }
-        throw new IllegalStateException(a.m2197k(this, a.m2191e("RecyclerView has no LayoutManager")));
+        throw new IllegalStateException(m2197k(this, m2191e("RecyclerView has no LayoutManager")));
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -6475,7 +6534,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
 
     public void initFastScroller(StateListDrawable stateListDrawable, Drawable drawable, StateListDrawable stateListDrawable2, Drawable drawable2) {
         if (stateListDrawable == null || drawable == null || stateListDrawable2 == null || drawable2 == null) {
-            throw new IllegalArgumentException(a.m2197k(this, a.m2191e("Trying to set fast scroller without both required drawables.")));
+            throw new IllegalArgumentException(m2197k(this, m2191e("Trying to set fast scroller without both required drawables.")));
         }
         Resources resources = getContext().getResources();
         new C0549l(this, stateListDrawable, drawable, stateListDrawable2, drawable2, resources.getDimensionPixelSize(com.didjdk.adbhelper.R.dimen.d5), resources.getDimensionPixelSize(com.didjdk.adbhelper.R.dimen.d7), resources.getDimensionPixelOffset(com.didjdk.adbhelper.R.dimen.d6));
@@ -6877,7 +6936,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             int[] iArr = this.mNestedOffsets;
             iArr[1] = 0;
             iArr[0] = 0;
-            int i = zMo462e;
+            int i = zMo462e ? 1 : 0;
             if (zMo464f) {
                 i = (zMo462e ? 1 : 0) | 2;
             }
@@ -6888,7 +6947,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         } else if (actionMasked == 2) {
             int iFindPointerIndex = motionEvent.findPointerIndex(this.mScrollPointerId);
             if (iFindPointerIndex < 0) {
-                StringBuilder sbM2191e = a.m2191e("Error processing scroll; pointer index for id ");
+                StringBuilder sbM2191e = m2191e("Error processing scroll; pointer index for id ");
                 sbM2191e.append(this.mScrollPointerId);
                 sbM2191e.append(" not found. Did any MotionEvents get skipped?");
                 Log.e(TAG, sbM2191e.toString());
@@ -7101,10 +7160,10 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
             this.mLastTouchY = y;
             this.mInitialTouchY = y;
             if (zMo464f) {
-                i = zMo462e;
+                i = zMo462e ? 1 : 0;
                 i = (zMo462e ? 1 : 0) | 2;
             }
-            i = zMo462e;
+            i = zMo462e ? 1 : 0;
             startNestedScroll(i, 0);
         } else if (actionMasked == 1) {
             this.mVelocityTracker.addMovement(motionEventObtain);
@@ -7119,7 +7178,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
         } else if (actionMasked == 2) {
             int iFindPointerIndex = motionEvent.findPointerIndex(this.mScrollPointerId);
             if (iFindPointerIndex < 0) {
-                StringBuilder sbM2191e = a.m2191e("Error processing scroll; pointer index for id ");
+                StringBuilder sbM2191e = m2191e("Error processing scroll; pointer index for id ");
                 sbM2191e.append(this.mScrollPointerId);
                 sbM2191e.append(" not found. Did any MotionEvents get skipped?");
                 Log.e(TAG, sbM2191e.toString());
@@ -7241,7 +7300,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
     public boolean removeAnimatingView(View view) {
         startInterceptRequestLayout();
         C0539b c0539b = this.mChildHelper;
-        int iIndexOfChild = RecyclerView.this.indexOfChild(view);
+        int iIndexOfChild = this.f959b.indexOfChild(view);
         boolean z = true;
         if (iIndexOfChild == -1) {
             c0539b.m2007l(view);
@@ -7271,7 +7330,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Called removeDetachedView with a view which is not flagged as tmp detached.");
                 sb.append(childViewHolderInt);
-                throw new IllegalArgumentException(a.m2197k(this, sb));
+                throw new IllegalArgumentException(m2197k(this, sb));
             }
         }
         view.clearAnimation();
@@ -7647,7 +7706,7 @@ public class RecyclerView extends ViewGroup implements InterfaceC0409d {
                 sb.append("LayoutManager ");
                 sb.append(abstractC0140o);
                 sb.append(" is already attached to a RecyclerView:");
-                throw new IllegalArgumentException(a.m2197k(abstractC0140o.f959b, sb));
+                throw new IllegalArgumentException(m2197k(abstractC0140o.f959b, sb));
             }
             abstractC0140o.m591Q0(this);
             if (this.mIsAttached) {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nu" type="id" />
+    <item name="nt" type="id" />
+    <item name="nv" type="id" />
+    <item name="nw" type="id" />
+    <item name="nx" type="id" />
+    <item name="s" type="id" />
+</resources>

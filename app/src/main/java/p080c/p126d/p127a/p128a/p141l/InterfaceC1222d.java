@@ -96,8 +96,6 @@ public interface InterfaceC1222d {
             this.f5852c = f3;
         }
 
-        public e(a aVar) {
-        }
     }
 
     /* JADX INFO: renamed from: a */

@@ -254,7 +254,7 @@ public class C0406a {
                         }
                     }
                     BottomSheetBehavior.C1344c c1344c = (BottomSheetBehavior.C1344c) aVar.f2755d;
-                    BottomSheetBehavior.this.m3077I(c1344c.f10216a);
+                    c1344c.performAction();
                     zPerformAccessibilityAction = true;
                     break;
                 }
@@ -273,8 +273,7 @@ public class C0406a {
         if (sparseArray != null && (weakReference = (WeakReference) sparseArray.get(i3)) != null) {
             ClickableSpan clickableSpan = (ClickableSpan) weakReference.get();
             if (clickableSpan == null) {
-                z = false;
-                break;
+                return z2;
             }
             ClickableSpan[] clickableSpanArrM1606d = C0429b.m1606d(view.createAccessibilityNodeInfo().getText());
             int i4 = 0;
