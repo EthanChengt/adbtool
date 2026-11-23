@@ -1,0 +1,98 @@
+name: Round 22 Script Fix 7
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Repair Round22 transform logic
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('apply_round22.py')
+          if not p.is_file():
+              raise SystemExit('apply_round22.py not found; stopping')
+          s = p.read_text(encoding='utf-8')
+
+          old_guard = 'if "a.m2191e(" in text_holder[0]:'
+          new_guard = 'if re.search(r"(?<![\\w.])a\\.m2191e\\(", text_holder[0]):'
+          count = s.count(old_guard)
+          if count != 1:
+              raise SystemExit(f'Expected exactly one C0397b guard, found {count}; stopping')
+          if 'import re' not in s:
+              raise SystemExit('apply_round22.py missing import re; stopping')
+          s = s.replace(old_guard, new_guard, 1)
+
+          lines = s.splitlines()
+          matches = [
+              idx for idx, line in enumerate(lines)
+              if 'rep("FloatingActionButton.this.f10289n.set(i6, i7, i8, i9);' in line
+          ]
+          if len(matches) != 1:
+              raise SystemExit(f'Expected one C1259e i6 patch anchor, found {len(matches)}; stopping')
+          idx = matches[0]
+          if idx + 1 >= len(lines) or lines[idx + 1].strip() != '"c1360b4.setShadowPadding(i6, i7, i8, i9);")':
+              raise SystemExit('C1259e patch anchor has unexpected structure; stopping')
+
+          lines[idx:idx + 2] = [
+              '        pattern = re.compile(',
+              '            r"FloatingActionButton\\.this\\.f10289n\\.set\\(i6,\\s*i7,\\s*i8,\\s*i9\\);\\s*"',
+              '            r"FloatingActionButton\\s+floatingActionButton2\\s*=\\s*FloatingActionButton\\.this;\\s*"',
+              '            r"int\\s+i10\\s*=\\s*floatingActionButton2\\.f10286k;\\s*"',
+              '            r"floatingActionButton2\\.setPadding\\(\\s*i6\\s*\\+\\s*i10,\\s*i7\\s*\\+\\s*i10,\\s*i8\\s*\\+\\s*i10,\\s*i9\\s*\\+\\s*i10\\s*\\);"',
+              '        )',
+              '        text_holder[0], count = pattern.subn(',
+              '            "c1360b4.setShadowPadding(i6, i7, i8, i9);", text_holder[0]',
+              '        )',
+              '        if count != 1:',
+              '            raise ValueError(f"{path}: expected one i6 shadow-padding block, found {count}")',
+          ]
+          p.write_text('\\n'.join(lines) + '\\n', encoding='utf-8')
+          print('Round22 patch script repair complete.')
+          PY
+
+      - name: Python syntax check
+        run: python3 -m py_compile apply_round22.py
+
+      - name: Validate Round 22 patches without modifying Java
+        run: python3 apply_round22.py --check-only .
+
+      - name: Apply Round 22 patches
+        run: python3 apply_round22.py .
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK (without obsolete tools package)
+        uses: android-actions/setup-android@v3
+        with:
+          packages: |
+            platforms;android-35
+            build-tools;35.0.0
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+
+      - name: Build debug APK
+        run: gradle --no-daemon --stacktrace :app:assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: round22-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
