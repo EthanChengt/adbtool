@@ -1,0 +1,128 @@
+name: Round 22 Script Fix 10
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repair-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Repair Round22 transform logic
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('apply_round22.py')
+          if not p.is_file():
+              raise SystemExit('apply_round22.py not found; stopping')
+          s = p.read_text(encoding='utf-8')
+          old_guard = 'if "a.m2191e(" in text_holder[0]:'
+          new_guard = 'if re.search(r"(?<![\\w.])a\\.m2191e\\(", text_holder[0]):'
+          count = s.count(old_guard)
+          if count != 1:
+              raise SystemExit(f'Expected exactly one C0397b guard, found {count}; stopping')
+          if 'import re' not in s:
+              raise SystemExit('apply_round22.py missing import re; stopping')
+          s = s.replace(old_guard, new_guard, 1)
+          lines = s.splitlines()
+          matches = [
+              i for i, line in enumerate(lines)
+              if 'rep("FloatingActionButton.this.f10289n.set(i6, i7, i8, i9);' in line
+          ]
+          if len(matches) != 1:
+              raise SystemExit(f'Expected one C1259e i6 patch anchor, found {len(matches)}; stopping')
+          i = matches[0]
+          expected = '"c1360b4.setShadowPadding(i6, i7, i8, i9);")'
+          if i + 1 >= len(lines) or lines[i + 1].strip() != expected:
+              raise SystemExit('C1259e patch anchor has unexpected structure; stopping')
+          replacement = [
+              '        pattern = re.compile(',
+              '            r"FloatingActionButton\\.this\\.f10289n\\.set\\(i6,\\s*i7,\\s*i8,\\s*i9\\);\\s*"',
+              '            r"FloatingActionButton\\s+floatingActionButton2\\s*=\\s*FloatingActionButton\\.this;\\s*"',
+              '            r"int\\s+i10\\s*=\\s*floatingActionButton2\\.f10286k;\\s*"',
+              '            r"floatingActionButton2\\.setPadding\\(\\s*i6\\s*\\+\\s*i10,\\s*i7\\s*\\+\\s*i10,\\s*i8\\s*\\+\\s*i10,\\s*i9\\s*\\+\\s*i10\\s*\\);"',
+              '        )',
+              '        text_holder[0], count = pattern.subn(',
+              '            "c1360b4.setShadowPadding(i6, i7, i8, i9);", text_holder[0]',
+              '        )',
+              '        if count != 1:',
+              '            raise ValueError(f"{path}: expected one i6 shadow-padding block, found {count}")',
+          ]
+          lines[i:i + 2] = replacement
+          p.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          print('Round22 transform logic repaired.')
+          PY
+
+      - name: Python syntax check
+        run: python3 -m py_compile apply_round22.py
+
+      - name: Validate Round 22 patches without modifying Java
+        run: python3 apply_round22.py --check-only .
+
+      - name: Apply Round 22 patches
+        run: python3 apply_round22.py .
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # Do not use android-actions/setup-android here: its default setup invokes
+      # sdkmanager for the removed "tools" package and fails on current SDK repos.
+      - name: Configure preinstalled Android SDK
+        shell: bash
+        run: |
+          SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          if [ ! -x "$SDK_ROOT/cmdline-tools/16.0/bin/sdkmanager" ]; then
+            SDKMANAGER="$(find "$SDK_ROOT/cmdline-tools" -type f -name sdkmanager -perm -u+x 2>/dev/null | head -n 1)"
+          else
+            SDKMANAGER="$SDK_ROOT/cmdline-tools/16.0/bin/sdkmanager"
+          fi
+          if [ -z "${SDKMANAGER:-}" ] || [ ! -x "$SDKMANAGER" ]; then
+            echo "sdkmanager not found under $SDK_ROOT" >&2
+            exit 1
+          fi
+          echo "ANDROID_HOME=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "$SDK_ROOT/platform-tools" >> "$GITHUB_PATH"
+          echo "$(dirname "$SDKMANAGER")" >> "$GITHUB_PATH"
+          echo "SDKMANAGER=$SDKMANAGER" >> "$GITHUB_ENV"
+          "$SDKMANAGER" --version
+
+      - name: Install required Android SDK packages
+        shell: bash
+        run: |
+          # sdkmanager may close stdin after accepting all licenses; with
+          # pipefail, the resulting SIGPIPE from `yes` can falsely fail the step.
+          set +o pipefail
+          yes | "$SDKMANAGER" --licenses
+          LICENSE_STATUS=$?
+          set -o pipefail
+          if [ "$LICENSE_STATUS" -ne 0 ]; then
+            echo "SDK license acceptance failed with exit code $LICENSE_STATUS" >&2
+            exit "$LICENSE_STATUS"
+          fi
+
+          "$SDKMANAGER" --install "platforms;android-35" "build-tools;35.0.0"
+          "$SDKMANAGER" --list_installed
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+
+      - name: Build debug APK
+        run: gradle --no-daemon --stacktrace :app:assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: round22-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
