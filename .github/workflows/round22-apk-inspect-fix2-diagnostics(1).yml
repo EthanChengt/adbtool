@@ -1,0 +1,163 @@
+name: Inspect Original APK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-original-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify original APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK='甲壳虫ADB助手_1.3.1.apk'
+          test -s "$APK" || { echo "APK not found at repository root: $APK"; exit 1; }
+          echo "APK_PATH=$APK"
+          stat -c 'APK_SIZE_BYTES=%s' "$APK"
+          sha256sum "$APK"
+          echo '--- APK ZIP contents (DEX / resources / manifest) ---'
+          # unzip -l prefixes filenames with size/date columns, so match the
+          # final filename field rather than anchoring at the start of the line.
+          unzip -l "$APK" | awk '$4 ~ /(^|\/)(classes[0-9]*\.dex|resources\.arsc|AndroidManifest\.xml)$/ { print; found=1 } END { if (!found) print "No standard DEX/resource entries matched; listing first 60 archive entries:" }'
+          echo '--- First 60 APK archive entries (diagnostic fallback) ---'
+          unzip -l "$APK" | sed -n '1,65p'
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Download JADX
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/jadx"
+          RELEASE_JSON="$RUNNER_TEMP/jadx-release.json"
+          curl -fsSL https://api.github.com/repos/skylot/jadx/releases/latest -o "$RELEASE_JSON"
+          ZIP_URL=$(python3 - "$RELEASE_JSON" <<'PY'
+          import json, sys
+          data = json.load(open(sys.argv[1], encoding='utf-8'))
+          assets = data.get('assets', [])
+          matches = [a['browser_download_url'] for a in assets
+                     if a.get('name', '').endswith('.zip')
+                     and 'windows' not in a.get('name', '').lower()]
+          if not matches:
+              raise SystemExit('Could not find the JADX distribution ZIP in latest release')
+          print(matches[0])
+          PY
+          )
+          echo "JADX_URL=$ZIP_URL"
+          curl -fL "$ZIP_URL" -o "$RUNNER_TEMP/jadx/jadx.zip"
+          unzip -q "$RUNNER_TEMP/jadx/jadx.zip" -d "$RUNNER_TEMP/jadx/dist"
+          JADX=$(find "$RUNNER_TEMP/jadx/dist" -type f -path '*/bin/jadx' | head -1)
+          test -n "$JADX" || { echo 'jadx executable not found after unzip'; exit 1; }
+          chmod +x "$JADX"
+          echo "JADX=$JADX" >> "$GITHUB_ENV"
+          "$JADX" --version
+
+      - name: Decompile original APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/original-apk-jadx"
+          mkdir -p "$OUT"
+          LOG="$RUNNER_TEMP/jadx.log"
+          # GitHub Actions runs bash with -e; disable it only around JADX so
+          # its non-zero exit can be captured and its diagnostic log printed.
+          set +e
+          "$JADX" -d "$OUT" '甲壳虫ADB助手_1.3.1.apk' > "$LOG" 2>&1
+          RC=$?
+          set -e
+          echo "JADX_EXIT_CODE=$RC"
+          echo '--- JADX diagnostic log (last 160 lines) ---'
+          if [ -s "$LOG" ]; then
+            tail -160 "$LOG"
+          else
+            echo 'JADX produced an empty log file.'
+          fi
+          if [ ! -d "$OUT/sources" ]; then
+            echo 'JADX sources directory was not produced.'
+            exit "${RC:-1}"
+          fi
+          echo "JADX_OUTPUT=$OUT"
+
+      - name: Print original class evidence
+        shell: bash
+        run: |
+          python3 - "$RUNNER_TEMP/original-apk-jadx" <<'PY'
+          from pathlib import Path
+          import sys
+
+          root = Path(sys.argv[1]) / 'sources'
+          targets = {
+              'MainActivity.java': ['class MainActivity', 'C0934k3', 'onCreate', 'class c'],
+              'ViewPager.java': ['CREATOR', 'MainActivity', 'break;', 'populate', 'SavedState'],
+              'TabLayout.java': ['MainActivity', 'mo2186c', 'm3157b', 'setupWithViewPager'],
+              'AbstractC0483r.java': ['m2202p', 'm2191e', 'm2200n', 'class a', 'class c'],
+              'C0477n.java': ['m1784c', 'Class<? extends'],
+              'C0451a.java': ['C0451a(', 'super('],
+              'AbstractC0488w.java': ['m1869e', 'm1808H', 'class Abstract'],
+              'Toolbar.java': ['CREATOR', 'class C0059d', 'mo918l', 'onMenuItemClick'],
+              'C0369g.java': ['catch', 'e = e2', 'ResourcesCompat'],
+              'C0002b.java': ['onTransact', 'RemoteException'],
+              'C1051q.java': ['m2188b', 'interface a', 'mo538f'],
+              'C0934k3.java': ['class C0934k3', 'f4837a', 'f4839c'],
+          }
+
+          def excerpt(path: Path, terms, limit=14, radius=7):
+              lines = path.read_text(encoding='utf-8', errors='replace').splitlines()
+              hits = [i for i, line in enumerate(lines) if any(t in line for t in terms)]
+              # Prefer lines with class/method/field references; cap noisy matches.
+              chosen = []
+              for i in hits:
+                  if any(abs(i - j) <= radius for j in chosen):
+                      continue
+                  chosen.append(i)
+                  if len(chosen) >= limit:
+                      break
+              if not chosen:
+                  print(f'  [No keyword hits; first 100 lines follow]')
+                  chosen = [0]
+                  radius = 49
+              emitted = set()
+              for i in chosen:
+                  lo, hi = max(0, i-radius), min(len(lines), i+radius+1)
+                  if emitted and lo <= max(emitted):
+                      lo = max(emitted) + 1
+                  if lo >= hi:
+                      continue
+                  print(f'  --- lines {lo+1}-{hi} of {len(lines)} ---')
+                  for n in range(lo, hi):
+                      print(f'  {n+1}: {lines[n]}')
+                  emitted.update(range(lo, hi))
+
+          print('=== ORIGINAL APK DECOMPILED CLASS REFERENCES ===')
+          for name, terms in targets.items():
+              matches = list(root.rglob(name))
+              print(f'\n=== {name}: {len(matches)} match(es) ===')
+              for path in matches[:3]:
+                  print(f'FILE: {path.relative_to(root)}')
+                  excerpt(path, terms)
+
+          print('\n=== ORIGINAL RESOURCE ID DEFINITIONS ===')
+          for path in list((Path(sys.argv[1])).rglob('ids.xml'))[:10]:
+              print(f'FILE: {path}')
+              lines = path.read_text(encoding='utf-8', errors='replace').splitlines()
+              for n, line in enumerate(lines):
+                  if any(k in line for k in ('fh', 'rd', 'ny')):
+                      print(f'  {n+1}: {line}')
+          for path in list(root.rglob('R.java'))[:10]:
+              print(f'FILE: {path.relative_to(root)}')
+              lines = path.read_text(encoding='utf-8', errors='replace').splitlines()
+              for n, line in enumerate(lines):
+                  if any(k in line for k in (' fh =', ' rd =', ' ny =')):
+                      print(f'  {n+1}: {line}')
+          PY
