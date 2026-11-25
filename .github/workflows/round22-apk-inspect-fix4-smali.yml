@@ -1,0 +1,213 @@
+name: Inspect Original APK (DEX and Smali)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-original-apk-smali:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify APK and extract raw DEX files
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK='甲壳虫ADB助手_1.3.1.apk'
+          test -s "$APK" || { echo "APK not found: $APK"; exit 1; }
+          OUT="$RUNNER_TEMP/original-apk-smali"
+          mkdir -p "$OUT/dex"
+          echo "APK_PATH=$APK"
+          stat -c 'APK_SIZE_BYTES=%s' "$APK"
+          sha256sum "$APK"
+          unzip -Z1 "$APK" | awk '/(^|\/)classes[0-9]*\.dex$/ { print; n++ } END { print "DEX_ENTRY_COUNT=" n; if (!n) exit 1 }'
+          unzip -j -o "$APK" 'classes*.dex' -d "$OUT/dex" >/dev/null
+          find "$OUT/dex" -maxdepth 1 -type f -name '*.dex' -printf '%f %s bytes\n' | sort
+          echo "SMALI_OUTPUT=$OUT"
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Download Apktool
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/apktool"
+          curl -fsSL https://api.github.com/repos/iBotPeaches/Apktool/releases/latest -o "$RUNNER_TEMP/apktool-release.json"
+          JAR_URL=$(python3 - "$RUNNER_TEMP/apktool-release.json" <<'PY'
+          import json, sys
+          data = json.load(open(sys.argv[1], encoding="utf-8"))
+          assets = [a for a in data.get("assets", [])
+                    if a.get("name", "").startswith("apktool_")
+                    and a.get("name", "").endswith(".jar")]
+          if not assets:
+              raise SystemExit("Could not find an apktool_<version>.jar release asset")
+          assets.sort(key=lambda a: a.get("name", ""), reverse=True)
+          print(assets[0]["browser_download_url"])
+          PY
+          )
+          echo "APKTOOL_URL=$JAR_URL"
+          curl -fL "$JAR_URL" -o "$RUNNER_TEMP/apktool/apktool.jar"
+          echo "APKTOOL_JAR=$RUNNER_TEMP/apktool/apktool.jar" >> "$GITHUB_ENV"
+          java -jar "$RUNNER_TEMP/apktool/apktool.jar" --version
+
+      - name: Disassemble original APK to Smali
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/original-apk-smali"
+          LOG="$OUT/apktool.log"
+          set +e
+          java -jar "$APKTOOL_JAR" d -f -o "$OUT/decoded" '甲壳虫ADB助手_1.3.1.apk' > "$LOG" 2>&1
+          RC=$?
+          set -e
+          echo "APKTOOL_EXIT_CODE=$RC"
+          tail -120 "$LOG" || true
+          SMALI_COUNT=$(find "$OUT/decoded" -type f -path '*/smali*/*.smali' | wc -l | tr -d ' ')
+          echo "SMALI_FILE_COUNT=$SMALI_COUNT"
+          if [ "$SMALI_COUNT" -eq 0 ]; then
+            echo "No Smali files were produced."
+            exit 1
+          fi
+          if [ "$RC" -ne 0 ]; then
+            echo "::warning::Apktool reported an error but produced Smali output; preserving it for inspection."
+          fi
+
+      - name: Print DEX class and method evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - "$RUNNER_TEMP/original-apk-smali/decoded" <<'PY'
+          from pathlib import Path
+          import re, sys
+
+          root = Path(sys.argv[1])
+          smali_files = sorted(root.rglob("*.smali"))
+          targets = {
+              "ViewPager": "Landroidx/viewpager/widget/ViewPager;",
+              "TabLayout": "Lcom/google/android/material/tabs/TabLayout;",
+              "MainActivity": "Lcom/didjdk/adbhelper/MainActivity;",
+              "FragmentState": "Lb/m/b/a;",
+              "FragmentContainer": "Lb/m/b/n;",
+              "FragmentManager": "Lb/m/b/r;",
+          }
+
+          by_descriptor = {}
+          for path in smali_files:
+              try:
+                  data = path.read_text(encoding="utf-8", errors="replace")
+              except OSError:
+                  continue
+              match = re.search(r"(?m)^\.class\s+.*?(L[^;]+;)", data)
+              if match:
+                  by_descriptor[match.group(1)] = (path, data.splitlines())
+
+          print(f"TOTAL_SMALI_FILES={len(smali_files)}")
+          print("=== TARGET CLASS LOCATIONS ===")
+          for name, desc in targets.items():
+              found = by_descriptor.get(desc)
+              print(f"{name}: {found[0].relative_to(root).as_posix() if found else 'NOT FOUND'}")
+
+          def emit_class(name, desc, dump_constructor=False, main_refs=False):
+              found = by_descriptor.get(desc)
+              print(f"\n=== {name} {desc} ===")
+              if not found:
+                  print("CLASS NOT FOUND")
+                  return
+              path, lines = found
+              print(f"FILE={path.relative_to(root).as_posix()}")
+              for line in lines:
+                  if (line.startswith((".class ", ".super ", ".implements ", ".source ", ".field ", ".method "))
+                      or "Ldalvik/annotation/InnerClass;" in line
+                      or "Ldalvik/annotation/EnclosingClass;" in line
+                      or "Ldalvik/annotation/EnclosingMethod;" in line):
+                      print(line)
+              if dump_constructor:
+                  print("--- CONSTRUCTOR BODIES ---")
+                  inside = False
+                  for line in lines:
+                      if line.startswith(".method "):
+                          inside = "<init>(" in line
+                          if inside:
+                              print(line)
+                      elif inside:
+                          print(line)
+                          if line == ".end method":
+                              inside = False
+              if main_refs:
+                  print("--- METHODS REFERENCING MainActivity ---")
+                  i = 0
+                  while i < len(lines):
+                      if lines[i].startswith(".method "):
+                          start = i
+                          end = i + 1
+                          while end < len(lines) and lines[end] != ".end method":
+                              end += 1
+                          block = lines[start:min(end + 1, len(lines))]
+                          if any("Lcom/didjdk/adbhelper/MainActivity" in x for x in block):
+                              cap = 240
+                              if len(block) > cap:
+                                  print("\n".join(block[:cap]))
+                                  print(f"... METHOD BODY TRUNCATED IN LOG ({len(block)} lines total; full file is in artifact) ...")
+                              else:
+                                  print("\n".join(block))
+                          i = end + 1
+                      else:
+                          i += 1
+
+          emit_class("FragmentState", targets["FragmentState"], dump_constructor=True)
+          emit_class("FragmentContainer", targets["FragmentContainer"])
+          emit_class("FragmentManager", targets["FragmentManager"])
+          emit_class("MainActivity", targets["MainActivity"], main_refs=True)
+          emit_class("ViewPager", targets["ViewPager"], main_refs=True)
+          emit_class("TabLayout", targets["TabLayout"], main_refs=True)
+
+          print("\n=== MAINACTIVITY NESTED CLASSES ===")
+          for desc, (path, lines) in sorted(by_descriptor.items()):
+              if desc.startswith("Lcom/didjdk/adbhelper/MainActivity$"):
+                  print(f"{desc} -> {path.relative_to(root).as_posix()}")
+                  for line in lines:
+                      if line.startswith((".class ", ".super ", ".field ", ".method ")):
+                          print(line)
+
+          print("\n=== DEX REFERENCES TO MainActivity FROM TARGET SMALI ===")
+          for name in ("ViewPager", "TabLayout", "FragmentState", "FragmentContainer", "FragmentManager"):
+              found = by_descriptor.get(targets[name])
+              if found:
+                  path, lines = found
+                  for i, line in enumerate(lines, 1):
+                      if "Lcom/didjdk/adbhelper/MainActivity" in line:
+                          print(f"{path.relative_to(root).as_posix()}:{i}:{line.strip()}")
+          PY
+
+      - name: List native libraries and Android manifest metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK='甲壳虫ADB助手_1.3.1.apk'
+          echo '=== NATIVE LIBRARIES IN APK ==='
+          unzip -Z1 "$APK" | grep -E '^lib/[^/]+/[^/]+\.so$' || true
+          echo '=== APKTOOL MANIFEST PACKAGE / SDK / APPLICATION ==='
+          if [ -f "$RUNNER_TEMP/original-apk-smali/decoded/AndroidManifest.xml" ]; then
+            grep -E 'manifest|uses-sdk|application|activity|meta-data' "$RUNNER_TEMP/original-apk-smali/decoded/AndroidManifest.xml" | head -100 || true
+          fi
+
+      - name: Upload raw DEX and complete Smali output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-apk-dex-smali
+          path: |
+            ${{ runner.temp }}/original-apk-smali/dex/
+            ${{ runner.temp }}/original-apk-smali/decoded/
+            ${{ runner.temp }}/original-apk-smali/apktool.log
+          if-no-files-found: warn
+          compression-level: 6
+          retention-days: 7
