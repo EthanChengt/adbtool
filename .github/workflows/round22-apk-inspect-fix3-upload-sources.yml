@@ -1,0 +1,125 @@
+name: Inspect Original APK (Upload Decompiled Sources)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-original-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify original APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK='甲壳虫ADB助手_1.3.1.apk'
+          test -s "$APK" || { echo "APK not found: $APK"; exit 1; }
+          echo "APK_PATH=$APK"
+          stat -c 'APK_SIZE_BYTES=%s' "$APK"
+          sha256sum "$APK"
+          unzip -l "$APK" | awk '$4 ~ /(^|\/)(classes[0-9]*\.dex|resources\.arsc|AndroidManifest\.xml)$/ { print; found=1 } END { if (!found) exit 1 }'
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Download JADX
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/jadx"
+          curl -fsSL https://api.github.com/repos/skylot/jadx/releases/latest -o "$RUNNER_TEMP/jadx-release.json"
+          ZIP_URL=$(python3 - "$RUNNER_TEMP/jadx-release.json" <<'PY'
+          import json, sys
+          data = json.load(open(sys.argv[1], encoding="utf-8"))
+          urls = [a["browser_download_url"] for a in data.get("assets", [])
+                  if a.get("name", "").endswith(".zip")
+                  and "windows" not in a.get("name", "").lower()]
+          if not urls:
+              raise SystemExit("JADX ZIP asset not found")
+          print(urls[0])
+          PY
+          )
+          echo "JADX_URL=$ZIP_URL"
+          curl -fL "$ZIP_URL" -o "$RUNNER_TEMP/jadx/jadx.zip"
+          unzip -q "$RUNNER_TEMP/jadx/jadx.zip" -d "$RUNNER_TEMP/jadx/dist"
+          JADX=$(find "$RUNNER_TEMP/jadx/dist" -type f -path '*/bin/jadx' | head -1)
+          test -n "$JADX"
+          chmod +x "$JADX"
+          echo "JADX=$JADX" >> "$GITHUB_ENV"
+          "$JADX" --version
+
+      - name: Decompile original APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/original-apk-jadx"
+          mkdir -p "$OUT"
+          LOG="$OUT/jadx.log"
+          set +e
+          "$JADX" -d "$OUT" '甲壳虫ADB助手_1.3.1.apk' > "$LOG" 2>&1
+          RC=$?
+          set -e
+          echo "JADX_EXIT_CODE=$RC"
+          tail -100 "$LOG" || true
+          test -d "$OUT/sources" || { echo "JADX did not create sources"; exit "${RC:-1}"; }
+          if [ "$RC" -ne 0 ]; then
+            echo "::warning::JADX reported errors but produced source files; preserving output for inspection."
+          fi
+          echo "JADX_OUTPUT=$OUT"
+          find "$OUT/sources" -type f -name '*.java' | wc -l | awk '{print "JAVA_SOURCE_FILE_COUNT="$1}'
+          find "$OUT/resources" -type f 2>/dev/null | wc -l | awk '{print "RESOURCE_FILE_COUNT="$1}'
+
+      - name: Print class inventory and key original code
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - "$RUNNER_TEMP/original-apk-jadx/sources" <<'PY'
+          from pathlib import Path
+          import sys
+
+          root = Path(sys.argv[1])
+          files = sorted(root.rglob("*.java"))
+          print(f"TOTAL_JAVA_FILES={len(files)}")
+          print("=== APP AND ANDROIDX CLASS INVENTORY ===")
+          for p in files:
+              rel = p.relative_to(root).as_posix()
+              if rel.startswith(("com/didjdk/adbhelper/", "androidx/viewpager/", "com/google/android/material/tabs/")):
+                  print(rel)
+
+          targets = [
+              "com/didjdk/adbhelper/MainActivity.java",
+              "androidx/viewpager/widget/ViewPager.java",
+              "com/google/android/material/tabs/TabLayout.java",
+          ]
+          for rel in targets:
+              p = root / rel
+              print(f"\n=== {rel} ===")
+              if not p.exists():
+                  print("NOT FOUND")
+                  continue
+              lines = p.read_text(encoding="utf-8", errors="replace").splitlines()
+              print(f"LINE_COUNT={len(lines)}")
+              for i, line in enumerate(lines[:260], 1):
+                  print(f"{i}: {line}")
+          PY
+
+      - name: Upload full JADX output for analysis
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-apk-jadx-output
+          path: |
+            ${{ runner.temp }}/original-apk-jadx/sources/
+            ${{ runner.temp }}/original-apk-jadx/resources/
+            ${{ runner.temp }}/original-apk-jadx/jadx.log
+          if-no-files-found: warn
+          compression-level: 6
+          retention-days: 7
