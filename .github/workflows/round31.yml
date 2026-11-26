@@ -1,4 +1,4 @@
-name: Round 22 Fix11 - Java Compile Repair
+name: Round 31 - Java Compile Repair
 
 on:
   workflow_dispatch:
@@ -7,7 +7,8 @@ on:
     paths:
       - "apply_round22.py"
       - "round29_fix1.py"
-      - ".github/workflows/round22-fix11.yml"
+      - "round31_java_compile_fix1.py"
+      - ".github/workflows/round31.yml"
 
 permissions:
   contents: read
@@ -300,6 +301,15 @@ jobs:
         run: |
           python3 -m py_compile round30_fix1.py
           python3 round30_fix1.py . --check-only
+
+      - name: Validate Round31 Java Compile Fix1
+        shell: bash
+        run: |
+          python3 -m py_compile round31_java_compile_fix1.py
+          python3 round31_java_compile_fix1.py --check-only .
+
+      - name: Apply Round31 Java Compile Fix1
+        run: python3 round31_java_compile_fix1.py .
 
       - name: Apply Round30 Fix1
         run: python3 round30_fix1.py .
