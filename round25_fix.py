@@ -65,8 +65,15 @@ put(rel, s)
 # single-letter package/class qualifier.
 rel = "app/src/main/java/p006b/p049j/p051b/C0447e.java"
 s = load(rel)
-s = one(s, 'StringBuilder sbM2191e = a.m2191e("captureChildView: parameter must be a descendant of the ViewDragHelper\'s tracked parent view (");',
-        'StringBuilder sbM2191e = new StringBuilder("captureChildView: parameter must be a descendant of the ViewDragHelper\'s tracked parent view (");', rel)
+plain_anchor = 'StringBuilder sbM2191e = a.m2191e("captureChildView: parameter must be a descendant of the ViewDragHelper\'s tracked parent view (");'
+qualified_anchor = 'StringBuilder sbM2191e = c.a.a.a.a.m2191e("captureChildView: parameter must be a descendant of the ViewDragHelper\'s tracked parent view (");'
+replacement = 'StringBuilder sbM2191e = new StringBuilder("captureChildView: parameter must be a descendant of the ViewDragHelper\'s tracked parent view (");'
+if s.count(qualified_anchor) == 1:
+    s = s.replace(qualified_anchor, replacement)
+elif s.count(plain_anchor) == 1:
+    s = s.replace(plain_anchor, replacement)
+else:
+    raise RuntimeError(f"{rel}: expected one original or Round24-qualified helper call")
 put(rel, s)
 
 # 4) Restore typed Parcelable.Creator signatures in Material saved-state classes.
@@ -202,7 +209,8 @@ put(rel, s)
 # invoked; the method is cached again, but no illegal out-of-loop break remains.
 rel = "app/src/main/java/androidx/appcompat/app/AppCompatViewInflater.java"
 s = load(rel)
-s = one(s, "            if (this.f135d != null) {\n                break;\n            }\n", "", rel)
+s = one(s, "            if (this.f135d != null) {\n                break;\n            }\n", "            if (this.f135d == null) {\n", rel)
+s = one(s, "            try {\n                this.f135d.invoke(this.f136e, view);", "            }\n            try {\n                this.f135d.invoke(this.f136e, view);", rel)
 put(rel, s)
 
 # 9) Material's CoordinatorLayout behaviors use the generic child type in
@@ -211,7 +219,6 @@ rel = "app/src/main/java/com/google/android/material/appbar/AppBarLayout.java"
 s = load(rel)
 repls = [
 ("public boolean mo2772E(View view)", "public boolean mo2772E(T view)"),
-("public int mo2776I(CoordinatorLayout coordinatorLayout, View view, int i, int i2, int i3)", "public int mo2776I(CoordinatorLayout coordinatorLayout, T view, int i, int i2, int i3)"),
 ("public boolean mo174k(CoordinatorLayout coordinatorLayout, View view, int i)", "public boolean mo174k(CoordinatorLayout coordinatorLayout, T view, int i)"),
 ("public boolean mo175l(CoordinatorLayout coordinatorLayout, View view, int i, int i2, int i3, int i4)", "public boolean mo175l(CoordinatorLayout coordinatorLayout, T view, int i, int i2, int i3, int i4)"),
 ("public /* bridge */ /* synthetic */ void mo179p(CoordinatorLayout coordinatorLayout, View view, View view2, int i, int i2, int[] iArr, int i3)", "public /* bridge */ /* synthetic */ void mo179p(CoordinatorLayout coordinatorLayout, T view, View view2, int i, int i2, int[] iArr, int i3)"),
@@ -226,6 +233,14 @@ repls = [
 ]
 for old,new in repls:
     s = one(s, old, new, rel)
+# Round24 already corrected mo2776I's generic parameter. Accept either tree state
+# so the script remains safe if run on a source tree without the Round24 step.
+mo2776_view = "public int mo2776I(CoordinatorLayout coordinatorLayout, View view, int i, int i2, int i3)"
+mo2776_generic = "public int mo2776I(CoordinatorLayout coordinatorLayout, T view, int i, int i2, int i3)"
+if s.count(mo2776_view) == 1:
+    s = s.replace(mo2776_view, mo2776_generic)
+elif s.count(mo2776_generic) != 1:
+    raise RuntimeError(f"{rel}: expected one original or Round24-generic mo2776I signature")
 # The bridge-shaped overrides above now receive T, so pass T through to the
 # typed helper methods rather than narrowing it back to AppBarLayout.
 s = one(s, "m3051M(coordinatorLayout, (AppBarLayout) view, view2, i2, iArr);",
@@ -239,7 +254,9 @@ s = one(s, "return m3053O(coordinatorLayout, (AppBarLayout) view, view2, i, i2);
 s = s.replace("AppBarLayout appBarLayout = (AppBarLayout) view;", "T appBarLayout = (T) view;")
 # This source contains one decompiler-inserted break outside a loop in offset logic.
 s = one(s, "            if (!appBarLayout.f10119f) {\n                top = iM1448h;\n                break;\n            }",
-        "            if (!appBarLayout.f10119f) {\n                top = iM1448h;\n            }", rel)
+        "            if (!appBarLayout.f10119f) {\n                top = iM1448h;\n            } else {", rel)
+s = one(s, "            boolean zM2780D = m2780D(top);",
+        "            }\n            boolean zM2780D = m2780D(top);", rel)
 put(rel, s)
 
 # 10) Extended FAB behavior signatures must use its declared generic child T;
