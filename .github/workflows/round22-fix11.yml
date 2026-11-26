@@ -258,8 +258,8 @@ jobs:
       - name: Apply Round 25 Fix2
         run: python3 round25_fix2.py
 
-      - name: Apply Round 26 Fix1
-        run: python3 round26_fix.py
+      - name: Apply Round 26 Fix2
+        run: python3 round26_fix2.py
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
