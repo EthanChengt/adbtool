@@ -560,61 +560,61 @@ def patch_c0603b(s: str) -> str:
         "        XmlResourceParser animation = null;\n        Animator animatorM2148a;",
         "C0603b animation parser initialization",
     )
-    s = replace_once_or_done(
-        s,
-        """                                    } catch (IOException e2) {
+
+    # Replace JADX's nested catch/rethrow merge with one parser lifecycle.
+    # XmlResourceParser.close() is called in finally, including parse failures.
+    old_branch = '''                            Resources resources2 = context.getResources();
+                            Resources.Theme theme2 = context.getTheme();
+                            try {
+                                try {
+                                    animation = resources2.getAnimation(resourceId2);
+                                    try {
+                                        animatorM2148a = C0604c.m2148a(context, resources2, theme2, animation, Xml.asAttributeSet(animation), null, 0, 1.0f);
+                                        animation.close();
+                                    } catch (IOException e2) {
                                         e = e2;
-                                        Resources.NotFoundException notFoundException = new Resources.NotFoundException(\"Can't load animation resource ID #0x\" + Integer.toHexString(resourceId2));
+                                        Resources.NotFoundException notFoundException = new Resources.NotFoundException("Can't load animation resource ID #0x" + Integer.toHexString(resourceId2));
                                         notFoundException.initCause(e);
                                         throw notFoundException;
                                     } catch (XmlPullParserException e3) {
                                         e = e3;
-                                        Resources.NotFoundException notFoundException2 = new Resources.NotFoundException(\"Can't load animation resource ID #0x\" + Integer.toHexString(resourceId2));
+                                        Resources.NotFoundException notFoundException2 = new Resources.NotFoundException("Can't load animation resource ID #0x" + Integer.toHexString(resourceId2));
                                         notFoundException2.initCause(e);
-                                        throw notFoundException2;""",
-        """                                    } catch (IOException e2) {
-                                        Resources.NotFoundException notFoundException = new Resources.NotFoundException(\"Can't load animation resource ID #0x\" + Integer.toHexString(resourceId2));
-                                        notFoundException.initCause(e2);
-                                        throw notFoundException;
-                                    } catch (XmlPullParserException e3) {
-                                        Resources.NotFoundException notFoundException2 = new Resources.NotFoundException(\"Can't load animation resource ID #0x\" + Integer.toHexString(resourceId2));
-                                        notFoundException2.initCause(e3);
-                                        throw notFoundException2;""",
-        "C0603b nested animator parse error conversion",
-    )
-    s = replace_once_or_done(
-        s,
-        """                            } catch (Throwable th2) {
-                                th = th2;
-                                animation = null;
-                            }
-                        }
-                        animatorM2148a.setTarget""",
-        """                            } catch (Throwable th2) {
-                                animation = null;
-                                throw new RuntimeException(th2);
-                            }
-                        }
-                        animatorM2148a.setTarget""",
-        "C0603b animator parser cleanup rethrow",
-    )
-    s = replace_once_or_done(
-        s,
-        """                            } catch (IOException e4) {
+                                        throw notFoundException2;
+                                    } catch (Throwable th) {
+                                        th = th;
+                                        if (animation != null) {
+                                            animation.close();
+                                        }
+                                        throw th;
+                                    }
+                                } catch (Throwable th2) {
+                                    th = th2;
+                                    animation = null;
+                                }
+                            } catch (IOException e4) {
                                 e = e4;
                             } catch (XmlPullParserException e5) {
                                 e = e5;
-                            }""",
-        """                            } catch (IOException e4) {
-                                Resources.NotFoundException failure = new Resources.NotFoundException(\"Can't load animation resource ID #0x\" + Integer.toHexString(resourceId2));
-                                failure.initCause(e4);
+                            }'''
+    new_branch = '''                            Resources resources2 = context.getResources();
+                            Resources.Theme theme2 = context.getTheme();
+                            XmlResourceParser parser = null;
+                            try {
+                                parser = resources2.getAnimation(resourceId2);
+                                animatorM2148a = C0604c.m2148a(context, resources2, theme2, parser, Xml.asAttributeSet(parser), null, 0, 1.0f);
+                            } catch (IOException | XmlPullParserException parseException) {
+                                Resources.NotFoundException failure = new Resources.NotFoundException("Can't load animation resource ID #0x" + Integer.toHexString(resourceId2));
+                                failure.initCause(parseException);
                                 throw failure;
-                            } catch (XmlPullParserException e5) {
-                                Resources.NotFoundException failure = new Resources.NotFoundException(\"Can't load animation resource ID #0x\" + Integer.toHexString(resourceId2));
-                                failure.initCause(e5);
-                                throw failure;
-                            }""",
-        "C0603b outer animator parse error conversion",
+                            } finally {
+                                if (parser != null) {
+                                    parser.close();
+                                }
+                            }'''
+    s = replace_once_or_done(
+        s, old_branch, new_branch,
+        "C0603b animator parser lifecycle block",
     )
     s = replace_once_or_done(
         s,
