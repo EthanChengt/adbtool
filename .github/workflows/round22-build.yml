@@ -1,4 +1,5 @@
-name: Round 22 Script Fix 6
+
+name: Round 22 Script Fix 10
 
 on:
   workflow_dispatch:
@@ -9,67 +10,93 @@ permissions:
 jobs:
   repair-and-build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Repair the existing Round22 transformation script itself.
       - name: Repair Round22 transform logic
+        shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import re
 
-          p = Path('apply_round22.py')
+          p = Path("apply_round22.py")
           if not p.is_file():
-              raise SystemExit('apply_round22.py not found; stopping')
-          s = p.read_text(encoding='utf-8')
+              raise SystemExit("apply_round22.py not found; stopping")
 
-          # Fix C0397b: the old substring guard also matched the suffix of
-          # the fully-qualified helper call c.a.a.a.a.m2191e(...).
+          s = p.read_text(encoding="utf-8")
+
+          # Fix C0397b: avoid matching the suffix of a fully-qualified
+          # helper call such as c.a.a.a.a.m2191e(...).
           old_guard = 'if "a.m2191e(" in text_holder[0]:'
           new_guard = 'if re.search(r"(?<![\\w.])a\\.m2191e\\(", text_holder[0]):'
-          guard_count = s.count(old_guard)
-          if guard_count != 1:
+
+          count = s.count(old_guard)
+          if count != 1:
               raise SystemExit(
-                  f'Expected exactly one C0397b guard source line, found {guard_count}; stopping'
+                  f"Expected exactly one C0397b guard, found {count}; stopping"
               )
-          if 'import re' not in s:
-              raise SystemExit('apply_round22.py does not import re; stopping')
+
+          if "import re" not in s:
+              raise SystemExit("apply_round22.py does not import re; stopping")
+
           s = s.replace(old_guard, new_guard, 1)
 
-          # Fix C1259e's final shadow-padding edit. The source Java block uses
-          # 8 spaces on these lines, while the original exact anchor expected
-          # 12. Replace the exact Python rep() call with a whitespace-tolerant
-          # regex transformation, scoped to the unique i6/i7/i8/i9 block.
+          # Fix Toolbar callback placement.
+          # Both markers must change so mo918l() is inserted into C0059d,
+          # immediately before the C0060e nested class.
+          toolbar_marker = "Toolbar$f */"
+          marker_count = s.count(toolbar_marker)
+          if marker_count != 2:
+              raise SystemExit(
+                  f"Expected two Toolbar callback markers, found {marker_count}; stopping"
+              )
+
+          s = s.replace(toolbar_marker, "Toolbar$e */", 2)
+
+          # Fix C1259e: use a whitespace-tolerant regex for the final
+          # shadow-padding block.
           lines = s.splitlines()
+
           matches = [
               i for i, line in enumerate(lines)
               if 'rep("FloatingActionButton.this.f10289n.set(i6, i7, i8, i9);' in line
           ]
+
           if len(matches) != 1:
               raise SystemExit(
-                  f'Expected one C1259e i6 patch call in apply_round22.py, found {len(matches)}; stopping'
+                  f"Expected one C1259e i6 patch anchor, found {len(matches)}; stopping"
               )
+
           i = matches[0]
           expected_second = '"c1360b4.setShadowPadding(i6, i7, i8, i9);")'
+
           if i + 1 >= len(lines) or lines[i + 1].strip() != expected_second:
-              raise SystemExit('C1259e i6 patch call did not match the expected two-line structure; stopping')
+              raise SystemExit(
+                  "C1259e patch anchor has unexpected structure; stopping"
+              )
 
           replacement = [
-              '        pattern = re.compile(',
+              "        pattern = re.compile(",
               '            r"FloatingActionButton\\.this\\.f10289n\\.set\\(i6,\\s*i7,\\s*i8,\\s*i9\\);\\s*"',
               '            r"FloatingActionButton\\s+floatingActionButton2\\s*=\\s*FloatingActionButton\\.this;\\s*"',
               '            r"int\\s+i10\\s*=\\s*floatingActionButton2\\.f10286k;\\s*"',
               '            r"floatingActionButton2\\.setPadding\\(\\s*i6\\s*\\+\\s*i10,\\s*i7\\s*\\+\\s*i10,\\s*i8\\s*\\+\\s*i10,\\s*i9\\s*\\+\\s*i10\\s*\\);"',
-              '        )',
-              '        text_holder[0], count = pattern.subn(',
+              "        )",
+              "        text_holder[0], count = pattern.subn(",
               '            "c1360b4.setShadowPadding(i6, i7, i8, i9);", text_holder[0]',
-              '        )',
-              '        if count != 1:',
+              "        )",
+              "        if count != 1:",
               '            raise ValueError(f"{path}: expected one i6 shadow-padding block, found {count}")',
           ]
+
           lines[i:i + 2] = replacement
-          p.write_text('\n'.join(lines) + '\n', encoding='utf-8')
-          print('C0397b guard and C1259e indentation-tolerant transform repaired.')
+          p.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+          print("C0397b, C1259e and Toolbar transforms repaired.")
           PY
 
       - name: Python syntax check
@@ -81,22 +108,431 @@ jobs:
       - name: Apply Round 22 patches
         run: python3 apply_round22.py .
 
+      # Additional Java fixes based on the Fix10 javac errors.
+      - name: Apply additional Java compile repairs
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          def one(text, old, new, label):
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(
+                      f"{label}: expected 1 match, found {count}; stopping"
+                  )
+              return text.replace(old, new, 1)
+
+          def edit(path, transform):
+              p = Path(path)
+              if not p.is_file():
+                  raise SystemExit(f"Missing source file: {path}")
+
+              original = p.read_text(encoding="utf-8")
+              updated = transform(original)
+
+              if updated == original:
+                  raise SystemExit(f"No changes applied to {path}")
+
+              p.write_text(updated, encoding="utf-8")
+              print(f"Repaired {path}")
+
+          # Fully qualify calls to the decompiler helper class.
+          # This avoids collisions with nested classes named "a".
+          def qualify_helpers(text, label):
+              pattern = re.compile(r"(?<![\w.])a\.(m[0-9]+[A-Za-z]*)\(")
+              updated, count = pattern.subn(
+                  lambda m: "c.a.a.a.a." + m.group(1) + "(",
+                  text
+              )
+
+              if count == 0:
+                  raise SystemExit(f"{label}: no helper calls found")
+
+              return updated
+
+          # C0451a: Java requires super(...) to be the first constructor
+          # statement. Also qualify shadowed helper calls.
+          def fix_c0451a(s):
+              s = one(
+                  s,
+                  """        C0477n c0477nM1811K = abstractC0483r.m1811K();
+                  AbstractC0479o<?> abstractC0479o = abstractC0483r.f3108n;
+                  super(c0477nM1811K, abstractC0479o != null ? abstractC0479o.f3086c.getClassLoader() : null);""",
+                  """        super(abstractC0483r.m1811K(), abstractC0483r.f3108n != null ? abstractC0483r.f3108n.f3086c.getClassLoader() : null);""",
+                  "C0451a constructor"
+              )
+
+              return qualify_helpers(s, "C0451a helper references")
+
+          edit(
+              "app/src/main/java/p006b/p056m/p057b/C0451a.java",
+              fix_c0451a
+          )
+
+          # C0477n: restore the Fragment generic class type.
+          def fix_c0477n(s):
+              return one(
+                  s,
+                  "return m1783b(classLoader, str);",
+                  "return (Class<? extends Fragment>) (Class<?>) m1783b(classLoader, str);",
+                  "C0477n generic return"
+              )
+
+          edit(
+              "app/src/main/java/p006b/p056m/p057b/C0477n.java",
+              fix_c0477n
+          )
+
+          # AbstractC0483r: restore typed Fragment lists and qualify
+          # helper calls shadowed by the inner class named "a".
+          def fix_fragment_manager(s):
+              old = "(ArrayList) this.f3097c.m1880f()"
+
+              count = s.count(old)
+              if count != 3:
+                  raise SystemExit(
+                      f"AbstractC0483r: expected 3 manager-list casts, found {count}"
+                  )
+
+              s = s.replace(
+                  old,
+                  "(ArrayList<Fragment>) this.f3097c.m1880f()"
+              )
+
+              s = one(
+                  s,
+                  "(ArrayList) abstractC0483r.f3097c.m1880f()",
+                  "(ArrayList<Fragment>) abstractC0483r.f3097c.m1880f()",
+                  "AbstractC0483r nested manager-list cast"
+              )
+
+              return qualify_helpers(s, "AbstractC0483r helper references")
+
+          edit(
+              "app/src/main/java/p006b/p056m/p057b/AbstractC0483r.java",
+              fix_fragment_manager
+          )
+
+          # C0487v: restore the generic return type of the ViewModel factory.
+          edit(
+              "app/src/main/java/p006b/p056m/p057b/C0487v.java",
+              lambda s: one(
+                  s,
+                  "return new C0487v(true);",
+                  "return (T) new C0487v(true);",
+                  "C0487v generic return"
+              )
+          )
+
+          # AbstractC0476m0: retain ViewGroup as the static type after casting.
+          def fix_transition_group(s):
+              start = s.index("    public void m1780f(")
+              end = s.index(
+                  "\n    /* JADX INFO: renamed from: g */",
+                  start
+              )
+
+              block = s[start:end]
+
+              block = one(
+                  block,
+                  "                view = (ViewGroup) view;",
+                  "                ViewGroup viewGroup = (ViewGroup) view;",
+                  "AbstractC0476m0 ViewGroup declaration"
+              )
+
+              block = one(
+                  block,
+                  "view.isTransitionGroup()",
+                  "viewGroup.isTransitionGroup()",
+                  "AbstractC0476m0 transition group"
+              )
+
+              block = one(
+                  block,
+                  "view.getTag(R.id.ny)",
+                  "viewGroup.getTag(R.id.ny)",
+                  "AbstractC0476m0 transition tag"
+              )
+
+              block = one(
+                  block,
+                  "view.getBackground()",
+                  "viewGroup.getBackground()",
+                  "AbstractC0476m0 background"
+              )
+
+              block = one(
+                  block,
+                  "C0418m.m1568k(view)",
+                  "C0418m.m1568k(viewGroup)",
+                  "AbstractC0476m0 transition name"
+              )
+
+              block = one(
+                  block,
+                  "int childCount = view.getChildCount();",
+                  "int childCount = viewGroup.getChildCount();",
+                  "AbstractC0476m0 child count"
+              )
+
+              block = one(
+                  block,
+                  "m1780f(arrayList, view.getChildAt(i));",
+                  "m1780f(arrayList, viewGroup.getChildAt(i));",
+                  "AbstractC0476m0 child access"
+              )
+
+              return s[:start] + block + s[end:]
+
+          edit(
+              "app/src/main/java/p006b/p056m/p057b/AbstractC0476m0.java",
+              fix_transition_group
+          )
+
+          # Binder.onTransact may throw RemoteException.
+          edit(
+              "app/src/main/java/p000a/p001a/p002a/p005b/C0002b.java",
+              lambda s: one(
+                  s,
+                  "public boolean onTransact(int code, Parcel data, Parcel reply, int flags) {",
+                  "public boolean onTransact(int code, Parcel data, Parcel reply, int flags) throws android.os.RemoteException {",
+                  "C0002b onTransact declaration"
+              )
+          )
+
+          # C0369g: the second catch variable is e2, not e.
+          def fix_resources_compat(s):
+              marker = "} catch (XmlPullParserException e2) {"
+
+              if s.count(marker) != 1:
+                  raise SystemExit(
+                      "C0369g: expected one XmlPullParserException catch"
+                  )
+
+              pos = s.index(marker)
+              head = s[:pos]
+              tail = s[pos:]
+
+              tail = one(
+                  tail,
+                  marker + "\n                    e = e2;\n",
+                  marker + "\n",
+                  "C0369g second catch assignment"
+              )
+
+              tail = one(
+                  tail,
+                  'Log.e("ResourcesCompat", sb.toString(), e);',
+                  'Log.e("ResourcesCompat", sb.toString(), e2);',
+                  "C0369g second catch log"
+              )
+
+              return head + tail
+
+          edit(
+              "app/src/main/java/p006b/p032h/p034c/p035b/C0369g.java",
+              fix_resources_compat
+          )
+
+          # Add resource IDs used by the recovered Fragment/ViewGroup code.
+          def fix_ids(s):
+              names = ("fh", "ny", "rd")
+
+              for name in names:
+                  if f'name="{name}"' in s:
+                      raise SystemExit(
+                          f"ids.xml already contains {name}; stopping"
+                      )
+
+              declarations = "".join(
+                  f'    <item name="{name}" type="id" />\n'
+                  for name in names
+              )
+
+              return one(
+                  s,
+                  "</resources>",
+                  declarations + "</resources>",
+                  "ids.xml declarations"
+              )
+
+          edit(
+              "app/src/main/res/values/ids.xml",
+              fix_ids
+          )
+
+          # Add an accessor to the real MainActivity.c adapter.
+          def fix_main_activity(s):
+              return one(
+                  s,
+                  "        public native int c();\n        public int mo2186c() {",
+                  """        public native int c();
+
+                  public MainActivity getOwnerActivity() {
+                      return MainActivity.this;
+                  }
+
+                  public int mo2186c() {""",
+                  "MainActivity.c owner accessor"
+              )
+
+          edit(
+              "app/src/main/java/com/didjdk/adbhelper/MainActivity.java",
+              fix_main_activity
+          )
+
+          # ViewPager: repair Parcelable creator signatures, Fragment type,
+          # adapter owner reference, helper shadowing and invalid break.
+          def fix_viewpager(s):
+              s = one(
+                  s,
+                  "public Object createFromParcel(Parcel parcel) {\n                return new C0178k(parcel, null);",
+                  "public C0178k createFromParcel(Parcel parcel) {\n                return new C0178k(parcel, null);",
+                  "ViewPager Parcelable creator"
+              )
+
+              s = one(
+                  s,
+                  "public Object[] newArray(int i) {\n                return new C0178k[i];",
+                  "public C0178k[] newArray(int i) {\n                return new C0178k[i];",
+                  "ViewPager Parcelable array"
+              )
+
+              s = one(
+                  s,
+                  "g0 abstractC1002g0M1808H = abstractC0488w.f3145c.m1808H(AbstractC0488w.m1869e(getId(), j));",
+                  "Fragment abstractC1002g0M1808H = abstractC0488w.f3145c.m1808H(AbstractC0488w.m1869e(getId(), j));",
+                  "ViewPager Fragment type"
+              )
+
+              s = one(
+                  s,
+                  "MainActivity.this.f6456H.f4837a.get(i);",
+                  "((MainActivity.c) this.f1150f).getOwnerActivity().f6456H.f4837a.get(i);",
+                  "ViewPager adapter owner"
+              )
+
+              old_head = """            if (viewFindFocus == null) {
+                  c0172eM734h = null;
+                  break;
+              }
+              while (true) {"""
+
+              new_head = """            if (viewFindFocus == null) {
+                  c0172eM734h = null;
+              } else {
+                  while (true) {"""
+
+              s = one(
+                  s,
+                  old_head,
+                  new_head,
+                  "ViewPager invalid break branch"
+              )
+
+              old_tail = """            }
+              if (c0172eM734h == null || c0172eM734h.f1173b != this.f1151g) {"""
+
+              new_tail = """                }
+              }
+              if (c0172eM734h == null || c0172eM734h.f1173b != this.f1151g) {"""
+
+              s = one(
+                  s,
+                  old_tail,
+                  new_tail,
+                  "ViewPager focus branch closure"
+              )
+
+              return qualify_helpers(s, "ViewPager helper references")
+
+          edit(
+              "app/src/main/java/androidx/viewpager/widget/ViewPager.java",
+              fix_viewpager
+          )
+
+          # TabLayout: use the actual MainActivity.c adapter and retrieve
+          # its enclosing Activity instead of illegal MainActivity.this.
+          def fix_tablayout(s):
+              old = """                MainActivity.C1332c c1332c = (MainActivity.C1332c) this.f10342J;
+                c1372gM3141h.m3157b(MainActivity.this.getResources().getString(MainActivity.this.f6456H.f4839c.get(i).intValue()));"""
+
+              new = """                MainActivity.c adapter = (MainActivity.c) this.f10342J;
+                MainActivity owner = adapter.getOwnerActivity();
+                c1372gM3141h.m3157b(owner.getResources().getString(owner.f6456H.f4839c.get(i).intValue()));"""
+
+              return one(s, old, new, "TabLayout adapter owner")
+
+          edit(
+              "app/src/main/java/com/google/android/material/tabs/TabLayout.java",
+              fix_tablayout
+          )
+
+          # C1051q: nested interface a shadows the helper class a.
+          edit(
+              "app/src/main/java/c/c/a/v3/k0/C1051q.java",
+              lambda s: qualify_helpers(s, "C1051q helper references")
+          )
+
+          print("Additional Java compile repairs applied.")
+          PY
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: "17"
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      # Use the Android SDK already installed on the GitHub-hosted runner.
+      - name: Configure preinstalled Android SDK
+        shell: bash
+        run: |
+          SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
 
-      - name: Install Android SDK components
-        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+          if [ ! -x "$SDK_ROOT/cmdline-tools/16.0/bin/sdkmanager" ]; then
+            SDKMANAGER="$(find "$SDK_ROOT/cmdline-tools" -type f -name sdkmanager -perm -u+x 2>/dev/null | head -n 1)"
+          else
+            SDKMANAGER="$SDK_ROOT/cmdline-tools/16.0/bin/sdkmanager"
+          fi
+
+          if [ -z "${SDKMANAGER:-}" ] || [ ! -x "$SDKMANAGER" ]; then
+            echo "sdkmanager not found under $SDK_ROOT" >&2
+            exit 1
+          fi
+
+          echo "ANDROID_HOME=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "$SDK_ROOT/platform-tools" >> "$GITHUB_PATH"
+          echo "$(dirname "$SDKMANAGER")" >> "$GITHUB_PATH"
+          echo "SDKMANAGER=$SDKMANAGER" >> "$GITHUB_ENV"
+
+          "$SDKMANAGER" --version
+
+      - name: Accept Android SDK licenses and install components
+        shell: bash
+        run: |
+          # sdkmanager may close stdin after accepting all licenses.
+          # Avoid pipefail treating yes's SIGPIPE as a license failure.
+          set +o pipefail
+          yes | "$SDKMANAGER" --licenses
+          LICENSE_STATUS=$?
+          set -o pipefail
+
+          if [ "$LICENSE_STATUS" -ne 0 ]; then
+            echo "SDK license acceptance failed with exit code $LICENSE_STATUS" >&2
+            exit "$LICENSE_STATUS"
+          fi
+
+          "$SDKMANAGER" --install "platforms;android-35" "build-tools;35.0.0"
+          "$SDKMANAGER" --list_installed
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.11.1'
+          gradle-version: "8.11.1"
 
       - name: Build debug APK
         run: gradle --no-daemon --stacktrace :app:assembleDebug
@@ -106,3 +542,4 @@ jobs:
         with:
           name: round22-debug-apk
           path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
