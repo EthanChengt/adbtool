@@ -6,7 +6,7 @@ Usage at repository root:
     python3 round30_fix1.py .
 
 All files are transformed and validated in memory before any file is written.
-Changed files receive a .round30.bak backup.
+Changed files are backed up under .round30-backup/ (outside Android res/).
 """
 from __future__ import annotations
 
@@ -864,9 +864,13 @@ def main() -> int:
         print(f"Round30 Fix1 validation passed: {len(updates)} files; no files changed")
         return 0
 
+    # Keep backups outside app/src/main/res: Android's resource merger scans
+    # every file under res/ and rejects backup names such as ids.xml.round30.bak.
+    backup_root = root / ".round30-backup"
     for rel, updated in updates.items():
         path = root / rel
-        backup = path.with_suffix(path.suffix + ".round30.bak")
+        backup = backup_root / (rel + ".bak")
+        backup.parent.mkdir(parents=True, exist_ok=True)
         if not backup.exists():
             shutil.copy2(path, backup)
         path.write_text(updated, encoding="utf-8")
