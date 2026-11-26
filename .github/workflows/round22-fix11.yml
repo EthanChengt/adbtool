@@ -277,6 +277,14 @@ jobs:
       - name: Apply Round28 Fix1
         run: python3 round28_fix1.py .
 
+      - name: Validate Round28 Fix2
+        run: |
+          python3 -m py_compile round28_fix2.py
+          python3 round28_fix2.py . --check-only
+
+      - name: Apply Round28 Fix2
+        run: python3 round28_fix2.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
