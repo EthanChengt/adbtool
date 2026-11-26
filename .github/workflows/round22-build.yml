@@ -415,22 +415,28 @@ jobs:
                   "ViewPager adapter owner"
               )
 
-              old_head = """            if (viewFindFocus == null) {
-                  c0172eM734h = null;
-                  break;
-              }
-              while (true) {"""
+              old_head = re.compile(
+                  r"(?m)^ {12}if \(viewFindFocus == null\) \{\n"
+                  r" {16}c0172eM734h = null;\n"
+                  r" {16}break;\n"
+                  r" {12}\}\n"
+                  r" {12}while \(true\) \{"
+              )
 
               new_head = """            if (viewFindFocus == null) {
-                  c0172eM734h = null;
-              } else {
-                  while (true) {"""
+                c0172eM734h = null;
+             } else {
+                while (true) {"""
 
-              s = one(
-                  s,
-                  old_head,
-                  new_head,
-                  "ViewPager invalid break branch"
+             s, count = old_head.subn(
+             lambda _: new_head,
+             s,
+             count=1
+             )
+
+              if count != 1:
+                raise SystemExit(
+               f"ViewPager invalid break branch: expected 1 match, found {count}"
               )
 
               old_tail = """            }
