@@ -53,6 +53,23 @@ jobs:
                   raise SystemExit("Unexpected Toolbar marker count")
               s = s.replace(old_marker, "Toolbar$e */", 2)
 
+          old_anchor = (
+              r"\n            FloatingActionButton floatingActionButton2 = FloatingActionButton.this;"
+              r"\n            int i10 = floatingActionButton2.f10286k;"
+              r"\n            floatingActionButton2.setPadding(i6 + i10, i7 + i10, i8 + i10, i9 + i10);"
+          )
+
+          new_anchor = (
+              r"\n        FloatingActionButton floatingActionButton2 = FloatingActionButton.this;"
+              r"\n        int i10 = floatingActionButton2.f10286k;"
+              r"\n        floatingActionButton2.setPadding(i6 + i10, i7 + i10, i8 + i10, i9 + i10);"
+          )
+
+          if s.count(old_anchor) != 1:
+              raise SystemExit("C1259e second padding anchor mismatch")
+
+          s = s.replace(old_anchor, new_anchor, 1)
+
           p.write_text(s, encoding="utf-8")
           print("Round22 script guard repair completed")
           PY
