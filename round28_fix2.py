@@ -96,12 +96,17 @@ def main() -> int:
     if not root.is_dir():
         raise SystemExit(f"repository root does not exist: {root}")
 
+    # None of these six files originally imported the nested helper type
+    # `c.a.a.a.a.a`; they import the helper class `c.a.a.a.a` itself.
+    # Therefore Round28 Fix1 cannot legitimately have produced `import a;`.
+    # Do not fabricate that import: only repair the static wildcard and the
+    # optional stripped single-method static import in r.java.
     targets = {
-        "app/src/main/java/c/c/a/v3/i0/C1021p.java": True,
-        "app/src/main/java/c/c/a/v3/i0/r.java": True,
-        "app/src/main/java/c/c/a/v3/m0/C1102z.java": True,
-        "app/src/main/java/c/c/a/v3/l0/C1069l.java": True,
-        "app/src/main/java/p006b/p026f/p027a/p028h/C0332d.java": True,
+        "app/src/main/java/c/c/a/v3/i0/C1021p.java": False,
+        "app/src/main/java/c/c/a/v3/i0/r.java": False,
+        "app/src/main/java/c/c/a/v3/m0/C1102z.java": False,
+        "app/src/main/java/c/c/a/v3/l0/C1069l.java": False,
+        "app/src/main/java/p006b/p026f/p027a/p028h/C0332d.java": False,
         "app/src/main/java/p006b/p026f/p027a/p028h/C0333e.java": False,
     }
 
