@@ -86,8 +86,14 @@ def patch_c0332d(s: str) -> str:
     # LinearSystem.addRatio; the adjacent top/bottom local already maps to TOP.
     s = replace_n(s, "c0328g3 = r29;", "c0328g3 = c0328gM1314l6;", "C0332d missing RIGHT anchor", 4)
     s = replace_n(s, "c0328g5 = r25;", "c0328g5 = c0328gM1314l8;", "C0332d missing BOTTOM anchor", 4)
-    # JADX emitted a register copy immediately overwritten by the next line.
-    s = replace_n(s, "            c0328g = r26;\n", "", "C0332d dead r26 register copies", 2)
+    # JADX emitted two dead register copies with different indentation levels.
+    # Both are immediately overwritten by the following c0328g assignment.
+    dead_r26 = re.compile(r"(?m)^[ \t]*c0328g = r26;[ \t]*\n")
+    s, removed = dead_r26.subn("", s)
+    if removed != 2:
+        raise PatchError(
+            f"C0332d dead r26 register copies: expected 2 occurrence(s), found {removed}"
+        )
     return s
 
 
