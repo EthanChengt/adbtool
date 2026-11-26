@@ -1,0 +1,298 @@
+name: Round 22 Fix11 - Java Compile Repair
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - "apply_round22.py"
+      - ".github/workflows/round22-fix11.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  repair-and-build:
+    name: Apply Fix11 and build APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 修正 Round22 脚本中已确认的 guard 和 Toolbar 锚点问题
+      - name: Repair Round22 script guards
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p = Path("apply_round22.py")
+          if not p.is_file():
+              raise SystemExit("apply_round22.py not found")
+
+          s = p.read_text(encoding="utf-8")
+
+          old = 'if "a.m2191e(" in text_holder[0]:'
+          new = 'if re.search(r"(?<![\\w.])a\\.m2191e\\(", text_holder[0]):'
+
+          if old in s:
+              if s.count(old) != 1:
+                  raise SystemExit("Unexpected C0397b guard count")
+              s = s.replace(old, new, 1)
+
+          old_marker = "Toolbar$f */"
+          if old_marker in s:
+              if s.count(old_marker) != 2:
+                  raise SystemExit("Unexpected Toolbar marker count")
+              s = s.replace(old_marker, "Toolbar$e */", 2)
+
+          p.write_text(s, encoding="utf-8")
+          print("Round22 script guard repair completed")
+          PY
+
+      - name: Validate Round22 script
+        shell: bash
+        run: |
+          python3 -m py_compile apply_round22.py
+          python3 apply_round22.py --check-only .
+
+      - name: Apply Round22
+        shell: bash
+        run: |
+          python3 apply_round22.py .
+
+      # Fix11：只修复已从上次 javac 日志确认的问题
+      - name: Apply Fix11 Java repairs
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          def edit(path, transform):
+              p = Path(path)
+              if not p.is_file():
+                  raise SystemExit(f"Missing file: {path}")
+
+              old = p.read_text(encoding="utf-8")
+              new = transform(old)
+
+              if old == new:
+                  print(f"No change required: {path}")
+                  return
+
+              p.write_text(new, encoding="utf-8")
+              print(f"Fixed: {path}")
+
+          def replace_one(s, old, new, label):
+              n = s.count(old)
+              if n != 1:
+                  raise SystemExit(
+                      f"{label}: expected exactly 1 match, found {n}"
+                  )
+              return s.replace(old, new, 1)
+
+          # 1. AbstractC0483r：
+          # 内部类 c 会遮蔽包名前缀 c.a.a.a.a。
+          # 此类已经 import c.a.a.a.a.a，因此应使用 a.m...。
+          def fix_abstract(s):
+              old = "c.a.a.a.a."
+              count = s.count(old)
+
+              if count:
+                  s = s.replace(old, "a.")
+
+              return s
+
+          edit(
+              "app/src/main/java/p006b/p056m/p057b/AbstractC0483r.java",
+              fix_abstract
+          )
+
+          # 2. b/s/m.java
+          def fix_m(s):
+              s = replace_one(
+                  s,
+                  "Interpolator accelerateInterpolator;",
+                  "Interpolator accelerateInterpolator = null;",
+                  "Interpolator initialization"
+              )
+
+              old_sha = '''    public static String m1953I(byte[] bArr) {
+                  byte[] bArrDigest = MessageDigest.getInstance("SHA1").digest(bArr);'''
+
+              new_sha = '''    public static String m1953I(byte[] bArr) {
+                  byte[] bArrDigest;
+                  try {
+                      bArrDigest = MessageDigest.getInstance("SHA1").digest(bArr);
+                  } catch (java.security.NoSuchAlgorithmException e) {
+                      throw new IllegalStateException("SHA1 unavailable", e);
+                  }'''
+
+              s = replace_one(
+                  s, old_sha, new_sha, "SHA1 exception handling"
+              )
+
+              # 重写容量格式化方法，确保 KB/MB/GB/TB 分支各自返回，
+              # 不再让反编译产生的局部变量跨分支使用。
+              start = s.index("    public static String m1977u(Context context) {")
+              next_method = s.find(
+                  "\n    /* JADX INFO: renamed",
+                  start + 1
+              )
+
+              if next_method < 0:
+                  raise SystemExit("Cannot locate m1977u method boundary")
+
+              method = '''    public static String m1977u(Context context) {
+                  long bytes = m1970n(context.getCacheDir());
+
+                  if (Environment.getExternalStorageState().equals("mounted")) {
+                      bytes += m1970n(context.getExternalCacheDir());
+                  }
+
+                  if (bytes < 1024L) {
+                      return "缓存为空";
+                  }
+
+                  double size = bytes;
+                  String unit = "B";
+
+                  size /= 1024.0d;
+                  unit = "KB";
+
+                  if (size >= 1024.0d) {
+                      size /= 1024.0d;
+                      unit = "MB";
+                  }
+
+                  if (size >= 1024.0d) {
+                      size /= 1024.0d;
+                      unit = "GB";
+                  }
+
+                  if (size >= 1024.0d) {
+                      size /= 1024.0d;
+                      unit = "TB";
+                  }
+
+                  return new BigDecimal(Double.toString(size))
+                          .setScale(2, 4)
+                          .toPlainString() + " " + unit;
+              }
+          '''
+
+              s = s[:start] + method + s[next_method:]
+              return s
+
+          edit("app/src/main/java/b/s/m.java", fix_m)
+
+          # 3. C0303b：
+          # Iterator<Map.Entry<K,V>> 的 next() 必须返回 Map.Entry<K,V>。
+          def fix_c0303b(s):
+              old = "public Object next() {"
+              count = s.count(old)
+
+              if count != 2:
+                  raise SystemExit(
+                      f"C0303b next() count mismatch: expected 2, found {count}"
+                  )
+
+              s = s.replace(
+                  old,
+                  "public Map.Entry<K, V> next() {"
+              )
+
+              # 内部类 a 会遮蔽导入的 helper 类 a。
+              # 这里直接创建 StringBuilder，不再调用被遮蔽的 helper。
+              s = replace_one(
+                  s,
+                  'StringBuilder sbM2191e = a.m2191e("[");',
+                  'StringBuilder sbM2191e = new StringBuilder("[");',
+                  "C0303b toString helper"
+              )
+
+              return s
+
+          edit(
+              "app/src/main/java/p006b/p019c/p020a/p022b/C0303b.java",
+              fix_c0303b
+          )
+
+          print("Fix11 targeted repairs completed")
+          PY
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK packages
+        shell: bash
+        run: |
+          sdkmanager --install \
+            "platforms;android-35" \
+            "build-tools;35.0.0"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+
+      - name: Build debug APK
+        id: build
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p build-diagnostics
+          gradle --no-daemon --stacktrace \
+            :app:assembleDebug \
+            2>&1 | tee build-diagnostics/gradle-build.log
+
+      - name: Collect Java compiler diagnostics
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p build-diagnostics
+
+          find app/build -type f \
+            \( -name "*.log" -o -name "*.txt" \) \
+            -print \
+            > build-diagnostics/build-files.txt || true
+
+          if [ -f build-diagnostics/gradle-build.log ]; then
+            grep -n -E \
+              "error:|warning:|FAILED|BUILD SUCCESSFUL|BUILD FAILED" \
+              build-diagnostics/gradle-build.log \
+              > build-diagnostics/compiler-errors.txt || true
+          fi
+
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round22-fix11-error-logs
+          path: |
+            build-diagnostics/
+            app/build/outputs/logs/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload debug APK
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: adb-helper-fix11-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 14
