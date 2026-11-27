@@ -10,6 +10,7 @@ on:
       - "round31_java_compile_fix1.py"
       - "round46_c0295y_i5_init_fix.py"
       - "round47_abstractc0483r_loop_repair.py"
+      - "round48_livedata_inner_constructors.py"
       - ".github/workflows/round31.yml"
 
 permissions:
@@ -501,6 +502,17 @@ jobs:
         shell: bash
         run: |
           python3 round47_abstractc0483r_loop_repair.py .
+
+      - name: Validate Round48 LiveData inner-class constructors
+        shell: bash
+        run: |
+          python3 -m py_compile round48_livedata_inner_constructors.py
+          python3 round48_livedata_inner_constructors.py . --check-only
+
+      - name: Apply Round48 LiveData inner-class constructors
+        shell: bash
+        run: |
+          python3 round48_livedata_inner_constructors.py .
 
 
       - name: Set up JDK 17
