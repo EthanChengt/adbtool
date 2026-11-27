@@ -357,6 +357,17 @@ jobs:
         run: |
           python3 round35_io_propagation_fix1.py .
 
+      - name: Validate Round36 corner matrix fix
+        shell: bash
+        run: |
+          python3 -m py_compile round36_corner_matrix_init_fix1.py
+          python3 round36_corner_matrix_init_fix1.py . --check-only
+
+      - name: Apply Round36 corner matrix fix
+        shell: bash
+        run: |
+          python3 round36_corner_matrix_init_fix1.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
