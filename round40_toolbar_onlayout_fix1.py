@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Round40: repair JADX-damaged Toolbar.onLayout local flow and loops.
+"""Round40: repair JADX-damaged Toolbar.onLayout local flow and loops (validator count corrected).
 
 Usage:
   python3 round40_toolbar_onlayout_fix1.py . --check-only
@@ -110,8 +110,8 @@ def transform(source: str) -> tuple[str, list[str]]:
     for label, fragment in checks:
         if fragment not in result:
             raise RuntimeError(f"post-validation failed: {label}")
-    if result.count("z2 = (!zM114t && this.f387c.getMeasuredWidth() > 0)") != 2:
-        raise RuntimeError("post-validation failed: expected two restored z2 predicates")
+    if result.count("z2 = (!zM114t && this.f387c.getMeasuredWidth() > 0)") != 3:
+        raise RuntimeError("post-validation failed: expected three total z2 predicates (one original plus two restored)")
     return result, statuses
 
 def main() -> int:
