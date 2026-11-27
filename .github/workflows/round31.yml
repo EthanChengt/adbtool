@@ -434,6 +434,17 @@ jobs:
         run: |
           python3 round41_c0264i0_linear_layout_fix.py .
 
+      - name: Validate Round42 C0264i0 duplicate Override annotations
+        shell: bash
+        run: |
+          python3 -m py_compile round42_c0264i0_override_dedup_fix.py
+          python3 round42_c0264i0_override_dedup_fix.py . --check-only
+
+      - name: Apply Round42 C0264i0 duplicate Override annotations
+        shell: bash
+        run: |
+          python3 round42_c0264i0_override_dedup_fix.py .
+
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
