@@ -8,6 +8,7 @@ on:
       - "apply_round22.py"
       - "round29_fix1.py"
       - "round31_java_compile_fix1.py"
+      - "round46_c0295y_i5_init_fix.py"
       - ".github/workflows/round31.yml"
 
 permissions:
@@ -477,6 +478,17 @@ jobs:
         shell: bash
         run: |
           python3 round45_c0229g_menu_order_fix.py .
+
+      - name: Validate Round46 C0295y i5 initialization
+        shell: bash
+        run: |
+          python3 -m py_compile round46_c0295y_i5_init_fix.py
+          python3 round46_c0295y_i5_init_fix.py . --check-only
+
+      - name: Apply Round46 C0295y i5 initialization
+        shell: bash
+        run: |
+          python3 round46_c0295y_i5_init_fix.py .
 
 
       - name: Set up JDK 17
