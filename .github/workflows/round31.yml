@@ -368,6 +368,18 @@ jobs:
         run: |
           python3 round36_corner_matrix_init_fix1.py .
 
+      - name: Validate Round37 dialog local initialization
+        shell: bash
+        run: |
+          python3 -m py_compile round37_dialog_locals_init_fix1.py
+          python3 round37_dialog_locals_init_fix1.py . --check-only
+
+      - name: Apply Round37 dialog local initialization
+        shell: bash
+        run: |
+          python3 round37_dialog_locals_init_fix1.py .
+
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
