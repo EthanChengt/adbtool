@@ -17,6 +17,7 @@ on:
       - 'round52_activityc0194j_remove_unreachable_catch.py'
       - 'round53_c0466h0_control_flow_repair.py'
       - 'round54_parcel_file_descriptor_rewinder_checked_exception_fix.py'
+      - 'round55_executor_service_checked_exceptions_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -586,6 +587,17 @@ jobs:
         shell: bash
         run: |
           python3 round54_parcel_file_descriptor_rewinder_checked_exception_fix.py .
+
+      - name: Validate Round55 ExecutorService checked exceptions
+        shell: bash
+        run: |
+          python3 -m py_compile round55_executor_service_checked_exceptions_fix.py
+          python3 round55_executor_service_checked_exceptions_fix.py . --check-only
+
+      - name: Apply Round55 ExecutorService checked exceptions
+        shell: bash
+        run: |
+          python3 round55_executor_service_checked_exceptions_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
