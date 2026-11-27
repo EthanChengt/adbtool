@@ -9,6 +9,7 @@ on:
       - "round29_fix1.py"
       - "round31_java_compile_fix1.py"
       - "round46_c0295y_i5_init_fix.py"
+      - "round47_abstractc0483r_loop_repair.py"
       - ".github/workflows/round31.yml"
 
 permissions:
@@ -489,6 +490,17 @@ jobs:
         shell: bash
         run: |
           python3 round46_c0295y_i5_init_fix.py .
+
+      - name: Validate Round47 AbstractC0483r operation-scan repair
+        shell: bash
+        run: |
+          python3 -m py_compile round47_abstractc0483r_loop_repair.py
+          python3 round47_abstractc0483r_loop_repair.py . --check-only
+
+      - name: Apply Round47 AbstractC0483r operation-scan repair
+        shell: bash
+        run: |
+          python3 round47_abstractc0483r_loop_repair.py .
 
 
       - name: Set up JDK 17
