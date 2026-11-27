@@ -346,6 +346,17 @@ jobs:
         run: |
           python3 round34_compile_repair1.py .
 
+      - name: Validate Round35 IOException propagation
+        shell: bash
+        run: |
+          python3 -m py_compile round35_io_propagation_fix1.py
+          python3 round35_io_propagation_fix1.py . --check-only
+
+      - name: Apply Round35 IOException propagation
+        shell: bash
+        run: |
+          python3 round35_io_propagation_fix1.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
