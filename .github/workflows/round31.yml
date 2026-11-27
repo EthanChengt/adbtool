@@ -379,6 +379,17 @@ jobs:
         run: |
           python3 round37_dialog_locals_init_fix1.py .
 
+      - name: Validate Round38 TabLayout local repairs
+        shell: bash
+        run: |
+          python3 -m py_compile round38_tablayout_init_fix1.py
+          python3 round38_tablayout_init_fix1.py . --check-only
+
+      - name: Apply Round38 TabLayout local repairs
+        shell: bash
+        run: |
+          python3 round38_tablayout_init_fix1.py .
+
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
