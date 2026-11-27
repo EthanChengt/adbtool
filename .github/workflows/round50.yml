@@ -13,6 +13,7 @@ on:
       - "round48_livedata_inner_constructors.py"
       - "round49_c0243a0_text_direction_fix.py"
       - "round50_c0363a_xml_exceptions_fix.py"
+      - 'round51_c0274n0_uninitialized_locals_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -538,6 +539,17 @@ jobs:
         shell: bash
         run: |
           python3 round50_c0363a_xml_exceptions_fix.py .
+
+      - name: Validate Round51 C0274n0 initialization fix
+        shell: bash
+        run: |
+          python3 -m py_compile round51_c0274n0_uninitialized_locals_fix.py
+          python3 round51_c0274n0_uninitialized_locals_fix.py . --check-only
+
+      - name: Apply Round51 C0274n0 initialization fix
+        shell: bash
+        run: |
+          python3 round51_c0274n0_uninitialized_locals_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
