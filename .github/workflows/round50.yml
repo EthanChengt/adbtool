@@ -1,4 +1,4 @@
-name: Round 31 - Java Compile Repair
+name: Round 50 - Java Compile Repair
 
 on:
   workflow_dispatch:
@@ -12,7 +12,8 @@ on:
       - "round47_abstractc0483r_loop_repair.py"
       - "round48_livedata_inner_constructors.py"
       - "round49_c0243a0_text_direction_fix.py"
-      - ".github/workflows/round31.yml"
+      - "round50_c0363a_xml_exceptions_fix.py"
+      - ".github/workflows/round50.yml"
 
 permissions:
   contents: read
@@ -527,6 +528,16 @@ jobs:
         run: python3 round49_c0243a0_text_direction_fix.py .
       # ===== Round 49 insertion ends =====
 
+      - name: Validate Round50 C0363a XML exceptions fix
+        shell: bash
+        run: |
+          python3 -m py_compile round50_c0363a_xml_exceptions_fix.py
+          python3 round50_c0363a_xml_exceptions_fix.py . --check-only
+
+      - name: Apply Round50 C0363a XML exceptions fix
+        shell: bash
+        run: |
+          python3 round50_c0363a_xml_exceptions_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
