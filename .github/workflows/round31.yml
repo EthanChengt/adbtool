@@ -390,6 +390,17 @@ jobs:
         run: |
           python3 round38_tablayout_init_fix1.py .
 
+      - name: Validate Round39 NestedScrollView over-scroll repair
+        shell: bash
+        run: |
+          python3 -m py_compile round39_nestedscrollview_overScroll_fix1.py
+          python3 round39_nestedscrollview_overScroll_fix1.py . --check-only
+
+      - name: Apply Round39 NestedScrollView over-scroll repair
+        shell: bash
+        run: |
+          python3 round39_nestedscrollview_overScroll_fix1.py .
+
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
