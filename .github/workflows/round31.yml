@@ -445,6 +445,17 @@ jobs:
         run: |
           python3 round42_c0264i0_override_dedup_fix.py .
 
+      - name: Validate Round43 C0264i0 orphan Override cleanup
+        shell: bash
+        run: |
+          python3 -m py_compile round43_c0264i0_orphan_override_fix.py
+          python3 round43_c0264i0_orphan_override_fix.py . --check-only
+
+      - name: Apply Round43 C0264i0 orphan Override cleanup
+        shell: bash
+        run: |
+          python3 round43_c0264i0_orphan_override_fix.py .
+
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
