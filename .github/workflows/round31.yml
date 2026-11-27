@@ -324,6 +324,17 @@ jobs:
         run: |
           python3 round32_java_compile_fix1.py .
 
+      - name: Validate Round33 Glide Java Compile Repair
+        shell: bash
+        run: |
+          python3 -m py_compile round33_glide_compile_repair1.py
+          python3 round33_glide_compile_repair1.py . --check-only
+
+      - name: Apply Round33 Glide Java Compile Repair
+        shell: bash
+        run: |
+          python3 round33_glide_compile_repair1.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
