@@ -456,6 +456,17 @@ jobs:
         run: |
           python3 round43_c0264i0_orphan_override_fix.py .
 
+      - name: Validate Round44 batch ViewPager and C0264i0 repairs
+        shell: bash
+        run: |
+          python3 -m py_compile round44_batch_viewpager_c0264i0_repair.py
+          python3 round44_batch_viewpager_c0264i0_repair.py . --check-only
+
+      - name: Apply Round44 batch ViewPager and C0264i0 repairs
+        shell: bash
+        run: |
+          python3 round44_batch_viewpager_c0264i0_repair.py .
+
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
