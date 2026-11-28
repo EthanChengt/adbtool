@@ -868,6 +868,17 @@ jobs:
         run: |
           python3 round78_twostatepreference_summary_control_flow_fix.py .
 
+      - name: Validate Round79 FileProvider compile repairs
+        shell: bash
+        run: |
+          python3 -m py_compile round79_fileprovider_checked_exceptions_and_query_init_fix.py
+          python3 round79_fileprovider_checked_exceptions_and_query_init_fix.py . --check-only
+
+      - name: Apply Round79 FileProvider compile repairs
+        shell: bash
+        run: |
+          python3 round79_fileprovider_checked_exceptions_and_query_init_fix.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
