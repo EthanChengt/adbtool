@@ -13,12 +13,7 @@ def replace_one(source, old, new, label):
     return source.replace(old, new, 1)
 
 def transform(source):
-    source = replace_one(
-        source,
-        "import java.io.File;\nimport java.io.IOException;",
-        "import java.io.File;\nimport java.io.FileNotFoundException;\nimport java.io.IOException;",
-        "FileNotFoundException import"
-    )
+    # Fully-qualified type avoids brittle import-order anchors.
     source = replace_one(
         source,
         "public static InterfaceC0076a m195b(Context context, String str) {",
@@ -28,13 +23,13 @@ def transform(source):
     source = replace_one(
         source,
         "public ParcelFileDescriptor openFile(Uri uri, String str) {",
-        "public ParcelFileDescriptor openFile(Uri uri, String str) throws FileNotFoundException {",
+        "public ParcelFileDescriptor openFile(Uri uri, String str) throws java.io.FileNotFoundException {",
         "openFile checked exception"
     )
     source = replace_one(
         source,
-        "        for (String str3 : strArr) {\n            if (\"_display_name\".equals(str3)) {",
-        "        for (String str3 : strArr) {\n            i = i2;\n            if (\"_display_name\".equals(str3)) {",
+        '        for (String str3 : strArr) {\n            if ("_display_name".equals(str3)) {',
+        '        for (String str3 : strArr) {\n            i = i2;\n            if ("_display_name".equals(str3)) {',
         "query projection index initialization"
     )
     return source
@@ -46,7 +41,9 @@ def main():
     args = parser.parse_args()
     path = Path(args.root) / REL
     source = path.read_text(encoding="utf-8")
-    if "throws IOException, XmlPullParserException" in source and "throws FileNotFoundException" in source and "            i = i2;\n            if (\"_display_name\".equals(str3))" in source:
+    if ("throws IOException, XmlPullParserException" in source
+            and "throws java.io.FileNotFoundException" in source
+            and '            i = i2;\n            if ("_display_name".equals(str3))' in source):
         print(f"Round79 already applied: {REL}")
         return
     updated = transform(source)
@@ -57,7 +54,10 @@ def main():
     if not backup.exists():
         shutil.copy2(path, backup)
     path.write_text(updated, encoding="utf-8")
-    if transform(path.read_text(encoding="utf-8")) != path.read_text(encoding="utf-8"):
+    final = path.read_text(encoding="utf-8")
+    if ("throws IOException, XmlPullParserException" not in final
+            or "throws java.io.FileNotFoundException" not in final
+            or '            i = i2;\n            if ("_display_name".equals(str3))' not in final):
         raise SystemExit("Round79 post-write verification failed")
     print(f"Round79 applied: {REL}")
     print(f"Backup: {backup}")
