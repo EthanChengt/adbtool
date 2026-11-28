@@ -25,6 +25,7 @@ on:
       - 'round60_c0706j_checked_exception_repair.py'
       - 'round61_c0714r_checked_exception_propagation.py'
       - 'round62_c0709m_pending_callback_return_fix.py'
+      - 'round63_bottomsheet_accessibility_local_init_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -682,6 +683,17 @@ jobs:
         shell: bash
         run: |
           python3 round62_c0709m_pending_callback_return_fix.py .
+
+      - name: Validate Round63 BottomSheet accessibility local initialization
+        shell: bash
+        run: |
+          python3 -m py_compile round63_bottomsheet_accessibility_local_init_fix.py
+          python3 round63_bottomsheet_accessibility_local_init_fix.py . --check-only
+
+      - name: Apply Round63 BottomSheet accessibility local initialization
+        shell: bash
+        run: |
+          python3 round63_bottomsheet_accessibility_local_init_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
