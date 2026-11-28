@@ -74,7 +74,7 @@ def main():
     else:
         print(f"Round65 already applied: {REL}")
     check=path.read_text(encoding="utf-8")
-    right_pair = "fCenterX2 = this.f6066d.right;\\n                        f = fCenterX2 - fMeasureText;"
+    right_pair = "fCenterX2 = this.f6066d.right;\n                        f = fCenterX2 - fMeasureText;"
     if (check.count("float fMeasureText = 0.0f;") != 1
             or check.count("float f = 0.0f;") != 1
             or check.count(right_pair) != 8):
