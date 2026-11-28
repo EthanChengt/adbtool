@@ -8,7 +8,7 @@ REL = Path("app/src/main/java/p006b/p049j/p051b/AbstractC0443a.java")
 
 REPLACEMENTS = [
     ("        int iWidth;\n", "        int iWidth = 0;\n"),
-    ("        int i2;\n", "        int i2 = 0;\n"),
+    ("        int i2;\n        C0429b c0429b2;\n", "        int i2 = 0;\n        C0429b c0429b2;\n"),
     ("        int iHeight;\n", "        int iHeight = 0;\n"),
     ("            if (i != 17) {\n", "            if (i == 33 || i == 130) {\n"),
     ("            } else {\n                iWidth = rect3.width() + 1;\n            }\n            rect4.offset(iWidth, 0);",
