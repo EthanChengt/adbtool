@@ -857,6 +857,17 @@ jobs:
         run: |
           python3 round77_unlockactivity_runnable_constructor_fix.py .
 
+      - name: Validate Round78 TwoStatePreference summary control flow
+        shell: bash
+        run: |
+          python3 -m py_compile round78_twostatepreference_summary_control_flow_fix.py
+          python3 round78_twostatepreference_summary_control_flow_fix.py . --check-only
+
+      - name: Apply Round78 TwoStatePreference summary control flow
+        shell: bash
+        run: |
+          python3 round78_twostatepreference_summary_control_flow_fix.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
