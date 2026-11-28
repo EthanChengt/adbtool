@@ -31,6 +31,7 @@ on:
       - 'round67_c0291w_final_field_single_assignment_fix.py'
       - 'round68_chip_final_field_hover_init_fix.py'
       - 'round69_abstractc0443a_directional_focus_control_flow_fix.py'
+      - 'round70_abstractc0443a_focus_result_initialization.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -765,6 +766,17 @@ jobs:
         shell: bash
         run: |
           python3 round69_abstractc0443a_directional_focus_control_flow_fix.py .
+
+      - name: Validate Round70 directional focus result initialization
+        shell: bash
+        run: |
+          python3 -m py_compile round70_abstractc0443a_focus_result_initialization.py
+          python3 round70_abstractc0443a_focus_result_initialization.py . --check-only
+
+      - name: Apply Round70 directional focus result initialization
+        shell: bash
+        run: |
+          python3 round70_abstractc0443a_focus_result_initialization.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
