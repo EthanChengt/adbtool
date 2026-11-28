@@ -40,6 +40,7 @@ on:
       - 'round82_mainactivity_click_listener_constructor_fix.py'
       - 'round83_socketfactory_ioexception_fix.py'
       - 'round84_remoteactivity_click_listener_constructor_fix.py'
+      - 'round85_fastbootactivity_click_listener_constructor_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -939,6 +940,17 @@ jobs:
         shell: bash
         run: |
           python3 round84_remoteactivity_click_listener_constructor_fix.py .
+
+      - name: Validate Round85 FastbootActivity click listener constructor
+        shell: bash
+        run: |
+          python3 -m py_compile round85_fastbootactivity_click_listener_constructor_fix.py
+          python3 round85_fastbootactivity_click_listener_constructor_fix.py . --check-only
+
+      - name: Apply Round85 FastbootActivity click listener constructor
+        shell: bash
+        run: |
+          python3 round85_fastbootactivity_click_listener_constructor_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
