@@ -29,6 +29,7 @@ on:
       - 'round65_c1266c_text_measurement_control_flow_fix.py'
       - 'round66_fabtransformation_accessibility_local_init_fix.py'
       - 'round67_c0291w_final_field_single_assignment_fix.py'
+      - 'round68_chip_final_field_hover_init_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -741,6 +742,17 @@ jobs:
         shell: bash
         run: |
           python3 round67_c0291w_final_field_single_assignment_fix.py .
+
+      - name: Validate Round68 Chip constructor and hover repairs
+        shell: bash
+        run: |
+          python3 -m py_compile round68_chip_final_field_hover_init_fix.py
+          python3 round68_chip_final_field_hover_init_fix.py . --check-only
+
+      - name: Apply Round68 Chip constructor and hover repairs
+        shell: bash
+        run: |
+          python3 round68_chip_final_field_hover_init_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
