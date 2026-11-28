@@ -846,6 +846,17 @@ jobs:
         run: |
           python3 round76_settingsactivity_compile_repairs.py .
 
+      - name: Validate Round77 UnlockActivity Runnable constructor
+        shell: bash
+        run: |
+          python3 -m py_compile round77_unlockactivity_runnable_constructor_fix.py
+          python3 round77_unlockactivity_runnable_constructor_fix.py . --check-only
+
+      - name: Apply Round77 UnlockActivity Runnable constructor
+        shell: bash
+        run: |
+          python3 round77_unlockactivity_runnable_constructor_fix.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
