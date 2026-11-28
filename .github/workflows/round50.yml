@@ -34,6 +34,7 @@ on:
       - 'round70_abstractc0443a_focus_result_initialization.py'
       - 'round72_controlview_action_definite_assignment_fix.py'
       - 'round73_aboutactivity_raw_resource_close_fix.py'
+      - 'round79_fileprovider_checked_exceptions_and_query_init_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
