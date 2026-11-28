@@ -3,38 +3,32 @@
 from pathlib import Path
 import argparse
 import re
-import sys
 
 REL = Path("app/src/main/java/androidx/core/app/CoreComponentFactory.java")
-METHODS = (
-    "instantiateActivity",
-    "instantiateApplication",
-    "instantiateProvider",
-    "instantiateReceiver",
-    "instantiateService",
-)
+METHODS = {
+    "instantiateActivity": "Activity",
+    "instantiateApplication": "Application",
+    "instantiateProvider": "ContentProvider",
+    "instantiateReceiver": "BroadcastReceiver",
+    "instantiateService": "Service",
+}
 
 def transform(source: str) -> str:
     result = source
-    for name in METHODS:
+    for name, return_type in METHODS.items():
         pattern = re.compile(
-            r"(public\\s+(?:Activity|Application|ContentProvider|BroadcastReceiver|Service)\\s+"
-            + re.escape(name)
-            + r"\\s*\\([^{}]*?\\))\\s*(throws\\s+[^{}]+)?\\s*\\{"
+            r"(public\s+" + re.escape(return_type) + r"\s+" + re.escape(name)
+            + r"\s*\([^{}]*?\))\s*(throws\s+[^{}]+)?\s*\{"
         )
         matches = list(pattern.finditer(result))
         if len(matches) != 1:
-            raise ValueError(f"{name}: expected exactly one method declaration, found {len(matches)}")
+            raise ValueError(f"{name}: expected exactly one declaration, found {len(matches)}")
         m = matches[0]
         existing = m.group(2) or ""
         if "ClassNotFoundException" in existing:
             continue
-        if existing:
-            throws = existing.rstrip() + ", ClassNotFoundException"
-        else:
-            throws = "throws ClassNotFoundException"
-        replacement = m.group(1) + " " + throws + " {"
-        result = result[:m.start()] + replacement + result[m.end():]
+        throws = (existing.rstrip() + ", ClassNotFoundException") if existing else "throws ClassNotFoundException"
+        result = result[:m.start()] + m.group(1) + " " + throws + " {" + result[m.end():]
     return result
 
 def main():
@@ -48,10 +42,7 @@ def main():
     original = path.read_text(encoding="utf-8")
     updated = transform(original)
     if args.check_only:
-        if original == updated:
-            print("Round81 check: all five methods already declare ClassNotFoundException")
-        else:
-            print("Round81 check: five method declarations are patchable")
+        print("Round81 check: patchable" if original != updated else "Round81 check: already applied")
         return
     if original == updated:
         print("Round81: already applied")
@@ -62,7 +53,7 @@ def main():
     path.write_text(updated, encoding="utf-8")
     if transform(updated) != updated:
         raise SystemExit("Round81 post-write verification failed")
-    print("Round81: propagated ClassNotFoundException in all five overrides")
+    print("Round81: all five overrides now declare ClassNotFoundException")
 
 if __name__ == "__main__":
     main()
