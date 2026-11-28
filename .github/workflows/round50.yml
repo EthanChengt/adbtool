@@ -28,6 +28,7 @@ on:
       - 'round63_bottomsheet_accessibility_local_init_fix.py'
       - 'round65_c1266c_text_measurement_control_flow_fix.py'
       - 'round66_fabtransformation_accessibility_local_init_fix.py'
+      - 'round67_c0291w_final_field_single_assignment_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -729,6 +730,17 @@ jobs:
         shell: bash
         run: |
           python3 round66_fabtransformation_accessibility_local_init_fix.py .
+
+      - name: Validate Round67 C0291w final-field assignment repair
+        shell: bash
+        run: |
+          python3 -m py_compile round67_c0291w_final_field_single_assignment_fix.py
+          python3 round67_c0291w_final_field_single_assignment_fix.py . --check-only
+
+      - name: Apply Round67 C0291w final-field assignment repair
+        shell: bash
+        run: |
+          python3 round67_c0291w_final_field_single_assignment_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
