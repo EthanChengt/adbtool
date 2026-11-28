@@ -8,7 +8,6 @@ import sys
 REL = Path("app/src/main/java/p006b/p008b/p018i/C0291w.java")
 OLD = "                    this.f2027f = true;\n"
 NEW = ""
-MARKER = "        this.f2027f = true;\n"
 
 
 def main():
@@ -22,7 +21,7 @@ def main():
         raise SystemExit(f"Missing source file: {path}")
 
     source = path.read_text(encoding="utf-8")
-    if source.count(MARKER) == 1 and OLD not in source:
+    if source.splitlines().count("        this.f2027f = true;") == 1 and OLD not in source:
         print(f"Round67 already applied: {REL}")
         return
 
@@ -31,10 +30,10 @@ def main():
             f"Round67 anchor mismatch in {REL}: expected exactly one "
             f"catch-path assignment, found {source.count(OLD)}"
         )
-    if source.count(MARKER) != 1:
+    if source.splitlines().count("        this.f2027f = true;") != 1:
         raise SystemExit(
             f"Round67 final assignment count mismatch: expected one "
-            f"normal-path assignment, found {source.count(MARKER)}"
+            f"normal-path assignment, found {source.splitlines().count('        this.f2027f = true;')}"
         )
 
     updated = source.replace(OLD, NEW, 1)
