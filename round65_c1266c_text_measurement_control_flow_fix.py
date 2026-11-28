@@ -74,8 +74,16 @@ def main():
     else:
         print(f"Round65 already applied: {REL}")
     check=path.read_text(encoding="utf-8")
-    if check.count("float fMeasureText = 0.0f;")!=1 or check.count("float f = 0.0f;")!=1 or check.count("f = fCenterX2 - fMeasureText;")!=8:
-        raise SystemExit("Round65 post-write verification failed")
+    right_pair = "fCenterX2 = this.f6066d.right;\\n                        f = fCenterX2 - fMeasureText;"
+    if (check.count("float fMeasureText = 0.0f;") != 1
+            or check.count("float f = 0.0f;") != 1
+            or check.count(right_pair) != 8):
+        raise SystemExit(
+            "Round65 post-write verification failed: "
+            f"width_decl={check.count('float fMeasureText = 0.0f;')}, "
+            f"origin_decl={check.count('float f = 0.0f;')}, "
+            f"right_gravity_pairs={check.count(right_pair)}"
+        )
     print("Round65 post-write verification passed")
 
 if __name__=="__main__":
