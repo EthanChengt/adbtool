@@ -695,6 +695,17 @@ jobs:
         run: |
           python3 round63_bottomsheet_accessibility_local_init_fix.py .
 
+      - name: Validate Round64 TextInputLayout definite-assignment repair
+        shell: bash
+        run: |
+          python3 -m py_compile round64_textinputlayout_definite_assignment_fix.py
+          python3 round64_textinputlayout_definite_assignment_fix.py . --check-only
+
+      - name: Apply Round64 TextInputLayout definite-assignment repair
+        shell: bash
+        run: |
+          python3 round64_textinputlayout_definite_assignment_fix.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
