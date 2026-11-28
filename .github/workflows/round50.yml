@@ -23,6 +23,7 @@ on:
       - 'round58_appcompat_view_inflater_checked_exceptions_fix.py'
       - 'round59_c0717u_checked_exception_repair.py'
       - 'round60_c0706j_checked_exception_repair.py'
+      - 'round61_c0714r_checked_exception_propagation.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -658,6 +659,17 @@ jobs:
         shell: bash
         run: |
           python3 round60_c0706j_checked_exception_repair.py .
+
+      - name: Validate Round61 C0714r checked-exception propagation
+        shell: bash
+        run: |
+          python3 -m py_compile round61_c0714r_checked_exception_propagation.py
+          python3 round61_c0714r_checked_exception_propagation.py . --check-only
+
+      - name: Apply Round61 C0714r checked-exception propagation
+        shell: bash
+        run: |
+          python3 round61_c0714r_checked_exception_propagation.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
