@@ -813,6 +813,17 @@ jobs:
         run: |
           python3 round73_aboutactivity_raw_resource_close_fix.py .
 
+      - name: Validate Round74 FilePickerActivity local initialization
+        shell: bash
+        run: |
+          python3 -m py_compile round74_filepicker_bindview_local_init_fix.py
+          python3 round74_filepicker_bindview_local_init_fix.py . --check-only
+
+      - name: Apply Round74 FilePickerActivity local initialization
+        shell: bash
+        run: |
+          python3 round74_filepicker_bindview_local_init_fix.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
