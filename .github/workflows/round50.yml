@@ -37,6 +37,7 @@ on:
       - 'round79_fileprovider_checked_exceptions_and_query_init_fix.py'
       - 'round80_aboutactivity_click_listener_constructor_fix.py'
       - 'round81_corecomponentfactory_checked_exception_fix.py'
+      - 'round82_mainactivity_click_listener_constructor_fix.py'
       - ".github/workflows/round50.yml"
 
 permissions:
@@ -903,6 +904,17 @@ jobs:
         shell: bash
         run: |
           python3 round81_corecomponentfactory_checked_exception_fix.py .
+
+      - name: Validate Round82 MainActivity click listener constructor
+        shell: bash
+        run: |
+          python3 -m py_compile round82_mainactivity_click_listener_constructor_fix.py
+          python3 round82_mainactivity_click_listener_constructor_fix.py . --check-only
+
+      - name: Apply Round82 MainActivity click listener constructor
+        shell: bash
+        run: |
+          python3 round82_mainactivity_click_listener_constructor_fix.py .
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
