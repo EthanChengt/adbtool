@@ -824,6 +824,17 @@ jobs:
         run: |
           python3 round74_filepicker_bindview_local_init_fix.py .
 
+      - name: Validate Round75 FilePickerActivity ImageView exception-path initialization
+        shell: bash
+        run: |
+          python3 -m py_compile round75_filepicker_imageview_exception_path_init.py
+          python3 round75_filepicker_imageview_exception_path_init.py . --check-only
+
+      - name: Apply Round75 FilePickerActivity ImageView exception-path initialization
+        shell: bash
+        run: |
+          python3 round75_filepicker_imageview_exception_path_init.py .
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
